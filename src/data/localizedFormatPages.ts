@@ -56,7 +56,7 @@ const TRANSLATION_PATTERNS: Record<SupportedLanguage, {
     howItWorks: '¿Cómo funciona la conversión local?',
     whyTitle: '¿Por qué elegir nuestro convertidor?',
     whyDesc: 'Todo el procesamiento se realiza en la memoria de tu dispositivo mediante WebAssembly.',
-    freeNoUpload: '100% gratuito y privado. Cero subidas a la nube.',
+    freeNoUpload: '100% gratuito e privado. Cero subidas a la nube.',
     faq1Q: '¿Es gratuito este servicio?',
     faq1A: '¡Sí! Es 100% gratis, sin registro, sin marcas de agua y sin límites de archivos.',
     faq2Q: '¿Están seguros mis videos?',
@@ -154,6 +154,302 @@ const TRANSLATION_PATTERNS: Record<SupportedLanguage, {
   }
 };
 
+interface SlugSpecificOverride {
+  h1Prefix?: string;
+  h1Highlight?: string;
+  h1Suffix?: string;
+  badge?: string;
+  metaTitle?: string;
+  metaDescription?: string;
+  heroSubtitle?: string;
+  dropzoneTitle?: string;
+  explainerTitle?: string;
+  explainerParagraphs?: string[];
+  sourceDetailsTitle?: string;
+  sourceDetails?: string[];
+  targetDetailsTitle?: string;
+  targetDetails?: string[];
+}
+
+const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugSpecificOverride>>> = {
+  'melhor-conversor-de-video-gratuito': {
+    en: {
+      h1Prefix: 'The Best',
+      h1Highlight: 'Free Video Converter 2026',
+      h1Suffix: 'Online & Safe',
+      badge: '🏆 Best Free In-Browser Video Converter',
+      metaTitle: 'Best Free Video Converter Online 2026 — Zero Upload & Safe',
+      metaDescription: 'Discover why ConversordeVideo.com is the best free video converter: zero uploads, no file size limits, no registration, and 100% private.',
+      heroSubtitle: 'The ultimate tool to convert MP4, MOV, MP3, WebM, and GIF. Zero wait queues, no intrusive ads, and 100% in your browser.',
+      dropzoneTitle: 'Drag any video or audio file here to start converting',
+      explainerTitle: 'Why choose our in-browser WebAssembly converter?',
+      explainerParagraphs: [
+        'While traditional cloud converters (CloudConvert, Convertio, FreeConvert) charge monthly subscriptions, enforce long wait queues, and force you to upload private files to remote servers, ConversordeVideo.com runs 100% locally on your computer or phone.',
+        'Powered by WebAssembly, you achieve lightning speed without consuming mobile upload bandwidth and with full data privacy compliance.'
+      ],
+      sourceDetailsTitle: 'Traditional Cloud Services',
+      sourceDetails: [
+        'Slow upload times on heavy videos',
+        'Shared queue delays up to 15 minutes',
+        '100 MB free file paywalls',
+        'Videos stored on third-party remote servers'
+      ],
+      targetDetailsTitle: 'ConversordeVideo.com',
+      targetDetails: [
+        'Zero upload — 100% in-browser memory processing',
+        'No queue delays and unlimited conversions',
+        'Instant mobile and camera footage conversions',
+        'Completely free with no sign-up required'
+      ]
+    },
+    es: {
+      h1Prefix: 'El Mejor',
+      h1Highlight: 'Convertidor de Video Gratis 2026',
+      h1Suffix: 'Online y Seguro',
+      badge: '🏆 Mejor Convertidor de Video Gratuito',
+      metaTitle: 'El Mejor Convertidor de Video Gratuito Online 2026 — Sin Límites y Seguro',
+      metaDescription: 'Descubre por qué ConversordeVideo.com es el mejor convertidor de video gratuito: sin subidas, sin límites de tamaño, sin registro y 100% privado.',
+      heroSubtitle: 'La herramienta definitiva para convertir MP4, MOV, MP3, WebM y GIF. Cero colas, sin anuncios invasivos y 100% en tu navegador.',
+      dropzoneTitle: 'Arrastra cualquier archivo de video o audio para comenzar',
+      explainerTitle: '¿Por qué elegir nuestro convertidor en el navegador?',
+      explainerParagraphs: [
+        'Mientras los convertidores tradicionales cobran suscripciones, imponen colas de espera y obligan a subir tus videos a la nube, ConversordeVideo.com funciona 100% en tu dispositivo.',
+        'Gracias a WebAssembly, disfrutas de máxima velocidad sin gastar tus datos de subida y con total privacidad.'
+      ],
+      sourceDetailsTitle: 'Servicios en la Nube Tradicionales',
+      sourceDetails: [
+        'Subida lenta de archivos pesados',
+        'Colas de espera de hasta 15 minutos',
+        'Límite gratuito de 100 MB',
+        'Videos almacenados en servidores ajenos'
+      ],
+      targetDetailsTitle: 'ConversordeVideo.com',
+      targetDetails: [
+        'Cero subidas — 100% procesamiento local',
+        'Sin colas ni límites de conversiones',
+        'Conversión instantánea en móviles y cámaras',
+        'Totalmente gratis y sin registro'
+      ]
+    },
+    fr: {
+      h1Prefix: 'Le Meilleur',
+      h1Highlight: 'Convertisseur Vidéo Gratuit 2026',
+      h1Suffix: 'En Ligne et Sécurisé',
+      badge: '🏆 Meilleur Convertisseur Vidéo Gratuit',
+      metaTitle: 'Meilleur Convertisseur Vidéo Gratuit en Ligne 2026 — Sans Limite et Sécurisé',
+      metaDescription: 'Découvrez pourquoi ConversordeVideo.com est le meilleur convertisseur vidéo gratuit : aucun téléversement, aucune limite de taille et 100% privé.',
+      heroSubtitle: 'L’outil ultime pour convertir MP4, MOV, MP3, WebM et GIF. Aucune file d’attente et 100% dans votre navigateur.',
+      dropzoneTitle: 'Glissez n’importe quel fichier vidéo ou audio pour commencer',
+      explainerTitle: 'Pourquoi choisir notre convertisseur dans le navigateur ?',
+      explainerParagraphs: [
+        'Alors que les outils cloud traditionnels imposent des abonnements payants et des files d’attente, ConversordeVideo.com s’exécute localement sur votre appareil.',
+        'Grâce à WebAssembly, profitez d’un transcodage instantané sans envoyer aucun octet sur internet.'
+      ],
+      sourceDetailsTitle: 'Services Cloud Anciens',
+      sourceDetails: [
+        'Téléversement lent des vidéos lourdes',
+        'Files d’attente jusqu’à 15 minutes',
+        'Limites gratuites de 100 Mo',
+        'Fichiers stockés sur des serveurs distants'
+      ],
+      targetDetailsTitle: 'ConversordeVideo.com',
+      targetDetails: [
+        'Zéro téléversement — 100% traitement local',
+        'Aucune file d’attente et conversions illimitées',
+        'Compatibilité instantanée iPhone et caméras',
+        '100% gratuit et sans inscription'
+      ]
+    },
+    ja: {
+      h1Prefix: '完全無料・安全な',
+      h1Highlight: '2026年 最優秀 動画変換ツール',
+      h1Suffix: '徹底比較ガイド',
+      badge: '🏆 最優秀 オンライン動画変換ツール',
+      metaTitle: '2026年 おすすめ無料動画変換ツール — 制限なし・高セキュリティ',
+      metaDescription: 'ConversordeVideo.comが選ばれる理由：ファイル送信不要、容量無制限、登録不要、完全プライベートな動画変換。',
+      heroSubtitle: 'MP4, MOV, MP3, WebM, GIF を高品質に変換。待ち時間ゼロ・広告なし・ブラウザ内で完結。',
+      dropzoneTitle: 'ここに動画または音声ファイルをドラッグして開始',
+      explainerTitle: 'なぜブラウザ内 WebAssembly 変換が選ばれるのか？',
+      explainerParagraphs: [
+        '従来のクラウド変換ツールは月額課金や待ち時間があり、大事なプライベート動画をサーバーへ送信する必要がありました。ConversordeVideo.com はお使いの端末内で100%処理します。',
+        'WebAssembly技術により、回線速度に左右されず超高速・安全に動画を変換できます。'
+      ],
+      sourceDetailsTitle: '従来のクラウド変換ツール',
+      sourceDetails: [
+        '大容量動画のアップロードに時間がかかる',
+        '最大15分の順番待ちキュー',
+        '無料枠は100MBまでなどの制限',
+        '外部サーバーにデータが保管されるリスク'
+      ],
+      targetDetailsTitle: 'ConversordeVideo.com',
+      targetDetails: [
+        'ファイル送信不要 — 端末メモリ内で100%処理',
+        '待ち時間ゼロ・回数無制限',
+        'スマホ動画やカメラ映像を即時変換',
+        '登録不要・完全無料'
+      ]
+    },
+    zh: {
+      h1Prefix: '2026年度最佳',
+      h1Highlight: '免费在线视频转换工具',
+      h1Suffix: '深度评测',
+      badge: '🏆 最佳免费视频转换器与评测',
+      metaTitle: '2026 最佳免费在线视频转换器 — 零上传无限制安全转码',
+      metaDescription: '了解为什么 ConversordeVideo.com 是最佳免费视频转换器：零文件上传、无文件大小付费限制、免注册且 100% 私密安全。',
+      heroSubtitle: '转换 MP4、MOV、MP3、WebM 和 GIF 的终极利器。免排队、无侵入式广告，100% 浏览器本地运行。',
+      dropzoneTitle: '拖拽任意视频或音频文件到此处即可开始转换',
+      explainerTitle: '为什么选择我们的浏览器本地 WebAssembly 转换器？',
+      explainerParagraphs: [
+        '传统的云端转换网站（如 CloudConvert、Convertio）收取高额订阅费，限制文件大小，并要求将私密视频上传至远程服务器。ConversordeVideo.com 100% 在您的本地电脑或手机内存中完成转码。',
+        '依托先进的 WebAssembly 技术，无需消耗上传流量，享受极限转换速度与严密隐私保障。'
+      ],
+      sourceDetailsTitle: '传统云端转换工具',
+      sourceDetails: [
+        '大文件上传极其缓慢',
+        '共享队列排队高达 15 分钟',
+        '100 MB 免费额度限制及付费墙',
+        '视频文件被存储在第三方云端服务器'
+      ],
+      targetDetailsTitle: 'ConversordeVideo.com',
+      targetDetails: [
+        '零文件上传 — 100% 浏览器内存安全计算',
+        '零等待排队，无转换次数限制',
+        '手机与高清摄像机视频瞬间转码',
+        '免注册、免登录，完全免费'
+      ]
+    },
+    no: {
+      h1Prefix: 'Den Beste',
+      h1Highlight: 'Gratis Videokonvertereren 2026',
+      h1Suffix: 'på Nett og Trygg',
+      badge: '🏆 Kåret til Raskeste og Tryggeste Konverterer',
+      metaTitle: 'Beste Gratis Videokonverterer på Nett 2026 — Uten Begrensninger',
+      metaDescription: 'Oppdag hvorfor ConversordeVideo.com er den beste gratis videokonvertereren: ingen skyopplasting, ingen størrelsesgrenser og 100% privat.',
+      heroSubtitle: 'Det ultimate verktøyet for MP4, MOV, MP3, WebM og GIF. Null køer, ingen irriterende annonser og 100% i nettleseren.',
+      dropzoneTitle: 'Dra en video- eller lydfil hit for å starte',
+      explainerTitle: 'Hvorfor velge vår nettleserbaserte videokonverterer?'
+    },
+    tr: {
+      h1Prefix: '2026’nın En İyi',
+      h1Highlight: 'Ücretsiz Video Dönüştürücüsü',
+      h1Suffix: 'Çevrimiçi ve Güvenli',
+      badge: '🏆 En Hızlı ve Güvenli Video Dönüştürücü',
+      metaTitle: 'En İyi Ücretsiz Video Dönüştürücü Çevrimiçi 2026 — Limitsiz ve Güvenli',
+      metaDescription: 'ConversordeVideo.com’un neden en iyi ücretsiz video dönüştürücü olduğunu keşfedin: buluta yükleme yok, boyut sınırı yok, %100 gizli.',
+      heroSubtitle: 'MP4, MOV, MP3, WebM ve GIF dönüştürmek için mükemmel araç. Bekleme sırası yok, reklam yok ve %100 tarayıcınızda.',
+      dropzoneTitle: 'Dönüştürmeye başlamak için videoyu buraya sürükleyin',
+      explainerTitle: 'Neden tarayıcı içi WebAssembly dönüştürücümüzü seçmelisiniz?'
+    },
+    pl: {
+      h1Prefix: 'Najlepszy',
+      h1Highlight: 'Darmowy Konwerter Wideo 2026',
+      h1Suffix: 'Online i Bezpieczny',
+      badge: '🏆 Najszybszy i Najbezpieczniejszy Konwerter',
+      metaTitle: 'Najlepszy Darmowy Konwerter Wideo Online 2026 — Bez Limitów i Bezpieczny',
+      metaDescription: 'Dowiedz się, dlaczego ConversordeVideo.com to najlepszy darmowy konwerter wideo: brak wysyłania do chmury, brak limitów rozmiaru i 100% prywatności.',
+      heroSubtitle: 'Niezastąpione narzędzie do konwersji MP4, MOV, MP3, WebM i GIF. Brak kolejek i 100% w Twojej przeglądarce.',
+      dropzoneTitle: 'Przeciągnij dowolny plik wideo lub audio, aby rozpocząć',
+      explainerTitle: 'Dlaczego warto wybrać nasz konwerter w przeglądarce?'
+    }
+  },
+  'converter-video-para-mp3': {
+    en: {
+      h1Prefix: 'Extract Audio',
+      h1Highlight: 'Video to MP3 Converter',
+      h1Suffix: 'Hi-Fi 192 kbps',
+      badge: '🎵 Audio Track Extractor'
+    },
+    es: {
+      h1Prefix: 'Extraer Audio',
+      h1Highlight: 'Video a MP3',
+      h1Suffix: 'Alta Fidelidad 192 kbps',
+      badge: '🎵 Extractor de Audio MP3'
+    },
+    fr: {
+      h1Prefix: 'Extraire l’Audio',
+      h1Highlight: 'Vidéo vers MP3',
+      h1Suffix: 'Haute Fidélité 192 kbps',
+      badge: '🎵 Extracteur Audio MP3'
+    },
+    ja: {
+      h1Prefix: '音声を抽出',
+      h1Highlight: '動画から MP3 変換',
+      h1Suffix: '192 kbps 高音質',
+      badge: '🎵 高音質 MP3 音声抽出'
+    },
+    zh: {
+      h1Prefix: '提取音频',
+      h1Highlight: '视频提取 MP3',
+      h1Suffix: '192 kbps 高保真',
+      badge: '🎵 高保真 MP3 音频提取'
+    }
+  },
+  'video-para-gif': {
+    en: {
+      h1Prefix: 'Convert',
+      h1Highlight: 'Video to Animated GIF',
+      h1Suffix: 'High Quality Loops',
+      badge: '✨ Animated GIF Maker'
+    },
+    es: {
+      h1Prefix: 'Convertir',
+      h1Highlight: 'Video a GIF Animado',
+      h1Suffix: 'Bucles de Alta Calidad',
+      badge: '✨ Creador de GIFs Animados'
+    },
+    fr: {
+      h1Prefix: 'Convertir',
+      h1Highlight: 'Vidéo vers GIF Animé',
+      h1Suffix: 'Boucles Fluides',
+      badge: '✨ Créateur de GIF Animé'
+    },
+    ja: {
+      h1Prefix: '動画から',
+      h1Highlight: 'アニメーション GIF 作成',
+      h1Suffix: '高画質ループ',
+      badge: '✨ GIF アニメーション作成'
+    },
+    zh: {
+      h1Prefix: '精彩剪辑',
+      h1Highlight: '视频转动态 GIF',
+      h1Suffix: '高画质循环动图',
+      badge: '✨ 高清 GIF 动图制作'
+    }
+  },
+  'conversor-de-audio': {
+    en: {
+      h1Prefix: 'Universal',
+      h1Highlight: 'Audio Converter Online',
+      h1Suffix: 'to MP3 / AAC',
+      badge: '🎧 Universal Audio Transcoder'
+    },
+    es: {
+      h1Prefix: 'Convertidor',
+      h1Highlight: 'de Audio Universal',
+      h1Suffix: 'a MP3 / AAC',
+      badge: '🎧 Transcodificador de Audio'
+    },
+    fr: {
+      h1Prefix: 'Convertisseur',
+      h1Highlight: 'Audio Universel',
+      h1Suffix: 'vers MP3 / AAC',
+      badge: '🎧 Transcodeur Audio Universel'
+    },
+    ja: {
+      h1Prefix: '高音質',
+      h1Highlight: '万能 音声変換ツール',
+      h1Suffix: 'MP3 / AAC 形式',
+      badge: '🎧 万能オーディオコンバーター'
+    },
+    zh: {
+      h1Prefix: '万能',
+      h1Highlight: '音频格式转换器',
+      h1Suffix: '转 MP3 / AAC',
+      badge: '🎧 全格式音频转码器'
+    }
+  }
+};
+
 /**
  * Returns localized format page data for any supported language.
  * Defaults to the original Portuguese data if lang === 'pt'.
@@ -168,22 +464,91 @@ export function getLocalizedFormatPage(slug: string, lang: SupportedLanguage): F
   const isCompressor = slug.includes('compressor') || slug.includes('comprimir');
   const targetLabel = original.targetFormat.toUpperCase();
 
-  const titlePrefix = isCompressor ? p.compressPrefix : p.convertPrefix;
-  const metaTitle = `${titlePrefix} ${targetLabel} ${p.onlineFree}`;
-  const metaDescription = `${titlePrefix} ${targetLabel} ${p.freeNoUpload} ${p.heroSuffix}`;
+  // Extract source format if format is converter-[source]-para-[target]
+  let sourceFormat = '';
+  const match = slug.match(/^converter-([a-z0-9]+)-para-([a-z0-9]+)$/);
+  if (match) {
+    sourceFormat = match[1].toUpperCase();
+  }
+
+  let titlePrefix = isCompressor ? p.compressPrefix : p.convertPrefix;
+  let h1Highlight = targetLabel;
+  let h1Prefix = titlePrefix;
+  let h1Suffix = lang === 'ja' || lang === 'zh' ? '' : 'Online';
+  let badge = original.badge;
+
+  if (sourceFormat) {
+    if (lang === 'en') {
+      h1Prefix = 'Convert';
+      h1Highlight = `${sourceFormat} to ${targetLabel}`;
+      badge = `⚡ Fast ${sourceFormat} to ${targetLabel} Converter`;
+    } else if (lang === 'es') {
+      h1Prefix = 'Convertir';
+      h1Highlight = `${sourceFormat} a ${targetLabel}`;
+      badge = `⚡ Convertidor de ${sourceFormat} a ${targetLabel}`;
+    } else if (lang === 'fr') {
+      h1Prefix = 'Convertir';
+      h1Highlight = `${sourceFormat} vers ${targetLabel}`;
+      badge = `⚡ Convertisseur ${sourceFormat} vers ${targetLabel}`;
+    } else if (lang === 'ja') {
+      h1Prefix = `${sourceFormat} を`;
+      h1Highlight = `${targetLabel} に変換`;
+      badge = `⚡ ${sourceFormat} から ${targetLabel} 変換`;
+    } else if (lang === 'zh') {
+      h1Prefix = `${sourceFormat} 转`;
+      h1Highlight = `${targetLabel} 视频转换`;
+      badge = `⚡ ${sourceFormat} 转 ${targetLabel} 极速转换`;
+    } else if (lang === 'no') {
+      h1Prefix = 'Konverter';
+      h1Highlight = `${sourceFormat} til ${targetLabel}`;
+      badge = `⚡ Rask ${sourceFormat} til ${targetLabel} Konvertering`;
+    } else if (lang === 'tr') {
+      h1Prefix = `${sourceFormat} ->`;
+      h1Highlight = `${targetLabel} Dönüştürücü`;
+      badge = `⚡ Hızlı ${sourceFormat} -> ${targetLabel} Dönüştürme`;
+    } else if (lang === 'pl') {
+      h1Prefix = 'Konwertuj';
+      h1Highlight = `${sourceFormat} na ${targetLabel}`;
+      badge = `⚡ Szybka Konwersja ${sourceFormat} na ${targetLabel}`;
+    }
+  }
+
+  // Check specific overrides for unique pages (e.g. melhor-conversor-de-video-gratuito)
+  const override = SLUG_LOCALIZATIONS[slug]?.[lang] || SLUG_LOCALIZATIONS[slug]?.en;
+  if (override) {
+    if (override.h1Prefix) h1Prefix = override.h1Prefix;
+    if (override.h1Highlight) h1Highlight = override.h1Highlight;
+    if (override.h1Suffix !== undefined) h1Suffix = override.h1Suffix;
+    if (override.badge) badge = override.badge;
+  }
+
+  const metaTitle = override?.metaTitle || `${h1Prefix} ${h1Highlight} ${p.onlineFree}`;
+  const metaDescription = override?.metaDescription || `${h1Prefix} ${h1Highlight} ${p.freeNoUpload} ${p.heroSuffix}`;
+  const heroSubtitle = override?.heroSubtitle || `${p.whyDesc} ${p.heroSuffix}`;
+  const dropzoneTitle = override?.dropzoneTitle || `${p.dropzoneText} ${targetLabel}`;
+  const explainerTitle = override?.explainerTitle || p.howItWorks;
+  const explainerParagraphs = override?.explainerParagraphs || original.explainerParagraphs;
+  const sourceDetailsTitle = override?.sourceDetailsTitle || original.sourceDetailsTitle;
+  const sourceDetails = override?.sourceDetails || original.sourceDetails;
+  const targetDetailsTitle = override?.targetDetailsTitle || original.targetDetailsTitle;
+  const targetDetails = override?.targetDetails || original.targetDetails;
 
   return {
     ...original,
-    h1Prefix: titlePrefix,
-    h1Highlight: targetLabel,
-    h1Suffix: lang === 'ja' || lang === 'zh' ? '' : 'Online',
+    badge,
+    h1Prefix,
+    h1Highlight,
+    h1Suffix,
     metaTitle,
     metaDescription,
-    heroSubtitle: `${p.whyDesc} ${p.heroSuffix}`,
-    dropzoneTitle: `${p.dropzoneText} ${targetLabel}`,
-    explainerTitle: p.howItWorks,
-    sourceDetailsTitle: original.sourceDetailsTitle,
-    targetDetailsTitle: original.targetDetailsTitle,
+    heroSubtitle,
+    dropzoneTitle,
+    explainerTitle,
+    explainerParagraphs,
+    sourceDetailsTitle,
+    sourceDetails,
+    targetDetailsTitle,
+    targetDetails,
     faqs: [
       { question: p.faq1Q, answer: p.faq1A },
       { question: p.faq2Q, answer: p.faq2A }
@@ -523,7 +888,7 @@ const RAW_GRID_TOOLS = [
       pt: 'Converta arquivos MP4 para o formato leve WebM ideal para sites, blogs e carregamento rápido.',
       en: 'Convert MP4 videos to lightweight WebM format for instant HTML5 web playback.',
       es: 'Convierte videos MP4 a formato WebM ultraligero para sitios web y blogs HTML5.',
-      fr: 'Convertissez des fichiers MP4 au format léger WebM idéal pour le web HTML5.',
+      fr: 'Convertissez des fichiers MP4 au format léger WebM ideal pour le web HTML5.',
       ja: 'HTML5 サイトやブログに最適な超軽量 WebM 形式に変換します。',
       zh: '将 MP4 转换为超轻量 WebM 格式，适合网站背景与 HTML5 快速加载。',
       no: 'Konverter MP4-videoer til lett WebM-format for rask HTML5-avspilling.',
