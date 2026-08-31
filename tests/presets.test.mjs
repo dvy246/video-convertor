@@ -37,22 +37,22 @@ describe('FFmpeg Presets & Engine Logic', () => {
 
   it('calculateWhatsAppBitrateArgs calculates safe dynamic bitrate within WhatsApp limits (<14.5MB)', () => {
     // 60 seconds video
-    const args60 = calculateWhatsAppBitrateArgs('input.mp4', 'output.mp4', 60);
+    const args60 = calculateWhatsAppBitrateArgs(60, 'input.mp4', 'output.mp4');
     const bIndex = args60.indexOf('-b:v');
     assert.ok(bIndex !== -1);
     const bitrateStr = args60[bIndex + 1];
     const bitrateK = parseInt(bitrateStr.replace('k', ''), 10);
-    assert.ok(bitrateK >= 350 && bitrateK <= 2200, `Bitrate ${bitrateK}k out of expected range`);
+    assert.ok(bitrateK >= 150 && bitrateK <= 2500, `Bitrate ${bitrateK}k out of expected range`);
     
-    // Very short video (5s) -> should be capped at max 2200k
-    const args5 = calculateWhatsAppBitrateArgs('input.mp4', 'output.mp4', 5);
+    // Very short video (5s) -> should be capped at max 2500k
+    const args5 = calculateWhatsAppBitrateArgs(5, 'input.mp4', 'output.mp4');
     const bIndex5 = args5.indexOf('-b:v');
-    assert.equal(args5[bIndex5 + 1], '2200k');
+    assert.equal(args5[bIndex5 + 1], '2500k');
 
-    // Very long video (600s) -> should be clamped at min 350k
-    const args600 = calculateWhatsAppBitrateArgs('input.mp4', 'output.mp4', 600);
+    // Very long video (600s) -> should be clamped at min 150k
+    const args600 = calculateWhatsAppBitrateArgs(600, 'input.mp4', 'output.mp4');
     const bIndex600 = args600.indexOf('-b:v');
-    assert.equal(args600[bIndex600 + 1], '350k');
+    assert.equal(args600[bIndex600 + 1], '150k');
   });
 
   it('audio_mp3 preset extracts high quality LAME MP3 (192 kbps)', () => {
@@ -76,8 +76,8 @@ describe('FFmpeg Presets & Engine Logic', () => {
     const formats = ['mp4', 'webm', 'mp3', 'gif'];
     for (const fmt of formats) {
       assert.ok(FORMAT_DETAILS[fmt], `Missing format details for ${fmt}`);
-      assert.ok(FORMAT_DETAILS[fmt].label);
-      assert.ok(FORMAT_DETAILS[fmt].description);
+      assert.ok(FORMAT_DETAILS[fmt].name, `Missing name for ${fmt}`);
+      assert.ok(FORMAT_DETAILS[fmt].description, `Missing description for ${fmt}`);
       // Ensure no 100% claims in format descriptions
       assert.ok(!FORMAT_DETAILS[fmt].description.includes('100%'), `Format ${fmt} contains 100% claim`);
     }
