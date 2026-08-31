@@ -157,6 +157,25 @@ export const PRESETS: Record<PresetId, Preset> = {
       '-vf', 'fps=12,scale=480:-1:flags=lanczos,split[s0][s1];[s0]palettegen=max_colors=128[p];[s1][p]paletteuse=dither=bayer',
       output
     ]
+  },
+  resize_1080p: {
+    id: 'resize_1080p',
+    label: 'Redimensionar Full HD (1080p)',
+    badge: '1080p HD',
+    description: 'Redimensiona a resolução do vídeo para Full HD 1080p mantendo proporção e nitidez.',
+    targetFormat: 'mp4',
+    getArgs: (input, output) => [
+      '-i', input,
+      '-c:v', 'libx264',
+      '-crf', '23',
+      '-preset', 'ultrafast',
+      '-vf', "scale=-2:'min(1080,ih)'",
+      '-pix_fmt', 'yuv420p',
+      '-c:a', 'aac',
+      '-b:a', '128k',
+      '-movflags', '+faststart',
+      output
+    ]
   }
 };
 
@@ -179,7 +198,7 @@ export function calculateWhatsAppBitrateArgs(durationSeconds: number, input: str
     '-maxrate', `${Math.round(videoBitrateKbps * 1.3)}k`,
     '-bufsize', `${Math.round(videoBitrateKbps * 2)}k`,
     '-preset', 'ultrafast',
-    '-vf', 'scale=-2:\'min(720,ih)\'',
+    '-vf', "scale=-2:'min(720,ih)'",
     '-pix_fmt', 'yuv420p',
     '-c:a', 'aac',
     '-b:a', `${audioBitrateKbps}k`,
@@ -200,7 +219,7 @@ export const FORMAT_DETAILS: Record<OutputFormat, {
     mime: 'video/mp4',
     ext: 'mp4',
     description: 'O formato padrão mais compatível do mundo. Roda em 100% dos celulares, TVs, PCs e navegadores.',
-    popularPresets: ['balanced', 'compress_balanced', 'compress_extreme', 'whatsapp', 'high_quality', 'small_size', 'instagram_reels']
+    popularPresets: ['balanced', 'compress_balanced', 'compress_extreme', 'whatsapp', 'high_quality', 'small_size', 'instagram_reels', 'resize_1080p']
   },
   webm: {
     name: 'WebM (HTML5 Web)',

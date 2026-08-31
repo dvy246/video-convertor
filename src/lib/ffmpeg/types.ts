@@ -9,7 +9,8 @@ export type PresetId =
   | 'compress_balanced'
   | 'compress_extreme'
   | 'audio_mp3' 
-  | 'gif_standard';
+  | 'gif_standard'
+  | 'resize_1080p';
 
 export interface Preset {
   id: PresetId;

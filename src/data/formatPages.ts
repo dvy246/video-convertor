@@ -874,25 +874,49 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     slug: 'conversor-de-audio',
     targetFormat: 'mp3',
     initialPreset: 'audio_mp3',
-    badge: '🎧 Conversor de Áudio Universal',
+    badge: '🎧 Conversor de Áudio Universal & Extração MP3',
     h1Prefix: 'Conversor de',
     h1Highlight: 'Áudio Online',
     h1Suffix: 'Grátis',
-    metaTitle: 'Conversor de Áudio Online Grátis — Extrair e Converter Áudio',
-    metaDescription: 'Converta arquivos de áudio e extraia trilhas sonoras de vídeos para MP3 de alta fidelidade (192 kbps) no navegador. 100% gratuito e privado.',
-    heroSubtitle: 'Converta formatos de som e extraia faixas musicais de vídeos sem enviar arquivos para a internet.',
-    dropzoneTitle: 'Arraste seu arquivo de áudio ou vídeo aqui',
-    keywords: ['conversor de audio', 'conversor de audio online', 'converter audio para mp3', 'audio converter'],
-    explainerTitle: 'Como funciona o conversor de áudio universal?',
+    metaTitle: 'Conversor de Áudio Online Grátis — Transcodificação e MP3',
+    metaDescription: 'Converta arquivos de áudio (WAV, FLAC, M4A, OGG, AAC) e extraia som de vídeos para MP3 a 192 kbps. 100% no navegador, sem upload e sem cadastro.',
+    heroSubtitle: 'Transforme gravações, faixas musicais e trilhas sonoras de vídeos no padrão universal MP3 com alta nitidez estéreo. Processamento 100% no seu navegador.',
+    dropzoneTitle: 'Arraste qualquer arquivo de áudio ou vídeo para converter para MP3',
+    keywords: ['conversor de audio', 'conversor de áudio', 'conversor de audio online', 'converter audio para mp3', 'conversor de áudio gratuito'],
+    explainerTitle: 'Como funciona o conversor de áudio universal no navegador?',
     explainerParagraphs: [
-      'Nossa ferramenta permite converter faixas de áudio e arquivos de vídeo em arquivos MP3 estéreo leves com codificação LAME constante de 192 kbps, garantindo clareza e compatibilidade total com qualquer player de música.'
+      'O nosso conversor de áudio utiliza a biblioteca FFmpeg compilada para WebAssembly para processar arquivos de som e vídeo diretamente na memória RAM do seu celular ou computador. Isso significa que você pode converter formatos pesados ou incompatíveis (como WAV sem perdas, FLAC, M4A do iPhone, OGG ou AAC) para o contêiner universal MP3 a 192 kbps sem esperar filas de upload.',
+      'Ao contrário de conversores tradicionais que enviam suas gravações para servidores remotos, nenhuma informação sai do seu dispositivo, garantindo velocidade máxima e privacidade total em conformidade com a LGPD.'
     ],
-    sourceDetailsTitle: 'Arquivo Original',
-    sourceDetails: ['Qualquer formato de vídeo ou áudio', 'Tamanho volumoso'],
-    targetDetailsTitle: 'Arquivo MP3 Estéreo',
-    targetDetails: ['Qualidade estéreo 192 kbps', 'Tamanho super reduzido'],
+    sourceDetailsTitle: 'Formatos de Entrada Suportados',
+    sourceDetails: [
+      'Áudio: WAV, FLAC, M4A, OGG, AAC, WMA',
+      'Vídeo: MP4, MOV, MKV, AVI, WebM, FLV',
+      'Gravações de voz e notas de celular'
+    ],
+    targetDetailsTitle: 'Saída em MP3 Universal (192 kbps)',
+    targetDetails: [
+      'Compatível com 100% dos celulares, TVs e rádios',
+      'Codificação LAME estéreo de alta fidelidade',
+      'Redução drástica do tamanho com áudio nítido'
+    ],
     faqs: [
-      { question: 'Posso converter gravações de voz?', answer: 'Sim! Aceitamos arquivos de gravação de voz (M4A, OGG, WAV, AAC) e convertemos para MP3 padrão.' }
+      {
+        question: 'Quais tipos de arquivo de áudio posso converter?',
+        answer: 'Você pode converter arquivos WAV, FLAC, M4A, AAC, OGG, WMA, AIFF e também extrair faixas de áudio de vídeos em MP4, MOV, MKV, AVI e WebM.'
+      },
+      {
+        question: 'O conversor de áudio é realmente gratuito e sem limites?',
+        answer: 'Sim. O ConversordeVideo.com é 100% gratuito, sem limite diário de conversões, sem necessidade de cadastro e sem marcas d’água.'
+      },
+      {
+        question: 'Minhas gravações de voz ou músicas são enviadas para algum servidor?',
+        answer: 'Não. O processamento é executado inteiramente na memória RAM do seu próprio navegador através de WebAssembly. Seus arquivos nunca são transmitidos pela internet.'
+      },
+      {
+        question: 'Como converter áudio no celular Android ou iPhone?',
+        answer: 'Basta abrir o site no navegador do seu smartphone (Chrome no Android ou Safari no iOS), selecionar o arquivo de áudio ou vídeo e clicar em converter para baixar o MP3.'
+      }
     ]
   },
 
@@ -1027,6 +1051,508 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
       {
         question: 'O compressor adiciona marca d’água no vídeo?',
         answer: 'Nunca. Seus vídeos são exportados totalmente limpos, exatamente como você os gravou.'
+      }
+    ]
+  },
+
+  // Audio Converter Cluster (High Search Volume Keywords)
+  'conversor-de-audio-para-mp3': {
+    slug: 'conversor-de-audio-para-mp3',
+    targetFormat: 'mp3',
+    initialPreset: 'audio_mp3',
+    badge: '🎵 Alta Fidelidade Estéreo • 192 kbps LAME',
+    h1Prefix: 'Conversor de Áudio para',
+    h1Highlight: 'MP3 Online',
+    h1Suffix: 'Grátis',
+    metaTitle: 'Conversor de Áudio para MP3 Online Grátis — Rápido e Seguro',
+    metaDescription: 'Converta qualquer arquivo de som para MP3 com codificação LAME 192 kbps estéreo. 100% no navegador, sem upload para a nuvem e totalmente gratuito.',
+    heroSubtitle: 'Transforme gravações de voz, músicas e áudios em MP3 compatível com todos os players. Sem instalar programas e sem fila de espera.',
+    dropzoneTitle: 'Arraste seu arquivo de áudio aqui para converter para MP3',
+    keywords: ['conversor de audio para mp3', 'conversor de áudio para mp3', 'converter audio para mp3', 'transformar audio em mp3'],
+    explainerTitle: 'Por que converter arquivos de áudio para o padrão MP3?',
+    explainerParagraphs: [
+      'O MP3 (MPEG-1 Audio Layer III) continua sendo o formato de áudio mais universal e amplamente reconhecido no mundo. Enquanto formatos como WAV e FLAC ocupam dezenas de megabytes e arquivos M4A da Apple frequentemente apresentam falhas em aparelhos antigos, o MP3 garante reprodução instantânea em qualquer som de carro, caixa bluetooth, computador ou celular.',
+      'Nosso conversor utiliza a consagrada biblioteca LAME MP3 configurada a uma taxa constante de 192 kbps estéreo, oferecendo o equilíbrio ideal entre preservação acústica cristalina e economia de espaço de armazenamento.'
+    ],
+    sourceDetailsTitle: 'Formatos de Áudio Variados',
+    sourceDetails: [
+      'Arquivos WAV pesados ou M4A incompatíveis',
+      'Falhas de reprodução em aparelhos de som legados',
+      'Dificuldade para anexar em e-mails e mensagens'
+    ],
+    targetDetailsTitle: 'Padrão MP3 Estéreo (192 kbps)',
+    targetDetails: [
+      '100% universal em qualquer reprodutor ou TV',
+      'Tamanho compacto com fidelidade acústica',
+      'Fácil de compartilhar e arquivar sem perdas visíveis'
+    ],
+    faqs: [
+      {
+        question: 'Qual a taxa de bits utilizada na conversão para MP3?',
+        answer: 'Exportamos com taxa de bits constante (CBR) de 192 kbps estéreo a 44.1/48 kHz, o que garante excelente nitidez para músicas, podcasts e locuções.'
+      },
+      {
+        question: 'Posso converter áudio gravado no WhatsApp ou no gravador do iPhone?',
+        answer: 'Sim! Nosso conversor decodifica áudios em formato Opus/OGG do WhatsApp e gravações M4A/AAC do iPhone, transformando-os em arquivos MP3 universais.'
+      },
+      {
+        question: 'A conversão de áudio para MP3 é ilimitada?',
+        answer: 'Sim. Como todo o cálculo é realizado localmente no seu computador ou celular via WebAssembly, não cobramos assinaturas nem impomos limites de uso.'
+      },
+      {
+        question: 'Preciso instalar codecs ou aplicativos extras?',
+        answer: 'Não é necessário instalar nada. Todo o mecanismo de áudio roda de forma nativa e segura dentro do seu navegador web.'
+      }
+    ]
+  },
+
+  'baixar-conversor-de-audio-mp3-gratuito': {
+    slug: 'baixar-conversor-de-audio-mp3-gratuito',
+    targetFormat: 'mp3',
+    initialPreset: 'audio_mp3',
+    badge: '🏆 Sem Download de Programas • 100% Web Seguro',
+    h1Prefix: 'Conversor de Áudio para',
+    h1Highlight: 'MP3 Gratuito',
+    h1Suffix: 'Online',
+    metaTitle: 'Conversor de Áudio para MP3 Gratuito — Sem Baixar Programas',
+    metaDescription: 'Converta áudios e vídeos para MP3 gratuitamente no navegador sem baixar programas pesados ou arriscados. Rápido, seguro, sem cadastro e 100% privado.',
+    heroSubtitle: 'Dispense a instalação de softwares pesados: converta qualquer áudio para MP3 direto no navegador com a mesma velocidade de um programa instalado.',
+    dropzoneTitle: 'Arraste seu arquivo para converter para MP3 gratuitamente',
+    keywords: ['baixar conversor de áudio para mp3 gratuito', 'baixar conversor de audio para mp3 gratis', 'conversor de audio gratuito', 'programa converter audio mp3 gratis'],
+    explainerTitle: 'Por que você não precisa baixar um programa para converter áudio?',
+    explainerParagraphs: [
+      'Tradicionalmente, para converter músicas ou gravações de som era necessário baixar instaladores executáveis (.exe ou .dmg), que frequentemente vinham acompanhados de barras de ferramentas indesejadas, anúncios invasivos ou limitações de versão de teste.',
+      'Com a evolução do WebAssembly, o ConversordeVideo.com traz o motor profissional do FFmpeg para rodar diretamente dentro do seu navegador. Você obtém a mesma potência e velocidade de um software profissional de desktop sem instalar absolutamente nada e sem expor seu computador a vírus ou malwares.'
+    ],
+    sourceDetailsTitle: 'Programas Antigos para Baixar',
+    sourceDetails: [
+      'Risco de vírus, adwares e instaladores suspeitos',
+      'Ocupam espaço no disco e exigem atualizações',
+      'Frequentemente cobram taxas após período de teste'
+    ],
+    targetDetailsTitle: 'ConversordeVideo.com no Navegador',
+    targetDetails: [
+      'Zero instalação — abra a página e use na hora',
+      '100% gratuito para sempre sem pegadinhas',
+      'Processamento local seguro e sem rastreamento'
+    ],
+    faqs: [
+      {
+        question: 'Preciso baixar algum aplicativo para usar este conversor de áudio?',
+        answer: 'Não! Todo o processo de conversão para MP3 ocorre dentro do seu navegador web sem necessidade de baixar ou instalar qualquer arquivo executável.'
+      },
+      {
+        question: 'O conversor online é tão rápido quanto um programa instalado no PC?',
+        answer: 'Sim. Nosso motor utiliza WebAssembly com aceleração por múltiplos núcleos do processador, entregando velocidade similar a programas nativos.'
+      },
+      {
+        question: 'Existe risco de segurança ao usar o conversor no navegador?',
+        answer: 'Ao contrário de programas baixados da web, nosso conversor roda no ambiente isolado (sandbox) do seu navegador e não possui acesso aos seus arquivos do sistema.'
+      },
+      {
+        question: 'Posso converter arquivos grandes sem limite de tamanho?',
+        answer: 'Sim. Como o processamento usa a memória RAM do seu próprio dispositivo, você pode converter arquivos de áudio e gravações extensas sem restrições de servidor.'
+      }
+    ]
+  },
+
+  'conversor-de-audio-mp3': {
+    slug: 'conversor-de-audio-mp3',
+    targetFormat: 'mp3',
+    initialPreset: 'audio_mp3',
+    badge: '⚡ Conversão Rápida para Formato MP3',
+    h1Prefix: 'Conversor de',
+    h1Highlight: 'Áudio MP3',
+    h1Suffix: 'Online Grátis',
+    metaTitle: 'Conversor de Áudio MP3 Online Grátis — Som Cristalino',
+    metaDescription: 'Transforme qualquer arquivo de áudio ou vídeo em MP3 leve com qualidade 192 kbps. 100% no navegador, sem upload para servidores e sem registros.',
+    heroSubtitle: 'A ferramenta prática para transformar faixas sonoras e vídeos no padrão MP3 com alta fidelidade estéreo e sem burocracia.',
+    dropzoneTitle: 'Arraste seu arquivo para gerar o áudio em MP3',
+    keywords: ['conversor de audio mp3', 'conversor de áudio mp3', 'conversor audio mp3', 'converter em mp3 online'],
+    explainerTitle: 'Como o conversor de áudio MP3 preserva a clareza sonora?',
+    explainerParagraphs: [
+      'Ao converter um arquivo de áudio para MP3, o algoritmo de compressão precisa balancear a redução de tamanho com a fidelidade das frequências audíveis humanas. Nossa ferramenta utiliza a biblioteca LAME com parâmetros ajustados para preservar frequências de até 20 kHz em estéreo real.',
+      'O resultado é um arquivo leve, fácil de enviar por mensageiros ou anexar em apresentações, com clareza impecável tanto para voz quanto para instrumentos musicais.'
+    ],
+    sourceDetailsTitle: 'Arquivos Pesados ou Incompatíveis',
+    sourceDetails: [
+      'Formatos WAV, AIFF ou FLAC volumosos',
+      'Arquivos com codecs que travam players móveis',
+      'Consumo excessivo de espaço de armazenamento'
+    ],
+    targetDetailsTitle: 'Áudio MP3 Calibrado',
+    targetDetails: [
+      'Bitrate constante de 192 kbps estéreo',
+      'Compatibilidade universal em 100% dos aparelhos',
+      'Tamanho até 90% menor preservando a nitidez'
+    ],
+    faqs: [
+      {
+        question: 'Como converter áudio para MP3 mantendo o volume original?',
+        answer: 'Nosso conversor mantém o nível de ganho e canais estéreo da faixa de origem sem aplicar compressão dinâmica destrutiva.'
+      },
+      {
+        question: 'É possível converter notas de voz do celular para MP3?',
+        answer: 'Sim. Aceitamos gravações de voz de celulares Android e iPhones (m4a, aac, amr, ogg) e convertemos diretamente em MP3.'
+      },
+      {
+        question: 'Quanto tempo demora para converter uma música para MP3?',
+        answer: 'A maioria das músicas e gravações de áudio de 3 a 5 minutos é convertida em menos de 2 segundos diretamente no seu navegador.'
+      },
+      {
+        question: 'Preciso criar conta ou informar e-mail para baixar o MP3?',
+        answer: 'Não. O download do arquivo MP3 convertido é liberado imediatamente sem nenhum cadastro ou exigência de dados pessoais.'
+      }
+    ]
+  },
+
+  'conversor-de-audio-online': {
+    slug: 'conversor-de-audio-online',
+    targetFormat: 'mp3',
+    initialPreset: 'audio_mp3',
+    badge: '🌐 100% Online • Sem Upload • Privado',
+    h1Prefix: 'Conversor de',
+    h1Highlight: 'Áudio Online',
+    h1Suffix: 'no Navegador',
+    metaTitle: 'Conversor de Áudio Online — Sem Enviar Arquivos para a Web',
+    metaDescription: 'Converta arquivos de áudio online com total privacidade: todo o processo roda no seu navegador sem upload para servidores. 100% gratuito e seguro.',
+    heroSubtitle: 'Converta músicas, podcasts e gravações no navegador sem esperar uploads demorados e com garantia de privacidade absoluta sob a LGPD.',
+    dropzoneTitle: 'Arraste seu arquivo para converter online no navegador',
+    keywords: ['conversor de audio online', 'conversor de áudio online', 'converter audio online gratis', 'conversor de audio web'],
+    explainerTitle: 'Qual a diferença entre nosso conversor online e os conversores comuns?',
+    explainerParagraphs: [
+      'A maioria dos conversores online da internet exige que você envie (faça upload) do seu arquivo para servidores remotos na nuvem. Em conexões lentas, enviar um arquivo de 100 MB pode demorar vários minutos, além de expor dados confidenciais a servidores de terceiros.',
+      'O ConversordeVideo.com funciona de maneira totalmente diferente: todo o código de conversão roda localmente no seu navegador através de WebAssembly. O arquivo não é transmitido pela internet, o que proporciona conversão instantânea mesmo sem uma conexão de alta velocidade e protege 100% da sua privacidade.'
+    ],
+    sourceDetailsTitle: 'Conversores Online Tradicionais',
+    sourceDetails: [
+      'Upload demorado dependente da sua internet',
+      'Arquivos armazenados em servidores externos',
+      'Filas de espera e limites diários de conversão'
+    ],
+    targetDetailsTitle: 'Nosso Conversor Local Online',
+    targetDetails: [
+      'Zero tempo de upload — início imediato',
+      'Arquivos 100% seguros na memória do seu aparelho',
+      'Sem limites de uso diário e sem filas'
+    ],
+    faqs: [
+      {
+        question: 'Como este conversor online funciona sem enviar o arquivo para a internet?',
+        answer: 'Utilizamos a tecnologia WebAssembly, que permite rodar código nativo de alto desempenho (FFmpeg) diretamente na memória do seu navegador web.'
+      },
+      {
+        question: 'O conversor online funciona em computadores corporativos ou Chromebooks?',
+        answer: 'Sim! Por funcionar diretamente no navegador (Chrome, Edge, Firefox, Safari), funciona em qualquer sistema operacional sem necessitar de permissões de administrador.'
+      },
+      {
+        question: 'Preciso de internet rápida para converter áudios grandes?',
+        answer: 'Não! Como não há upload nem download de servidores remotos durante o processamento, a conversão ocorre na velocidade do seu processador local.'
+      },
+      {
+        question: 'O conversor funciona no modo anônimo ou sem conexão?',
+        answer: 'Sim. Uma vez carregada a página, a conversão ocorre localmente no seu dispositivo mesmo em abas anônimas.'
+      }
+    ]
+  },
+
+  'conversor-de-audio-do-youtube': {
+    slug: 'conversor-de-audio-do-youtube',
+    targetFormat: 'mp3',
+    initialPreset: 'audio_mp3',
+    badge: '📹 Extração de Áudio de Vídeos Baixados do YouTube',
+    h1Prefix: 'Conversor de Áudio do',
+    h1Highlight: 'YouTube para MP3',
+    h1Suffix: 'Online',
+    metaTitle: 'Conversor de Áudio do YouTube para MP3 — Formatar Vídeos',
+    metaDescription: 'Extraia o áudio de vídeos baixados do YouTube e YouTube Shorts em formato MP3 de 192 kbps. 100% no navegador, seguro e sem upload de arquivos.',
+    heroSubtitle: 'Converta gravações e clipes salvos do YouTube em arquivos de áudio MP3 leves e nítidos para ouvir no carro, fone de ouvido ou celular.',
+    dropzoneTitle: 'Arraste o arquivo de vídeo do YouTube para extrair o áudio MP3',
+    keywords: ['conversor de audio youtube', 'conversor de audio do youtube', 'conversor de áudio do youtube', 'converter video do youtube em mp3'],
+    explainerTitle: 'Como converter o áudio de vídeos do YouTube salvos no seu computador?',
+    explainerParagraphs: [
+      'Se você possui gravações, palestras, podcasts ou clipes de vídeo salvos do YouTube no seu computador ou celular (em contêineres MP4 ou WebM), nossa ferramenta permite descartar a pesada trilha visual e extrair apenas o som em formato MP3 estéreo de alta fidelidade (192 kbps).',
+      'Importante: este conversor processa arquivos de mídia já armazenados localmente no seu dispositivo. Todo o processamento é feito no seu próprio navegador via WebAssembly, sem enviar nenhum arquivo para servidores externos e sem armazenar suas mídias na nuvem.'
+    ],
+    sourceDetailsTitle: 'Vídeo Baixado do YouTube (MP4/WebM)',
+    sourceDetails: [
+      'Arquivo de vídeo volumoso (> 50 MB)',
+      'Consome muita bateria para reproduzir com tela desligada',
+      'Desnecessário quando você só quer ouvir o conteúdo'
+    ],
+    targetDetailsTitle: 'Áudio MP3 Extraído (192 kbps)',
+    targetDetails: [
+      'Redução de até 95% do tamanho em disco',
+      'Reprodução perfeita com tela desligada no celular',
+      'Compatível com qualquer tocador de música ou pendrive de carro'
+    ],
+    faqs: [
+      {
+        question: 'Esta ferramenta baixa vídeos diretamente de links ou URLs do YouTube?',
+        answer: 'Não. Nossa ferramenta é um conversor de arquivos locais. Você deve selecionar um arquivo de vídeo (MP4, WebM, etc.) já salvo no seu aparelho para que extraiamos a trilha de som em MP3.'
+      },
+      {
+        question: 'Qual é a qualidade do áudio extraído do vídeo?',
+        answer: 'A trilha sonora é codificada em MP3 estéreo a 192 kbps usando a biblioteca LAME, preservando a máxima clareza de voz e instrumentos.'
+      },
+      {
+        question: 'Posso converter vídeos do YouTube Shorts para áudio MP3?',
+        answer: 'Sim! Aceitamos arquivos de vídeo tanto no formato horizontal 16:9 quanto no formato vertical 9:16 do Shorts.'
+      },
+      {
+        question: 'O arquivo de vídeo original é alterado durante a conversão?',
+        answer: 'Não. O arquivo original permanece intocado no seu aparelho e um novo arquivo de áudio .mp3 separado é gerado para download.'
+      }
+    ]
+  },
+
+  // Video to Audio Cluster (High Volume Brazil Keywords)
+  'converter-video-em-audio': {
+    slug: 'converter-video-em-audio',
+    targetFormat: 'mp3',
+    initialPreset: 'audio_mp3',
+    badge: '🎵 Conversão Universal de Vídeo em Áudio',
+    h1Prefix: 'Converter Vídeo em',
+    h1Highlight: 'Áudio Online',
+    h1Suffix: 'Grátis',
+    metaTitle: 'Converter Vídeo em Áudio Online Grátis — Rápido e Sem Upload',
+    metaDescription: 'Converta qualquer vídeo (MP4, MOV, MKV, AVI, WebM) em áudio MP3 de alta qualidade diretamente no navegador. 100% gratuito, sem limites e sem cadastro.',
+    heroSubtitle: 'Transforme gravações e clipes de vídeo em faixas de áudio estéreo nítidas e leves em segundos. Processamento 100% no seu navegador.',
+    dropzoneTitle: 'Arraste seu arquivo de vídeo para converter em áudio MP3',
+    keywords: ['converter video em audio', 'converter vídeo em áudio', 'converter video em áudio', 'converter vídeo em áudio online', 'como converter video em audio', 'converter vídeo em áudio mp3'],
+    explainerTitle: 'Como transformar qualquer arquivo de vídeo em uma faixa de áudio leve?',
+    explainerParagraphs: [
+      'Gravações de videoaulas, palestras, podcasts, reuniões e shows frequentemente possuem valor concentrado no conteúdo sonoro. Manter esses arquivos em contêineres de vídeo consome centenas de megabytes desnecessários e impede a reprodução em segundo plano no celular.',
+      'Nossa ferramenta descarta os quadros visuais e codifica exclusivamente a faixa de áudio no padrão MP3 de 192 kbps estéreo com a biblioteca LAME. O arquivo resultante é até 95% mais leve, mantendo fidelidade cristalina para vozes e instrumentos.'
+    ],
+    sourceDetailsTitle: 'Arquivo de Vídeo Original',
+    sourceDetails: [
+      'Arquivo pesado ocupando muito armazenamento',
+      'Consome bateria excessiva ao rodar com tela ligada',
+      'Incompatível com players dedicados de música e fones'
+    ],
+    targetDetailsTitle: 'Faixa de Áudio MP3 Extraída',
+    targetDetails: [
+      'Redução de até 95% do tamanho em disco',
+      'Reprodução perfeita em segundo plano em qualquer celular',
+      'Compatibilidade universal com som automotivo e caixas de som'
+    ],
+    faqs: [
+      {
+        question: 'Como converter vídeo em áudio pelo navegador?',
+        answer: 'Basta arrastar seu arquivo de vídeo para a caixa de upload, selecionar o formato de áudio MP3 e clicar em converter. O processamento é executado localmente na velocidade do seu dispositivo.'
+      },
+      {
+        question: 'Qual é o melhor formato de áudio para extrair de vídeos?',
+        answer: 'O formato MP3 com taxa constante de 192 kbps é a escolha universal ideal, combinando alta nitidez acústica e compatibilidade com 100% dos aparelhos.'
+      },
+      {
+        question: 'Posso converter vídeos do celular ou do WhatsApp em áudio?',
+        answer: 'Sim! A ferramenta aceita vídeos enviados por WhatsApp, gravações de câmera do iPhone/Android e arquivos baixados da internet.'
+      },
+      {
+        question: 'Meus arquivos de vídeo são enviados para algum servidor?',
+        answer: 'Não. Todo o processo de conversão ocorre 100% no seu próprio navegador via WebAssembly, garantindo total privacidade e segurança.'
+      }
+    ]
+  },
+
+  'converter-video-em-audio-gratis': {
+    slug: 'converter-video-em-audio-gratis',
+    targetFormat: 'mp3',
+    initialPreset: 'audio_mp3',
+    badge: '⚡ 100% Grátis • Sem Limites • Sem Cadastro',
+    h1Prefix: 'Converter Vídeo em Áudio',
+    h1Highlight: 'Grátis Online',
+    h1Suffix: '',
+    metaTitle: 'Converter Vídeo em Áudio Grátis Online — Sem Limites e Sem Cadastro',
+    metaDescription: 'Converta vídeos em áudio gratuitamente sem pagar assinaturas, sem criar contas e sem marcas d’água. Conheça a ferramenta mais rápida e privada da internet.',
+    heroSubtitle: 'Extraia o áudio dos seus vídeos sem custos: sem planos pagos, sem filas de espera e com processamento 100% local no seu aparelho.',
+    dropzoneTitle: 'Arraste seu vídeo para converter em áudio gratuitamente',
+    keywords: ['converter vídeo em áudio grátis', 'converter video em audio gratis', 'converter vídeo em áudio gratuito', 'conversor de video em audio gratis'],
+    explainerTitle: 'Por que o nosso conversor de vídeo em áudio gratuito é ilimitado?',
+    explainerParagraphs: [
+      'A maioria dos conversores online impõe limites diários de uso, filas de espera lentas e cobrança de assinaturas caras porque dependem de servidores na nuvem caros para processar seus arquivos.',
+      'O ConversordeVideo.com funciona de maneira diferente: utilizando o poder de processamento do seu próprio navegador via WebAssembly, eliminamos intermediários na nuvem e oferecemos conversões ilimitadas, gratuitas e instantâneas para sempre.'
+    ],
+    sourceDetailsTitle: 'Conversores Pagos Tradicionais',
+    sourceDetails: [
+      'Filas de espera lentas e tempo limite por arquivo',
+      'Cobrança de planos mensais e cadastro obrigatório',
+      'Upload obrigatório dos seus dados para servidores externos'
+    ],
+    targetDetailsTitle: 'ConversordeVideo.com',
+    targetDetails: [
+      '100% Gratuito e sem qualquer limite diário',
+      'Zero cadastro, zero e-mails coletados',
+      'Processamento instantâneo na memória do seu dispositivo'
+    ],
+    faqs: [
+      {
+        question: 'Existe algum limite de conversões de vídeo para áudio por dia?',
+        answer: 'Não. Você pode converter quantos vídeos desejar, sem limite de quantidade ou de duração.'
+      },
+      {
+        question: 'Preciso fornecer dados de cartão de crédito ou criar conta?',
+        answer: 'Nunca. O serviço é totalmente livre, sem cadastro e sem solicitação de dados pessoais.'
+      },
+      {
+        question: 'O áudio convertido tem alguma marca d’água sonora?',
+        answer: 'Não. O áudio gerado é 100% limpo, exatamente como na gravação original.'
+      },
+      {
+        question: 'Funciona em computadores e celulares?',
+        answer: 'Sim, você pode converter vídeos em áudio tanto no computador (Windows, Mac, Linux) quanto em celulares (Android, iPhone).'
+      }
+    ]
+  },
+
+  'extrair-audio-de-video': {
+    slug: 'extrair-audio-de-video',
+    targetFormat: 'mp3',
+    initialPreset: 'audio_mp3',
+    badge: '🎧 Extração Sonora Direta & Sem Perdas',
+    h1Prefix: 'Extrair Áudio de',
+    h1Highlight: 'Vídeo Online',
+    h1Suffix: 'Grátis',
+    metaTitle: 'Extrair Áudio de Vídeo Online Grátis — Isolar Faixa de Som em MP3',
+    metaDescription: 'Extraia o áudio de qualquer arquivo de vídeo (MP4, MOV, MKV, AVI) em MP3 de 192 kbps diretamente no navegador. Rápido, 100% gratuito e privado.',
+    heroSubtitle: 'Isole a faixa de áudio de vídeos, palestras e gravações em MP3 cristalino sem carregar o peso da imagem. Processamento local e seguro.',
+    dropzoneTitle: 'Arraste seu arquivo de vídeo para extrair o áudio',
+    keywords: ['extrair audio de video', 'extrair áudio de vídeo', 'como extrair audio de video', 'extrair áudio de vídeo grátis', 'extrair audio de vídeo'],
+    explainerTitle: 'Como isolar e extrair o som de qualquer arquivo de vídeo?',
+    explainerParagraphs: [
+      'Ao gravar uma apresentação, aula ou evento, a câmera registra imagens e sons em um mesmo contêiner multimídia. Quando você precisa apenas do áudio para criar um episódio de podcast, estudar ou ouvir música, carregar o vídeo completo é ineficiente.',
+      'A extração de áudio isola a trilha sonora original e a converte para o formato MP3 estéreo de 192 kbps. Essa operação elimina megabytes desnecessários e gera um arquivo leve e pronto para reprodução em qualquer fone ou reprodutor de áudio.'
+    ],
+    sourceDetailsTitle: 'Vídeo Original com Faixa Visual',
+    sourceDetails: [
+      'Gasto excessivo de dados e armazenamento',
+      'Exige tela ligada para reprodução na maioria dos apps',
+      'Difícil de transferir rapidamente via mensageiros'
+    ],
+    targetDetailsTitle: 'Áudio Isolado em MP3',
+    targetDetails: [
+      'Arquivo compacto com até 95% menos tamanho',
+      'Áudio estéreo de alta fidelidade (192 kbps)',
+      'Escuta contínua com tela apagada e economia de bateria'
+    ],
+    faqs: [
+      {
+        question: 'Como extrair o áudio de um vídeo sem perder qualidade?',
+        answer: 'Nossa ferramenta extrai a faixa de som e a codifica com o codec LAME MP3 em 192 kbps de alta taxa de bits, preservando a nitidez de agudos e graves da gravação.'
+      },
+      {
+        question: 'Quais formatos de vídeo são aceitos para extrair áudio?',
+        answer: 'Você pode extrair som de vídeos nos formatos MP4, MOV, MKV, AVI, WebM, WMV, FLV, 3GP, M2TS, MTS, TS, VOB e muitos outros.'
+      },
+      {
+        question: 'Posso extrair o áudio de arquivos de vídeo grandes?',
+        answer: 'Sim. Como o processamento ocorre na memória RAM do seu aparelho via WebAssembly, não há restrições de upload de servidor.'
+      },
+      {
+        question: 'A ferramenta funciona no celular Android e iPhone?',
+        answer: 'Sim, basta abrir a página no navegador do seu smartphone (Chrome ou Safari) e escolher o vídeo da sua galeria.'
+      }
+    ]
+  },
+
+  'extrair-audio-de-video-online': {
+    slug: 'extrair-audio-de-video-online',
+    targetFormat: 'mp3',
+    initialPreset: 'audio_mp3',
+    badge: '🌐 Direto no Navegador • Sem Instalação',
+    h1Prefix: 'Extrair Áudio de Vídeo',
+    h1Highlight: 'Online no Navegador',
+    h1Suffix: 'Grátis',
+    metaTitle: 'Extrair Áudio de Vídeo Online no Navegador — Sem Instalar Programas',
+    metaDescription: 'Extraia áudio de vídeos online sem baixar softwares pesados. Funciona direto no Chrome, Safari e Edge com processamento local seguro via WebAssembly.',
+    heroSubtitle: 'Esqueça instaladores e programas pesados: extraia o áudio dos seus vídeos diretamente na janela do seu navegador com velocidade instantânea.',
+    dropzoneTitle: 'Arraste o vídeo para extrair o áudio online no navegador',
+    keywords: ['extrair audio de video online', 'extrair áudio de vídeo online', 'extrair áudio de vídeo online grátis', 'extrair audio de video web'],
+    explainerTitle: 'Por que extrair áudio online no navegador é mais prático e seguro?',
+    explainerParagraphs: [
+      'Tradicionalmente, extrair áudio de vídeos exigia instalar softwares pesados de edição ou arriscar o envio de arquivos pessoais para serviços desconhecidos na nuvem.',
+      'Com a tecnologia WebAssembly do ConversordeVideo.com, toda a computação é feita na hora pelo seu próprio navegador. Você economiza tempo, não ocupa espaço no disco com programas extras e mantém seus arquivos 100% confidenciais.'
+    ],
+    sourceDetailsTitle: 'Softwares Tradicionais Instalados',
+    sourceDetails: [
+      'Instalação pesada consumindo espaço no disco',
+      'Risco de malwares e atualizações invasivas',
+      'Configurações complexas e interfaces confusas'
+    ],
+    targetDetailsTitle: 'Extração Online no Navegador',
+    targetDetails: [
+      'Acesso instantâneo sem instalação ou extensões',
+      'Processamento 100% privado na sua máquina',
+      'Interface limpa, rápida e responsiva'
+    ],
+    faqs: [
+      {
+        question: 'Preciso instalar alguma extensão ou plugin no navegador?',
+        answer: 'Não. Nossa ferramenta funciona nativamente em qualquer navegador moderno (Chrome, Safari, Edge, Firefox, Opera) sem plugins.'
+      },
+      {
+        question: 'A extração consome meus dados de internet móvel?',
+        answer: 'Apenas para carregar o código da página uma única vez. Como o vídeo não é enviado para a nuvem, seu plano de dados não é consumido no envio.'
+      },
+      {
+        question: 'Funciona mesmo com conexão lenta ou instável?',
+        answer: 'Sim. Uma vez carregada a página, a extração de áudio é realizada pelo processador do seu aparelho e não depende de internet rápida.'
+      },
+      {
+        question: 'Quanto tempo leva para extrair o áudio de um vídeo?',
+        answer: 'Geralmente poucos segundos, dependendo apenas da duração do vídeo e da velocidade do processador do seu dispositivo.'
+      }
+    ]
+  },
+
+  'extrair-audio-de-video-do-youtube': {
+    slug: 'extrair-audio-de-video-do-youtube',
+    targetFormat: 'mp3',
+    initialPreset: 'audio_mp3',
+    badge: '🔴 Para Gravações e Clipes Salvos do YouTube',
+    h1Prefix: 'Extrair Áudio de Vídeo do',
+    h1Highlight: 'YouTube Online',
+    h1Suffix: 'em MP3',
+    metaTitle: 'Extrair Áudio de Vídeo do YouTube Online — Salvar Som em MP3',
+    metaDescription: 'Extraia o áudio de vídeos e transmissões baixadas do YouTube em formato MP3 de 192 kbps. 100% privado no navegador e sem upload de arquivos.',
+    heroSubtitle: 'Converta gravações e clipes do YouTube salvos no seu aparelho em arquivos de som MP3 leves para escutar no celular ou no carro.',
+    dropzoneTitle: 'Arraste o vídeo salvo do YouTube para extrair o áudio MP3',
+    keywords: ['extrair audio de video do youtube', 'extrair audio de video youtube', 'extrair áudio de vídeo youtube', 'extrair áudio de vídeo do youtube', 'como extrair audio de video do youtube'],
+    explainerTitle: 'Como extrair a faixa sonora de gravações do YouTube armazenadas no seu computador?',
+    explainerParagraphs: [
+      'Muitos usuários mantêm clipes, entrevistas, videoaulas e apresentações baixadas do YouTube em seus aparelhos nos contêineres MP4 ou WebM. Para transformar esses vídeos em arquivos de áudio portáteis, nossa ferramenta isola a faixa sonora em MP3 de 192 kbps estéreo.',
+      'Atenção: este utilitário opera exclusivamente sobre arquivos de mídia já presentes no seu armazenamento local. Nenhum dado é baixado de servidores externos e seus arquivos não são enviados para a nuvem.'
+    ],
+    sourceDetailsTitle: 'Vídeo Baixado do YouTube',
+    sourceDetails: [
+      'Tamanho excessivo ocupando espaço na memória',
+      'Reprodução exige player de vídeo compatível',
+      'Desconfortável para escutar enquanto faz outras tarefas'
+    ],
+    targetDetailsTitle: 'Áudio MP3 Extraído',
+    targetDetails: [
+      'Redução de até 95% do peso do arquivo',
+      'Toca em qualquer celular com tela bloqueada',
+      'Ideal para pendrives, som de carro e fones bluetooth'
+    ],
+    faqs: [
+      {
+        question: 'Esta ferramenta extrai áudio diretamente de um link ou URL do YouTube?',
+        answer: 'Não. Nossa ferramenta trabalha com arquivos locais já salvos no seu aparelho (MP4, WebM, etc.), extraindo a trilha sonora sem conexão remota.'
+      },
+      {
+        question: 'Qual é a taxa de bits do áudio extraído de vídeos do YouTube?',
+        answer: 'Codificamos a trilha em MP3 estéreo a 192 kbps com a biblioteca LAME, garantindo excelente nitidez sonora.'
+      },
+      {
+        question: 'Posso extrair o áudio de vídeos verticais do YouTube Shorts?',
+        answer: 'Sim! Todos os vídeos salvos do YouTube Shorts são aceitos normalmente.'
+      },
+      {
+        question: 'O arquivo de vídeo original do YouTube é danificado?',
+        answer: 'Não. O arquivo original permanece inalterado no seu dispositivo e um novo arquivo MP3 é gerado para download.'
       }
     ]
   }
