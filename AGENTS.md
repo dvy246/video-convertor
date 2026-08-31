@@ -19,7 +19,7 @@ Welcome! This document provides complete, up-to-date instructions, conventions, 
   7. **Norwegian (`no`)**: `/no/`
   8. **Turkish (`tr`)**: `/tr/`
   9. **Polish (`pl`)**: `/pl/`
-- **Total Static Pages:** 317 canonical MPA routes with complete bidirectional `hreflang` alternate tags and XML sitemaps.
+- **Total Static Pages:** 497 canonical MPA routes (51 tool routes + home + legal pages across 9 locales) with complete bidirectional `hreflang` alternate tags and XML sitemaps.
 - **Live Production URL:** [https://conversordevideo.pages.dev](https://conversordevideo.pages.dev) (deployed via Cloudflare Pages).
 - **GitHub Repository:** `https://github.com/dvy246/video-convertor.git`
 - **Integration Branch:** `feat/multi-lang-i18n`
@@ -57,7 +57,7 @@ Welcome! This document provides complete, up-to-date instructions, conventions, 
 | **Interactivity** | React 19 Islands | `^19.0.0` | Isolated client-side state machine loaded via `client:idle` with localized props. |
 | **Transcoding & Compression** | `@ffmpeg/ffmpeg` + `@ffmpeg/util` | `^0.12.15` | Browser-local WebAssembly video/audio transcode and smart compression engine. |
 | **Icons** | Phosphor Icons + SVG | `^2.1.7` | Accessible, lightweight icon set with `aria-hidden` attributes. |
-| **SEO & Sitemaps** | `@astrojs/sitemap` | `^3.2.1` | Automatic XML sitemap generation for all 317 canonical routes. |
+| **SEO & Sitemaps** | `@astrojs/sitemap` | `^3.2.1` | Automatic XML sitemap generation for all 497 canonical routes. |
 | **Deployment** | Cloudflare Pages + Wrangler | `^4.127.1` | Edge CDN hosting with strict COOP/COEP isolation headers. |
 
 ---
@@ -123,5 +123,6 @@ npm run deploy
 | `compress_extreme` | Compressão Máxima | CRF 30, max 720p, AAC 64k, faststart | 75-80% file size reduction |
 | `whatsapp` | Otimizado p/ WhatsApp | Dynamic bitrate calculation `< 14.5MB`, max 720p, AAC 96k | Direct WhatsApp video shares |
 | `instagram_reels` | Reels / Stories | CRF 22, 9:16 vertical formatting | Instagram, TikTok, Shorts |
+| `resize_1080p` | Redimensionar 1080p | CRF 23, scale 1080p, AAC 128k, faststart | Video resizing & aspect formatting |
 | `audio_mp3` | Extrair Áudio MP3 | LAME MP3 192 kbps constant bitrate | Podcasts, lectures, voice memos |
 | `gif_standard` | GIF Animado | 12 fps, max width 480px, Bayer dither palette | Loop stickers & reactions |

@@ -37,10 +37,10 @@ conversordevideo/
 │   │       ├── FormatGrid.astro      # Grid linking specialized converter & compressor tools
 │   │       └── FAQSection.astro      # Schema-backed native details/summary FAQs
 │   ├── data/
-│   │   ├── formatPages.ts        # Typed store for all 37 programmatic format & compressor pages
+│   │   ├── formatPages.ts        # Typed store for all 51 programmatic format, compressor & resizer pages
 │   │   ├── homeArticles.ts       # In-depth technical guides for all 9 locales
 │   │   ├── legalPages.ts         # Privacy Policy, Terms of Service, and About pages across 9 locales
-│   │   └── localizedFormatPages.ts# Multi-language metadata & comparison guide generator
+│   │   └── localizedFormatPages.ts# Multi-language metadata, grid tools & slug localizations
 │   ├── i18n/                     # Internationalization Module (Astro Recipe Standard)
 │   │   ├── client.ts             # Client-side translation helper (`tClient` & `getClientLang`)
 │   │   ├── languages.ts          # 9 supported languages, ISO codes, and flags
@@ -54,7 +54,7 @@ conversordevideo/
 │   │   ├── ffmpeg/               # FFmpeg WebAssembly Domain Module
 │   │   │   ├── engine.ts             # Singleton engine with memory cleanup & cancel
 │   │   │   ├── metadata.ts           # Client-side metadata & poster frame extractor
-│   │   │   ├── presets.ts            # Plain-language presets & WhatsApp / compression calculator
+│   │   │   ├── presets.ts            # Plain-language presets & WhatsApp / compression / resize calculator
 │   │   │   └── types.ts              # Core TypeScript interfaces
 │   │   └── seo/                  # SEO & Structured Data Module
 │   │       ├── meta.ts               # Site config & canonical URL generator
@@ -62,22 +62,25 @@ conversordevideo/
 │   ├── pages/
 │   │   ├── [lang]/               # Dynamic multi-language sub-directories
 │   │   │   ├── index.astro           # Localized homepages (/en/, /es/, /fr/, /ja/, /zh/, /no/, /tr/, /pl/)
-│   │   │   ├── [...slug].astro       # Localized format & compressor tools
+│   │   │   ├── [...slug].astro       # Localized format, compressor, resizer & audio tools
 │   │   │   ├── privacidade.astro     # Localized Privacy Policy & GDPR (/en/privacidade, /es/privacidade, etc.)
 │   │   │   ├── sobre.astro           # Localized About & Technology (/en/sobre, /es/sobre, etc.)
 │   │   │   └── termos.astro          # Localized Terms of Service (/en/termos, /es/termos, etc.)
 │   │   ├── index.astro               # Unprefixed Portuguese homepage ('Conversor de Vídeo Online')
 │   │   ├── compressor-de-video.astro # Hub ("compressor de video", "compressor de video online")
-│   │   ├── compressor-de-video-mp4.astro
-│   │   ├── compressor-de-video-gratuito.astro
-│   │   ├── comprimir-video.astro
-│   │   ├── conversor-de-video-para-mp4.astro
-│   │   ├── [32 other Portuguese format pages...]
+│   │   ├── compactar-video.astro     # Hub ("compactar video", "compactar video online")
+│   │   ├── converter-video-em-audio.astro # Hub ("converter video em audio")
+│   │   ├── extrair-audio-de-video.astro   # Hub ("extrair audio de video")
+│   │   ├── redimensionar-video.astro      # Hub ("redimensionar video")
+│   │   ├── conversor-de-audio.astro  # Hub ("conversor de audio")
+│   │   ├── video-para-gif.astro      # Hub ("video para gif")
+│   │   ├── [44 other Portuguese tool & format spoke pages...]
 │   │   ├── sobre.astro, privacidade.astro, termos.astro # Portuguese legal/about pages
 │   │   └── 404.astro, 500.astro      # Smart multilingual 404 & error recovery pages
 │   └── styles/
 │       └── global.css            # Tailwind v4 import, custom tokens & dark variant
 ├── ARCHITECTURE.md               # Detailed technical architecture reference
+└── AGENTS.md                     # AI Agent Operating Guide & Multi-Language Invariant
 ├── STRUCTURE.md                  # Complete annotated repository file structure
 ├── astro.config.mjs              # Astro configuration with i18n, Vite plugins & headers
 ├── package.json

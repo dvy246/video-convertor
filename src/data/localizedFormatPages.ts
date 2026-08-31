@@ -2770,6 +2770,196 @@ const RAW_GRID_TOOLS = [
       tr: 'Windows',
       pl: 'Windows'
     }
+  },
+  {
+    id: 'video-to-audio',
+    href: '/converter-video-em-audio',
+    icon: 'M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3',
+    titles: {
+      pt: 'Vídeo para Áudio',
+      en: 'Video to Audio',
+      es: 'Video a Audio',
+      fr: 'Vidéo vers Audio',
+      ja: '動画を音声に変換',
+      zh: '视频转音频',
+      no: 'Video til Lyd',
+      tr: 'Videoyu Sese Dönüştür',
+      pl: 'Wideo na Audio'
+    },
+    descs: {
+      pt: 'Converta qualquer vídeo em áudio MP3 cristalino de 192 kbps sem upload.',
+      en: 'Convert any video into crystal-clear 192 kbps MP3 audio with no uploads.',
+      es: 'Convierte cualquier video a audio MP3 nítido de 192 kbps sin subir archivos.',
+      fr: 'Convertissez toute vidéo en audio MP3 192 kbps haute fidélité sans upload.',
+      ja: '動画からクリアな 192 kbps MP3 音声に高速変換。クラウド送信なし。',
+      zh: '将各类视频转换为 192 kbps 高保真 MP3 音频，零云端上传。',
+      no: 'Konverter enhver video til 192 kbps MP3-lyd uten filopplasting.',
+      tr: 'Herhangi bir videoyu yükleme yapmadan net 192 kbps MP3 sese dönüştürün.',
+      pl: 'Konwertuj dowolne wideo na czysty dźwięk MP3 192 kbps bez wysyłania plików.'
+    },
+    badges: {
+      pt: 'Áudio MP3',
+      en: 'MP3 Audio',
+      es: 'Audio MP3',
+      fr: 'Audio MP3',
+      ja: 'MP3音声',
+      zh: 'MP3音频',
+      no: 'MP3 Lyd',
+      tr: 'MP3 Ses',
+      pl: 'Audio MP3'
+    }
+  },
+  {
+    id: 'extract-audio',
+    href: '/extrair-audio-de-video',
+    icon: 'M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z',
+    titles: {
+      pt: 'Extrair Áudio de Vídeo',
+      en: 'Extract Audio from Video',
+      es: 'Extraer Audio de Video',
+      fr: 'Extraire l’Audio de Vidéo',
+      ja: '動画から音声を抽出',
+      zh: '从视频提取音频',
+      no: 'Trekk ut Lyd fra Video',
+      tr: 'Videodan Ses Çıkar',
+      pl: 'Wyodrębnij Audio z Wideo'
+    },
+    descs: {
+      pt: 'Isole a trilha sonora original de palestras, shows e gravações em MP3.',
+      en: 'Isolate original soundtracks from lectures, concerts, and recordings in MP3.',
+      es: 'Aísla la banda sonora de charlas, eventos y videos en MP3 de alta fidelidad.',
+      fr: 'Isolez la piste sonore de conférences et vidéos dans un fichier MP3 pur.',
+      ja: '講義や演奏、動画から音声トラックだけを直接 MP3 として抽出。',
+      zh: '从讲座、演说与录像中剥离纯净音轨，保存为高质量 MP3 文件。',
+      no: 'Isoler det originale lydsporet fra opptak og forelesninger i MP3.',
+      tr: 'Derslerden ve videolardan orijinal ses parçasını MP3 olarak izole edin.',
+      pl: 'Odizoluj oryginalną ścieżkę dźwiękową z wykładów i filmów do formatu MP3.'
+    },
+    badges: {
+      pt: 'Extração',
+      en: 'Extraction',
+      es: 'Extracción',
+      fr: 'Extraction',
+      ja: '音声抽出',
+      zh: '音轨提取',
+      no: 'Uttrekking',
+      tr: 'Ses Çıkarma',
+      pl: 'Ekstrakcja'
+    }
+  },
+  {
+    id: 'compactar',
+    href: '/compactar-video',
+    icon: 'M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10',
+    titles: {
+      pt: 'Compactar Vídeo',
+      en: 'Compress Video',
+      es: 'Compactar Video',
+      fr: 'Compresser Vidéo',
+      ja: '動画サイズ軽量化',
+      zh: '智能压缩视频',
+      no: 'Krymp Video',
+      tr: 'Video Boyutu Küçült',
+      pl: 'Zmniejsz Wideo'
+    },
+    descs: {
+      pt: 'Reduza o peso dos vídeos em até 80% mantendo qualidade Full HD/HD.',
+      en: 'Reduce video file size by up to 80% while keeping Full HD/HD quality.',
+      es: 'Reduce el peso de videos hasta un 80% manteniendo resolución Full HD/HD.',
+      fr: 'Réduisez le poids des vidéos jusqu’à 80% en conservant la qualité Full HD/HD.',
+      ja: 'Full HD / HD の鮮明さを保ちながら最大 80% の容量をスマート削減。',
+      zh: '在保留全高清画质的同时缩减最高 80% 体积，极速轻量化。',
+      no: 'Reduser videostørrelsen med opptil 80% og behold Full HD/HD-kvalitet.',
+      tr: 'Full HD/HD kalitesini koruyarak video boyutunu %80’e kadar azaltın.',
+      pl: 'Zmniejsz rozmiar wideo nawet o 80%, zachowując jakość Full HD/HD.'
+    },
+    badges: {
+      pt: 'Compactador',
+      en: 'Compact',
+      es: 'Compactar',
+      fr: 'Compact',
+      ja: '容量削減',
+      zh: '极速瘦身',
+      no: 'Kompakt',
+      tr: 'Sıkıştırıcı',
+      pl: 'Kompresja'
+    }
+  },
+  {
+    id: 'video-resizer',
+    href: '/redimensionar-video',
+    icon: 'M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4',
+    titles: {
+      pt: 'Redimensionar Vídeo',
+      en: 'Resize Video',
+      es: 'Redimensionar Video',
+      fr: 'Redimensionner Vidéo',
+      ja: '動画リサイズ',
+      zh: '调整视频尺寸',
+      no: 'Endre Videostørrelse',
+      tr: 'Video Yeniden Boyutlandır',
+      pl: 'Skaluj Wideo'
+    },
+    descs: {
+      pt: 'Ajuste resolução para 1080p, 720p ou proporções 16:9 e 9:16 sem distorcer.',
+      en: 'Adjust resolution to 1080p, 720p, or 16:9 / 9:16 ratios without distortion.',
+      es: 'Ajusta resolución a 1080p, 720p o proporciones 16:9 y 9:16 sin distorsión.',
+      fr: 'Ajustez la résolution en 1080p, 720p ou formats 16:9 et 9:16 sans distorsion.',
+      ja: '1080p、720p や 16:9 / 9:16 縦横比に歪みなく綺麗にリサイズ。',
+      zh: '精确调整分辨率至 1080p、720p 或 16:9 / 9:16 比例且画面不失真。',
+      no: 'Juster oppløsning til 1080p, 720p eller 16:9 og 9:16 uten forvrengning.',
+      tr: 'Bozulma olmadan 1080p, 720p veya 16:9 / 9:16 oranlarına ayarlayın.',
+      pl: 'Dostosuj rozdzielczość do 1080p, 720p lub proporcji 16:9 i 9:16 bez zniekształceń.'
+    },
+    badges: {
+      pt: 'Resolução',
+      en: 'Resolution',
+      es: 'Resolución',
+      fr: 'Résolution',
+      ja: '解像度変更',
+      zh: '画面重塑',
+      no: 'Oppløsning',
+      tr: 'Çözünürlük',
+      pl: 'Rozdzielczość'
+    }
+  },
+  {
+    id: 'gif-converter',
+    href: '/converter-video-para-gif',
+    icon: 'M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z',
+    titles: {
+      pt: 'Vídeo para GIF',
+      en: 'Video to GIF',
+      es: 'Video a GIF',
+      fr: 'Vidéo vers GIF',
+      ja: '動画を GIF に変換',
+      zh: '视频转 GIF 动图',
+      no: 'Video til GIF',
+      tr: 'Videoyu GIF’e Dönüştür',
+      pl: 'Wideo na GIF'
+    },
+    descs: {
+      pt: 'Crie animações em loop fluidas a 12 fps sem marcas d’água.',
+      en: 'Create smooth 12 fps looping GIF animations with no watermarks.',
+      es: 'Crea animaciones en bucle fluidas a 12 fps sin marcas de agua.',
+      fr: 'Créez des animations GIF en boucle fluides à 12 fps sans filigrane.',
+      ja: '透かしなしで 12 fps の滑らかなループ GIF アニメーションを作成。',
+      zh: '制作 12 帧流畅循环且无任何水印的表情动图。',
+      no: 'Lag jevne 12 fps loopende GIF-animasjoner uten vannmerker.',
+      tr: 'Filigransız 12 fps akıcı döngülü GIF animasyonları oluşturun.',
+      pl: 'Twórz płynne animacje GIF w pętli 12 fps bez znaków wodnych.'
+    },
+    badges: {
+      pt: 'GIF Animado',
+      en: 'Animated GIF',
+      es: 'GIF Animado',
+      fr: 'GIF Animé',
+      ja: 'GIFアニメ',
+      zh: '动态GIF',
+      no: 'Animert GIF',
+      tr: 'Hareketli GIF',
+      pl: 'Animowany GIF'
+    }
   }
 ];
 

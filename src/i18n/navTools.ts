@@ -10,73 +10,91 @@ export function getLocalizedPopularTools(lang: SupportedLanguage): NavToolItem[]
   const dict: Record<SupportedLanguage, NavToolItem[]> = {
     pt: [
       { href: '/conversor-de-video-para-mp4', name: 'Conversor para MP4', desc: 'MOV, MKV, AVI, WebM para MP4' },
+      { href: '/converter-video-em-audio', name: 'Vídeo em Áudio', desc: 'Qualquer vídeo para MP3 192 kbps' },
+      { href: '/extrair-audio-de-video', name: 'Extrair Áudio de Vídeo', desc: 'Isolar trilha sonora original' },
+      { href: '/conversor-de-audio', name: 'Conversor de Áudio', desc: 'Qualquer áudio para MP3' },
       { href: '/converter-mov-para-mp4', name: 'MOV para MP4', desc: 'Vídeos de iPhone e Mac' },
       { href: '/converter-video-para-mp3', name: 'Vídeo para MP3', desc: 'Extração de áudio 192 kbps' },
-      { href: '/conversor-de-audio', name: 'Conversor de Áudio', desc: 'Qualquer áudio para MP3' },
       { href: '/video-para-gif', name: 'Vídeo para GIF', desc: 'Animações em loop para stickers' },
       { href: '/converter-mp4-para-webm', name: 'MP4 para WebM', desc: 'Vídeo leve para sites e HTML5' }
     ],
     en: [
       { href: '/conversor-de-video-para-mp4', name: 'MP4 Converter', desc: 'MOV, MKV, AVI, WebM to MP4' },
+      { href: '/converter-video-em-audio', name: 'Video to Audio', desc: 'Any video to 192 kbps MP3' },
+      { href: '/extrair-audio-de-video', name: 'Extract Audio', desc: 'Isolate original sound track' },
+      { href: '/conversor-de-audio', name: 'Audio Converter', desc: 'Any audio format to MP3' },
       { href: '/converter-mov-para-mp4', name: 'MOV to MP4', desc: 'iPhone & Mac QuickTime videos' },
       { href: '/converter-video-para-mp3', name: 'Video to MP3', desc: 'Hi-Fi 192 kbps audio extraction' },
-      { href: '/conversor-de-audio', name: 'Audio Converter', desc: 'Any audio format to MP3' },
       { href: '/video-para-gif', name: 'Video to GIF', desc: 'Looping animated stickers & memes' },
       { href: '/converter-mp4-para-webm', name: 'MP4 to WebM', desc: 'Lightweight HTML5 web video' }
     ],
     es: [
       { href: '/conversor-de-video-para-mp4', name: 'Convertidor a MP4', desc: 'MOV, MKV, AVI, WebM a MP4' },
+      { href: '/converter-video-em-audio', name: 'Video a Audio', desc: 'Cualquier video a MP3 192 kbps' },
+      { href: '/extrair-audio-de-video', name: 'Extraer Audio', desc: 'Aislar banda sonora original' },
+      { href: '/conversor-de-audio', name: 'Convertidor de Audio', desc: 'Cualquier audio a MP3' },
       { href: '/converter-mov-para-mp4', name: 'MOV a MP4', desc: 'Videos de iPhone y Mac' },
       { href: '/converter-video-para-mp3', name: 'Video a MP3', desc: 'Extracción de audio a 192 kbps' },
-      { href: '/conversor-de-audio', name: 'Convertidor de Audio', desc: 'Cualquier audio a MP3' },
       { href: '/video-para-gif', name: 'Video a GIF', desc: 'Animaciones en bucle para stickers' },
       { href: '/converter-mp4-para-webm', name: 'MP4 a WebM', desc: 'Video ligero para web y HTML5' }
     ],
     fr: [
       { href: '/conversor-de-video-para-mp4', name: 'Convertisseur MP4', desc: 'MOV, MKV, AVI, WebM vers MP4' },
+      { href: '/converter-video-em-audio', name: 'Vidéo vers Audio', desc: 'Toute vidéo en MP3 192 kbps' },
+      { href: '/extrair-audio-de-video', name: 'Extraire l’Audio', desc: 'Isoler la piste sonore originale' },
+      { href: '/conversor-de-audio', name: 'Convertisseur Audio', desc: 'Tout format audio vers MP3' },
       { href: '/converter-mov-para-mp4', name: 'MOV vers MP4', desc: 'Vidéos d’iPhone et Mac' },
       { href: '/converter-video-para-mp3', name: 'Vidéo vers MP3', desc: 'Extraction audio 192 kbps' },
-      { href: '/conversor-de-audio', name: 'Convertisseur Audio', desc: 'Tout format audio vers MP3' },
       { href: '/video-para-gif', name: 'Vidéo vers GIF', desc: 'Animations en boucle pour stickers' },
       { href: '/converter-mp4-para-webm', name: 'MP4 vers WebM', desc: 'Vidéo légère pour le web HTML5' }
     ],
     ja: [
       { href: '/conversor-de-video-para-mp4', name: 'MP4 変換ツール', desc: 'MOV, MKV, AVI, WebM を MP4 に' },
+      { href: '/converter-video-em-audio', name: '動画から音声へ', desc: 'あらゆる動画を 192 kbps MP3 に' },
+      { href: '/extrair-audio-de-video', name: '音声トラック抽出', desc: '原音のまま音声だけを分離' },
+      { href: '/conversor-de-audio', name: '音声変換ツール', desc: 'あらゆる音声を MP3 に' },
       { href: '/converter-mov-para-mp4', name: 'MOV から MP4', desc: 'iPhone / Mac 録画動画' },
       { href: '/converter-video-para-mp3', name: '動画から MP3', desc: '高音質 192 kbps 音声抽出' },
-      { href: '/conversor-de-audio', name: '音声変換ツール', desc: 'あらゆる音声を MP3 に' },
       { href: '/video-para-gif', name: '動画から GIF', desc: 'ステッカー用ループアニメーション' },
       { href: '/converter-mp4-para-webm', name: 'MP4 から WebM', desc: 'HTML5 サイト用軽量動画' }
     ],
     zh: [
       { href: '/conversor-de-video-para-mp4', name: 'MP4 转换器', desc: 'MOV, MKV, AVI, WebM 转 MP4' },
+      { href: '/converter-video-em-audio', name: '视频转音频', desc: '提取各类视频为 192 kbps MP3' },
+      { href: '/extrair-audio-de-video', name: '提取视频原声', desc: '精准分离纯净音频轨道' },
+      { href: '/conversor-de-audio', name: '万能音频转换器', desc: '各类音频转 MP3' },
       { href: '/converter-mov-para-mp4', name: 'MOV 转 MP4', desc: '苹果 iPhone / Mac 视频' },
       { href: '/converter-video-para-mp3', name: '视频提取 MP3', desc: '192 kbps 高保真音频提取' },
-      { href: '/conversor-de-audio', name: '万能音频转换器', desc: '各类音频转 MP3' },
       { href: '/video-para-gif', name: '视频转 GIF', desc: '表情包循环动图制作' },
       { href: '/converter-mp4-para-webm', name: 'MP4 转 WebM', desc: '网站与 HTML5 轻量格式' }
     ],
     no: [
       { href: '/conversor-de-video-para-mp4', name: 'MP4 Konverter', desc: 'MOV, MKV, AVI, WebM til MP4' },
+      { href: '/converter-video-em-audio', name: 'Video til Lyd', desc: 'Enhver video til 192 kbps MP3' },
+      { href: '/extrair-audio-de-video', name: 'Trekk ut Lyd', desc: 'Isoler det originale lydsporet' },
+      { href: '/conversor-de-audio', name: 'Lydkonverter', desc: 'Alle lydformater til MP3' },
       { href: '/converter-mov-para-mp4', name: 'MOV til MP4', desc: 'iPhone og Mac QuickTime-videoer' },
       { href: '/converter-video-para-mp3', name: 'Video til MP3', desc: 'Lyduttrekk i 192 kbps' },
-      { href: '/conversor-de-audio', name: 'Lydkonverter', desc: 'Alle lydformater til MP3' },
       { href: '/video-para-gif', name: 'Video til GIF', desc: 'Animert sløyfe for klistremerker' },
       { href: '/converter-mp4-para-webm', name: 'MP4 til WebM', desc: 'Lett HTML5 nettvideo' }
     ],
     tr: [
       { href: '/conversor-de-video-para-mp4', name: 'MP4 Dönüştürücü', desc: 'MOV, MKV, AVI, WebM -> MP4' },
+      { href: '/converter-video-em-audio', name: 'Videodan Sese', desc: 'Videodan 192 kbps MP3 sese' },
+      { href: '/extrair-audio-de-video', name: 'Ses Parçası Çıkar', desc: 'Orijinal ses kanalını izole et' },
+      { href: '/conversor-de-audio', name: 'Ses Dönüştürücü', desc: 'Tüm ses formatları -> MP3' },
       { href: '/converter-mov-para-mp4', name: 'MOV -> MP4', desc: 'iPhone ve Mac videoları' },
       { href: '/converter-video-para-mp3', name: 'Videodan MP3', desc: '192 kbps yüksek kaliteli ses' },
-      { href: '/conversor-de-audio', name: 'Ses Dönüştürücü', desc: 'Tüm ses formatları -> MP3' },
       { href: '/video-para-gif', name: 'Videodan GIF', desc: 'Çıkartma ve döngülü animasyon' },
       { href: '/converter-mp4-para-webm', name: 'MP4 -> WebM', desc: 'Web siteleri için hafif video' }
     ],
     pl: [
       { href: '/conversor-de-video-para-mp4', name: 'Konwerter MP4', desc: 'MOV, MKV, AVI, WebM na MP4' },
+      { href: '/converter-video-em-audio', name: 'Wideo na Audio', desc: 'Dowolne wideo na 192 kbps MP3' },
+      { href: '/extrair-audio-de-video', name: 'Wyodrębnij Dźwięk', desc: 'Wyizoluj oryginalną ścieżkę dźwiękową' },
+      { href: '/conversor-de-audio', name: 'Konwerter Audio', desc: 'Dowolny format audio na MP3' },
       { href: '/converter-mov-para-mp4', name: 'MOV na MP4', desc: 'Wideo z iPhone’a i Maca' },
       { href: '/converter-video-para-mp3', name: 'Wideo na MP3', desc: 'Ekstrakcja audio 192 kbps' },
-      { href: '/conversor-de-audio', name: 'Konwerter Audio', desc: 'Dowolny format audio na MP3' },
       { href: '/video-para-gif', name: 'Wideo na GIF', desc: 'Animowane pętle na naklejki' },
       { href: '/converter-mp4-para-webm', name: 'MP4 na WebM', desc: 'Lekkie wideo na strony HTML5' }
     ]
@@ -89,6 +107,8 @@ export function getLocalizedCompressorTools(lang: SupportedLanguage): NavToolIte
   const dict: Record<SupportedLanguage, NavToolItem[]> = {
     pt: [
       { href: '/compressor-de-video', name: 'Compressor de Vídeo', desc: 'Reduz até 80% do tamanho' },
+      { href: '/compactar-video', name: 'Compactar Vídeo', desc: 'Diminui megabytes sem perda' },
+      { href: '/redimensionar-video', name: 'Redimensionar Vídeo', desc: 'Ajuste 1080p, 720p e 9:16' },
       { href: '/compressor-de-video-mp4', name: 'Compressor MP4', desc: 'H.264 leve com faststart' },
       { href: '/compressor-de-video-gratuito', name: 'Compressor Gratuito', desc: '100% livre sem limites' },
       { href: '/comprimir-video', name: 'Comprimir p/ WhatsApp', desc: 'Garante tamanho < 16MB' },
@@ -97,6 +117,8 @@ export function getLocalizedCompressorTools(lang: SupportedLanguage): NavToolIte
     ],
     en: [
       { href: '/compressor-de-video', name: 'Video Compressor', desc: 'Reduce up to 80% file size' },
+      { href: '/compactar-video', name: 'Compress Video', desc: 'Shrink megabytes without loss' },
+      { href: '/redimensionar-video', name: 'Resize Video', desc: 'Adjust 1080p, 720p & 9:16' },
       { href: '/compressor-de-video-mp4', name: 'MP4 Compressor', desc: 'Fast H.264 with web faststart' },
       { href: '/compressor-de-video-gratuito', name: 'Free Compressor', desc: '100% free with no limits' },
       { href: '/comprimir-video', name: 'Compress for WhatsApp', desc: 'Guarantees file size < 16MB' },
@@ -105,6 +127,8 @@ export function getLocalizedCompressorTools(lang: SupportedLanguage): NavToolIte
     ],
     es: [
       { href: '/compressor-de-video', name: 'Compresor de Video', desc: 'Reduce hasta un 80% el tamaño' },
+      { href: '/compactar-video', name: 'Compactar Video', desc: 'Reduce megabytes sin pérdidas' },
+      { href: '/redimensionar-video', name: 'Redimensionar Video', desc: 'Ajuste a 1080p, 720p y 9:16' },
       { href: '/compressor-de-video-mp4', name: 'Compresor MP4', desc: 'H.264 ligero con faststart' },
       { href: '/compressor-de-video-gratuito', name: 'Compresor Gratuito', desc: '100% libre sin límites' },
       { href: '/comprimir-video', name: 'Comprimir p/ WhatsApp', desc: 'Garantiza tamaño < 16MB' },
@@ -113,6 +137,8 @@ export function getLocalizedCompressorTools(lang: SupportedLanguage): NavToolIte
     ],
     fr: [
       { href: '/compressor-de-video', name: 'Compresseur Vidéo', desc: 'Réduit jusqu’à 80% le poids' },
+      { href: '/compactar-video', name: 'Compresser Vidéo', desc: 'Diminue les mégaoctets sans perte' },
+      { href: '/redimensionar-video', name: 'Redimensionner Vidéo', desc: 'Ajustez en 1080p, 720p et 9:16' },
       { href: '/compressor-de-video-mp4', name: 'Compresseur MP4', desc: 'H.264 léger avec faststart' },
       { href: '/compressor-de-video-gratuito', name: 'Compresseur Gratuit', desc: '100% gratuit sans limite' },
       { href: '/comprimir-video', name: 'Compresser p/ WhatsApp', desc: 'Garantit un poids < 16 Mo' },
@@ -121,6 +147,8 @@ export function getLocalizedCompressorTools(lang: SupportedLanguage): NavToolIte
     ],
     ja: [
       { href: '/compressor-de-video', name: '動画圧縮ツール', desc: '容量を最大80%軽量化' },
+      { href: '/compactar-video', name: '動画サイズ削減', desc: '画質を落とさずに軽量化' },
+      { href: '/redimensionar-video', name: '動画リサイズ', desc: '1080p・720p・9:16調整' },
       { href: '/compressor-de-video-mp4', name: 'MP4 圧縮', desc: 'faststart 最適化 H.264' },
       { href: '/compressor-de-video-gratuito', name: '完全無料圧縮', desc: '制限なし・100%無料' },
       { href: '/comprimir-video', name: 'WhatsApp用 圧縮', desc: '16MB未満に自動最適化' },
@@ -129,6 +157,8 @@ export function getLocalizedCompressorTools(lang: SupportedLanguage): NavToolIte
     ],
     zh: [
       { href: '/compressor-de-video', name: '视频压缩器', desc: '最高缩减 80% 体积' },
+      { href: '/compactar-video', name: '智能压缩视频', desc: '无损画质大幅减小体积' },
+      { href: '/redimensionar-video', name: '调整视频尺寸', desc: '适配 1080p、720p 与 9:16' },
       { href: '/compressor-de-video-mp4', name: 'MP4 视频压缩', desc: '高速 H.264 与 faststart' },
       { href: '/compressor-de-video-gratuito', name: '免费无限制压缩', desc: '100% 免费无大小限制' },
       { href: '/comprimir-video', name: '压缩适配 WhatsApp', desc: '保证文件小于 16MB' },
@@ -137,6 +167,8 @@ export function getLocalizedCompressorTools(lang: SupportedLanguage): NavToolIte
     ],
     no: [
       { href: '/compressor-de-video', name: 'Videokomprimering', desc: 'Reduser filstørrelse med opptil 80%' },
+      { href: '/compactar-video', name: 'Krymp Video', desc: 'Kutt megabytes uten kvalitetstap' },
+      { href: '/redimensionar-video', name: 'Endre Videostørrelse', desc: 'Juster til 1080p, 720p og 9:16' },
       { href: '/compressor-de-video-mp4', name: 'MP4 Komprimering', desc: 'Rask H.264 med faststart' },
       { href: '/compressor-de-video-gratuito', name: 'Gratis Komprimering', desc: '100% gratis uten grenser' },
       { href: '/comprimir-video', name: 'Komprimer for WhatsApp', desc: 'Garanterer størrelse < 16MB' },
@@ -145,6 +177,8 @@ export function getLocalizedCompressorTools(lang: SupportedLanguage): NavToolIte
     ],
     tr: [
       { href: '/compressor-de-video', name: 'Video Sıkıştırıcı', desc: 'Boyutu %80’e kadar küçültün' },
+      { href: '/compactar-video', name: 'Video Boyutu Küçült', desc: 'Kayıpsız megabayt azaltma' },
+      { href: '/redimensionar-video', name: 'Video Boyutlandır', desc: '1080p, 720p ve 9:16 ayarı' },
       { href: '/compressor-de-video-mp4', name: 'MP4 Sıkıştırma', desc: 'Web için hızlı H.264' },
       { href: '/compressor-de-video-gratuito', name: 'Ücretsiz Sıkıştırıcı', desc: '%100 ücretsiz ve limitsiz' },
       { href: '/comprimir-video', name: 'WhatsApp İçin Sıkıştır', desc: '16MB altı garantili boyut' },
@@ -153,6 +187,8 @@ export function getLocalizedCompressorTools(lang: SupportedLanguage): NavToolIte
     ],
     pl: [
       { href: '/compressor-de-video', name: 'Kompresor Wideo', desc: 'Zmniejsz rozmiar nawet o 80%' },
+      { href: '/compactar-video', name: 'Zmniejsz Wideo', desc: 'Ogranicz megabajty bez strat' },
+      { href: '/redimensionar-video', name: 'Skaluj Wideo', desc: 'Dopasuj do 1080p, 720p i 9:16' },
       { href: '/compressor-de-video-mp4', name: 'Kompresor MP4', desc: 'Szybki H.264 z faststart' },
       { href: '/compressor-de-video-gratuito', name: 'Darmowy Kompresor', desc: '100% bezpłatny bez limitów' },
       { href: '/comprimir-video', name: 'Kompresuj pod WhatsApp', desc: 'Gwarancja rozmiaru < 16MB' },
