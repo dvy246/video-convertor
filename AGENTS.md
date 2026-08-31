@@ -26,6 +26,27 @@ Welcome! This document provides complete, up-to-date instructions, conventions, 
 
 ---
 
+## 🚨 Mandatory Agent Operating Rules & Multi-Language Invariant
+
+> [!IMPORTANT]
+> **1. Multi-Language Completeness Invariant (Zero Hardcoded Copy)**
+> - **Every new feature, UI component, page, card, modal, or informational block added to this repository MUST be translated with consistency across ALL 9 supported locales (`pt`, `en`, `es`, `fr`, `ja`, `zh`, `no`, `tr`, `pl`).**
+> - **Never leave pages partially translated** and never hardcode Portuguese, English, or any single-language copy inside `.astro` components or React islands.
+> - **Server & Client Synchronization**:
+>   - Add all text keys to `src/i18n/ui.ts` for server-side templates (`useTranslations(lang)`).
+>   - Add client-side keys and pass `lang={currentLang}` to React components to consume `tClient(key, lang)` in `src/i18n/client.ts`.
+>   - For new programmatic tools or format hubs, add metadata and localized explainer sets in `src/data/localizedFormatPages.ts`.
+>   - For new navigation tools or footer links, add them across all 9 languages in `src/i18n/navTools.ts`.
+>   - For legal, policy, or editorial articles, add translations in `src/data/legalPages.ts` or `src/data/homeArticles.ts`.
+
+> [!TIP]
+> **2. Architecture & File Placement Reference**
+> - **Always consult [`STRUCTURE.md`](./STRUCTURE.md)** for complete directory organization, routing conventions, and where new files must reside.
+> - **Always consult [`ARCHITECTURE.md`](./ARCHITECTURE.md)** for system design, WebAssembly engine lifecycle, and data flow patterns.
+> - **Always build (`npm run build`) and test before claiming completion.**
+
+---
+
 ## 🛠️ Technology Stack
 
 | Layer | Technology | Version | Purpose |
