@@ -198,9 +198,22 @@ class FFmpegEngine {
       const mime = FORMAT_DETAILS[targetFormat].mime;
       const blob = new Blob([data.buffer], { type: mime });
 
-      // Output Validation: verify non-empty buffer
-      if (!blob || blob.size < 128) {
-        throw new Error('O arquivo gerado está corrompido ou vazio. Tente com outro formato ou predefinição.');
+      // Output Validation: format-aware minimum size checks
+      const MIN_SIZES: Record<string, number> = {
+        'video/mp4': 4096,
+        'video/webm': 4096,
+        'video/quicktime': 4096,
+        'video/x-msvideo': 4096,
+        'video/x-matroska': 4096,
+        'audio/mpeg': 1024,
+        'image/gif': 512
+      };
+      const minSize = MIN_SIZES[mime] || 128;
+      if (!blob || blob.size < minSize) {
+        throw new Error(
+          `O arquivo gerado parece estar corrompido (${blob?.size || 0} bytes). ` +
+          'Tente com outro formato, predefinição ou verifique se o arquivo de entrada é válido.'
+        );
       }
 
       const downloadUrl = URL.createObjectURL(blob);

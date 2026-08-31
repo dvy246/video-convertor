@@ -23,7 +23,7 @@ export const PRESETS: Record<PresetId, Preset> = {
     id: 'high_quality',
     label: 'Alta Qualidade (CRF 18)',
     badge: 'Máxima Fidelidade',
-    description: 'Preserva 99% dos detalhes visuais originais com compressão praticamente sem perdas visuais.',
+    description: 'Máxima fidelidade visual com compressão praticamente imperceptível ao olho humano.',
     targetFormat: 'mp4',
     getArgs: (input, output) => [
       '-i', input,
@@ -98,7 +98,7 @@ export const PRESETS: Record<PresetId, Preset> = {
     id: 'whatsapp',
     label: 'Otimizado para WhatsApp (< 16 MB)',
     badge: 'WhatsApp Target',
-    description: 'Garante envio instantâneo sem travar no WhatsApp e sem que o app destrua a qualidade do vídeo.',
+    description: 'Otimizado para envio rápido no WhatsApp, mantendo a qualidade do vídeo dentro do limite de tamanho da plataforma.',
     targetFormat: 'mp4',
     getArgs: (input, output) => [
       '-i', input,
@@ -124,6 +124,7 @@ export const PRESETS: Record<PresetId, Preset> = {
       '-c:v', 'libx264',
       '-crf', '22',
       '-preset', 'ultrafast',
+      '-vf', "scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2",
       '-pix_fmt', 'yuv420p',
       '-c:a', 'aac',
       '-b:a', '128k',
@@ -218,7 +219,7 @@ export const FORMAT_DETAILS: Record<OutputFormat, {
     name: 'MP4 (H.264 Universal)',
     mime: 'video/mp4',
     ext: 'mp4',
-    description: 'O formato padrão mais compatível do mundo. Roda em 100% dos celulares, TVs, PCs e navegadores.',
+    description: 'O formato padrão mais compatível do mundo. Reproduz na grande maioria dos celulares, TVs, PCs e navegadores modernos.',
     popularPresets: ['balanced', 'compress_balanced', 'compress_extreme', 'whatsapp', 'high_quality', 'small_size', 'instagram_reels', 'resize_1080p']
   },
   webm: {

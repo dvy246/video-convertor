@@ -23,7 +23,6 @@ export function generateOrganizationSchema() {
     'name': SITE_CONFIG.name,
     'url': SITE_CONFIG.url,
     'logo': `${SITE_CONFIG.url}/favicon.svg`,
-    'sameAs': [],
     'contactPoint': {
       '@type': 'ContactPoint',
       'contactType': 'customer support',
@@ -33,13 +32,13 @@ export function generateOrganizationSchema() {
   };
 }
 
-export function generateWebSiteSchema() {
+export function generateWebSiteSchema(lang?: string) {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     'name': SITE_CONFIG.name,
     'url': SITE_CONFIG.url,
-    'inLanguage': 'pt-BR',
+    'inLanguage': lang || 'pt-BR',
     'description': SITE_CONFIG.description
   };
 }
@@ -49,17 +48,18 @@ export function generateWebApplicationSchema(options?: {
   description?: string;
   url?: string;
   applicationSubCategory?: string;
+  lang?: string;
 }) {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
     'name': options?.name || SITE_CONFIG.name,
     'url': options?.url || SITE_CONFIG.url,
-    'description': options?.description || 'Conversor e compressor de vídeo gratuito no navegador sem upload de arquivos e 100% privado.',
+    'description': options?.description || 'Conversor e compressor de vídeo gratuito no navegador sem upload de arquivos. Processamento local e privado.',
     'applicationCategory': 'MultimediaApplication',
     'applicationSubCategory': options?.applicationSubCategory || 'Video Converter & Compressor',
     'operatingSystem': 'All (Web Browser)',
-    'inLanguage': 'pt-BR',
+    'inLanguage': options?.lang || 'pt-BR',
     'offers': {
       '@type': 'Offer',
       'price': '0',
@@ -67,11 +67,11 @@ export function generateWebApplicationSchema(options?: {
     },
     'browserRequirements': 'Requires modern browser with WebAssembly support',
     'featureList': [
-      'Conversão e compressão 100% no navegador (sem upload para servidores)',
+      'Processamento de vídeo e áudio diretamente no navegador via WebAssembly',
       'Sem necessidade de cadastro ou e-mail',
       'Suporte para MP4, MOV, MP3, GIF, WebM, AVI, MKV',
       'Compressão inteligente para WhatsApp e e-mail',
-      'Privacidade total em conformidade com a LGPD'
+      'Projetado para privacidade — arquivos de mídia não são enviados para servidores'
     ]
   };
 }
@@ -93,8 +93,7 @@ export function generateHowToSchema(options: {
       '@type': 'HowToStep',
       'position': step.position,
       'name': step.name,
-      'text': step.text,
-      'url': `${SITE_CONFIG.url}/#passo-${step.position}`
+      'text': step.text
     }))
   };
 }
