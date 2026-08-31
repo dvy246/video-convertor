@@ -932,7 +932,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     metaDescription: 'Comprima vídeos MP4, MOV e outros formatos online diretamente no seu navegador. Reduza até 80% do tamanho de arquivo sem perder nitidez, sem upload e sem cadastro.',
     heroSubtitle: 'Reduza o peso dos seus vídeos em segundos para enviar por WhatsApp, e-mail e economizar espaço. Processamento 100% local no seu aparelho.',
     dropzoneTitle: 'Arraste o vídeo que você deseja comprimir',
-    keywords: ['compressor de video', 'compressor de video online', 'compressor de video gratis', 'comprimir video online'],
+    keywords: ['compressor de video', 'compressor de video online', 'compressor de video gratis', 'comprimir video online', 'compactar video', 'comprimir vídeo online grátis', 'reduzir tamanho do video'],
     explainerTitle: 'Como funciona a compressão de vídeo inteligente no navegador?',
     explainerParagraphs: [
       'Celulares e câmeras gravam vídeos com taxas de bits elevadas que geram arquivos pesados sem ganho visível de nitidez na maioria das telas.',
@@ -1553,6 +1553,207 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
       {
         question: 'O arquivo de vídeo original do YouTube é danificado?',
         answer: 'Não. O arquivo original permanece inalterado no seu dispositivo e um novo arquivo MP3 é gerado para download.'
+      }
+    ]
+  },
+
+  // Video Compacting Cluster (High Search Volume Keywords)
+  'compactar-video': {
+    slug: 'compactar-video',
+    targetFormat: 'mp4',
+    initialPreset: 'compress_balanced',
+    badge: '📦 Compactação Inteligente de Vídeo',
+    h1Prefix: 'Compactar Vídeo',
+    h1Highlight: 'Online Grátis',
+    h1Suffix: 'sem Perder Qualidade',
+    metaTitle: 'Compactar Vídeo Online Grátis — Reduzir Tamanho sem Perda de Qualidade',
+    metaDescription: 'Compacte vídeos MP4, MOV e outros formatos online diretamente no navegador. Reduza até 80% do tamanho com máxima nitidez visual, sem upload e sem cadastro.',
+    heroSubtitle: 'Diminua o peso dos seus vídeos em segundos mantendo excelente resolução em 1080p e 720p. Processamento 100% privado no seu próprio navegador.',
+    dropzoneTitle: 'Arraste seu arquivo de vídeo aqui para compactar',
+    keywords: ['compactar video', 'compactar vídeo', 'compactar video online', 'compactar video gratis', 'compactar video sem perder qualidade', 'compactar vídeo online'],
+    explainerTitle: 'Como compactar vídeos de alta resolução sem perder a nitidez visual?',
+    explainerParagraphs: [
+      'Vídeos gravados em smartphones e câmeras frequentemente contêm bitrates excessivos, gerando arquivos pesados de centenas de megabytes que dificultam o envio por mensageiros ou o armazenamento.',
+      'Nosso compactador aplica codificação inteligente CRF (Constant Rate Factor) via WebAssembly diretamente na memória do seu aparelho. O algoritmo reescreve os dados descartando redundâncias visuais imperceptíveis, reduzindo drasticamente o tamanho do arquivo sem criar artefatos ou desfoque.'
+    ],
+    sourceDetailsTitle: 'Vídeo Pesado Não Otimizado',
+    sourceDetails: [
+      'Bitrate excessivo ocupando gigabytes no aparelho',
+      'Erros de limite de anexo em e-mails e mensageiros',
+      'Lentidão para carregar e transferir em redes móveis'
+    ],
+    targetDetailsTitle: 'Vídeo Compactado & Otimizado',
+    targetDetails: [
+      'Redução média de 50% a 80% do tamanho em disco',
+      'Resolução e nitidez preservadas em 1080p ou 720p HD',
+      'Compatibilidade universal e carregamento instantâneo'
+    ],
+    faqs: [
+      {
+        question: 'Como compactar vídeo online sem perder qualidade?',
+        answer: 'Arraste seu arquivo de vídeo para a ferramenta e selecione a predefinição de compressão desejada. Nosso algoritmo perceptual reduz os dados redundantes preservando rostos, textos e detalhes visuais nítidos.'
+      },
+      {
+        question: 'Qual a diferença entre compactar e comprimir vídeo?',
+        answer: 'Os termos são sinônimos práticos. Ambas as abordagens aplicam reencodificação eficiente (H.264/AAC) para gerar arquivos menores com máxima fidelidade.'
+      },
+      {
+        question: 'Meus vídeos são enviados para algum servidor remoto?',
+        answer: 'Não. Todo o cálculo de compactação acontece na memória RAM do seu próprio aparelho via WebAssembly. Seus arquivos nunca saem do seu computador ou celular.'
+      },
+      {
+        question: 'Posso compactar vídeos do celular iPhone ou Android?',
+        answer: 'Sim! A ferramenta é totalmente compatível com navegadores móveis (Safari no iPhone e Chrome no Android).'
+      }
+    ]
+  },
+
+  'compactar-video-mp4': {
+    slug: 'compactar-video-mp4',
+    targetFormat: 'mp4',
+    initialPreset: 'compress_balanced',
+    badge: '🎬 Otimização de Arquivos MP4',
+    h1Prefix: 'Compactar Vídeo',
+    h1Highlight: 'MP4 Online',
+    h1Suffix: 'Grátis',
+    metaTitle: 'Compactar Vídeo MP4 Online Grátis — Diminuir Tamanho de Arquivo MP4',
+    metaDescription: 'Compacte arquivos MP4 online sem perder resolução. Reduza megabytes mantendo vídeo H.264 rápido para web e áudio AAC cristalino.',
+    heroSubtitle: 'Diminua o tamanho de qualquer vídeo MP4 sem comprometer a qualidade visual. Rápido, 100% privado e sem marcas d’água.',
+    dropzoneTitle: 'Arraste o arquivo MP4 para compactar',
+    keywords: ['compactar video mp4', 'compactar vídeo mp4', 'como compactar video mp4', 'compactar mp4 online', 'compactar video mp4 gratis'],
+    explainerTitle: 'Por que compactar vídeos MP4 com cabeçalho Faststart?',
+    explainerParagraphs: [
+      'O contêiner MP4 é o padrão mais usado no mundo, mas exportações brutas costumam conter taxas de dados muito superiores ao necessário para visualização online e em celulares.',
+      'Nossa ferramenta reescreve a faixa de vídeo com perfil H.264 otimizado e adiciona a flag faststart no início do arquivo, permitindo reprodução instantânea na web antes mesmo do download terminar.'
+    ],
+    sourceDetailsTitle: 'MP4 Pesado Original',
+    sourceDetails: [
+      'Taxa de dados pesada para upload e download',
+      'Risco de travamento em conexões móveis',
+      'Espaço em disco consumido rapidamente'
+    ],
+    targetDetailsTitle: 'MP4 Compactado',
+    targetDetails: [
+      'Cabeçalho faststart para streaming sem espera',
+      'Tamanho otimizado para e-mail e mensageiros',
+      'Áudio AAC estéreo de alta fidelidade preservado'
+    ],
+    faqs: [
+      {
+        question: 'Como compactar um arquivo MP4 sem perder resolução?',
+        answer: 'Basta arrastar o MP4 para o conversor e selecionar a opção de compressão. A ferramenta ajusta o bitrate de forma equilibrada, retendo os detalhes com metade do tamanho.'
+      },
+      {
+        question: 'O arquivo MP4 compactado funciona em Smart TVs e celulares?',
+        answer: 'Sim! O arquivo resultante é um MP4 padrão universal H.264 compatível com 100% dos dispositivos e reprodutores de mídia.'
+      },
+      {
+        question: 'Existe limite de tamanho para compactar arquivos MP4?',
+        answer: 'Como o processamento é local no navegador, você pode compactar arquivos de 300MB a 500MB com facilidade na maioria dos dispositivos modernos.'
+      },
+      {
+        question: 'A ferramenta adiciona marcas d’água nos vídeos compactados?',
+        answer: 'Nunca. Seus vídeos são exportados completamente limpos, sem marcas d’água e sem propagandas.'
+      }
+    ]
+  },
+
+  'compactar-video-para-whatsapp': {
+    slug: 'compactar-video-para-whatsapp',
+    targetFormat: 'mp4',
+    initialPreset: 'whatsapp',
+    badge: '📱 Otimizado para WhatsApp (< 16 MB)',
+    h1Prefix: 'Compactar Vídeo para',
+    h1Highlight: 'WhatsApp Online',
+    h1Suffix: 'sem Travar',
+    metaTitle: 'Compactar Vídeo para WhatsApp Online — Enviar sem Limite de 16MB',
+    metaDescription: 'Compacte vídeos pesados para menos de 16MB e envie no WhatsApp sem erros de limite e sem perda de nitidez. 100% gratuito e privado no navegador.',
+    heroSubtitle: 'Ajuste vídeos grandes para o limite oficial de 16 MB do WhatsApp mantendo resolução 720p HD e áudio nítido.',
+    dropzoneTitle: 'Arraste o vídeo para compactar para o WhatsApp',
+    keywords: ['compactar video para whatsapp', 'compactar vídeo para whatsapp', 'compactar video whatsapp', 'como compactar video para mandar no whatsapp'],
+    explainerTitle: 'Como compactar vídeos para enviar no WhatsApp sem travar?',
+    explainerParagraphs: [
+      'O WhatsApp possui um limite rígido de 16 MB para envio direto de vídeos em chats. Ao tentar enviar arquivos maiores, o aplicativo costuma comprimir de forma agressiva, destruindo a nitidez da imagem.',
+      'Nossa predefinição calcula automaticamente o bitrate necessário com base na duração do clipe, garantindo que o arquivo final fique abaixo de 15 MB mantendo resolução HD 720p e áudio AAC estéreo impecável.'
+    ],
+    sourceDetailsTitle: 'Vídeo Acima de 16 MB',
+    sourceDetails: [
+      'Bloqueado pelo limite do WhatsApp',
+      'Compressão destrutiva pelo próprio aplicativo',
+      'Demora para carregar e falhas de envio'
+    ],
+    targetDetailsTitle: 'Vídeo Otimizado (< 15 MB)',
+    targetDetails: [
+      'Envio instantâneo sem mensagens de erro',
+      'Nitidez preservada em 720p HD',
+      'Áudio AAC claro e sem ruídos'
+    ],
+    faqs: [
+      {
+        question: 'Qual é o tamanho máximo aceito pelo WhatsApp para vídeos?',
+        answer: 'O WhatsApp impõe um limite de 16 MB para arquivos de vídeo enviados como mídia. Nossa ferramenta compacta seu vídeo para menos de 15 MB para garantir envio perfeito.'
+      },
+      {
+        question: 'O WhatsApp destrói a qualidade do vídeo após o envio?',
+        answer: 'Quando o vídeo já está abaixo de 16 MB no formato padrão H.264, o WhatsApp o envia diretamente sem aplicar compressões agressivas adicionais.'
+      },
+      {
+        question: 'Posso compactar vídeos gravados no iPhone para enviar no WhatsApp?',
+        answer: 'Sim! Aceitamos vídeos MOV do iPhone e os convertemos em MP4 leve otimizado para o WhatsApp.'
+      },
+      {
+        question: 'Quanto tempo leva para compactar um vídeo para o WhatsApp?',
+        answer: 'Geralmente de 5 a 15 segundos, dependendo da duração do vídeo e da velocidade do seu dispositivo.'
+      }
+    ]
+  },
+
+  'reduzir-tamanho-do-video': {
+    slug: 'reduzir-tamanho-do-video',
+    targetFormat: 'mp4',
+    initialPreset: 'compress_balanced',
+    badge: '📉 Redução Inteligente de Megabytes',
+    h1Prefix: 'Reduzir Tamanho do',
+    h1Highlight: 'Vídeo Online',
+    h1Suffix: 'Grátis',
+    metaTitle: 'Reduzir Tamanho do Vídeo Online Grátis — Diminuir Espaço em Disco',
+    metaDescription: 'Reduza o tamanho de vídeos pesados online sem perder nitidez visual. Economize espaço no seu celular ou computador sem upload de arquivos.',
+    heroSubtitle: 'Diminua os megabytes de qualquer vídeo com facilidade para liberar espaço no disco e agilizar compartilhamentos.',
+    dropzoneTitle: 'Arraste o vídeo aqui para reduzir o tamanho',
+    keywords: ['reduzir tamanho do video', 'reduzir tamanho do vídeo', 'reduzir tamanho do video online', 'reduzir tamanho de video', 'reduzir tamanho mp4'],
+    explainerTitle: 'Como reduzir o tamanho de vídeos em disco preservando a definição?',
+    explainerParagraphs: [
+      'Gravações em alta definição acumulam dezenas de gigabytes na memória do celular e no disco rígido do computador. Reduzir o tamanho dos arquivos é essencial para liberar espaço sem precisar apagar memórias importantes.',
+      'Com nosso algoritmo de compressão no navegador, você reduz o peso dos vídeos em até 70% mantendo a resolução em Full HD ou HD, pronto para arquivamento ou envio rápido.'
+    ],
+    sourceDetailsTitle: 'Vídeo com Espaço Excessivo',
+    sourceDetails: [
+      'Memória do smartphone lotada',
+      'Impossível de anexar em e-mails convencionais',
+      'Backup lento e custoso na nuvem'
+    ],
+    targetDetailsTitle: 'Vídeo Reduzido & Compacto',
+    targetDetails: [
+      'Até 70% menos espaço ocupado em disco',
+      'Facilidade total para compartilhar e anexar',
+      'Preservação da nitidez de imagem em telas grandes'
+    ],
+    faqs: [
+      {
+        question: 'Como reduzir o tamanho de um vídeo sem deixá-lo borrado?',
+        answer: 'Nossa ferramenta usa codificação perceptual inteligente CRF, que remove dados invisíveis ao olho humano mantendo bordas e cores nítidas.'
+      },
+      {
+        question: 'Quanto de espaço posso economizar reduzindo meus vídeos?',
+        answer: 'Na maioria dos casos, a redução varia entre 50% e 80% do tamanho original do arquivo.'
+      },
+      {
+        question: 'Posso reduzir o tamanho de múltiplos vídeos seguidos?',
+        answer: 'Sim! Não há limites diários de uso e você pode processar quantos vídeos desejar.'
+      },
+      {
+        question: 'É necessário fazer cadastro ou pagar alguma taxa?',
+        answer: 'Não. O ConversordeVideo.com é 100% gratuito e aberto a todos os usuários.'
       }
     ]
   }

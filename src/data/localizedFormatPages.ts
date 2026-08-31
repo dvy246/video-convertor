@@ -1229,6 +1229,302 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       metaDescription: 'Wyodrębnij ścieżkę audio z zapisanych filmów YouTube i Shorts do formatu MP3 192 kbps. 100% prywatnie w przeglądarce.',
       heroSubtitle: 'Zmieniaj pobrane klipy z YouTube w lekkie i czyste pliki MP3 do wygodnego słuchania.'
     }
+  },
+  'compactar-video': {
+    en: {
+      h1Prefix: 'Compress Video',
+      h1Highlight: 'Online Free',
+      h1Suffix: 'Without Losing Quality',
+      badge: '📦 Smart Video Compressor',
+      metaTitle: 'Compress Video Online Free — Reduce Size Without Losing Quality',
+      metaDescription: 'Compress MP4, MOV, and other video files online directly in your browser. Reduce file size by up to 80% with maximum visual clarity, no uploads, no signups.',
+      heroSubtitle: 'Shrink heavy videos in seconds while preserving crisp 1080p and 720p HD resolution. 100% private local processing in your browser.'
+    },
+    es: {
+      h1Prefix: 'Comprimir Video',
+      h1Highlight: 'Online Gratis',
+      h1Suffix: 'sin Perder Calidad',
+      badge: '📦 Compresor Inteligente de Video',
+      metaTitle: 'Comprimir Video Online Gratis — Reducir Tamaño sin Perder Calidad',
+      metaDescription: 'Comprime videos MP4, MOV y otros formatos online directamente en tu navegador. Reduce hasta un 80% del tamaño con nitidez visual máxima y sin subir archivos.',
+      heroSubtitle: 'Reduce el peso de tus videos en segundos manteniendo excelente resolución en 1080p y 720p. Procesamiento 100% privado en tu navegador.'
+    },
+    fr: {
+      h1Prefix: 'Compresser Vidéo',
+      h1Highlight: 'en Ligne Gratuit',
+      h1Suffix: 'sans Perdre en Qualité',
+      badge: '📦 Compression Vidéo Intelligente',
+      metaTitle: 'Compresser Vidéo en Ligne Gratuit — Réduire la Taille sans Perte',
+      metaDescription: 'Compressez des vidéos MP4, MOV et d’autres formats en ligne directement dans votre navigateur. Réduisez jusqu’à 80% du poids sans perte de netteté.',
+      heroSubtitle: 'Réduisez le poids de vos vidéos en quelques secondes tout en conservant une excellente résolution 1080p et 720p. Traitement 100% local.'
+    },
+    ja: {
+      h1Prefix: '画質を落とさずに',
+      h1Highlight: '動画サイズを圧縮',
+      h1Suffix: '無料オンライン',
+      badge: '📦 スマート動画圧縮ツール',
+      metaTitle: '動画圧縮 無料オンライン — 画質を落とさずに容量削減',
+      metaDescription: 'MP4、MOV などの動画をブラウザ内で直接スマート圧縮。最大80%容量削減しながら鮮明な画質を維持。クラウド送信なしで完全安全。',
+      heroSubtitle: '1080p / 720p の高画質を保ったまま、重い動画のファイルサイズを数秒で軽量化します。'
+    },
+    zh: {
+      h1Prefix: '智能无损',
+      h1Highlight: '视频压缩工具',
+      h1Suffix: '在线免费',
+      badge: '📦 智能视频压缩器',
+      metaTitle: '在线免费压缩视频 — 无损画质大幅缩小视频体积',
+      metaDescription: '在浏览器中直接压缩 MP4、MOV 等视频文件。体积最高缩减 80%，完美保留 1080p/720p 清晰画质，零云端上传。',
+      heroSubtitle: '数秒内将庞大的视频文件体积缩减过半，同时保留清晰细腻的画质。100% 本地运算保护隐私。'
+    },
+    no: {
+      h1Prefix: 'Komprimer Video',
+      h1Highlight: 'Online Gratis',
+      h1Suffix: 'Uten Kvalitetstap',
+      badge: '📦 Smart Videokomprimering',
+      metaTitle: 'Komprimer Video Online Gratis — Reduser Størrelse Uten Kvalitetstap',
+      metaDescription: 'Komprimer MP4, MOV og andre videoer online direkte i nettleseren. Reduser filstørrelsen med opptil 80% uten uskarpe bilder og uten opplasting.',
+      heroSubtitle: 'Krymp tunge videoer på sekunder og behold skarp 1080p og 720p HD-oppløsning. 100% privat i nettleseren.'
+    },
+    tr: {
+      h1Prefix: 'Kalite Kaybı Olmadan',
+      h1Highlight: 'Video Sıkıştır',
+      h1Suffix: 'Çevrimiçi Ücretsiz',
+      badge: '📦 Akıllı Video Sıkıştırıcı',
+      metaTitle: 'Video Sıkıştır Çevrimiçi Ücretsiz — Kalite Kaybı Olmadan Boyut Küçült',
+      metaDescription: 'MP4, MOV ve diğer videoları tarayıcınızda doğrudan sıkıştırın. Maksimum netlikle dosya boyutunu %80’e kadar küçültün, yükleme ve kayıt yok.',
+      heroSubtitle: '1080p ve 720p netliğini koruyarak ağır videolarınızın boyutunu saniyeler içinde küçültün.'
+    },
+    pl: {
+      h1Prefix: 'Kompresuj Wideo',
+      h1Highlight: 'Online Za Darmo',
+      h1Suffix: 'Bez Utraty Jakości',
+      badge: '📦 Inteligentna Kompresja Wideo',
+      metaTitle: 'Kompresuj Wideo Online Za Darmo — Zmniejsz Rozmiar bez Utraty Jakości',
+      metaDescription: 'Kompresuj pliki MP4, MOV i inne wideo online w przeglądarce. Zmniejsz rozmiar nawet o 80% z zachowaniem ostrości obrazu, bez wysyłania plików.',
+      heroSubtitle: 'Zmniejsz wagę ciężkich filmów w kilka sekund, zachowując wyrazistą rozdzielczość 1080p i 720p HD.'
+    }
+  },
+  'compactar-video-mp4': {
+    en: {
+      h1Prefix: 'Compress Video',
+      h1Highlight: 'MP4 Online',
+      h1Suffix: 'Free',
+      badge: '🎬 MP4 File Optimizer',
+      metaTitle: 'Compress MP4 Video Online Free — Reduce MP4 File Size',
+      metaDescription: 'Compress MP4 video files online without losing resolution. Reduce megabytes with fast web H.264 video and crystal-clear AAC audio.',
+      heroSubtitle: 'Shrink heavy MP4 files without sacrificing image crispness or universal device compatibility.'
+    },
+    es: {
+      h1Prefix: 'Comprimir Video',
+      h1Highlight: 'MP4 Online',
+      h1Suffix: 'Gratis',
+      badge: '🎬 Optimizador de Archivos MP4',
+      metaTitle: 'Comprimir Video MP4 Online Gratis — Reducir Tamaño de MP4',
+      metaDescription: 'Comprime archivos MP4 online sin perder resolución. Reduce megabytes manteniendo video H.264 rápido para web y audio AAC claro.',
+      heroSubtitle: 'Reduce el tamaño de cualquier video MP4 sin comprometer la calidad visual ni la compatibilidad universal.'
+    },
+    fr: {
+      h1Prefix: 'Compresser Vidéo',
+      h1Highlight: 'MP4 en Ligne',
+      h1Suffix: 'Gratuit',
+      badge: '🎬 Optimiseur de Fichiers MP4',
+      metaTitle: 'Compresser Vidéo MP4 en Ligne Gratuit — Réduire la Taille MP4',
+      metaDescription: 'Compressez vos vidéos MP4 en ligne sans perte de résolution. Réduisez les mégaoctets avec un encodage H.264 rapide et audio AAC pur.',
+      heroSubtitle: 'Diminuez la taille de tout fichier MP4 sans compromettre la netteté ni la compatibilité universelle.'
+    },
+    ja: {
+      h1Prefix: 'MP4 動画の容量を',
+      h1Highlight: 'スマート圧縮',
+      h1Suffix: '無料',
+      badge: '🎬 MP4 ファイル最適化ツール',
+      metaTitle: 'MP4 動画圧縮 無料オンライン — MP4 のファイルサイズを軽量化',
+      metaDescription: '解像度を落とさずに MP4 動画をオンライン圧縮。高速 H.264 エンコードと高音質 AAC で Web 最適化。',
+      heroSubtitle: '画質と全デバイス再生互換性を損なわずに、重い MP4 動画のデータ容量をスリム化します。'
+    },
+    zh: {
+      h1Prefix: '高效压缩',
+      h1Highlight: 'MP4 视频文件',
+      h1Suffix: '在线免费',
+      badge: '🎬 MP4 视频轻量化工具',
+      metaTitle: '在线压缩 MP4 视频 — 快速减少 MP4 占用空间',
+      metaDescription: '在线压缩 MP4 视频文件且不损失分辨率。通过高速 H.264 编码与清晰 AAC 音频显著削减兆字节。',
+      heroSubtitle: '在不牺牲画质清晰度与通用播放兼容性的前提下，极速缩减 MP4 视频体积。'
+    },
+    no: {
+      h1Prefix: 'Komprimer Video',
+      h1Highlight: 'MP4 Online',
+      h1Suffix: 'Gratis',
+      badge: '🎬 MP4 Filoptimalisering',
+      metaTitle: 'Komprimer MP4 Video Online Gratis — Reduser MP4 Filstørrelse',
+      metaDescription: 'Komprimer MP4-videofiler online uten å miste oppløsning. Reduser megabytes med rask H.264-video og krystallklar AAC-lyd.',
+      heroSubtitle: 'Krymp tunge MP4-filer uten å ofre bildeskarphet eller universell kompatibilitet.'
+    },
+    tr: {
+      h1Prefix: 'MP4 Video',
+      h1Highlight: 'Sıkıştır Çevrimiçi',
+      h1Suffix: 'Ücretsiz',
+      badge: '🎬 MP4 Dosya Optimize Edici',
+      metaTitle: 'MP4 Video Sıkıştır Çevrimiçi Ücretsiz — MP4 Boyutunu Küçült',
+      metaDescription: 'Çözünürlük kaybetmeden MP4 video dosyalarını çevrimiçi sıkıştırın. Hızlı H.264 video ve net AAC ses ile megabaytları azaltın.',
+      heroSubtitle: 'Görüntü netliğinden veya cihaz uyumluluğundan ödün vermeden büyük MP4 dosyalarını küçültün.'
+    },
+    pl: {
+      h1Prefix: 'Kompresuj Wideo',
+      h1Highlight: 'MP4 Online',
+      h1Suffix: 'Za Darmo',
+      badge: '🎬 Optymalizator Plików MP4',
+      metaTitle: 'Kompresuj Wideo MP4 Online Za Darmo — Zmniejsz Rozmiar MP4',
+      metaDescription: 'Kompresuj pliki wideo MP4 online bez utraty rozdzielczości. Zmniejsz megabajty dzięki szybkiemu wideo H.264 i czystemu audio AAC.',
+      heroSubtitle: 'Zmniejsz rozmiar ciężkich plików MP4 bez poświęcania ostrości obrazu ani uniwersalnej kompatybilności.'
+    }
+  },
+  'compactar-video-para-whatsapp': {
+    en: {
+      h1Prefix: 'Compress Video for',
+      h1Highlight: 'WhatsApp Online',
+      h1Suffix: 'Under 16MB',
+      badge: '📱 Optimized for WhatsApp (< 16 MB)',
+      metaTitle: 'Compress Video for WhatsApp Online — Send Without 16MB Limit',
+      metaDescription: 'Compress heavy videos under 16MB and send them via WhatsApp without size errors or aggressive app blur. 100% free and private in browser.',
+      heroSubtitle: 'Fit large videos under WhatsApp’s 16MB limit while preserving 720p HD resolution and crisp stereo sound.'
+    },
+    es: {
+      h1Prefix: 'Comprimir Video para',
+      h1Highlight: 'WhatsApp Online',
+      h1Suffix: 'Menos de 16MB',
+      badge: '📱 Optimizado para WhatsApp (< 16 MB)',
+      metaTitle: 'Comprimir Video para WhatsApp Online — Enviar sin Límite de 16MB',
+      metaDescription: 'Comprime videos pesados a menos de 16MB y envíalos por WhatsApp sin errores ni pérdida de nitidez. 100% gratis y privado.',
+      heroSubtitle: 'Ajusta videos grandes al límite de 16 MB de WhatsApp manteniendo resolución 720p HD y audio nítido.'
+    },
+    fr: {
+      h1Prefix: 'Compresser Vidéo pour',
+      h1Highlight: 'WhatsApp en Ligne',
+      h1Suffix: 'Sous 16 Mo',
+      badge: '📱 Optimisé pour WhatsApp (< 16 Mo)',
+      metaTitle: 'Compresser Vidéo pour WhatsApp — Envoyer sans Limite de 16 Mo',
+      metaDescription: 'Compressez des vidéos lourdes sous les 16 Mo pour les envoyer sur WhatsApp sans erreur ni flou agressif. 100% gratuit et privé.',
+      heroSubtitle: 'Adaptez vos vidéos volumineuses à la limite de 16 Mo de WhatsApp tout en préservant la résolution HD 720p.'
+    },
+    ja: {
+      h1Prefix: 'WhatsApp 向け',
+      h1Highlight: '動画スマート圧縮',
+      h1Suffix: '16MB未満',
+      badge: '📱 WhatsApp 最適化 (< 16 MB)',
+      metaTitle: 'WhatsApp 用 動画圧縮 オンライン — 16MB 制限内に簡単リサイズ',
+      metaDescription: '大容量動画を画質を落とさずに 16MB 未満にスマート圧縮し、WhatsApp でスムーズに送信。ブラウザ完結で安全。',
+      heroSubtitle: '720p HD 画質とクリアな音声を維持したまま、WhatsApp の 16MB 容量制限内に動画を圧縮します。'
+    },
+    zh: {
+      h1Prefix: '压缩视频适配',
+      h1Highlight: 'WhatsApp / 社交软件',
+      h1Suffix: '16MB以内',
+      badge: '📱 适配 WhatsApp / 微信 (< 16 MB)',
+      metaTitle: '压缩视频适配 WhatsApp — 快速压缩至 16MB 以内轻松发送',
+      metaDescription: '将大型视频无损压缩至 16MB 以内，轻松在 WhatsApp 及各类社交软件中秒发，避免被软件二次压缩降画质。',
+      heroSubtitle: '保持 720p 高清画质与清晰音频，将大体积视频完美适配 WhatsApp 的 16MB 发送上限。'
+    },
+    no: {
+      h1Prefix: 'Komprimer Video for',
+      h1Highlight: 'WhatsApp Online',
+      h1Suffix: 'Under 16MB',
+      badge: '📱 Optimalisert for WhatsApp (< 16 MB)',
+      metaTitle: 'Komprimer Video for WhatsApp Online — Send Uten 16MB Grense',
+      metaDescription: 'Komprimer store videoer til under 16MB og del på WhatsApp uten feilmeldinger eller bildeødeleggelse. 100% gratis i nettleseren.',
+      heroSubtitle: 'Tilpass store videoer til WhatsApps 16MB-grense og behold skarp 720p HD-oppløsning.'
+    },
+    tr: {
+      h1Prefix: 'WhatsApp İçin',
+      h1Highlight: 'Video Sıkıştır',
+      h1Suffix: '16MB Altı',
+      badge: '📱 WhatsApp İçin Optimize (< 16 MB)',
+      metaTitle: 'WhatsApp İçin Video Sıkıştır — 16MB Sınırına Takılmadan Gönder',
+      metaDescription: 'Büyük videoları 16MB altına sıkıştırarak WhatsApp üzerinden hatasız ve net şekilde gönderin. %100 ücretsiz ve tarayıcıda.',
+      heroSubtitle: '720p HD çözünürlüğü koruyarak videoları WhatsApp’ın 16MB dosya sınırına göre küçültün.'
+    },
+    pl: {
+      h1Prefix: 'Kompresuj Wideo dla',
+      h1Highlight: 'WhatsApp Online',
+      h1Suffix: 'Poniżej 16MB',
+      badge: '📱 Zoptymalizowane pod WhatsApp (< 16 MB)',
+      metaTitle: 'Kompresuj Wideo dla WhatsApp — Wysyłaj bez Limitu 16MB',
+      metaDescription: 'Kompresuj ciężkie wideo poniżej 16MB i wysyłaj przez WhatsApp bez błędów rozmiaru i bez utraty ostrości. 100% za darmo i prywatnie.',
+      heroSubtitle: 'Dopasuj duże pliki wideo do limitu 16MB w WhatsApp, zachowując rozdzielczość 720p HD i czysty dźwięk.'
+    }
+  },
+  'reduzir-tamanho-do-video': {
+    en: {
+      h1Prefix: 'Reduce Video Size',
+      h1Highlight: 'Online Free',
+      h1Suffix: 'Save Disk Space',
+      badge: '📉 Smart File Size Reducer',
+      metaTitle: 'Reduce Video Size Online Free — Shrink Video File Storage',
+      metaDescription: 'Reduce heavy video file sizes online without losing visual clarity. Save storage on your phone or computer with zero file uploads.',
+      heroSubtitle: 'Shrink megabytes from any video file effortlessly to free up storage space and speed up sharing.'
+    },
+    es: {
+      h1Prefix: 'Reducir Tamaño de',
+      h1Highlight: 'Video Online',
+      h1Suffix: 'Gratis',
+      badge: '📉 Reductor Inteligente de Tamaño',
+      metaTitle: 'Reducir Tamaño de Video Online Gratis — Ahorrar Espacio en Disco',
+      metaDescription: 'Reduce el tamaño de videos pesados online sin perder nitidez visual. Ahorra espacio en tu celular o computadora sin subir archivos.',
+      heroSubtitle: 'Disminuye los megabytes de cualquier video con facilidad para liberar espacio y agilizar envíos.'
+    },
+    fr: {
+      h1Prefix: 'Réduire la Taille d’une',
+      h1Highlight: 'Vidéo en Ligne',
+      h1Suffix: 'Gratuit',
+      badge: '📉 Réducteur de Taille de Fichier',
+      metaTitle: 'Réduire la Taille d’une Vidéo en Ligne — Économiser de l’Espace',
+      metaDescription: 'Réduisez la taille de vos vidéos lourdes en ligne sans perte de netteté. Économisez de l’espace sur votre téléphone ou PC sans upload.',
+      heroSubtitle: 'Diminuez les mégaoctets de vos vidéos facilement pour libérer de l’espace disque et accélérer les partages.'
+    },
+    ja: {
+      h1Prefix: '画質を保ったまま',
+      h1Highlight: '動画容量を削減',
+      h1Suffix: '無料オンライン',
+      badge: '📉 データ容量スマート軽量化',
+      metaTitle: '動画容量を削減 無料オンライン — ディスク空き容量を節約',
+      metaDescription: '画質を落とさずに重い動画のデータサイズをオンライン削減。スマホや PC のストレージを安全に節約。',
+      heroSubtitle: '動画ファイルのメガバイト数を手軽に減らして、空き容量の確保や素早い共有を可能にします。'
+    },
+    zh: {
+      h1Prefix: '在线减少',
+      h1Highlight: '视频文件大小',
+      h1Suffix: '节省存储空间',
+      badge: '📉 智能瘦身缩小体积',
+      metaTitle: '在线缩小视频文件大小 — 节省手机电脑存储空间',
+      metaDescription: '在不损失视觉清晰度的前提下在线缩小重型视频体积。释放手机或电脑存储空间，零文件上传。',
+      heroSubtitle: '轻松大幅削减视频兆字节，为您的设备释放宝贵空间并加速文件传输。'
+    },
+    no: {
+      h1Prefix: 'Reduser Videostørrelse',
+      h1Highlight: 'Online Gratis',
+      h1Suffix: 'Spar Diskplass',
+      badge: '📉 Smart Størrelsesreduksjon',
+      metaTitle: 'Reduser Videostørrelse Online Gratis — Spar Plass på Disken',
+      metaDescription: 'Reduser store videofilstørrelser online uten tap av visuell klarhet. Spar lagringsplass på telefonen eller datamaskinen uten opplasting.',
+      heroSubtitle: 'Krymp megabytes fra enhver video for å frigjøre lagringsplass og gjøre deling raskere.'
+    },
+    tr: {
+      h1Prefix: 'Video Boyutunu',
+      h1Highlight: 'Küçült Çevrimiçi',
+      h1Suffix: 'Depolama Tasarrufu',
+      badge: '📉 Akıllı Boyut Küçültücü',
+      metaTitle: 'Video Boyutunu Küçült Çevrimiçi Ücretsiz — Alan Kazanın',
+      metaDescription: 'Görsel netliği kaybetmeden ağır video dosyası boyutlarını çevrimiçi olarak küçültün. Telefonunuzda veya bilgisayarınızda yer açın.',
+      heroSubtitle: 'Depolama alanı açmak ve paylaşımları hızlandırmak için herhangi bir videonun megabaytlarını zahmetsizce azaltın.'
+    },
+    pl: {
+      h1Prefix: 'Zmniejsz Rozmiar',
+      h1Highlight: 'Wideo Online',
+      h1Suffix: 'Zaoszczędź Miejsce',
+      badge: '📉 Inteligentna Redukcja Rozmiaru',
+      metaTitle: 'Zmniejsz Rozmiar Wideo Online Za Darmo — Oszczędzaj Miejsce na Dysku',
+      metaDescription: 'Zmniejszaj rozmiar ciężkich plików wideo online bez utraty wyrazistości obrazu. Oszczędzaj pamięć telefonu lub komputera bez wysyłania.',
+      heroSubtitle: 'Zmniejsz megabajty dowolnego wideo z łatwością, aby zwolnić miejsce na dysku i przyspieszyć przesyłanie.'
+    }
   }
 };
 
