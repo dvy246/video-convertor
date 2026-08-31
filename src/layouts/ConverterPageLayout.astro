@@ -6,7 +6,7 @@ import FAQSection from '../components/sections/FAQSection.astro';
 import FormatGrid from '../components/sections/FormatGrid.astro';
 import type { FormatPageData } from '../data/formatPages';
 import type { SupportedLanguage } from '../i18n/languages';
-import { getLangFromUrl, useTranslatedPath } from '../i18n/utils';
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
 import { 
   generateWebApplicationSchema, 
   generateHowToSchema, 
@@ -22,6 +22,7 @@ export interface Props {
 
 const { data, lang } = Astro.props;
 const currentLang = lang || getLangFromUrl(Astro.url);
+const t = useTranslations(currentLang);
 const translatePath = useTranslatedPath(currentLang);
 const canonicalUrl = `https://conversordevideo.com${translatePath(`/${data.slug}`)}`;
 
@@ -39,24 +40,24 @@ const howToSchema = generateHowToSchema({
   steps: [
     {
       position: 1,
-      name: 'Selecione o arquivo / Select video file',
-      text: 'Arraste o vídeo para a área de conversão ou clique para selecionar do seu dispositivo.'
+      name: t('howItWorks.step1Title'),
+      text: t('howItWorks.step1Desc')
     },
     {
       position: 2,
-      name: 'Escolha a predefinição / Choose preset',
-      text: 'O formato desejado já vem configurado com a taxa de bits ideal.'
+      name: t('howItWorks.step2Title'),
+      text: t('howItWorks.step2Desc')
     },
     {
       position: 3,
-      name: 'Baixe o arquivo / Download file',
-      text: 'Clique em Converter e baixe seu arquivo imediatamente sem marcas d’água.'
+      name: t('howItWorks.step3Title'),
+      text: t('howItWorks.step3Desc')
     }
   ]
 });
 
 const breadcrumbSchema = generateBreadcrumbSchema([
-  { name: 'Início', url: `https://conversordevideo.com${translatePath('/')}` },
+  { name: t('footer.infoTitle'), url: `https://conversordevideo.com${translatePath('/')}` },
   { name: `${data.h1Prefix} ${data.h1Highlight}`, url: canonicalUrl }
 ]);
 
@@ -90,6 +91,7 @@ const faqSchema = generateFAQSchema(data.faqs);
       initialTargetFormat={data.targetFormat}
       initialPreset={data.initialPreset}
       defaultTitle={data.dropzoneTitle}
+      lang={currentLang}
       client:idle 
     />
   </section>
@@ -97,7 +99,8 @@ const faqSchema = generateFAQSchema(data.faqs);
   <!-- How It Works Section -->
   <HowItWorks 
     title={`${data.h1Prefix} ${data.h1Highlight}`}
-    subtitle="Sem filas de espera, sem necessidade de cadastro e 100% no seu navegador."
+    subtitle={t('howItWorks.subtitle')}
+    lang={currentLang}
   />
 
   <!-- Technical Explainer Section -->
@@ -149,7 +152,7 @@ const faqSchema = generateFAQSchema(data.faqs);
   )}
 
   <!-- Format Grid Tools -->
-  <FormatGrid />
+  <FormatGrid lang={currentLang} />
 
   <!-- FAQ Section -->
   {data.faqs && data.faqs.length > 0 && (

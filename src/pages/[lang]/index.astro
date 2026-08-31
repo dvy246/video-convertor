@@ -5,6 +5,7 @@ import HowItWorks from '../../components/sections/HowItWorks.astro';
 import Features from '../../components/sections/Features.astro';
 import ComparisonTable from '../../components/sections/ComparisonTable.astro';
 import FormatGrid from '../../components/sections/FormatGrid.astro';
+import HomeSEOArticle from '../../components/sections/HomeSEOArticle.astro';
 import FAQSection from '../../components/sections/FAQSection.astro';
 import { nonDefaultLangs, type SupportedLanguage } from '../../i18n/languages';
 import { useTranslations } from '../../i18n/utils';
@@ -96,20 +97,23 @@ const faqSchema = generateFAQSchema(faqs);
     </div>
 
     <!-- Interactive Converter App Island -->
-    <ConverterApp client:idle />
+    <ConverterApp lang={lang} client:idle />
   </section>
 
   <!-- How It Works Section -->
-  <HowItWorks />
+  <HowItWorks lang={lang} />
 
   <!-- Features Section -->
-  <Features />
+  <Features lang={lang} />
 
   <!-- Comparison Section -->
-  <ComparisonTable />
+  <ComparisonTable lang={lang} />
 
   <!-- Format Grid / Specialized Tools -->
-  <FormatGrid />
+  <FormatGrid lang={lang} />
+
+  <!-- Technical SEO In-Depth Article -->
+  <HomeSEOArticle lang={lang} />
 
   <!-- FAQ Section -->
   <FAQSection faqs={faqs} />

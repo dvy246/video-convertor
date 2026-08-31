@@ -2,24 +2,27 @@ import React from 'react';
 import type { OutputFormat } from '../../lib/ffmpeg/types';
 import { FORMAT_DETAILS } from '../../lib/ffmpeg/presets';
 import { tClient } from '../../i18n/client';
+import type { SupportedLanguage } from '../../i18n/languages';
 
 interface FormatSelectorProps {
   selectedFormat: OutputFormat;
   onFormatChange: (format: OutputFormat) => void;
   disabled?: boolean;
+  lang?: SupportedLanguage;
 }
 
 export const FormatSelector: React.FC<FormatSelectorProps> = ({
   selectedFormat,
   onFormatChange,
-  disabled = false
+  disabled = false,
+  lang
 }) => {
   const formats: OutputFormat[] = ['mp4', 'mp3', 'gif', 'webm', 'mov', 'avi', 'mkv'];
 
   return (
     <div className="space-y-2">
       <label className="block text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
-        {tClient('format.selectTitle')}
+        {tClient('format.selectTitle', lang)}
       </label>
       <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2" role="radiogroup" aria-label="Output format selector">
         {formats.map((format) => {

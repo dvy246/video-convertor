@@ -10,17 +10,20 @@ import { PresetSelector } from './PresetSelector';
 import { ConversionProgress } from './ConversionProgress';
 import { ResultCard } from './ResultCard';
 import { tClient } from '../../i18n/client';
+import type { SupportedLanguage } from '../../i18n/languages';
 
 interface ConverterAppProps {
   initialTargetFormat?: OutputFormat;
   initialPreset?: PresetId;
   defaultTitle?: string;
+  lang?: SupportedLanguage;
 }
 
 export const ConverterApp: React.FC<ConverterAppProps> = ({
   initialTargetFormat = 'mp4',
   initialPreset = 'balanced',
-  defaultTitle
+  defaultTitle,
+  lang
 }) => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [metadata, setMetadata] = useState<VideoMetadata | null>(null);
@@ -88,7 +91,7 @@ export const ConverterApp: React.FC<ConverterAppProps> = ({
     setProgress({
       ratio: 0.05,
       percent: 5,
-      statusMessage: tClient('progress.converting')
+      statusMessage: tClient('progress.converting', lang)
     });
 
     try {
@@ -135,13 +138,13 @@ export const ConverterApp: React.FC<ConverterAppProps> = ({
           <svg className="w-5 h-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
           </svg>
-          <span>Navegador Não Compatível com WebAssembly</span>
+          <span>WebAssembly Not Supported</span>
         </div>
         <p className="text-sm">
-          {browserSupportError || 'Seu navegador não possui suporte aos recursos necessários (SharedArrayBuffer ou WebAssembly) para processar vídeos localmente.'}
+          {browserSupportError || 'Your browser does not currently support the required WebAssembly features for local transcoding.'}
         </p>
         <p className="text-xs text-amber-700 dark:text-amber-400">
-          Recomendamos utilizar a versão mais recente do Google Chrome, Microsoft Edge, Mozilla Firefox, Brave ou Safari no macOS/iOS.
+          We recommend updating to the latest version of Google Chrome, Microsoft Edge, Mozilla Firefox, Brave, or Safari.
         </p>
       </div>
     );
@@ -151,13 +154,17 @@ export const ConverterApp: React.FC<ConverterAppProps> = ({
     <div className="w-full max-w-4xl mx-auto">
       {/* Privacy Guarantee Trust Badge */}
       <div className="flex justify-center mb-6">
-        <PrivacyBadge />
+        <PrivacyBadge lang={lang} />
       </div>
 
       {/* Main Converter Card */}
       <div className="bg-white dark:bg-zinc-900/90 border border-zinc-200/90 dark:border-zinc-800 rounded-3xl p-6 sm:p-8 shadow-sm space-y-6 transition-colors duration-200">
         {status === 'idle' && (
-          <FileDropZone onFileSelected={handleFileSelected} />
+          <FileDropZone 
+            onFileSelected={handleFileSelected} 
+            defaultTitle={defaultTitle}
+            lang={lang} 
+          />
         )}
 
         {status === 'ready' && selectedFile && (
@@ -203,9 +210,9 @@ export const ConverterApp: React.FC<ConverterAppProps> = ({
                 type="button"
                 onClick={handleReset}
                 className="text-xs font-semibold text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-200 p-2 rounded-xl hover:bg-zinc-200/60 dark:hover:bg-zinc-700 transition-colors shrink-0 cursor-pointer"
-                title="Trocar arquivo"
+                title="Change file"
               >
-                Trocar
+                Change
               </button>
             </div>
 
@@ -213,6 +220,7 @@ export const ConverterApp: React.FC<ConverterAppProps> = ({
             <FormatSelector
               selectedFormat={targetFormat}
               onFormatChange={handleFormatChange}
+              lang={lang}
             />
 
             {/* Smart Preset Selector */}
@@ -220,6 +228,7 @@ export const ConverterApp: React.FC<ConverterAppProps> = ({
               format={targetFormat}
               selectedPreset={selectedPreset}
               onPresetChange={setSelectedPreset}
+              lang={lang}
             />
 
             {/* Action CTA Button */}
@@ -233,10 +242,10 @@ export const ConverterApp: React.FC<ConverterAppProps> = ({
                   <path strokeLinecap="round" strokeLinejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <span>{tClient('action.convert')} ({targetFormat.toUpperCase()})</span>
+                <span>{tClient('action.convert', lang)} ({targetFormat.toUpperCase()})</span>
               </button>
               <p className="text-center text-[11px] text-zinc-500 dark:text-zinc-400 pt-2">
-                {tClient('privacy.badge')}
+                {tClient('privacy.badge', lang)}
               </p>
             </div>
           </div>

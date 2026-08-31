@@ -1,16 +1,21 @@
 import React, { useState, useRef, useCallback } from 'react';
 import { tClient } from '../../i18n/client';
+import type { SupportedLanguage } from '../../i18n/languages';
 
 interface FileDropZoneProps {
   onFileSelected: (file: File) => void;
   acceptedFormats?: string;
   disabled?: boolean;
+  lang?: SupportedLanguage;
+  defaultTitle?: string;
 }
 
 export const FileDropZone: React.FC<FileDropZoneProps> = ({
   onFileSelected,
   acceptedFormats = 'video/*,audio/*,.mov,.mp4,.webm,.mkv,.avi,.wmv,.flv,.m4v,.3gp,.ts,.m2ts,.mts,.vob,.mxf',
-  disabled = false
+  disabled = false,
+  lang,
+  defaultTitle
 }) => {
   const [isDragOver, setIsDragOver] = useState(false);
   const [warningMessage, setWarningMessage] = useState<string | null>(null);
@@ -22,7 +27,7 @@ export const FileDropZone: React.FC<FileDropZoneProps> = ({
     // Check file size warning (> 350 MB)
     if (file.size > 350 * 1024 * 1024) {
       setWarningMessage(
-        `Aviso: O arquivo selecionado tem ${(file.size / (1024 * 1024)).toFixed(0)} MB. Arquivos muito grandes podem demorar mais para processar no navegador dependendo da memória do seu dispositivo.`
+        `Warning: Selected file is ${(file.size / (1024 * 1024)).toFixed(0)} MB. Very large files may take longer to transcode in browser memory.`
       );
     }
 
@@ -57,6 +62,8 @@ export const FileDropZone: React.FC<FileDropZoneProps> = ({
       processFile(file);
     }
   };
+
+  const titleText = defaultTitle || tClient('dropzone.title', lang);
 
   return (
     <div className="w-full">
@@ -103,10 +110,10 @@ export const FileDropZone: React.FC<FileDropZoneProps> = ({
 
           <div className="space-y-1.5 max-w-md">
             <h3 className="text-lg sm:text-xl font-semibold text-zinc-900 dark:text-white tracking-tight">
-              {tClient('dropzone.title')}
+              {titleText}
             </h3>
             <p className="text-sm text-zinc-500 dark:text-zinc-400">
-              {tClient('dropzone.subtitle')}
+              {tClient('dropzone.subtitle', lang)}
             </p>
           </div>
 
@@ -115,7 +122,7 @@ export const FileDropZone: React.FC<FileDropZoneProps> = ({
               ⚡ WebAssembly
             </span>
             <span className="inline-flex items-center gap-1 bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md font-medium text-zinc-700 dark:text-zinc-300">
-              🔒 {tClient('header.badge')}
+              🔒 {tClient('header.badge', lang)}
             </span>
             <span className="inline-flex items-center gap-1 bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md font-medium text-zinc-700 dark:text-zinc-300">
               ✨ 100% Free

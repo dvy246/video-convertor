@@ -2,19 +2,22 @@ import React from 'react';
 import type { OutputFormat, PresetId } from '../../lib/ffmpeg/types';
 import { PRESETS, FORMAT_DETAILS } from '../../lib/ffmpeg/presets';
 import { tClient } from '../../i18n/client';
+import type { SupportedLanguage } from '../../i18n/languages';
 
 interface PresetSelectorProps {
   format: OutputFormat;
   selectedPreset: PresetId;
   onPresetChange: (presetId: PresetId) => void;
   disabled?: boolean;
+  lang?: SupportedLanguage;
 }
 
 export const PresetSelector: React.FC<PresetSelectorProps> = ({
   format,
   selectedPreset,
   onPresetChange,
-  disabled = false
+  disabled = false,
+  lang
 }) => {
   const availablePresetIds = FORMAT_DETAILS[format].popularPresets;
 
@@ -22,10 +25,10 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
     <div className="space-y-2">
       <div className="flex items-center justify-between">
         <label className="block text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
-          {tClient('preset.selectTitle')}
+          {tClient('preset.selectTitle', lang)}
         </label>
         <span className="text-[11px] text-emerald-600 dark:text-emerald-400 font-medium bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-100 dark:border-emerald-900/60 px-2 py-0.5 rounded-full">
-          {tClient('preset.noConfig')}
+          {tClient('preset.noConfig', lang)}
         </span>
       </div>
 
@@ -33,8 +36,8 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
         {availablePresetIds.map((presetId) => {
           const preset = PRESETS[presetId];
           const isSelected = selectedPreset === presetId;
-          const translatedLabel = tClient(`preset.${presetId}`) !== `preset.${presetId}` 
-            ? tClient(`preset.${presetId}`) 
+          const translatedLabel = tClient(`preset.${presetId}`, lang) !== `preset.${presetId}` 
+            ? tClient(`preset.${presetId}`, lang) 
             : preset.label;
 
           return (
