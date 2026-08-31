@@ -1,4 +1,9 @@
 ---
+import { getLangFromUrl, useTranslatedPath } from '../../i18n/utils';
+
+const currentLang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(currentLang);
+
 const tools = [
   {
     title: 'Conversor de Vídeo para MP4',
@@ -139,7 +144,7 @@ const tools = [
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
       {tools.map((tool) => (
         <a
-          href={tool.href}
+          href={translatePath(tool.href)}
           class="group bg-white dark:bg-zinc-900 border border-zinc-200/90 dark:border-zinc-800 hover:border-emerald-500/70 dark:hover:border-emerald-500/70 rounded-2xl p-5 sm:p-6 space-y-3 transition-all hover:shadow-xs flex flex-col justify-between"
         >
           <div class="space-y-3">
@@ -162,7 +167,7 @@ const tools = [
           </div>
           
           <div class="pt-2 flex items-center gap-1.5 text-xs font-semibold text-emerald-600 dark:text-emerald-400 group-hover:translate-x-1 transition-transform">
-            <span>Acessar conversor</span>
+            <span>Acessar</span>
             <span>&rarr;</span>
           </div>
         </a>

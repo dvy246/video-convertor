@@ -3,6 +3,7 @@ node_modules/
 dist/
 .astro/
 .wrangler/
+.i18n-baseline/
 
 # Environment and logs
 .env

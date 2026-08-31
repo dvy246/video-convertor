@@ -1,0 +1,26 @@
+---
+import ConverterPageLayout from '../../layouts/ConverterPageLayout.astro';
+import { FORMAT_PAGES } from '../../data/formatPages';
+import { getLocalizedFormatPage } from '../../data/localizedFormatPages';
+import { nonDefaultLangs, type SupportedLanguage } from '../../i18n/languages';
+
+export function getStaticPaths() {
+  const paths: { params: { lang: string; slug: string }; props: { slug: string; lang: SupportedLanguage } }[] = [];
+
+  for (const lang of nonDefaultLangs) {
+    for (const slug of Object.keys(FORMAT_PAGES)) {
+      paths.push({
+        params: { lang, slug },
+        props: { slug, lang }
+      });
+    }
+  }
+
+  return paths;
+}
+
+const { slug, lang } = Astro.props as { slug: string; lang: SupportedLanguage };
+const data = getLocalizedFormatPage(slug, lang);
+---
+
+<ConverterPageLayout data={data} lang={lang} />

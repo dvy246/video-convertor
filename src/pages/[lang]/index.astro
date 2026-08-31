@@ -1,0 +1,116 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { ConverterApp } from '../../components/converter/ConverterApp';
+import HowItWorks from '../../components/sections/HowItWorks.astro';
+import Features from '../../components/sections/Features.astro';
+import ComparisonTable from '../../components/sections/ComparisonTable.astro';
+import FormatGrid from '../../components/sections/FormatGrid.astro';
+import FAQSection from '../../components/sections/FAQSection.astro';
+import { nonDefaultLangs, type SupportedLanguage } from '../../i18n/languages';
+import { useTranslations } from '../../i18n/utils';
+import { 
+  generateWebApplicationSchema, 
+  generateHowToSchema, 
+  generateFAQSchema,
+  generateOrganizationSchema,
+  generateWebSiteSchema
+} from '../../lib/seo/schema';
+
+export function getStaticPaths() {
+  return nonDefaultLangs.map((lang) => ({
+    params: { lang }
+  }));
+}
+
+const { lang } = Astro.params as { lang: SupportedLanguage };
+const t = useTranslations(lang);
+
+const pageTitle = t('site.title');
+const pageDescription = t('site.description');
+const canonicalUrl = `https://conversordevideo.com/${lang}`;
+
+const faqs = [
+  {
+    question: t('faq.title'),
+    answer: t('features.privacyDesc')
+  },
+  {
+    question: t('howItWorks.title'),
+    answer: t('hero.subtitle')
+  }
+];
+
+const orgSchema = generateOrganizationSchema();
+const siteSchema = generateWebSiteSchema();
+
+const webAppSchema = generateWebApplicationSchema({
+  name: t('site.title'),
+  description: pageDescription,
+  url: canonicalUrl
+});
+
+const howToSchema = generateHowToSchema({
+  name: t('howItWorks.title'),
+  description: t('howItWorks.subtitle'),
+  steps: [
+    {
+      position: 1,
+      name: t('howItWorks.step1Title'),
+      text: t('howItWorks.step1Desc')
+    },
+    {
+      position: 2,
+      name: t('howItWorks.step2Title'),
+      text: t('howItWorks.step2Desc')
+    },
+    {
+      position: 3,
+      name: t('howItWorks.step3Title'),
+      text: t('howItWorks.step3Desc')
+    }
+  ]
+});
+
+const faqSchema = generateFAQSchema(faqs);
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  canonicalUrl={canonicalUrl}
+  lang={lang}
+  schemas={[orgSchema, siteSchema, webAppSchema, howToSchema, faqSchema]}
+>
+  <!-- Hero & Converter Section -->
+  <section class="pt-8 pb-12 sm:pt-14 sm:pb-16 px-4 sm:px-6">
+    <div class="max-w-4xl mx-auto text-center space-y-4 mb-8">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 text-xs font-bold uppercase tracking-wider border border-emerald-200/80 dark:border-emerald-800/60">
+        ✨ {t('hero.badge')}
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-black text-zinc-900 dark:text-white tracking-tight leading-tight">
+        {t('hero.titlePrefix')} <span class="text-emerald-600 dark:text-emerald-400">{t('hero.titleHighlight')}</span>
+      </h1>
+      <p class="text-base sm:text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+        {t('hero.subtitle')}
+      </p>
+    </div>
+
+    <!-- Interactive Converter App Island -->
+    <ConverterApp client:idle />
+  </section>
+
+  <!-- How It Works Section -->
+  <HowItWorks />
+
+  <!-- Features Section -->
+  <Features />
+
+  <!-- Comparison Section -->
+  <ComparisonTable />
+
+  <!-- Format Grid / Specialized Tools -->
+  <FormatGrid />
+
+  <!-- FAQ Section -->
+  <FAQSection faqs={faqs} />
+</BaseLayout>

@@ -7,6 +7,14 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://conversordevideo.com',
+  i18n: {
+    defaultLocale: 'pt',
+    locales: ['pt', 'en', 'es', 'fr', 'ja', 'zh', 'no', 'tr', 'pl'],
+    routing: {
+      prefixDefaultLocale: false,
+      redirectToDefaultLocale: false
+    }
+  },
   build: {
     format: 'directory'
   },

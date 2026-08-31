@@ -1,4 +1,10 @@
 ---
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../../i18n/utils';
+
+const currentLang = getLangFromUrl(Astro.url);
+const t = useTranslations(currentLang);
+const translatePath = useTranslatedPath(currentLang);
+
 const formatLinks1 = [
   { name: 'Conversor para MP4', href: '/conversor-de-video-para-mp4' },
   { name: 'MOV para MP4 (iPhone)', href: '/converter-mov-para-mp4' },
@@ -46,31 +52,31 @@ const resourceLinks = [
 <footer class="border-t border-zinc-200/80 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 text-xs sm:text-sm transition-colors duration-200">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 space-y-10">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-      {/* Brand Column */}
+      <!-- Brand Column -->
       <div class="space-y-4 md:col-span-1">
-        <a href="/" class="flex items-center gap-2.5 font-black text-lg text-zinc-900 dark:text-white tracking-tight">
+        <a href={translatePath('/')} class="flex items-center gap-2.5 font-black text-lg text-zinc-900 dark:text-white tracking-tight">
           <span class="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center text-sm shadow-xs font-bold">
             ▶
           </span>
           <span>ConversordeVideo<span class="text-emerald-600 dark:text-emerald-400">.com</span></span>
         </a>
         <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
-          Conversor de vídeo e áudio gratuito, sem cadastro e 100% privado no navegador via WebAssembly. Zero arquivos enviados para servidores.
+          {t('footer.brandDesc')}
         </p>
         <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 text-[11px] font-semibold border border-emerald-200/60 dark:border-emerald-800/60">
-          <span>🔒 100% Conforme à LGPD</span>
+          <span>🔒 {t('footer.lgpd')}</span>
         </div>
       </div>
 
-      {/* Popular Formats Column */}
+      <!-- Popular Formats Column -->
       <div class="space-y-3">
         <h4 class="font-bold text-zinc-900 dark:text-zinc-100 text-xs uppercase tracking-wider">
-          Conversores Populares
+          {t('footer.popularTitle')}
         </h4>
         <ul class="space-y-2 text-xs">
           {formatLinks1.map((link) => (
             <li>
-              <a href={link.href} class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+              <a href={translatePath(link.href)} class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
                 {link.name}
               </a>
             </li>
@@ -78,15 +84,15 @@ const resourceLinks = [
         </ul>
       </div>
 
-      {/* Camcorder & Specialized Formats Column */}
+      <!-- Camcorder & Specialized Formats Column -->
       <div class="space-y-3">
         <h4 class="font-bold text-zinc-900 dark:text-zinc-100 text-xs uppercase tracking-wider">
-          Formatos Específicos
+          {t('footer.formatsTitle')}
         </h4>
         <ul class="space-y-2 text-xs">
           {formatLinks2.map((link) => (
             <li>
-              <a href={link.href} class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+              <a href={translatePath(link.href)} class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
                 {link.name}
               </a>
             </li>
@@ -94,15 +100,15 @@ const resourceLinks = [
         </ul>
       </div>
 
-      {/* Legal & About Column */}
+      <!-- Legal & About Column -->
       <div class="space-y-3">
         <h4 class="font-bold text-zinc-900 dark:text-zinc-100 text-xs uppercase tracking-wider">
-          Informações & Legal
+          {t('footer.infoTitle')}
         </h4>
         <ul class="space-y-2 text-xs">
           {resourceLinks.map((link) => (
             <li>
-              <a href={link.href} class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+              <a href={translatePath(link.href)} class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
                 {link.name}
               </a>
             </li>
@@ -113,10 +119,10 @@ const resourceLinks = [
 
     <div class="pt-8 border-t border-zinc-100 dark:border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-400 dark:text-zinc-500">
       <p>
-        © {new Date().getFullYear()} ConversordeVideo.com. Todos os direitos reservados.
+        © {new Date().getFullYear()} ConversordeVideo.com. {t('footer.rights')}
       </p>
       <p class="flex items-center gap-1 text-[11px]">
-        Desenvolvido com tecnologia WebAssembly local no navegador.
+        {t('footer.tech')}
       </p>
     </div>
   </div>

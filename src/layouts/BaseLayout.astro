@@ -3,6 +3,8 @@ import '../styles/global.css';
 import SEOHead from '../components/layout/SEOHead.astro';
 import Header from '../components/layout/Header.astro';
 import Footer from '../components/layout/Footer.astro';
+import { languages, type SupportedLanguage } from '../i18n/languages';
+import { getLangFromUrl } from '../i18n/utils';
 
 export interface Props {
   title?: string;
@@ -12,13 +14,16 @@ export interface Props {
   ogType?: 'website' | 'article';
   keywords?: string[];
   schemas?: (Record<string, any> | null)[];
+  lang?: SupportedLanguage;
 }
 
 const props = Astro.props;
+const currentLang = props.lang || getLangFromUrl(Astro.url);
+const langCode = languages[currentLang]?.code || 'pt-BR';
 ---
 
 <!doctype html>
-<html lang="pt-BR" class="h-full">
+<html lang={langCode} class="h-full">
   <head>
     <script is:inline>
       (function() {

@@ -1,5 +1,7 @@
 ---
 import { SITE_CONFIG } from '../../lib/seo/meta';
+import { languages } from '../../i18n/languages';
+import { getLangFromUrl, getAlternateLanguageUrls, stripLangFromPath } from '../../i18n/utils';
 
 export interface Props {
   title?: string;
@@ -10,6 +12,11 @@ export interface Props {
   keywords?: string[];
   schemas?: (Record<string, any> | null)[];
 }
+
+const currentLang = getLangFromUrl(Astro.url);
+const currentLangInfo = languages[currentLang];
+const alternateUrls = getAlternateLanguageUrls(Astro.url.pathname);
+const xDefaultHref = `${SITE_CONFIG.url.replace(/\/$/, '')}${stripLangFromPath(Astro.url.pathname) === '/' ? '' : stripLangFromPath(Astro.url.pathname)}`;
 
 const {
   title = `${SITE_CONFIG.name} — Conversor de Vídeo Online Grátis e Seguro`,
@@ -40,6 +47,12 @@ const validSchemas = schemas.filter((s): s is Record<string, any> => s !== null 
   <!-- Canonical URL -->
   <link rel="canonical" href={canonicalUrl} />
 
+  <!-- Hreflang Multi-Language Alternates (Google Search Central compliant) -->
+  {alternateUrls.map((alt) => (
+    <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
+  ))}
+  <link rel="alternate" hreflang="x-default" href={xDefaultHref || SITE_CONFIG.url} />
+
   <!-- Favicon and App Icons -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="apple-touch-icon" href="/favicon.svg" />
@@ -54,7 +67,7 @@ const validSchemas = schemas.filter((s): s is Record<string, any> => s !== null 
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content={SITE_CONFIG.name} />
-  <meta property="og:locale" content={SITE_CONFIG.defaultLocale} />
+  <meta property="og:locale" content={currentLangInfo ? currentLangInfo.code.replace('-', '_') : SITE_CONFIG.defaultLocale} />
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image" />

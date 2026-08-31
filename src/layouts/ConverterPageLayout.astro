@@ -5,6 +5,8 @@ import HowItWorks from '../components/sections/HowItWorks.astro';
 import FAQSection from '../components/sections/FAQSection.astro';
 import FormatGrid from '../components/sections/FormatGrid.astro';
 import type { FormatPageData } from '../data/formatPages';
+import type { SupportedLanguage } from '../i18n/languages';
+import { getLangFromUrl, useTranslatedPath } from '../i18n/utils';
 import { 
   generateWebApplicationSchema, 
   generateHowToSchema, 
@@ -15,10 +17,13 @@ import {
 
 export interface Props {
   data: FormatPageData;
+  lang?: SupportedLanguage;
 }
 
-const { data } = Astro.props;
-const canonicalUrl = `https://conversordevideo.com/${data.slug}`;
+const { data, lang } = Astro.props;
+const currentLang = lang || getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(currentLang);
+const canonicalUrl = `https://conversordevideo.com${translatePath(`/${data.slug}`)}`;
 
 const orgSchema = generateOrganizationSchema();
 
@@ -29,29 +34,29 @@ const webAppSchema = generateWebApplicationSchema({
 });
 
 const howToSchema = generateHowToSchema({
-  name: `Como ${data.h1Prefix.toLowerCase()} ${data.h1Highlight.toLowerCase()} online`,
+  name: `${data.h1Prefix} ${data.h1Highlight}`,
   description: data.heroSubtitle,
   steps: [
     {
       position: 1,
-      name: 'Selecione o arquivo de vídeo',
+      name: 'Selecione o arquivo / Select video file',
       text: 'Arraste o vídeo para a área de conversão ou clique para selecionar do seu dispositivo.'
     },
     {
       position: 2,
-      name: 'Escolha a predefinição',
+      name: 'Escolha a predefinição / Choose preset',
       text: 'O formato desejado já vem configurado com a taxa de bits ideal.'
     },
     {
       position: 3,
-      name: 'Baixe o arquivo convertido',
+      name: 'Baixe o arquivo / Download file',
       text: 'Clique em Converter e baixe seu arquivo imediatamente sem marcas d’água.'
     }
   ]
 });
 
 const breadcrumbSchema = generateBreadcrumbSchema([
-  { name: 'Início', url: 'https://conversordevideo.com' },
+  { name: 'Início', url: `https://conversordevideo.com${translatePath('/')}` },
   { name: `${data.h1Prefix} ${data.h1Highlight}`, url: canonicalUrl }
 ]);
 
@@ -63,6 +68,7 @@ const faqSchema = generateFAQSchema(data.faqs);
   description={data.metaDescription}
   canonicalUrl={canonicalUrl}
   keywords={data.keywords}
+  lang={currentLang}
   schemas={[orgSchema, webAppSchema, howToSchema, faqSchema, breadcrumbSchema]}
 >
   <!-- Hero Section -->
@@ -90,53 +96,63 @@ const faqSchema = generateFAQSchema(data.faqs);
 
   <!-- How It Works Section -->
   <HowItWorks 
-    title={`Como ${data.h1Prefix.toLowerCase()} ${data.h1Highlight.toLowerCase()} em segundos`}
+    title={`${data.h1Prefix} ${data.h1Highlight}`}
     subtitle="Sem filas de espera, sem necessidade de cadastro e 100% no seu navegador."
   />
 
   <!-- Technical Explainer Section -->
-  <section class="py-12 sm:py-16 bg-white dark:bg-zinc-900 border-y border-zinc-200/80 dark:border-zinc-800 transition-colors">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-8 text-zinc-700 dark:text-zinc-300">
-      <div class="space-y-3">
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
-          {data.explainerTitle}
-        </h2>
-        {data.explainerParagraphs.map((p) => (
-          <p class="text-sm sm:text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
-            {p}
-          </p>
-        ))}
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
-        <div class="bg-zinc-50 dark:bg-zinc-800/60 border border-zinc-200 dark:border-zinc-700/80 rounded-2xl p-6 space-y-3">
-          <h3 class="font-bold text-base text-zinc-900 dark:text-white">
-            {data.sourceDetailsTitle}
-          </h3>
-          <ul class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 space-y-2 list-disc pl-4">
-            {data.sourceDetails.map((item) => (
-              <li>{item}</li>
-            ))}
-          </ul>
+  {data.explainerParagraphs && data.explainerParagraphs.length > 0 && (
+    <section class="py-12 sm:py-16 bg-white dark:bg-zinc-900 border-y border-zinc-200/80 dark:border-zinc-800 transition-colors">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-8 text-zinc-700 dark:text-zinc-300">
+        <div class="space-y-3">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
+            {data.explainerTitle}
+          </h2>
+          {data.explainerParagraphs.map((p) => (
+            <p class="text-sm sm:text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+              {p}
+            </p>
+          ))}
         </div>
 
-        <div class="bg-emerald-50/50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 rounded-2xl p-6 space-y-3">
-          <h3 class="font-bold text-base text-emerald-950 dark:text-emerald-300">
-            {data.targetDetailsTitle}
-          </h3>
-          <ul class="text-xs sm:text-sm text-emerald-900 dark:text-emerald-400 space-y-2 list-disc pl-4">
-            {data.targetDetails.map((item) => (
-              <li>{item}</li>
-            ))}
-          </ul>
-        </div>
+        {(data.sourceDetails || data.targetDetails) && (
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
+            {data.sourceDetails && (
+              <div class="bg-zinc-50 dark:bg-zinc-800/60 border border-zinc-200 dark:border-zinc-700/80 rounded-2xl p-6 space-y-3">
+                <h3 class="font-bold text-base text-zinc-900 dark:text-white">
+                  {data.sourceDetailsTitle}
+                </h3>
+                <ul class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 space-y-2 list-disc pl-4">
+                  {data.sourceDetails.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {data.targetDetails && (
+              <div class="bg-emerald-50/50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 rounded-2xl p-6 space-y-3">
+                <h3 class="font-bold text-base text-emerald-950 dark:text-emerald-300">
+                  {data.targetDetailsTitle}
+                </h3>
+                <ul class="text-xs sm:text-sm text-emerald-900 dark:text-emerald-400 space-y-2 list-disc pl-4">
+                  {data.targetDetails.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        )}
       </div>
-    </div>
-  </section>
+    </section>
+  )}
 
   <!-- Format Grid Tools -->
   <FormatGrid />
 
   <!-- FAQ Section -->
-  <FAQSection faqs={data.faqs} />
+  {data.faqs && data.faqs.length > 0 && (
+    <FAQSection faqs={data.faqs} />
+  )}
 </BaseLayout>

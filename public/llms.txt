@@ -6,6 +6,7 @@
 - **Zero Upload:** O processamento ocorre 100% na memória RAM local do dispositivo do usuário através de WebAssembly.
 - **Privacidade e LGPD:** Em total conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018), garantindo que dados pessoais e mídias nunca saiam do aparelho.
 - **Gratuito e Sem Cadastro:** Sem filas de espera, sem necessidade de login e sem limites abusivos de tamanho de arquivo.
+- **Suporte Multi-Idioma (9 Idiomas):** Português (padrão na raiz), Inglês (`/en/`), Espanhol (`/es/`), Francês (`/fr/`), Japonês (`/ja/`), Chinês (`/zh/`), Norueguês (`/no/`), Turco (`/tr/`) e Polonês (`/pl/`) com tags `hreflang` completas.
 
 ## Principais Ferramentas e Rotas Canônicas
 
