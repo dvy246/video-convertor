@@ -3,9 +3,9 @@ import type { SupportedLanguage } from './languages';
 export const ui: Record<SupportedLanguage, Record<string, string>> = {
   pt: {
     // Header & Meta
-    'site.title': 'Conversor de Vídeo Online Grátis e Seguro — 100% no Navegador',
-    'site.description': 'Converta vídeos online gratuitamente no seu navegador sem upload de arquivos. 100% privado e rápido. Suporte para MP4, MOV, MP3, GIF, WebM e WhatsApp.',
-    'header.badge': '100% Local • Sem Upload',
+    'site.title': 'Conversor de Vídeo Online Grátis e Seguro — Processamento no Navegador',
+    'site.description': 'Converta vídeos online gratuitamente no seu navegador sem upload de arquivos. Privado e rápido. Suporte para MP4, MOV, MP3, GIF, WebM e WhatsApp.',
+    'header.badge': 'Processamento Local • Sem Upload',
     'header.formats': 'Formatos & Ferramentas',
     'header.colPopular': 'Populares & Áudio',
     'header.colCompress': 'Compressores & Redes',
@@ -21,12 +21,12 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
 
     // All Tools Directory Page
     'tools.metaTitle': 'Todas as 51 Ferramentas de Vídeo e Áudio Online Grátis — Catálogo Completo',
-    'tools.metaDesc': 'Catálogo completo com 51 conversores de vídeo, compressores, extratores de áudio MP3, redimensionadores e criadores de GIF. 100% no navegador e privado.',
+    'tools.metaDesc': 'Catálogo completo com 51 conversores de vídeo, compressores, extratores de áudio MP3, redimensionadores e criadores de GIF. Processamento no navegador e privado.',
     'tools.heroBadge': 'Catálogo Completo • 51 Ferramentas Locais',
     'tools.heroTitlePrefix': 'Todas as Ferramentas de',
     'tools.heroTitleHighlight': 'Vídeo & Áudio',
     'tools.heroTitleSuffix': 'Online',
-    'tools.heroSubtitle': '51 conversores, compressores e utilitários rápidos com processamento 100% no seu navegador. Sem uploads, sem cadastro, 100% gratuito e privado.',
+    'tools.heroSubtitle': '51 conversores, compressores e utilitários rápidos com processamento no seu navegador. Sem uploads, sem cadastro, gratuito e privado.',
     'tools.searchPlaceholder': 'Buscar ferramentas por formato, nome ou utilidade (ex: MP4, WhatsApp, Áudio, TikTok)...',
     'tools.filterAll': 'Todas as Ferramentas',
     'tools.filterVideo': 'Conversores de Vídeo',
@@ -44,21 +44,21 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'tools.openTool': 'Abrir Ferramenta',
     'tools.statSpeed': '⚡ Processamento Instantâneo',
     'tools.statPrivacy': '🔒 0 Bytes Enviados',
-    'tools.statFree': '✨ 100% Grátis & Sem Limites',
+    'tools.statFree': '✨ Gratuito & Sem Limites',
 
     // Hero
-    'hero.badge': 'Tecnologia WebAssembly 100% no Navegador',
+    'hero.badge': 'Tecnologia WebAssembly Processamento no Navegador',
     'hero.titlePrefix': 'Conversor de Vídeo',
     'hero.titleHighlight': 'Online',
     'hero.titleSuffix': '',
-    'hero.subtitle': 'Converta seus vídeos diretamente no navegador. Sem upload para servidores, sem cadastro e sem limites diários. Rápido, seguro e 100% gratuito.',
+    'hero.subtitle': 'Converta seus vídeos diretamente no navegador. Sem upload para servidores, sem cadastro e sem limites diários. Rápido, seguro e gratuito.',
 
     // Dropzone & Privacy
     'dropzone.title': 'Arraste seu vídeo aqui ou clique para selecionar',
     'dropzone.subtitle': 'MP4, MOV, MKV, AVI, WebM, FLV, M2TS, VOB, TS, WMV e mais',
     'dropzone.button': 'Selecionar Vídeo do Dispositivo',
     'dropzone.dragActive': 'Solte seu arquivo de vídeo aqui...',
-    'privacy.badge': '🔒 100% Local: Seus arquivos nunca saem do seu computador ou celular',
+    'privacy.badge': '🔒 Processamento Local: Seus arquivos de mídia não são enviados para servidores',
 
     // Converter Controls
     'format.selectTitle': '1. Escolha o Formato de Destino',
@@ -100,7 +100,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'features.badge': 'Vantagens Reais',
     'features.title': 'Por que escolher o Conversor de Vídeo?',
     'features.subtitle': 'Construído para resolver o problema de conversão de arquivos de forma rápida, privada e moderna.',
-    'features.privacyTitle': 'Privacidade Total & Conformidade LGPD',
+    'features.privacyTitle': 'Privacidade & Conformidade LGPD',
     'features.privacyDesc': 'Diferente dos conversores tradicionais que enviam seus vídeos para servidores desconhecidos, todo o processamento ocorre no seu próprio navegador.',
     'features.freeTitle': 'Zero Cadastro, Zero E-mail, Sem Taxas',
     'features.freeDesc': 'Você nunca precisará criar uma conta, inserir dados de cartão ou receber spam. Acesse, converta e baixe imediatamente.',
@@ -121,7 +121,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'comparison.colUs': 'ConversordeVideo.com',
     'comparison.newBadge': 'Novo',
     'comparison.row1Feature': 'Privacidade dos Arquivos',
-    'comparison.row1Us': '100% Local (Zero Upload)',
+    'comparison.row1Us': 'Processamento Local (Zero Upload)',
     'comparison.row1Them': 'Upload p/ Nuvem',
     'comparison.row2Feature': 'Exigência de Cadastro',
     'comparison.row2Us': 'Sem cadastro (Acesso Direto)',
@@ -155,8 +155,8 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'faq.title': 'Perguntas Frequentes sobre Conversão de Vídeo',
 
     // Footer
-    'footer.brandDesc': 'Conversor de vídeo e áudio gratuito, sem cadastro e 100% privado no navegador via WebAssembly. Zero arquivos enviados para servidores.',
-    'footer.lgpd': '100% Conforme à LGPD',
+    'footer.brandDesc': 'Conversor de vídeo e áudio gratuito, sem cadastro e privado no navegador via WebAssembly. Zero arquivos enviados para servidores.',
+    'footer.lgpd': 'Projetado em conformidade com a LGPD',
     'footer.popularTitle': 'Conversores Populares',
     'footer.formatsTitle': 'Formatos Específicos',
     'footer.infoTitle': 'Informações & Legal',
@@ -167,8 +167,8 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
   en: {
     // Header & Meta
     'site.title': 'Free Video Converter — 100% Private and Local',
-    'site.description': 'Convert and compress videos online for free directly in your browser without uploading files. 100% private and local. Supports MP4, MOV, MP3, GIF, WebM, and WhatsApp.',
-    'header.badge': '100% Local • Zero Upload',
+    'site.description': 'Convert and compress videos online for free directly in your browser without uploading files. private and local. Supports MP4, MOV, MP3, GIF, WebM, and WhatsApp.',
+    'header.badge': 'Processamento Local • Zero Upload',
     'header.formats': 'Formats & Tools',
     'header.colPopular': 'Popular & Audio',
     'header.colCompress': 'Compressors & Social',
@@ -207,10 +207,10 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'tools.openTool': 'Open Tool',
     'tools.statSpeed': '⚡ Instant Processing',
     'tools.statPrivacy': '🔒 Zero Server Uploads',
-    'tools.statFree': '✨ 100% Free & Unlimited',
+    'tools.statFree': '✨ Free & Unlimited',
 
     // Hero
-    'hero.badge': 'WebAssembly Technology • 100% In-Browser',
+    'hero.badge': 'WebAssembly Technology • In-Browser Processing',
     'hero.titlePrefix': 'Free Video Converter',
     'hero.titleHighlight': '100% Private & Local',
     'hero.titleSuffix': 'Zero Cloud Uploads',
@@ -221,7 +221,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'dropzone.subtitle': 'MP4, MOV, MKV, AVI, WebM, FLV, M2TS, VOB, TS, WMV and more',
     'dropzone.button': 'Select Video from Device',
     'dropzone.dragActive': 'Drop your video file here...',
-    'privacy.badge': '🔒 100% Local: Your files never leave your computer or phone',
+    'privacy.badge': '🔒 Local Processing: Your media files are not sent to any server',
 
     // Converter Controls
     'format.selectTitle': '1. Choose Output Format',
@@ -284,7 +284,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'comparison.colUs': 'ConversordeVideo.com',
     'comparison.newBadge': 'New',
     'comparison.row1Feature': 'File Privacy & Security',
-    'comparison.row1Us': '100% Local (Zero Upload)',
+    'comparison.row1Us': 'Processamento Local (Zero Upload)',
     'comparison.row1Them': 'Cloud Server Upload',
     'comparison.row2Feature': 'Account / Signup Required',
     'comparison.row2Us': 'No Signup (Direct Access)',
@@ -319,7 +319,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
 
     // Footer
     'footer.brandDesc': 'Free, private, zero-signup online video and audio converter operating directly in your browser via WebAssembly. Zero files uploaded to servers.',
-    'footer.lgpd': '100% GDPR & Privacy Compliant',
+    'footer.lgpd': 'Designed for GDPR & Privacy Compliance',
     'footer.popularTitle': 'Popular Converters',
     'footer.formatsTitle': 'Specialized Formats',
     'footer.infoTitle': 'Information & Legal',
@@ -329,9 +329,9 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
 
   es: {
     // Header & Meta
-    'site.title': 'Convertidor de Video Online Gratis y Seguro — 100% en el Navegador',
-    'site.description': 'Convierte y comprime videos online gratis en tu navegador sin subir archivos. 100% privado, rápido y sin registros. Compatible con MP4, MOV, MP3, GIF, WebM y WhatsApp.',
-    'header.badge': '100% Local • Sin Subir Archivos',
+    'site.title': 'Convertidor de Video Online Gratis y Seguro — Procesamiento en el Navegador',
+    'site.description': 'Convierte y comprime videos online gratis en tu navegador sin subir archivos. privado, rápido y sin registros. Compatible con MP4, MOV, MP3, GIF, WebM y WhatsApp.',
+    'header.badge': 'Processamento Local • Sin Subir Archivos',
     'header.formats': 'Formatos y Herramientas',
     'header.colPopular': 'Populares y Audio',
     'header.colCompress': 'Compresores y Redes',
@@ -347,12 +347,12 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
 
     // All Tools Directory Page
     'tools.metaTitle': 'Las 51 Herramientas de Video y Audio Online Gratis — Catálogo Completo',
-    'tools.metaDesc': 'Catálogo completo con 51 convertidores de video, compresores, extractores de audio MP3, redimensionadores y creadores de GIF. 100% privado en navegador.',
+    'tools.metaDesc': 'Catálogo completo con 51 convertidores de video, compresores, extractores de audio MP3, redimensionadores y creadores de GIF. privado en navegador.',
     'tools.heroBadge': 'Catálogo Completo • 51 Herramientas Locales',
     'tools.heroTitlePrefix': 'Todas las Herramientas de',
     'tools.heroTitleHighlight': 'Video y Audio',
     'tools.heroTitleSuffix': 'Online',
-    'tools.heroSubtitle': '51 convertidores, compresores y utilidades multimedia procesadas 100% en tu navegador. Sin subir archivos, sin registros, totalmente gratis.',
+    'tools.heroSubtitle': '51 convertidores, compresores y utilidades multimedia procesadas en tu navegador. Sin subir archivos, sin registros, totalmente gratis.',
     'tools.searchPlaceholder': 'Buscar herramientas por formato, nombre o uso (ej: MP4, WhatsApp, Audio, TikTok)...',
     'tools.filterAll': 'Todas las Herramientas',
     'tools.filterVideo': 'Convertidores de Video',
@@ -370,7 +370,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'tools.openTool': 'Abrir Herramienta',
     'tools.statSpeed': '⚡ Procesamiento Instantáneo',
     'tools.statPrivacy': '🔒 0 Bytes Enviados al Servidor',
-    'tools.statFree': '✨ 100% Gratis e Ilimitado',
+    'tools.statFree': '✨ Gratis e Ilimitado',
 
     // Hero
     'hero.badge': 'Tecnología WebAssembly 100% en tu Navegador',
@@ -384,7 +384,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'dropzone.subtitle': 'MP4, MOV, MKV, AVI, WebM, FLV, M2TS, VOB, TS, WMV y más',
     'dropzone.button': 'Seleccionar Video del Dispositivo',
     'dropzone.dragActive': 'Suelta tu archivo de video aquí...',
-    'privacy.badge': '🔒 100% Local: Tus archivos nunca salen de tu ordenador o teléfono',
+    'privacy.badge': '🔒 Procesamiento Local: Tus archivos no se envían a ningún servidor',
 
     // Converter Controls
     'format.selectTitle': '1. Elige el Formato de Salida',
@@ -447,7 +447,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'comparison.colUs': 'ConversordeVideo.com',
     'comparison.newBadge': 'Nuevo',
     'comparison.row1Feature': 'Privacidad de los Archivos',
-    'comparison.row1Us': '100% Local (Cero Subidas)',
+    'comparison.row1Us': 'Processamento Local (Cero Subidas)',
     'comparison.row1Them': 'Subida a Servidores Cloud',
     'comparison.row2Feature': 'Registro o Cuenta Obligatoria',
     'comparison.row2Us': 'Sin Registro (Acceso Directo)',
@@ -481,8 +481,8 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'faq.title': 'Preguntas Frecuentes sobre la Conversión de Video',
 
     // Footer
-    'footer.brandDesc': 'Convertidor de video y audio gratuito, sin registro y 100% privado en el navegador mediante WebAssembly. Cero archivos enviados a servidores.',
-    'footer.lgpd': '100% Conforme a Privacidad y RGPD',
+    'footer.brandDesc': 'Convertidor de video y audio gratuito, sin registro y privado en el navegador mediante WebAssembly. Cero archivos enviados a servidores.',
+    'footer.lgpd': 'Diseñado conforme a la privacidad y el RGPD',
     'footer.popularTitle': 'Convertidores Populares',
     'footer.formatsTitle': 'Formatos Específicos',
     'footer.infoTitle': 'Información y Legal',
@@ -492,9 +492,9 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
 
   fr: {
     // Header & Meta
-    'site.title': 'Convertisseur Vidéo en Ligne Gratuit et Sécurisé — 100% dans le Navigateur',
+    'site.title': 'Convertisseur Vidéo en Ligne Gratuit et Sécurisé — Traitement dans le Navigateur',
     'site.description': 'Convertissez et compressez des vidéos gratuitement dans votre navigateur sans téléverser de fichiers. 100% confidentiel, instantané et sans inscription.',
-    'header.badge': '100% Local • Aucun Téléversement',
+    'header.badge': 'Processamento Local • Aucun Téléversement',
     'header.formats': 'Formats et Outils',
     'header.colPopular': 'Populaires et Audio',
     'header.colCompress': 'Compresseurs et Réseaux',
@@ -515,7 +515,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'tools.heroTitlePrefix': 'Tous les Outils de',
     'tools.heroTitleHighlight': 'Vidéo & Audio',
     'tools.heroTitleSuffix': 'en Ligne',
-    'tools.heroSubtitle': '51 convertisseurs, compresseurs et utilitaires multimédia ultra-rapides traités à 100% dans votre navigateur. Aucun envoi, sans inscription.',
+    'tools.heroSubtitle': '51 convertisseurs, compresseurs et utilitaires multimédia ultra-rapides traités dans votre navigateur. Aucun envoi, sans inscription.',
     'tools.searchPlaceholder': 'Rechercher par format, nom ou usage (ex : MP4, WhatsApp, Audio, TikTok)...',
     'tools.filterAll': 'Tous les Outils',
     'tools.filterVideo': 'Convertisseurs Vidéo',
@@ -533,10 +533,10 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'tools.openTool': 'Ouvrir l’Outil',
     'tools.statSpeed': '⚡ Traitement Instantané',
     'tools.statPrivacy': '🔒 0 Octet Envoyé au Serveur',
-    'tools.statFree': '✨ 100% Gratuit & Illimité',
+    'tools.statFree': '✨ Gratuit & Illimité',
 
     // Hero
-    'hero.badge': 'Technologie WebAssembly 100% dans le Navigateur',
+    'hero.badge': 'Technologie WebAssembly Traitement dans le Navigateur',
     'hero.titlePrefix': 'Convertisseur Vidéo',
     'hero.titleHighlight': '100% Privé et Local',
     'hero.titleSuffix': 'Sans Téléversement',
@@ -547,7 +547,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'dropzone.subtitle': 'MP4, MOV, MKV, AVI, WebM, FLV, M2TS, VOB, TS, WMV et plus',
     'dropzone.button': 'Sélectionner une Vidéo',
     'dropzone.dragActive': 'Déposez votre fichier vidéo ici...',
-    'privacy.badge': '🔒 100% Local : Vos fichiers ne quittent jamais votre appareil',
+    'privacy.badge': '🔒 Processamento Local : Vos fichiers ne quittent jamais votre appareil',
 
     // Converter Controls
     'format.selectTitle': '1. Choisissez le Format de Sortie',
@@ -610,7 +610,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'comparison.colUs': 'ConversordeVideo.com',
     'comparison.newBadge': 'Nouveau',
     'comparison.row1Feature': 'Confidentialité des Fichiers',
-    'comparison.row1Us': '100% Local (Zéro Téléversement)',
+    'comparison.row1Us': 'Processamento Local (Zéro Téléversement)',
     'comparison.row1Them': 'Téléversement Cloud',
     'comparison.row2Feature': 'Inscription Obligatoire',
     'comparison.row2Us': 'Sans Inscription (Accès Direct)',
@@ -818,7 +818,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
 
   zh: {
     // Header & Meta
-    'site.title': '免费安全在线视频转换与压缩工具 — 100% 浏览器本地处理',
+    'site.title': '免费安全在线视频转换与压缩工具 — 浏览器本地处理',
     'site.description': '无需上传任何文件，在浏览器中免费进行视频转换与智能压缩。100% 私密安全、免注册。支持 MP4、MOV、MP3、GIF、WebM 和 WhatsApp。',
     'header.badge': '100% 本地处理 • 零文件上传',
     'header.formats': '格式与工具',
@@ -859,7 +859,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'tools.openTool': '打开工具',
     'tools.statSpeed': '⚡ 本地极速秒转',
     'tools.statPrivacy': '🔒 零字节上传至云端',
-    'tools.statFree': '✨ 100% 免费且无限制',
+    'tools.statFree': '✨ 免费且无限制',
 
     // Hero
     'hero.badge': 'WebAssembly 技术 100% 浏览器本地运行',
@@ -983,7 +983,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     // Header & Meta
     'site.title': 'Gratis og Trygg Videokonvertering på Nett — 100% i Nettleseren',
     'site.description': 'Konverter og komprimer videoer gratis i nettleseren din uten opplasting av filer. 100% privat, raskt og uten registrering. Støtter MP4, MOV, MP3, GIF, WebM og WhatsApp.',
-    'header.badge': '100% Lokalt • Ingen Opplasting',
+    'header.badge': 'Lokal Behandlingt • Ingen Opplasting',
     'header.formats': 'Formater og Verktøy',
     'header.colPopular': 'Populære og Lyd',
     'header.colCompress': 'Komprimering og Sosiale Medier',
@@ -1022,7 +1022,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'tools.openTool': 'Åpne Verktøy',
     'tools.statSpeed': '⚡ Umiddelbar Behandling',
     'tools.statPrivacy': '🔒 Null Filopplasting',
-    'tools.statFree': '✨ 100% Gratis & Ubegrenset',
+    'tools.statFree': '✨ Gratis & Ubegrenset',
 
     // Hero
     'hero.badge': 'WebAssembly-teknologi 100% i Nettleseren',
@@ -1036,7 +1036,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'dropzone.subtitle': 'MP4, MOV, MKV, AVI, WebM, FLV, M2TS, VOB, TS, WMV og flere',
     'dropzone.button': 'Velg Video fra Enhet',
     'dropzone.dragActive': 'Slipp videofilen her...',
-    'privacy.badge': '🔒 100% Lokalt: Filene dine forlater aldri datamaskinen eller telefonen',
+    'privacy.badge': '🔒 Lokal Behandlingt: Filene dine forlater aldri datamaskinen eller telefonen',
 
     // Converter Controls
     'format.selectTitle': '1. Velg Utdataformat',
@@ -1099,7 +1099,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'comparison.colUs': 'ConversordeVideo.com',
     'comparison.newBadge': 'Ny',
     'comparison.row1Feature': 'Filsikkerhet og Personvern',
-    'comparison.row1Us': '100% Lokalt (Ingen Opplasting)',
+    'comparison.row1Us': 'Lokal Behandlingt (Ingen Opplasting)',
     'comparison.row1Them': 'Opplasting til Skyserver',
     'comparison.row2Feature': 'Krav om Registrering',
     'comparison.row2Us': 'Ingen Registrering (Direkte Tilgang)',
@@ -1309,7 +1309,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     // Header & Meta
     'site.title': 'Darmowy i Bezpieczny Konwerter Wideo Online — 100% w Przeglądarce',
     'site.description': 'Konwertuj i kompresuj wideo za darmo bezpośrednio w przeglądarce bez przesyłania plików na serwer. 100% prywatności, szybko i bez rejestracji. Obsługuje MP4, MOV, MP3, GIF, WebM i WhatsApp.',
-    'header.badge': '100% Lokalnie • Zero Wysyłania',
+    'header.badge': 'Lokal Behandlingnie • Zero Wysyłania',
     'header.formats': 'Formaty i Narzędzia',
     'header.colPopular': 'Popularne i Audio',
     'header.colCompress': 'Kompresory i Społeczności',
@@ -1362,7 +1362,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'dropzone.subtitle': 'MP4, MOV, MKV, AVI, WebM, FLV, M2TS, VOB, TS, WMV i więcej',
     'dropzone.button': 'Wybierz Wideo z Urządzenia',
     'dropzone.dragActive': 'Upuść plik wideo tutaj...',
-    'privacy.badge': '🔒 100% Lokalnie: Twoje pliki nigdy nie opuszczają Twojego komputera ani telefonu',
+    'privacy.badge': '🔒 Lokal Behandlingnie: Twoje pliki nigdy nie opuszczają Twojego komputera ani telefonu',
 
     // Converter Controls
     'format.selectTitle': '1. Wybierz Format Docelowy',
@@ -1425,7 +1425,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'comparison.colUs': 'ConversordeVideo.com',
     'comparison.newBadge': 'Nowość',
     'comparison.row1Feature': 'Bezpieczeństwo Plików i Prywatność',
-    'comparison.row1Us': '100% Lokalnie (Zero Wysyłania)',
+    'comparison.row1Us': 'Lokal Behandlingnie (Zero Wysyłania)',
     'comparison.row1Them': 'Przesyłanie na Serwery w Chmurze',
     'comparison.row2Feature': 'Wymóg Rejestracji Konta',
     'comparison.row2Us': 'Bez Rejestracji (Dostęp Bezpośredni)',

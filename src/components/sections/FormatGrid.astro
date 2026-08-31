@@ -31,20 +31,23 @@ const tools = getLocalizedGridTools(currentLang);
       {tools.map((tool) => (
         <a
           href={translatePath(tool.href)}
-          class="group bg-white dark:bg-zinc-900 border border-zinc-200/90 dark:border-zinc-800 hover:border-emerald-500/70 dark:hover:border-emerald-500/70 rounded-2xl p-5 sm:p-6 space-y-3 transition-all hover:shadow-xs flex flex-col justify-between"
+          class="group relative bg-white/95 dark:bg-zinc-900/95 backdrop-blur-sm border border-zinc-200/80 dark:border-zinc-800/80 hover:border-emerald-500/70 dark:hover:border-emerald-500/70 rounded-2xl p-5 sm:p-6 space-y-4 shadow-xs hover:shadow-2xl hover:shadow-emerald-500/10 dark:hover:shadow-emerald-500/10 hover:-translate-y-1.5 hover:scale-[1.012] active:scale-[0.99] active:translate-y-0 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col justify-between overflow-hidden before:absolute before:inset-x-0 before:top-0 before:h-[1.5px] before:bg-gradient-to-r before:from-transparent before:via-emerald-400/60 before:to-transparent before:opacity-0 group-hover:before:opacity-100 before:transition-opacity before:duration-300"
         >
-          <div class="space-y-3">
+          {/* Subtle ambient light gradient on hover */}
+          <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+          <div class="relative z-10 space-y-3">
             <div class="flex items-center justify-between">
-              <div class="w-10 h-10 rounded-xl bg-zinc-50 dark:bg-zinc-800 group-hover:bg-emerald-50 dark:group-hover:bg-emerald-950/80 text-zinc-700 dark:text-zinc-300 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 border border-zinc-100 dark:border-zinc-700/80 flex items-center justify-center transition-colors">
-                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+              <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/80 dark:to-teal-950/80 group-hover:bg-emerald-600 group-hover:text-white text-emerald-600 dark:text-emerald-400 border border-emerald-100 dark:border-emerald-900/60 shadow-xs flex items-center justify-center group-hover:scale-110 group-hover:-translate-y-0.5 group-hover:rotate-[-2deg] transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]">
+                <svg class="w-5 h-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" d={tool.icon} />
                 </svg>
               </div>
-              <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-zinc-100 dark:bg-zinc-800 group-hover:bg-emerald-100 dark:group-hover:bg-emerald-950/80 text-zinc-600 dark:text-zinc-300 group-hover:text-emerald-800 dark:group-hover:text-emerald-300 transition-colors">
+              <span class="text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-md bg-zinc-100 dark:bg-zinc-800 group-hover:bg-emerald-100 dark:group-hover:bg-emerald-950/80 text-zinc-600 dark:text-zinc-300 group-hover:text-emerald-800 dark:group-hover:text-emerald-300 border border-zinc-200/60 dark:border-zinc-700/60 transition-colors shadow-2xs">
                 {tool.badge}
               </span>
             </div>
-            <h3 class="text-base font-bold text-zinc-900 dark:text-white group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors">
+            <h3 class="text-base font-bold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors duration-200 leading-snug">
               {tool.title}
             </h3>
             <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
@@ -52,9 +55,9 @@ const tools = getLocalizedGridTools(currentLang);
             </p>
           </div>
           
-          <div class="pt-2 flex items-center gap-1.5 text-xs font-semibold text-emerald-600 dark:text-emerald-400 group-hover:translate-x-1 transition-transform">
+          <div class="relative z-10 pt-2 border-t border-zinc-100 dark:border-zinc-800/80 flex items-center gap-1.5 text-xs font-bold text-emerald-600 dark:text-emerald-400 group-hover:translate-x-1 transition-transform duration-200">
             <span>{t('formatGrid.cta')}</span>
-            <span>&rarr;</span>
+            <span class="transition-transform duration-200 group-hover:translate-x-0.5">&rarr;</span>
           </div>
         </a>
       ))}

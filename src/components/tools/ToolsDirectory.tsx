@@ -169,36 +169,39 @@ export default function ToolsDirectory({ tools, lang, labels }: Props) {
             <a
               key={tool.slug}
               href={tool.href}
-              className="group relative flex flex-col justify-between p-5 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800/80 hover:border-emerald-500/60 dark:hover:border-emerald-500/60 shadow-xs hover:shadow-xl hover:shadow-emerald-500/5 transition-all duration-200 hover:-translate-y-0.5 overflow-hidden"
+              className="group relative flex flex-col justify-between p-5.5 rounded-2xl bg-white/95 dark:bg-zinc-900/95 backdrop-blur-sm border border-zinc-200/80 dark:border-zinc-800/80 hover:border-emerald-500/70 dark:hover:border-emerald-500/70 shadow-xs hover:shadow-2xl hover:shadow-emerald-500/10 dark:hover:shadow-emerald-500/10 hover:-translate-y-1.5 hover:scale-[1.012] active:scale-[0.99] active:translate-y-0 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] overflow-hidden before:absolute before:inset-x-0 before:top-0 before:h-[1.5px] before:bg-gradient-to-r before:from-transparent before:via-emerald-400/60 before:to-transparent before:opacity-0 group-hover:before:opacity-100 before:transition-opacity before:duration-300"
             >
+              {/* Subtle ambient light gradient on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
               {/* Top Row: Icon & Badges */}
-              <div>
+              <div className="relative z-10">
                 <div className="flex items-start justify-between gap-3 mb-3.5">
-                  <div className="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 border border-emerald-100 dark:border-emerald-900/50 group-hover:scale-105 group-hover:bg-emerald-600 group-hover:text-white transition-all">
-                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/80 dark:to-teal-950/80 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 border border-emerald-100 dark:border-emerald-900/60 shadow-xs group-hover:scale-110 group-hover:-translate-y-0.5 group-hover:rotate-[-2deg] group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]">
+                    <svg className="w-5 h-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                       <path strokeLinecap="round" strokeLinejoin="round" d={tool.icon} />
                     </svg>
                   </div>
 
                   <div className="flex items-center gap-1.5 flex-wrap justify-end">
                     {tool.isNew && (
-                      <span className="text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-md bg-amber-100 dark:bg-amber-950/80 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-900/50">
+                      <span className="text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-md bg-amber-100/90 dark:bg-amber-950/80 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-900/50 shadow-2xs group-hover:border-amber-300 transition-colors">
                         Novo
                       </span>
                     )}
                     {tool.isPopular && !tool.isNew && (
-                      <span className="text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-md bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 border border-emerald-100 dark:border-emerald-900/50">
+                      <span className="text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-md bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 border border-emerald-100 dark:border-emerald-900/50 shadow-2xs group-hover:border-emerald-300 transition-colors">
                         Popular
                       </span>
                     )}
-                    <span className="text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-md bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 border border-zinc-200/60 dark:border-zinc-700">
+                    <span className="text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-md bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 border border-zinc-200/60 dark:border-zinc-700 shadow-2xs group-hover:bg-zinc-200/80 dark:group-hover:bg-zinc-700/80 transition-colors">
                       {tool.targetFormat}
                     </span>
                   </div>
                 </div>
 
                 {/* Title */}
-                <h2 className="text-base font-bold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors leading-snug mb-1.5">
+                <h2 className="text-base font-bold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors duration-200 leading-snug mb-1.5">
                   {tool.title}
                 </h2>
 
@@ -209,12 +212,12 @@ export default function ToolsDirectory({ tools, lang, labels }: Props) {
               </div>
 
               {/* Bottom Row: Source Formats & Open CTA */}
-              <div className="pt-3 border-t border-zinc-100 dark:border-zinc-800/80 flex items-center justify-between gap-2 mt-auto">
+              <div className="relative z-10 pt-3 border-t border-zinc-100 dark:border-zinc-800/80 flex items-center justify-between gap-2 mt-auto">
                 <div className="flex items-center gap-1 overflow-hidden">
                   {tool.sourceFormats.slice(0, 4).map((fmt, idx) => (
                     <span
                       key={idx}
-                      className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 uppercase tracking-tight"
+                      className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 uppercase tracking-tight group-hover:bg-emerald-50 dark:group-hover:bg-emerald-950/40 group-hover:text-emerald-700 dark:group-hover:text-emerald-300 transition-colors"
                     >
                       {fmt}
                     </span>
@@ -226,9 +229,9 @@ export default function ToolsDirectory({ tools, lang, labels }: Props) {
                   )}
                 </div>
 
-                <span className="inline-flex items-center gap-1 text-xs font-bold text-emerald-600 dark:text-emerald-400 group-hover:translate-x-0.5 transition-transform shrink-0">
+                <span className="inline-flex items-center gap-1 text-xs font-bold text-emerald-600 dark:text-emerald-400 group-hover:translate-x-1 transition-transform duration-200 shrink-0">
                   <span>{labels.openTool}</span>
-                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                  <svg className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
                 </span>
