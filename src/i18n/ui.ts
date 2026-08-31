@@ -158,7 +158,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     // Hero
     'hero.badge': 'WebAssembly Technology • 100% In-Browser',
     'hero.titlePrefix': 'Free Video Converter',
-    'hero.titleHighlight': '100% Private and Local',
+    'hero.titleHighlight': '100% Private & Local',
     'hero.titleSuffix': 'Zero Cloud Uploads',
     'hero.subtitle': 'Convert, compress, and extract audio from videos in your device’s local memory. No arbitrary file limits, no queue delays, and guaranteed privacy.',
 
