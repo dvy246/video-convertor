@@ -1,0 +1,139 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ToolsDirectory from '../components/tools/ToolsDirectory';
+import { getLocalizedDirectoryTools } from '../data/allToolsData';
+import { useTranslations } from '../i18n/utils';
+import { generateBreadcrumbSchema, generateWebApplicationSchema, generateFAQSchema } from '../lib/seo/schema';
+
+const currentLang = 'pt';
+const t = useTranslations(currentLang);
+const tools = getLocalizedDirectoryTools(currentLang);
+const canonicalUrl = 'https://conversordevideo.com/ferramentas';
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Início', url: 'https://conversordevideo.com' },
+  { name: 'Todas as Ferramentas', url: canonicalUrl }
+]);
+
+const collectionSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  'name': t('tools.metaTitle'),
+  'description': t('tools.metaDesc'),
+  'url': canonicalUrl,
+  'inLanguage': 'pt-BR',
+  'mainEntity': {
+    '@type': 'ItemList',
+    'numberOfItems': tools.length,
+    'itemListElement': tools.map((tool, index) => ({
+      '@type': 'ListItem',
+      'position': index + 1,
+      'name': tool.title,
+      'url': `https://conversordevideo.com${tool.href}`
+    }))
+  }
+};
+
+const faqs = [
+  {
+    q: 'As ferramentas deste catálogo exigem upload de arquivos?',
+    a: 'Não. Todas as 51 ferramentas realizam o processamento 100% no seu navegador através de WebAssembly (FFmpeg.wasm). Nenhum byte do seu vídeo ou áudio é enviado para servidores externos.'
+  },
+  {
+    q: 'Existe limite diário de uso ou tamanho de arquivo?',
+    a: 'Não há limite de conversões diárias. Você pode converter e comprimir quantos arquivos precisar, sem assinaturas ou cobranças ocultas.'
+  },
+  {
+    q: 'Posso usar as ferramentas no celular (Android e iPhone)?',
+    a: 'Sim! Nossas ferramentas são totalmente compatíveis com smartphones (Chrome no Android, Safari no iOS), tablets e computadores.'
+  },
+  {
+    q: 'Qual é a qualidade de áudio ao extrair para MP3?',
+    a: 'A extração para áudio MP3 utiliza taxa de amostragem constante de 192 kbps com codificação LAME de alta fidelidade.'
+  }
+];
+
+const faqSchema = generateFAQSchema(faqs);
+const webAppSchema = generateWebApplicationSchema();
+
+const labels = {
+  searchPlaceholder: t('tools.searchPlaceholder'),
+  filterAll: t('tools.filterAll'),
+  filterVideo: t('tools.filterVideo'),
+  filterCompress: t('tools.filterCompress'),
+  filterAudio: t('tools.filterAudio'),
+  filterResize: t('tools.filterResize'),
+  filterGif: t('tools.filterGif'),
+  filterDevices: t('tools.filterDevices'),
+  countShowing: t('tools.countShowing'),
+  countOf: t('tools.countOf'),
+  countTools: t('tools.countTools'),
+  emptyTitle: t('tools.emptyTitle'),
+  emptyDesc: t('tools.emptyDesc'),
+  clearFilters: t('tools.clearFilters'),
+  openTool: t('tools.openTool'),
+  statSpeed: t('tools.statSpeed'),
+  statPrivacy: t('tools.statPrivacy'),
+  statFree: t('tools.statFree')
+};
+---
+
+<BaseLayout
+  title={t('tools.metaTitle')}
+  description={t('tools.metaDesc')}
+  canonicalUrl={canonicalUrl}
+  lang={currentLang}
+  schemas={[collectionSchema, breadcrumbSchema, webAppSchema, faqSchema]}
+>
+  <!-- Hero Section -->
+  <div class="relative overflow-hidden pt-12 pb-6 sm:pt-16 sm:pb-10 border-b border-zinc-200/60 dark:border-zinc-800/80 bg-gradient-to-b from-emerald-50/40 via-white to-transparent dark:from-emerald-950/20 dark:via-zinc-950 dark:to-transparent">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center space-y-4">
+      
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100/80 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 text-xs font-bold border border-emerald-200 dark:border-emerald-800/60 shadow-xs">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span>{t('tools.heroBadge')}</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl font-black text-zinc-900 dark:text-white tracking-tight leading-tight">
+        {t('tools.heroTitlePrefix')}{' '}
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500">
+          {t('tools.heroTitleHighlight')}
+        </span>{' '}
+        {t('tools.heroTitleSuffix')}
+      </h1>
+
+      <p class="text-sm sm:text-base text-zinc-600 dark:text-zinc-300 max-w-3xl mx-auto leading-relaxed">
+        {t('tools.heroSubtitle')}
+      </p>
+
+    </div>
+  </div>
+
+  <!-- Interactive Directory Island -->
+  <ToolsDirectory client:idle tools={tools} lang={currentLang} labels={labels} />
+
+  <!-- Educational & FAQ Section -->
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 py-16 space-y-12 border-t border-zinc-200/80 dark:border-zinc-800">
+    <div class="text-center space-y-3">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
+        Perguntas Frequentes sobre as Ferramentas
+      </h2>
+      <p class="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400">
+        Tudo o que você precisa saber sobre privacidade, compatibilidade e velocidade.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      {faqs.map((faq) => (
+        <div class="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-xs space-y-2">
+          <h3 class="text-sm sm:text-base font-bold text-zinc-900 dark:text-white">
+            {faq.q}
+          </h3>
+          <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+            {faq.a}
+          </p>
+        </div>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

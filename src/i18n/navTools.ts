@@ -344,54 +344,63 @@ export function getLocalizedFooterLinks2(lang: SupportedLanguage): NavToolItem[]
 export function getLocalizedResourceLinks(lang: SupportedLanguage): NavToolItem[] {
   const dict: Record<SupportedLanguage, NavToolItem[]> = {
     pt: [
+      { name: 'Todas as 51 Ferramentas', href: '/ferramentas' },
       { name: 'Melhor Conversor Gratuito', href: '/melhor-conversor-de-video-gratuito' },
       { name: 'Sobre a Tecnologia', href: '/sobre' },
       { name: 'Política de Privacidade & LGPD', href: '/privacidade' },
       { name: 'Termos de Uso', href: '/termos' }
     ],
     en: [
+      { name: 'All 51 Online Tools', href: '/ferramentas' },
       { name: 'Best Free Video Converter', href: '/melhor-conversor-de-video-gratuito' },
       { name: 'About Technology', href: '/sobre' },
       { name: 'Privacy Policy & GDPR', href: '/privacidade' },
       { name: 'Terms of Service', href: '/termos' }
     ],
     es: [
+      { name: 'Las 51 Herramientas', href: '/ferramentas' },
       { name: 'Mejor Convertidor Gratis', href: '/melhor-conversor-de-video-gratuito' },
       { name: 'Sobre la Tecnología', href: '/sobre' },
       { name: 'Política de Privacidad y RGPD', href: '/privacidade' },
       { name: 'Términos de Uso', href: '/termos' }
     ],
     fr: [
+      { name: 'Tous les 51 Outils', href: '/ferramentas' },
       { name: 'Meilleur Convertisseur Gratuit', href: '/melhor-conversor-de-video-gratuito' },
       { name: 'À Propos de la Technologie', href: '/sobre' },
       { name: 'Politique de Confidentialité RGPD', href: '/privacidade' },
       { name: 'Conditions d’Utilisation', href: '/termos' }
     ],
     ja: [
+      { name: '全51ツール一覧', href: '/ferramentas' },
       { name: '無料動画変換ツールの比較', href: '/melhor-conversor-de-video-gratuito' },
       { name: 'WebAssembly技術について', href: '/sobre' },
       { name: 'プライバシーポリシー', href: '/privacidade' },
       { name: '利用規約', href: '/termos' }
     ],
     zh: [
+      { name: '全部 51 款在线工具', href: '/ferramentas' },
       { name: '最佳免费视频转换工具评测', href: '/melhor-conversor-de-video-gratuito' },
       { name: '关于浏览器本地技术', href: '/sobre' },
       { name: '隐私政策与安全', href: '/privacidade' },
       { name: '服务条款', href: '/termos' }
     ],
     no: [
+      { name: 'Alle 51 Verktøy', href: '/ferramentas' },
       { name: 'Beste Gratis Videokonverterer', href: '/melhor-conversor-de-video-gratuito' },
       { name: 'Om Teknologien', href: '/sobre' },
       { name: 'Personvernerklæring & GDPR', href: '/privacidade' },
       { name: 'Brukervilkår', href: '/termos' }
     ],
     tr: [
+      { name: 'Tüm 51 Araç Dizini', href: '/ferramentas' },
       { name: 'En İyi Ücretsiz Video Dönüştürücü', href: '/melhor-conversor-de-video-gratuito' },
       { name: 'Teknoloji Hakkında', href: '/sobre' },
       { name: 'Gizlilik Politikası & KVKK', href: '/privacidade' },
       { name: 'Kullanım Koşulları', href: '/termos' }
     ],
     pl: [
+      { name: 'Wszystkie 51 Narzędzi', href: '/ferramentas' },
       { name: 'Najlepszy Darmowy Konwerter', href: '/melhor-conversor-de-video-gratuito' },
       { name: 'O Technologii', href: '/sobre' },
       { name: 'Polityka Prywatności i RODO', href: '/privacidade' },

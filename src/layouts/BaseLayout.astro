@@ -38,11 +38,11 @@ const langCode = languages[currentLang]?.code || 'pt-BR';
     <SEOHead {...props} />
   </head>
   <body class="min-h-full flex flex-col bg-zinc-50/50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 selection:bg-emerald-500 selection:text-white transition-colors duration-200">
-    <Header />
+    <Header lang={currentLang} />
     <main class="flex-1">
       <slot />
     </main>
-    <Footer />
+    <Footer lang={currentLang} />
 
     <!-- Service Worker Registration for Offline Cache with Auto-Update -->
     <script is:inline>

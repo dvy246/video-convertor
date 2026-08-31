@@ -19,7 +19,7 @@ Welcome! This document provides complete, up-to-date instructions, conventions, 
   7. **Norwegian (`no`)**: `/no/`
   8. **Turkish (`tr`)**: `/tr/`
   9. **Polish (`pl`)**: `/pl/`
-- **Total Static Pages:** 497 canonical MPA routes (51 tool routes + home + legal pages across 9 locales) with complete bidirectional `hreflang` alternate tags and XML sitemaps.
+- **Total Static Pages:** 506 canonical MPA routes (51 tool routes + dedicated `/ferramentas` directory + home + legal pages across 9 locales) with complete bidirectional `hreflang` alternate tags and XML sitemaps.
 - **Live Production URL:** [https://conversordevideo.pages.dev](https://conversordevideo.pages.dev) (deployed via Cloudflare Pages).
 - **GitHub Repository:** `https://github.com/dvy246/video-convertor.git`
 - **Integration Branch:** `feat/multi-lang-i18n`

@@ -23,6 +23,8 @@ conversordevideo/
 │   │   │   ├── ConversionProgress.tsx# Live progress bar, frame counter & cancel
 │   │   │   ├── ResultCard.tsx        # File diff, preview, download, embed generator
 │   │   │   └── PrivacyBadge.tsx      # 100% local trust indicator
+│   │   ├── tools/                # Dedicated Tools Directory Island
+│   │   │   └── ToolsDirectory.tsx    # Live search, category tabs, filter badges & empty state
 │   │   ├── layout/               # Global Layout Components
 │   │   │   ├── Header.astro          # Navigation with LanguageSwitcher & mobile drawer ('ConversordeVídeo')
 │   │   │   ├── LanguageSwitcher.astro# Accessible dropdown with native language names & flags
@@ -37,6 +39,7 @@ conversordevideo/
 │   │       ├── FormatGrid.astro      # Grid linking specialized converter & compressor tools
 │   │       └── FAQSection.astro      # Schema-backed native details/summary FAQs
 │   ├── data/
+│   │   ├── allToolsData.ts       # Structured catalog for all 51 tools with tags & category mappings
 │   │   ├── formatPages.ts        # Typed store for all 51 programmatic format, compressor & resizer pages
 │   │   ├── homeArticles.ts       # In-depth technical guides for all 9 locales
 │   │   ├── legalPages.ts         # Privacy Policy, Terms of Service, and About pages across 9 locales
@@ -63,10 +66,12 @@ conversordevideo/
 │   │   ├── [lang]/               # Dynamic multi-language sub-directories
 │   │   │   ├── index.astro           # Localized homepages (/en/, /es/, /fr/, /ja/, /zh/, /no/, /tr/, /pl/)
 │   │   │   ├── [...slug].astro       # Localized format, compressor, resizer & audio tools
+│   │   │   ├── ferramentas.astro     # Localized Tools Directory (/en/ferramentas, /es/ferramentas, etc.)
 │   │   │   ├── privacidade.astro     # Localized Privacy Policy & GDPR (/en/privacidade, /es/privacidade, etc.)
 │   │   │   ├── sobre.astro           # Localized About & Technology (/en/sobre, /es/sobre, etc.)
 │   │   │   └── termos.astro          # Localized Terms of Service (/en/termos, /es/termos, etc.)
 │   │   ├── index.astro               # Unprefixed Portuguese homepage ('Conversor de Vídeo Online')
+│   │   ├── ferramentas.astro         # Canonical Portuguese All Tools Directory (/ferramentas)
 │   │   ├── compressor-de-video.astro # Hub ("compressor de video", "compressor de video online")
 │   │   ├── compactar-video.astro     # Hub ("compactar video", "compactar video online")
 │   │   ├── converter-video-em-audio.astro # Hub ("converter video em audio")

@@ -31,7 +31,8 @@ const orgSchema = generateOrganizationSchema();
 const webAppSchema = generateWebApplicationSchema({
   name: `${data.h1Prefix} ${data.h1Highlight}`,
   description: data.metaDescription,
-  url: canonicalUrl
+  url: canonicalUrl,
+  applicationSubCategory: data.targetFormat === 'mp3' ? 'Audio Converter' : undefined
 });
 
 const howToSchema = generateHowToSchema({
