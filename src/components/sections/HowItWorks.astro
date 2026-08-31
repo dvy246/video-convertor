@@ -1,29 +1,36 @@
 ---
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import type { SupportedLanguage } from '../../i18n/languages';
+
 export interface Props {
   title?: string;
   subtitle?: string;
+  lang?: SupportedLanguage;
 }
 
+const currentLang = Astro.props.lang || getLangFromUrl(Astro.url);
+const t = useTranslations(currentLang);
+
 const {
-  title = 'Como Funciona a Conversão no Navegador',
-  subtitle = 'Um processo simples em 3 passos rápidos, sem filas de espera e sem uploads para a nuvem.'
+  title = t('howItWorks.title'),
+  subtitle = t('howItWorks.subtitle')
 } = Astro.props;
 
 const steps = [
   {
     number: '01',
-    title: 'Selecione o Vídeo',
-    description: 'Arraste seu arquivo para o conversor ou clique para escolher do seu celular ou computador. O arquivo carrega instantaneamente na memória local.'
+    title: t('howItWorks.step1Title'),
+    description: t('howItWorks.step1Desc')
   },
   {
     number: '02',
-    title: 'Escolha a Otimização',
-    description: 'Selecione o formato desejado (MP4, MP3, WebM, GIF) e a predefinição inteligente (como "Otimizado para WhatsApp" ou "Alta Fidelidade HD").'
+    title: t('howItWorks.step2Title'),
+    description: t('howItWorks.step2Desc')
   },
   {
     number: '03',
-    title: 'Baixe o Arquivo Pronto',
-    description: 'A tecnologia WebAssembly codifica o vídeo diretamente no seu dispositivo. Clique no botão de download e salve seu arquivo sem marcas d’água.'
+    title: t('howItWorks.step3Title'),
+    description: t('howItWorks.step3Desc')
   }
 ];
 ---
@@ -32,7 +39,7 @@ const steps = [
   <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-10">
     <div class="text-center max-w-2xl mx-auto space-y-2">
       <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-3 py-1 rounded-full border border-emerald-100 dark:border-emerald-900/60">
-        Simples & Direto
+        {t('howItWorks.badge')}
       </span>
       <h2 class="text-2xl sm:text-3xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
         {title}

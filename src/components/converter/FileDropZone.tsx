@@ -1,4 +1,5 @@
 import React, { useState, useRef, useCallback } from 'react';
+import { tClient } from '../../i18n/client';
 
 interface FileDropZoneProps {
   onFileSelected: (file: File) => void;
@@ -72,7 +73,7 @@ export const FileDropZone: React.FC<FileDropZoneProps> = ({
             fileInputRef.current?.click();
           }
         }}
-        aria-label="Área de envio de vídeo: clique ou arraste seu arquivo aqui"
+        aria-label="Upload Dropzone"
         className={`relative group cursor-pointer rounded-2xl p-8 sm:p-12 text-center transition-all duration-200 border-2 border-dashed ${
           isDragOver
             ? 'border-emerald-500 bg-emerald-50/60 dark:bg-emerald-950/30 scale-[1.01]'
@@ -102,22 +103,22 @@ export const FileDropZone: React.FC<FileDropZoneProps> = ({
 
           <div className="space-y-1.5 max-w-md">
             <h3 className="text-lg sm:text-xl font-semibold text-zinc-900 dark:text-white tracking-tight">
-              Arraste seu vídeo aqui ou <span className="text-emerald-600 dark:text-emerald-400 underline underline-offset-2">clique para escolher</span>
+              {tClient('dropzone.title')}
             </h3>
             <p className="text-sm text-zinc-500 dark:text-zinc-400">
-              Formatos aceitos: MP4, MOV, AVI, MKV, WebM, WMV, FLV, M4V, M2TS e mais.
+              {tClient('dropzone.subtitle')}
             </p>
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-2 pt-2 text-xs text-zinc-600 dark:text-zinc-400">
             <span className="inline-flex items-center gap-1 bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md font-medium text-zinc-700 dark:text-zinc-300">
-              ⚡ Conversão Instantânea
+              ⚡ WebAssembly
             </span>
             <span className="inline-flex items-center gap-1 bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md font-medium text-zinc-700 dark:text-zinc-300">
-              🔒 Sem Upload
+              🔒 {tClient('header.badge')}
             </span>
             <span className="inline-flex items-center gap-1 bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md font-medium text-zinc-700 dark:text-zinc-300">
-              ✨ 100% Gratuito
+              ✨ 100% Free
             </span>
           </div>
         </div>

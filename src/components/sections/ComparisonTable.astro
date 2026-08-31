@@ -1,17 +1,26 @@
 ---
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import type { SupportedLanguage } from '../../i18n/languages';
+
+export interface Props {
+  lang?: SupportedLanguage;
+}
+
+const currentLang = Astro.props.lang || getLangFromUrl(Astro.url);
+const t = useTranslations(currentLang);
 ---
 
 <section class="py-12 sm:py-16 bg-zinc-50 dark:bg-zinc-900/50 border-y border-zinc-200/80 dark:border-zinc-800 transition-colors">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-10">
     <div class="text-center max-w-2xl mx-auto space-y-2">
       <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-3 py-1 rounded-full border border-emerald-100 dark:border-emerald-900/60">
-        Comparativo Transparente
+        {t('comparison.badge')}
       </span>
       <h2 class="text-2xl sm:text-3xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
-        ConversordeVideo.com vs. Conversores Antigos
+        {t('comparison.title')}
       </h2>
       <p class="text-sm sm:text-base text-zinc-600 dark:text-zinc-400">
-        Veja por que processar vídeos localmente no navegador é muito superior ao modelo antigo de servidores na nuvem.
+        {t('comparison.subtitle')}
       </p>
     </div>
 
@@ -20,11 +29,11 @@
       <table class="w-full text-left text-xs sm:text-sm border-collapse">
         <thead>
           <tr class="bg-zinc-100/70 dark:bg-zinc-800/80 border-b border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-200 font-bold">
-            <th class="p-4 sm:p-5">Recurso / Critério</th>
+            <th class="p-4 sm:p-5">{t('comparison.colFeature')}</th>
             <th class="p-4 sm:p-5 bg-emerald-50 dark:bg-emerald-950/60 text-emerald-950 dark:text-emerald-300 border-x border-emerald-200/80 dark:border-emerald-800/60">
               <div class="flex items-center gap-1.5 font-extrabold text-sm sm:text-base">
-                <span>ConversordeVideo.com</span>
-                <span class="text-[10px] bg-emerald-600 text-white px-2 py-0.5 rounded-full uppercase tracking-wider">Novo</span>
+                <span>{t('comparison.colUs')}</span>
+                <span class="text-[10px] bg-emerald-600 text-white px-2 py-0.5 rounded-full uppercase tracking-wider">{t('comparison.newBadge')}</span>
               </div>
             </th>
             <th class="p-4 sm:p-5">Convertio</th>
@@ -34,81 +43,81 @@
         </thead>
         <tbody class="divide-y divide-zinc-200/80 dark:divide-zinc-800 text-zinc-700 dark:text-zinc-300">
           <tr class="hover:bg-zinc-50/50 dark:hover:bg-zinc-800/50">
-            <td class="p-4 font-semibold text-zinc-900 dark:text-white">Privacidade dos Arquivos</td>
+            <td class="p-4 font-semibold text-zinc-900 dark:text-white">{t('comparison.row1Feature')}</td>
             <td class="p-4 bg-emerald-50/40 dark:bg-emerald-950/40 text-emerald-900 dark:text-emerald-300 font-bold border-x border-emerald-100 dark:border-emerald-800/40">
               <span class="inline-flex items-center gap-1.5 text-emerald-700 dark:text-emerald-400">
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                100% Local (Zero Upload)
+                {t('comparison.row1Us')}
               </span>
             </td>
-            <td class="p-4 text-zinc-500 dark:text-zinc-400">Upload p/ Nuvem</td>
-            <td class="p-4 text-zinc-500 dark:text-zinc-400">Upload p/ Nuvem</td>
-            <td class="p-4 text-zinc-500 dark:text-zinc-400">Upload p/ Nuvem</td>
+            <td class="p-4 text-zinc-500 dark:text-zinc-400">{t('comparison.row1Them')}</td>
+            <td class="p-4 text-zinc-500 dark:text-zinc-400">{t('comparison.row1Them')}</td>
+            <td class="p-4 text-zinc-500 dark:text-zinc-400">{t('comparison.row1Them')}</td>
           </tr>
 
           <tr class="hover:bg-zinc-50/50 dark:hover:bg-zinc-800/50">
-            <td class="p-4 font-semibold text-zinc-900 dark:text-white">Exigência de Cadastro</td>
+            <td class="p-4 font-semibold text-zinc-900 dark:text-white">{t('comparison.row2Feature')}</td>
             <td class="p-4 bg-emerald-50/40 dark:bg-emerald-950/40 text-emerald-900 dark:text-emerald-300 font-bold border-x border-emerald-100 dark:border-emerald-800/40">
               <span class="inline-flex items-center gap-1.5 text-emerald-700 dark:text-emerald-400">
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                Sem cadastro (Acesso Direto)
+                {t('comparison.row2Us')}
               </span>
             </td>
-            <td class="p-4 text-zinc-500 dark:text-zinc-400">Não (para básicos)</td>
-            <td class="p-4 text-zinc-500 dark:text-zinc-400">Não (para básicos)</td>
-            <td class="p-4 text-zinc-500 dark:text-zinc-400">Não (para básicos)</td>
+            <td class="p-4 text-zinc-500 dark:text-zinc-400">{t('comparison.row2Them')}</td>
+            <td class="p-4 text-zinc-500 dark:text-zinc-400">{t('comparison.row2Them')}</td>
+            <td class="p-4 text-zinc-500 dark:text-zinc-400">{t('comparison.row2Them')}</td>
           </tr>
 
           <tr class="hover:bg-zinc-50/50 dark:hover:bg-zinc-800/50">
-            <td class="p-4 font-semibold text-zinc-900 dark:text-white">Limite de Tamanho Gratuito</td>
+            <td class="p-4 font-semibold text-zinc-900 dark:text-white">{t('comparison.row3Feature')}</td>
             <td class="p-4 bg-emerald-50/40 dark:bg-emerald-950/40 text-emerald-900 dark:text-emerald-300 font-bold border-x border-emerald-100 dark:border-emerald-800/40">
               <span class="inline-flex items-center gap-1.5 text-emerald-700 dark:text-emerald-400">
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                Livre (Usa RAM do dispositivo)
+                {t('comparison.row3Us')}
               </span>
             </td>
-            <td class="p-4 text-red-600 dark:text-red-400 font-medium">Apenas 100 MB</td>
-            <td class="p-4 text-zinc-600 dark:text-zinc-300">Até 1 GB (com fila)</td>
-            <td class="p-4 text-zinc-600 dark:text-zinc-300">Até 1 GB (com fila)</td>
+            <td class="p-4 text-red-600 dark:text-red-400 font-medium">{t('comparison.row3Them1')}</td>
+            <td class="p-4 text-zinc-600 dark:text-zinc-300">{t('comparison.row3Them2')}</td>
+            <td class="p-4 text-zinc-600 dark:text-zinc-300">{t('comparison.row3Them2')}</td>
           </tr>
 
           <tr class="hover:bg-zinc-50/50 dark:hover:bg-zinc-800/50">
-            <td class="p-4 font-semibold text-zinc-900 dark:text-white">Cota Diária de Conversão</td>
+            <td class="p-4 font-semibold text-zinc-900 dark:text-white">{t('comparison.row4Feature')}</td>
             <td class="p-4 bg-emerald-50/40 dark:bg-emerald-950/40 text-emerald-900 dark:text-emerald-300 font-bold border-x border-emerald-100 dark:border-emerald-800/40">
               <span class="inline-flex items-center gap-1.5 text-emerald-700 dark:text-emerald-400">
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                Ilimitada
+                {t('comparison.row4Us')}
               </span>
             </td>
-            <td class="p-4 text-zinc-600 dark:text-zinc-300">10 minutos/dia</td>
-            <td class="p-4 text-zinc-600 dark:text-zinc-300">25 minutos/dia</td>
-            <td class="p-4 text-zinc-600 dark:text-zinc-300">10 arquivos/dia</td>
+            <td class="p-4 text-zinc-600 dark:text-zinc-300">{t('comparison.row4Them1')}</td>
+            <td class="p-4 text-zinc-600 dark:text-zinc-300">{t('comparison.row4Them2')}</td>
+            <td class="p-4 text-zinc-600 dark:text-zinc-300">{t('comparison.row4Them3')}</td>
           </tr>
 
           <tr class="hover:bg-zinc-50/50 dark:hover:bg-zinc-800/50">
-            <td class="p-4 font-semibold text-zinc-900 dark:text-white">Predefinição Otimizada para WhatsApp</td>
+            <td class="p-4 font-semibold text-zinc-900 dark:text-white">{t('comparison.row5Feature')}</td>
             <td class="p-4 bg-emerald-50/40 dark:bg-emerald-950/40 text-emerald-900 dark:text-emerald-300 font-bold border-x border-emerald-100 dark:border-emerald-800/40">
               <span class="inline-flex items-center gap-1.5 text-emerald-700 dark:text-emerald-400">
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                Sim (&lt; 16MB automático)
+                {t('comparison.row5Us')}
               </span>
             </td>
-            <td class="p-4 text-zinc-400 dark:text-zinc-500">Não disponível</td>
-            <td class="p-4 text-zinc-400 dark:text-zinc-500">Não disponível</td>
-            <td class="p-4 text-zinc-400 dark:text-zinc-500">Não disponível</td>
+            <td class="p-4 text-zinc-400 dark:text-zinc-500">{t('comparison.row5Them')}</td>
+            <td class="p-4 text-zinc-400 dark:text-zinc-500">{t('comparison.row5Them')}</td>
+            <td class="p-4 text-zinc-400 dark:text-zinc-500">{t('comparison.row5Them')}</td>
           </tr>
 
           <tr class="hover:bg-zinc-50/50 dark:hover:bg-zinc-800/50">
-            <td class="p-4 font-semibold text-zinc-900 dark:text-white">Experiência de Uso (Sem Anúncios Invasivos)</td>
+            <td class="p-4 font-semibold text-zinc-900 dark:text-white">{t('comparison.row6Feature')}</td>
             <td class="p-4 bg-emerald-50/40 dark:bg-emerald-950/40 text-emerald-900 dark:text-emerald-300 font-bold border-x border-emerald-100 dark:border-emerald-800/40">
               <span class="inline-flex items-center gap-1.5 text-emerald-700 dark:text-emerald-400">
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                Limpa e Minimalista
+                {t('comparison.row6Us')}
               </span>
             </td>
-            <td class="p-4 text-zinc-600 dark:text-zinc-300">Média (Modais)</td>
-            <td class="p-4 text-zinc-600 dark:text-zinc-300">Boa</td>
-            <td class="p-4 text-red-600 dark:text-red-400 font-medium">Poluída (Muitos banners)</td>
+            <td class="p-4 text-zinc-600 dark:text-zinc-300">{t('comparison.row6Them1')}</td>
+            <td class="p-4 text-zinc-600 dark:text-zinc-300">{t('comparison.row6Them2')}</td>
+            <td class="p-4 text-red-600 dark:text-red-400 font-medium">{t('comparison.row6Them3')}</td>
           </tr>
         </tbody>
       </table>

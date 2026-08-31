@@ -9,6 +9,7 @@ import { FormatSelector } from './FormatSelector';
 import { PresetSelector } from './PresetSelector';
 import { ConversionProgress } from './ConversionProgress';
 import { ResultCard } from './ResultCard';
+import { tClient } from '../../i18n/client';
 
 interface ConverterAppProps {
   initialTargetFormat?: OutputFormat;
@@ -32,7 +33,7 @@ export const ConverterApp: React.FC<ConverterAppProps> = ({
   const [progress, setProgress] = useState<ProgressData>({
     ratio: 0,
     percent: 0,
-    statusMessage: 'Aguardando início...'
+    statusMessage: 'Preparing...'
   });
   const [result, setResult] = useState<ConversionResult | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -87,7 +88,7 @@ export const ConverterApp: React.FC<ConverterAppProps> = ({
     setProgress({
       ratio: 0.05,
       percent: 5,
-      statusMessage: 'Preparando conversor no navegador...'
+      statusMessage: tClient('progress.converting')
     });
 
     try {
@@ -104,155 +105,122 @@ export const ConverterApp: React.FC<ConverterAppProps> = ({
       setResult(conversionResult);
       setStatus('done');
     } catch (err: any) {
-      if (err.message && err.message.includes('cancelada')) {
-        handleReset();
-        return;
-      }
-      console.error('Conversion failed:', err);
+      console.error('Conversion execution error:', err);
+      setErrorMessage(err?.message || 'Error occurred during video transcoding.');
       setStatus('error');
-      setErrorMessage(
-        err?.message || 'Ocorreu um erro ao processar o vídeo. Tente com outro formato ou arquivo menor.'
-      );
     }
   };
 
   const handleCancel = () => {
     ffmpegEngine.cancel();
-    handleReset();
+    setStatus('ready');
+    setProgress({ ratio: 0, percent: 0, statusMessage: 'Cancelled' });
   };
 
   const handleReset = () => {
     setSelectedFile(null);
     setMetadata(null);
-    if (posterUrl) {
-      URL.revokeObjectURL(posterUrl);
-      setPosterUrl(undefined);
-      setPosterBlob(undefined);
-    }
+    setPosterUrl(undefined);
+    setPosterBlob(undefined);
     setStatus('idle');
     setResult(null);
     setErrorMessage(null);
-    setProgress({
-      ratio: 0,
-      percent: 0,
-      statusMessage: 'Aguardando início...'
-    });
+    setProgress({ ratio: 0, percent: 0, statusMessage: '' });
   };
 
   if (!isBrowserSupported) {
     return (
-      <div className="w-full max-w-3xl mx-auto p-6 bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-900/60 rounded-3xl text-center space-y-3">
-        <h3 className="text-lg font-bold text-amber-900 dark:text-amber-300">Navegador não suportado</h3>
-        <p className="text-sm text-amber-800 dark:text-amber-400">
-          {browserSupportError || 'Seu navegador não suporta WebAssembly local. Recomendamos usar o Google Chrome, Edge, Safari ou Firefox.'}
+      <div className="max-w-3xl mx-auto p-6 bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-900/60 rounded-2xl text-amber-900 dark:text-amber-200 space-y-3">
+        <div className="flex items-center gap-2 font-bold text-base">
+          <svg className="w-5 h-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+          </svg>
+          <span>Navegador Não Compatível com WebAssembly</span>
+        </div>
+        <p className="text-sm">
+          {browserSupportError || 'Seu navegador não possui suporte aos recursos necessários (SharedArrayBuffer ou WebAssembly) para processar vídeos localmente.'}
+        </p>
+        <p className="text-xs text-amber-700 dark:text-amber-400">
+          Recomendamos utilizar a versão mais recente do Google Chrome, Microsoft Edge, Mozilla Firefox, Brave ou Safari no macOS/iOS.
         </p>
       </div>
     );
   }
 
   return (
-    <div className="w-full max-w-3xl mx-auto space-y-6">
-      {/* Privacy Guarantee Header */}
-      <div className="flex justify-center">
+    <div className="w-full max-w-4xl mx-auto">
+      {/* Privacy Guarantee Trust Badge */}
+      <div className="flex justify-center mb-6">
         <PrivacyBadge />
       </div>
 
-      {/* Main Card Container */}
-      <div className="bg-white dark:bg-zinc-900 border border-zinc-200/90 dark:border-zinc-800 rounded-3xl p-5 sm:p-8 shadow-sm transition-all">
+      {/* Main Converter Card */}
+      <div className="bg-white dark:bg-zinc-900/90 border border-zinc-200/90 dark:border-zinc-800 rounded-3xl p-6 sm:p-8 shadow-sm space-y-6 transition-colors duration-200">
         {status === 'idle' && (
-          <div className="space-y-6">
-            {defaultTitle && (
-              <div className="text-center space-y-1">
-                <h2 className="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white tracking-tight">
-                  {defaultTitle}
-                </h2>
-                <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400">
-                  Selecione o arquivo abaixo para iniciar a conversão instantânea
-                </p>
-              </div>
-            )}
-            <FileDropZone onFileSelected={handleFileSelected} />
-          </div>
+          <FileDropZone onFileSelected={handleFileSelected} />
         )}
 
         {status === 'ready' && selectedFile && (
           <div className="space-y-6">
-            {/* File Info & Metadata Inspection Card */}
-            <div className="p-4 sm:p-5 bg-zinc-50 dark:bg-zinc-800/60 border border-zinc-200 dark:border-zinc-700/70 rounded-2xl space-y-3">
-              <div className="flex items-center justify-between gap-3">
-                <div className="flex items-center gap-3 min-w-0">
-                  {posterUrl ? (
-                    <img 
-                      src={posterUrl} 
-                      alt="Capa do vídeo" 
-                      className="w-12 h-12 rounded-xl object-cover border border-zinc-200 dark:border-zinc-700 shrink-0" 
-                    />
-                  ) : (
-                    <div className="w-12 h-12 rounded-xl bg-emerald-100/70 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-400 flex items-center justify-center shrink-0 font-bold text-xs uppercase">
-                      {selectedFile.name.split('.').pop() || 'VID'}
-                    </div>
-                  )}
-                  <div className="min-w-0">
-                    <div className="text-sm font-bold text-zinc-900 dark:text-white truncate max-w-xs sm:max-w-md">
-                      {selectedFile.name}
-                    </div>
-                    <div className="text-xs text-zinc-500 dark:text-zinc-400 font-mono">
-                      {metadata?.sizeFormatted || `${(selectedFile.size / (1024 * 1024)).toFixed(1)} MB`}
-                    </div>
+            {/* Selected File Details Bar */}
+            <div className="flex items-center justify-between p-4 bg-zinc-50 dark:bg-zinc-800/70 border border-zinc-200 dark:border-zinc-700/80 rounded-2xl gap-4">
+              <div className="flex items-center gap-3.5 min-w-0">
+                {posterUrl ? (
+                  <img
+                    src={posterUrl}
+                    alt="Preview"
+                    className="w-14 h-14 rounded-xl object-cover border border-zinc-200 dark:border-zinc-700 shrink-0 bg-black"
+                  />
+                ) : (
+                  <div className="w-14 h-14 rounded-xl bg-emerald-100/70 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 flex items-center justify-center shrink-0 font-bold text-xs uppercase">
+                    {selectedFile.name.split('.').pop() || 'FILE'}
+                  </div>
+                )}
+
+                <div className="min-w-0">
+                  <h4 className="font-bold text-sm sm:text-base text-zinc-900 dark:text-white truncate">
+                    {selectedFile.name}
+                  </h4>
+                  <div className="flex items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400">
+                    <span>{(selectedFile.size / (1024 * 1024)).toFixed(1)} MB</span>
+                    {metadata?.duration && (
+                      <>
+                        <span>&bull;</span>
+                        <span>{Math.floor(metadata.duration)}s</span>
+                      </>
+                    )}
+                    {metadata?.width && metadata?.height && (
+                      <>
+                        <span>&bull;</span>
+                        <span>{metadata.width}x{metadata.height}</span>
+                      </>
+                    )}
                   </div>
                 </div>
-
-                <button
-                  type="button"
-                  onClick={handleReset}
-                  className="text-xs font-semibold text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 px-3 py-1.5 hover:bg-zinc-200/60 dark:hover:bg-zinc-700 rounded-lg transition-colors cursor-pointer shrink-0"
-                >
-                  Trocar arquivo
-                </button>
               </div>
 
-              {/* Metadata Badges */}
-              {metadata && metadata.duration > 0 && (
-                <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-zinc-200/60 dark:border-zinc-700/60 text-xs text-zinc-600 dark:text-zinc-300">
-                  <span className="bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 px-2.5 py-1 rounded-md font-medium">
-                    ⏱️ Duração: <strong className="text-zinc-900 dark:text-white">{metadata.durationFormatted}</strong>
-                  </span>
-                  {metadata.resolution !== 'Desconhecida' && (
-                    <span className="bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 px-2.5 py-1 rounded-md font-medium">
-                      📐 Resolução: <strong className="text-zinc-900 dark:text-white">{metadata.resolution}</strong>
-                    </span>
-                  )}
-                  <span className="bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 px-2.5 py-1 rounded-md font-medium">
-                    🔒 Processamento: <strong className="text-emerald-700 dark:text-emerald-400">100% Local</strong>
-                  </span>
-                </div>
-              )}
+              <button
+                type="button"
+                onClick={handleReset}
+                className="text-xs font-semibold text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-200 p-2 rounded-xl hover:bg-zinc-200/60 dark:hover:bg-zinc-700 transition-colors shrink-0 cursor-pointer"
+                title="Trocar arquivo"
+              >
+                Trocar
+              </button>
             </div>
 
-            {/* Format Selection */}
+            {/* Target Format Selector */}
             <FormatSelector
               selectedFormat={targetFormat}
               onFormatChange={handleFormatChange}
             />
 
-            {/* Preset Selection */}
+            {/* Smart Preset Selector */}
             <PresetSelector
               format={targetFormat}
               selectedPreset={selectedPreset}
               onPresetChange={setSelectedPreset}
             />
-
-            {/* Memory & Processing Warning for large files */}
-            {selectedFile.size > 200 * 1024 * 1024 && (
-              <div className="p-3.5 bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-900/60 rounded-xl text-amber-900 dark:text-amber-300 text-xs flex items-start gap-2">
-                <svg className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                </svg>
-                <span>
-                  <strong>Aviso de Memória:</strong> Arquivos acima de 200 MB utilizam uma quantidade maior de memória RAM. Mantenha a aba aberta durante o processamento para máxima velocidade.
-                </span>
-              </div>
-            )}
 
             {/* Action CTA Button */}
             <div className="pt-2">
@@ -265,10 +233,10 @@ export const ConverterApp: React.FC<ConverterAppProps> = ({
                   <path strokeLinecap="round" strokeLinejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <span>Converter para {targetFormat.toUpperCase()} Agora</span>
+                <span>{tClient('action.convert')} ({targetFormat.toUpperCase()})</span>
               </button>
               <p className="text-center text-[11px] text-zinc-500 dark:text-zinc-400 pt-2">
-                O arquivo é processado na memória do seu aparelho. Zero dados enviados à nuvem.
+                {tClient('privacy.badge')}
               </p>
             </div>
           </div>
@@ -299,9 +267,9 @@ export const ConverterApp: React.FC<ConverterAppProps> = ({
               </svg>
             </div>
             <div className="space-y-1">
-              <h3 className="text-lg font-bold text-zinc-900 dark:text-white">Não foi possível concluir a conversão</h3>
+              <h3 className="text-lg font-bold text-zinc-900 dark:text-white">Conversion Error</h3>
               <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 max-w-md mx-auto">
-                {errorMessage || 'Ocorreu um erro durante a codificação do vídeo.'}
+                {errorMessage || 'An error occurred during video transcoding.'}
               </p>
             </div>
             <div className="pt-2">
@@ -310,7 +278,7 @@ export const ConverterApp: React.FC<ConverterAppProps> = ({
                 onClick={handleReset}
                 className="px-6 py-3 bg-zinc-900 dark:bg-zinc-100 hover:bg-zinc-800 dark:hover:bg-white text-white dark:text-zinc-900 rounded-xl font-semibold text-sm transition-all cursor-pointer"
               >
-                Tentar Novamente
+                Try Again
               </button>
             </div>
           </div>

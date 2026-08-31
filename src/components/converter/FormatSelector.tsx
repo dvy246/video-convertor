@@ -1,6 +1,7 @@
 import React from 'react';
 import type { OutputFormat } from '../../lib/ffmpeg/types';
 import { FORMAT_DETAILS } from '../../lib/ffmpeg/presets';
+import { tClient } from '../../i18n/client';
 
 interface FormatSelectorProps {
   selectedFormat: OutputFormat;
@@ -18,9 +19,9 @@ export const FormatSelector: React.FC<FormatSelectorProps> = ({
   return (
     <div className="space-y-2">
       <label className="block text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
-        1. Escolha o Formato de Destino
+        {tClient('format.selectTitle')}
       </label>
-      <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2" role="radiogroup" aria-label="Formato de saída">
+      <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2" role="radiogroup" aria-label="Output format selector">
         {formats.map((format) => {
           const isSelected = selectedFormat === format;
 
@@ -42,7 +43,7 @@ export const FormatSelector: React.FC<FormatSelectorProps> = ({
                 {format}
               </span>
               <span className={`text-[10px] truncate max-w-full ${isSelected ? 'text-zinc-300 dark:text-emerald-100' : 'text-zinc-500 dark:text-zinc-400'}`}>
-                {format === 'mp3' ? 'Áudio' : format === 'gif' ? 'Animação' : 'Vídeo'}
+                {format === 'mp3' ? 'Audio' : format === 'gif' ? 'GIF' : 'Video'}
               </span>
             </button>
           );

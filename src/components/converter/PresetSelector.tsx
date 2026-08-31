@@ -1,6 +1,7 @@
 import React from 'react';
 import type { OutputFormat, PresetId } from '../../lib/ffmpeg/types';
 import { PRESETS, FORMAT_DETAILS } from '../../lib/ffmpeg/presets';
+import { tClient } from '../../i18n/client';
 
 interface PresetSelectorProps {
   format: OutputFormat;
@@ -21,17 +22,20 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
     <div className="space-y-2">
       <div className="flex items-center justify-between">
         <label className="block text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
-          2. Selecione a Otimização / Predefinição
+          {tClient('preset.selectTitle')}
         </label>
         <span className="text-[11px] text-emerald-600 dark:text-emerald-400 font-medium bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-100 dark:border-emerald-900/60 px-2 py-0.5 rounded-full">
-          Sem configurações complexas
+          {tClient('preset.noConfig')}
         </span>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5" role="radiogroup" aria-label="Predefinição de conversão">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5" role="radiogroup" aria-label="Preset selection">
         {availablePresetIds.map((presetId) => {
           const preset = PRESETS[presetId];
           const isSelected = selectedPreset === presetId;
+          const translatedLabel = tClient(`preset.${presetId}`) !== `preset.${presetId}` 
+            ? tClient(`preset.${presetId}`) 
+            : preset.label;
 
           return (
             <button
@@ -49,7 +53,7 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
             >
               <div className="flex items-center justify-between gap-2 mb-1">
                 <span className={`text-sm font-semibold ${isSelected ? 'text-emerald-950 dark:text-emerald-300' : 'text-zinc-900 dark:text-zinc-100'}`}>
-                  {preset.label}
+                  {translatedLabel}
                 </span>
                 {preset.badge && (
                   <span className={`text-[10px] uppercase font-bold px-2 py-0.5 rounded-md shrink-0 ${

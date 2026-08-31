@@ -1,33 +1,43 @@
 ---
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import type { SupportedLanguage } from '../../i18n/languages';
+
+export interface Props {
+  lang?: SupportedLanguage;
+}
+
+const currentLang = Astro.props.lang || getLangFromUrl(Astro.url);
+const t = useTranslations(currentLang);
+
 const features = [
   {
-    title: 'Privacidade Total & Conformidade LGPD',
-    description: 'Diferente dos conversores tradicionais que enviam seus vídeos particulares para servidores desconhecidos na nuvem, todo o processamento ocorre dentro do seu próprio navegador.',
+    title: t('features.privacyTitle'),
+    description: t('features.privacyDesc'),
     icon: 'M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z'
   },
   {
-    title: 'Zero Cadastro, Zero E-mail, Sem Taxas',
-    description: 'Você nunca precisará criar uma conta, inserir dados de cartão de crédito ou receber spam. Acesse o site, converta seu arquivo e baixe imediatamente sem atritos.',
+    title: t('features.freeTitle'),
+    description: t('features.freeDesc'),
     icon: 'M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z'
   },
   {
-    title: 'Predefinição Inteligente para WhatsApp',
-    description: 'Envie vídeos no WhatsApp sem estourar o limite de 16MB e sem que o aplicativo destrua a qualidade da imagem com compressão excessiva.',
+    title: t('features.smartCompressTitle'),
+    description: t('features.smartCompressDesc'),
     icon: 'M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z'
   },
   {
-    title: 'Velocidade Local Sem Fila de Espera',
-    description: 'Aproveite o poder do processador (CPU/GPU) do seu computador ou celular. Sem filas de conversão compartilhada e sem depender de upload lento.',
+    title: t('features.speedTitle'),
+    description: t('features.speedDesc'),
     icon: 'M13 10V3L4 14h7v7l9-11h-7z'
   },
   {
-    title: 'Extração de Áudio MP3 em 1 Clique',
-    description: 'Transforme clipes, palestras ou gravações de vídeo em faixas de áudio MP3 cristalinas de 192 kbps sem precisar de softwares pesados.',
+    title: t('features.audioExtractTitle'),
+    description: t('features.audioExtractDesc'),
     icon: 'M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3'
   },
   {
-    title: 'Conversão para GIF Animado Fluido',
-    description: 'Crie animações e memes em formato GIF com controle inteligente de paleta de cores (Bayer dither) para visual nítido e tamanho enxuto.',
+    title: t('features.formatsTitle'),
+    description: t('features.formatsDesc'),
     icon: 'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z'
   }
 ];
@@ -37,13 +47,13 @@ const features = [
   <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-10">
     <div class="text-center max-w-2xl mx-auto space-y-2">
       <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-3 py-1 rounded-full border border-emerald-100 dark:border-emerald-900/60">
-        Vantagens Reais
+        {t('features.badge')}
       </span>
       <h2 class="text-2xl sm:text-3xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
-        Por que escolher o Conversor de Vídeo?
+        {t('features.title')}
       </h2>
       <p class="text-sm sm:text-base text-zinc-600 dark:text-zinc-400">
-        Construído para resolver o problema de conversão de arquivos de forma rápida, privada e moderna.
+        {t('features.subtitle')}
       </p>
     </div>
 
