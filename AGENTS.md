@@ -57,7 +57,7 @@ Welcome! This document provides complete, up-to-date instructions, conventions, 
 | **Interactivity** | React 19 Islands | `^19.0.0` | Isolated client-side state machine loaded via `client:idle` with localized props. |
 | **Transcoding & Compression** | `@ffmpeg/ffmpeg` + `@ffmpeg/util` | `^0.12.15` | Browser-local WebAssembly video/audio transcode and smart compression engine. |
 | **Icons** | Phosphor Icons + SVG | `^2.1.7` | Accessible, lightweight icon set with `aria-hidden` attributes. |
-| **SEO & Sitemaps** | `@astrojs/sitemap` | `^3.2.1` | Automatic XML sitemap generation for all 497 canonical routes. |
+| **SEO & Sitemaps** | `@astrojs/sitemap` | `^3.2.1` | Automatic XML sitemap generation for all 506 canonical routes. |
 | **Deployment** | Cloudflare Pages + Wrangler | `^4.127.1` | Edge CDN hosting with strict COOP/COEP isolation headers. |
 
 ---
@@ -126,3 +126,40 @@ npm run deploy
 | `resize_1080p` | Redimensionar 1080p | CRF 23, scale 1080p, AAC 128k, faststart | Video resizing & aspect formatting |
 | `audio_mp3` | Extrair Áudio MP3 | LAME MP3 192 kbps constant bitrate | Podcasts, lectures, voice memos |
 | `gif_standard` | GIF Animado | 12 fps, max width 480px, Bayer dither palette | Loop stickers & reactions |
+
+---
+
+## 🧰 Core Launch Suite & 7 Tool Categories (51 Programmatic Tools)
+
+All 51 tools are generated programmatically via `src/data/formatPages.ts` and `src/data/localizedFormatPages.ts`, each mapped to a canonical route in Portuguese and sub-routes across 8 localized paths:
+
+1. **Conversor de Vídeo (Core Video Converters - 14 tools)**:
+   - `conversor-de-video-para-mp4`, `converter-mov-para-mp4`, `converter-mkv-para-mp4`, `converter-avi-para-mp4`, `converter-webm-para-mp4`, `converter-mp4-para-webm`, `converter-wmv-para-mp4`, `converter-flv-para-mp4`, `converter-3gp-para-mp4`, `converter-m4v-para-mp4`, `converter-divx-para-mp4`, `converter-xvid-para-mp4`, `converter-ogv-para-mp4`, `converter-mxf-para-mp4`
+2. **Compressor de Vídeo (Video Compression & Size Reduction - 8 tools)**:
+   - `compressor-de-video`, `compactar-video`, `compressor-de-video-mp4`, `compactar-video-mp4`, `compressor-de-video-gratuito`, `comprimir-video`, `compactar-video-para-whatsapp`, `reduzir-tamanho-do-video`
+3. **Áudio & MP3 (Audio Extraction & Conversion - 12 tools)**:
+   - `conversor-de-audio`, `converter-video-em-audio`, `converter-video-em-audio-gratis`, `extrair-audio-de-video`, `extrair-audio-de-video-online`, `extrair-audio-de-video-do-youtube`, `converter-video-para-mp3`, `conversor-de-audio-mp3`, `conversor-de-audio-para-mp3`, `conversor-de-audio-online`, `conversor-de-audio-do-youtube`, `baixar-conversor-de-audio-mp3-gratuito`
+4. **Redimensionar Vídeo (Video Resizing & Aspect Ratio Scaling - 4 tools)**:
+   - `redimensionar-video`, `redimensionar-video-online`, `redimensionar-video-para-tiktok`, `redimensionar-video-para-instagram`
+5. **Vídeo para GIF (Animated Loop GIFs - 3 tools)**:
+   - `video-para-gif`, `converter-video-para-gif`, `conversor-de-video-para-gif`
+6. **Câmeras, Dispositivos & Redes Sociais (Device Formats & Social Media - 10 tools)**:
+   - `converter-video-iphone`, `converter-video-android`, `conversor-de-video-youtube`, `converter-video-instagram`, `converter-m2ts-para-mp4`, `converter-mts-para-mp4`, `converter-ts-para-mp4`, `converter-vob-para-mp4`, `melhor-conversor-de-video-gratuito`
+
+---
+
+## 🧭 Dedicated Tools Directory (`/ferramentas`) Architecture
+
+- **Canonical Portuguese Route**: `src/pages/ferramentas.astro` (`https://conversordevideo.com/ferramentas`)
+- **Multilingual Sub-Routes**: `src/pages/[lang]/ferramentas.astro` (`/en/ferramentas`, `/ja/ferramentas`, etc.)
+- **Interactive React Island**: `src/components/tools/ToolsDirectory.tsx` loaded via `client:idle`:
+  - Instant client-side search across titles, descriptions, format chips, and target extensions.
+  - 6 category tabs with dynamic live counters.
+  - Server-side pre-rendered HTML cards for instant first contentful paint (FCP) and full search bot indexability.
+- **Centralized Tool Catalog**: `src/data/allToolsData.ts` exporting `ALL_DIRECTORY_TOOLS` and `getLocalizedDirectoryTools(lang)`.
+- **Rich Structured Data**:
+  - `CollectionPage` schema with structured `ItemList` containing all tools.
+  - `BreadcrumbList` schema linking Home $\to$ Directory in the active locale.
+  - `WebApplication` schema with zero-upload local privacy specs.
+  - `FAQPage` schema answering key user questions in all 9 languages.
+
