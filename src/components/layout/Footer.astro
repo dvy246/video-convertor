@@ -1,52 +1,23 @@
 ---
 import { getLangFromUrl, useTranslations, useTranslatedPath } from '../../i18n/utils';
+import { 
+  getLocalizedFooterLinks1, 
+  getLocalizedFooterLinks2, 
+  getLocalizedResourceLinks 
+} from '../../i18n/navTools';
+import type { SupportedLanguage } from '../../i18n/languages';
 
-const currentLang = getLangFromUrl(Astro.url);
+export interface Props {
+  lang?: SupportedLanguage;
+}
+
+const currentLang = Astro.props.lang || getLangFromUrl(Astro.url);
 const t = useTranslations(currentLang);
 const translatePath = useTranslatedPath(currentLang);
 
-const formatLinks1 = [
-  { name: 'Conversor para MP4', href: '/conversor-de-video-para-mp4' },
-  { name: 'MOV para MP4 (iPhone)', href: '/converter-mov-para-mp4' },
-  { name: 'Compressor de Vídeo', href: '/compressor-de-video' },
-  { name: 'Compressor MP4 Online', href: '/compressor-de-video-mp4' },
-  { name: 'Compressor Gratuito', href: '/compressor-de-video-gratuito' },
-  { name: 'Comprimir p/ WhatsApp', href: '/comprimir-video' },
-  { name: 'Vídeo para MP3 (Áudio)', href: '/converter-video-para-mp3' },
-  { name: 'Conversor de Áudio', href: '/conversor-de-audio' },
-  { name: 'Vídeo para GIF Animado', href: '/video-para-gif' },
-  { name: 'Vídeo para Instagram', href: '/converter-video-instagram' }
-];
-
-const formatLinks2 = [
-  { name: 'Vídeo do YouTube & Shorts', href: '/conversor-de-video-youtube' },
-  { name: 'Vídeo para iPhone (iOS)', href: '/converter-video-iphone' },
-  { name: 'Vídeo para Android', href: '/converter-video-android' },
-  { name: 'M2TS para MP4 (Blu-ray)', href: '/converter-m2ts-para-mp4' },
-  { name: 'MTS para MP4 (AVCHD)', href: '/converter-mts-para-mp4' },
-  { name: 'TS para MP4 (TV Digital)', href: '/converter-ts-para-mp4' },
-  { name: 'VOB para MP4 (DVD)', href: '/converter-vob-para-mp4' },
-  { name: 'FLV para MP4 (Flash)', href: '/converter-flv-para-mp4' },
-  { name: '3GP para MP4 (Celular)', href: '/converter-3gp-para-mp4' },
-  { name: 'M4V para MP4 (iTunes)', href: '/converter-m4v-para-mp4' },
-  { name: 'RMVB para MP4', href: '/converter-rmvb-para-mp4' },
-  { name: 'DivX para MP4', href: '/converter-divx-para-mp4' },
-  { name: 'XviD para MP4', href: '/converter-xvid-para-mp4' },
-  { name: 'OGV para MP4 (Ogg)', href: '/converter-ogv-para-mp4' },
-  { name: 'MXF para MP4 (Cinema)', href: '/converter-mxf-para-mp4' },
-  { name: 'MP4 para WebM', href: '/converter-mp4-para-webm' },
-  { name: 'AVI para MP4', href: '/converter-avi-para-mp4' },
-  { name: 'MKV para MP4', href: '/converter-mkv-para-mp4' },
-  { name: 'WebM para MP4', href: '/converter-webm-para-mp4' },
-  { name: 'WMV para MP4', href: '/converter-wmv-para-mp4' }
-];
-
-const resourceLinks = [
-  { name: 'Melhor Conversor Gratuito', href: '/melhor-conversor-de-video-gratuito' },
-  { name: 'Sobre a Tecnologia', href: '/sobre' },
-  { name: 'Política de Privacidade & LGPD', href: '/privacidade' },
-  { name: 'Termos de Uso', href: '/termos' }
-];
+const formatLinks1 = getLocalizedFooterLinks1(currentLang);
+const formatLinks2 = getLocalizedFooterLinks2(currentLang);
+const resourceLinks = getLocalizedResourceLinks(currentLang);
 ---
 
 <footer class="border-t border-zinc-200/80 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 text-xs sm:text-sm transition-colors duration-200">

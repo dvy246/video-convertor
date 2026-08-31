@@ -2,46 +2,31 @@
 import ThemeSlider from './ThemeSlider.astro';
 import LanguageSwitcher from './LanguageSwitcher.astro';
 import { getLangFromUrl, useTranslations, useTranslatedPath } from '../../i18n/utils';
+import { 
+  getLocalizedPopularTools, 
+  getLocalizedCompressorTools, 
+  getLocalizedCamcorderTools 
+} from '../../i18n/navTools';
+import type { SupportedLanguage } from '../../i18n/languages';
 
-const currentLang = getLangFromUrl(Astro.url);
+export interface Props {
+  lang?: SupportedLanguage;
+}
+
+const currentLang = Astro.props.lang || getLangFromUrl(Astro.url);
 const t = useTranslations(currentLang);
 const translatePath = useTranslatedPath(currentLang);
 
-const popularTools = [
-  { href: '/conversor-de-video-para-mp4', name: 'Conversor para MP4', desc: 'MOV, MKV, AVI, WebM para MP4' },
-  { href: '/converter-mov-para-mp4', name: 'MOV para MP4', desc: 'Vídeos de iPhone e Mac' },
-  { href: '/converter-video-para-mp3', name: 'Vídeo para MP3', desc: 'Extração de áudio 192 kbps' },
-  { href: '/conversor-de-audio', name: 'Conversor de Áudio', desc: 'Qualquer áudio para MP3' },
-  { href: '/video-para-gif', name: 'Vídeo para GIF', desc: 'Animações em loop para stickers' },
-  { href: '/converter-mp4-para-webm', name: 'MP4 para WebM', desc: 'Vídeo leve para sites e HTML5' },
-];
-
-const compressorAndSocialTools = [
-  { href: '/compressor-de-video', name: 'Compressor de Vídeo', desc: 'Reduz até 80% do tamanho' },
-  { href: '/compressor-de-video-mp4', name: 'Compressor MP4', desc: 'H.264 leve com faststart' },
-  { href: '/compressor-de-video-gratuito', name: 'Compressor Gratuito', desc: '100% livre sem limites' },
-  { href: '/comprimir-video', name: 'Comprimir p/ WhatsApp', desc: 'Garante tamanho < 16MB' },
-  { href: '/converter-video-instagram', name: 'Vídeo para Instagram', desc: 'Reels e Stories em 9:16' },
-  { href: '/conversor-de-video-youtube', name: 'Vídeo do YouTube', desc: 'Shorts 9:16 e 16:9 Full HD' },
-];
-
-const camcorderAndClassicTools = [
-  { href: '/converter-m2ts-para-mp4', name: 'M2TS para MP4', desc: 'Câmeras Sony e Blu-ray' },
-  { href: '/converter-mts-para-mp4', name: 'MTS para MP4', desc: 'Filmadoras AVCHD' },
-  { href: '/converter-ts-para-mp4', name: 'TS para MP4', desc: 'Gravações de TV Digital' },
-  { href: '/converter-vob-para-mp4', name: 'VOB para MP4', desc: 'Discos e pastas de DVD' },
-  { href: '/converter-video-iphone', name: 'Vídeo para iPhone', desc: 'Rolo de câmera do iOS' },
-  { href: '/converter-video-android', name: 'Vídeo para Android', desc: 'Samsung, Motorola, Xiaomi' },
-  { href: '/converter-flv-para-mp4', name: 'FLV para MP4', desc: 'Flash Video legado' },
-  { href: '/converter-3gp-para-mp4', name: '3GP para MP4', desc: 'Celulares 3G antigos' }
-];
+const popularTools = getLocalizedPopularTools(currentLang);
+const compressorAndSocialTools = getLocalizedCompressorTools(currentLang);
+const camcorderAndClassicTools = getLocalizedCamcorderTools(currentLang);
 ---
 
 <header class="sticky top-0 z-50 w-full bg-white/95 dark:bg-zinc-900/95 backdrop-blur-md border-b border-zinc-200/80 dark:border-zinc-800 shadow-xs transition-colors duration-200">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
     
     <!-- Logo & Brand Identity -->
-    <a href={translatePath('/')} class="flex items-center gap-2.5 group shrink-0" aria-label="Conversor de Vídeo — Página Inicial">
+    <a href={translatePath('/')} class="flex items-center gap-2.5 group shrink-0" aria-label="Conversor de Vídeo — Home">
       <div class="w-9 h-9 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-xs transition-transform group-hover:scale-105">
         <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
           <path strokeLinecap="round" strokeLinejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
@@ -59,7 +44,7 @@ const camcorderAndClassicTools = [
     </a>
 
     <!-- Desktop Navigation -->
-    <nav class="hidden lg:flex items-center gap-1 text-sm font-semibold text-zinc-600 dark:text-zinc-300" aria-label="Navegação Principal">
+    <nav class="hidden lg:flex items-center gap-1 text-sm font-semibold text-zinc-600 dark:text-zinc-300" aria-label="Main Navigation">
       
       <!-- Mega Menu Dropdown Trigger -->
       <div class="relative group">
@@ -208,7 +193,7 @@ const camcorderAndClassicTools = [
         type="button"
         id="mobile-menu-toggle"
         class="lg:hidden p-2 rounded-xl text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors cursor-pointer"
-        aria-label="Abrir menu de navegação"
+        aria-label="Toggle navigation menu"
         aria-expanded="false"
         aria-controls="mobile-menu"
       >
