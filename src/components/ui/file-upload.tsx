@@ -79,7 +79,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({
       <div className="text-center mb-6">
         <h2 className="text-xl sm:text-2xl font-black text-zinc-900 dark:text-white tracking-tight">Upload your files</h2>
         <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 mt-1.5">
-          {accept || 'Videos, Audio, or Images up to 500MB • 100% Private'}
+          {accept || 'Videos, Audio, or Images up to 500MB • Private & Local'}
         </p>
       </div>
 
@@ -124,7 +124,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({
           </p>
 
           <span className="text-xs text-zinc-400 dark:text-zinc-500">
-            Processed 100% locally in your browser memory
+            Processed locally in your browser memory
           </span>
         </div>
       </form>

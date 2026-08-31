@@ -19,11 +19,12 @@ import {
 
 export function getStaticPaths() {
   return nonDefaultLangs.map((lang) => ({
-    params: { lang }
+    params: { lang },
+    props: { lang }
   }));
 }
 
-const { lang } = Astro.params as { lang: SupportedLanguage };
+const lang = (Astro.props?.lang || Astro.params?.lang) as SupportedLanguage;
 const t = useTranslations(lang);
 
 const pageTitle = t('site.title');

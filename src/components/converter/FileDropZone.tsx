@@ -139,7 +139,7 @@ export const FileDropZone: React.FC<FileDropZoneProps> = ({
             </span>
             <span className="inline-flex items-center gap-1.5 bg-zinc-100/90 dark:bg-zinc-800/90 px-3 py-1 rounded-lg border border-zinc-200/60 dark:border-zinc-700/60 shadow-2xs">
               <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" />
-              <span>100% Local • Zero Upload</span>
+              <span>Processamento Local • Sem Upload</span>
             </span>
             <span className="inline-flex items-center gap-1.5 bg-zinc-100/90 dark:bg-zinc-800/90 px-3 py-1 rounded-lg border border-zinc-200/60 dark:border-zinc-700/60 shadow-2xs">
               <Sparkles className="w-3.5 h-3.5 text-teal-500" />

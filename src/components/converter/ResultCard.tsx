@@ -67,7 +67,7 @@ export const ResultCard: React.FC<ResultCardProps> = ({
               {tClient('result.ready')}
             </h3>
             <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400">
-              {(result.timeTakenMs / 1000).toFixed(1)}s • 100% In-Browser WebAssembly
+              {(result.timeTakenMs / 1000).toFixed(1)}s • In-Browser WebAssembly
             </p>
           </div>
         </div>
