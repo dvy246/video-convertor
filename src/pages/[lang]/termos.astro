@@ -1,23 +1,35 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import { PRIVACY_PAGES } from '../data/legalPages';
-import { generateBreadcrumbSchema } from '../lib/seo/schema';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { nonDefaultLangs, type SupportedLanguage } from '../../i18n/languages';
+import { TERMS_PAGES } from '../../data/legalPages';
+import { generateBreadcrumbSchema } from '../../lib/seo/schema';
+import { useTranslatedPath, useTranslations } from '../../i18n/utils';
 
-const data = PRIVACY_PAGES.pt;
-const canonicalUrl = 'https://conversordevideo.com/privacidade';
+export function getStaticPaths() {
+  return nonDefaultLangs.map((lang) => ({
+    params: { lang }
+  }));
+}
+
+const { lang } = Astro.params as { lang: SupportedLanguage };
+const data = TERMS_PAGES[lang] || TERMS_PAGES.en;
+const translatePath = useTranslatedPath(lang);
+const t = useTranslations(lang);
+
+const canonicalUrl = `https://conversordevideo.com${translatePath('/termos')}`;
 
 const breadcrumbSchema = generateBreadcrumbSchema([
-  { name: 'Início', url: 'https://conversordevideo.com' },
+  { name: t('footer.infoTitle'), url: `https://conversordevideo.com${translatePath('/')}` },
   { name: data.title, url: canonicalUrl }
 ]);
 
-const privacyPageSchema = {
+const termsPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   'name': data.title,
   'description': data.metaDescription,
   'url': canonicalUrl,
-  'inLanguage': 'pt-BR'
+  'inLanguage': lang
 };
 ---
 
@@ -25,8 +37,8 @@ const privacyPageSchema = {
   title={data.metaTitle}
   description={data.metaDescription}
   canonicalUrl={canonicalUrl}
-  lang="pt"
-  schemas={[privacyPageSchema, breadcrumbSchema]}
+  lang={lang}
+  schemas={[termsPageSchema, breadcrumbSchema]}
 >
   <div class="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16 space-y-10 text-zinc-700 dark:text-zinc-300">
     <div class="space-y-3">
