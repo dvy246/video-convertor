@@ -1525,6 +1525,450 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       metaDescription: 'Zmniejszaj rozmiar ciężkich plików wideo online bez utraty wyrazistości obrazu. Oszczędzaj pamięć telefonu lub komputera bez wysyłania.',
       heroSubtitle: 'Zmniejsz megabajty dowolnego wideo z łatwością, aby zwolnić miejsce na dysku i przyspieszyć przesyłanie.'
     }
+  },
+  'redimensionar-video': {
+    en: {
+      h1Prefix: 'Resize Video',
+      h1Highlight: 'Online Free',
+      h1Suffix: 'HD Resolution',
+      badge: '📐 Smart Video Resizer',
+      metaTitle: 'Resize Video Online Free — Change Resolution and Aspect Ratio',
+      metaDescription: 'Resize MP4 and MOV videos online without losing quality. Adjust to Full HD 1080p, 720p, or 16:9 and 9:16 aspect ratios directly in your browser.',
+      heroSubtitle: 'Change video resolution and dimensions quickly and securely. 100% processed in your browser via WebAssembly.'
+    },
+    es: {
+      h1Prefix: 'Redimensionar Video',
+      h1Highlight: 'Online Gratis',
+      h1Suffix: 'en Alta Resolución',
+      badge: '📐 Redimensionador Inteligente',
+      metaTitle: 'Redimensionar Video Online Gratis — Cambiar Resolución y Proporción',
+      metaDescription: 'Redimensiona videos MP4 y MOV online sin perder calidad. Ajusta a Full HD 1080p, 720p o proporciones 16:9 y 9:16 en tu navegador.',
+      heroSubtitle: 'Cambia la resolución y dimensiones de tus videos de forma rápida y segura. Procesamiento 100% local en tu navegador.'
+    },
+    fr: {
+      h1Prefix: 'Redimensionner Vidéo',
+      h1Highlight: 'en Ligne Gratuit',
+      h1Suffix: 'Haute Résolution',
+      badge: '📐 Redimensionnement Vidéo Intelligent',
+      metaTitle: 'Redimensionner Vidéo en Ligne Gratuit — Changer la Résolution',
+      metaDescription: 'Redimensionnez des vidéos MP4 et MOV en ligne sans perte de qualité. Ajustez en Full HD 1080p, 720p ou ratios 16:9 et 9:16 dans votre navigateur.',
+      heroSubtitle: 'Modifiez la résolution et les dimensions de vos vidéos rapidement et en toute sécurité. Traitement 100% local.'
+    },
+    ja: {
+      h1Prefix: '画質を落とさずに',
+      h1Highlight: '動画サイズ・解像度を変更',
+      h1Suffix: '無料',
+      badge: '📐 高精度 動画リサイズツール',
+      metaTitle: '動画リサイズ 無料オンライン — 解像度とアスペクト比を変更',
+      metaDescription: 'MP4、MOV 動画の解像度をオンラインで綺麗に変更。Full HD 1080p、720p や 16:9 / 9:16 比率にブラウザ内で直接調整。',
+      heroSubtitle: '動画の縦横サイズや解像度を安全かつスピーディに変更します。端末内ローカル処理で完全プライベート。'
+    },
+    zh: {
+      h1Prefix: '在线调整',
+      h1Highlight: '视频尺寸与分辨率',
+      h1Suffix: '免费工具',
+      badge: '📐 智能视频尺寸重塑',
+      metaTitle: '在线免费调整视频尺寸 — 修改分辨率与宽高比',
+      metaDescription: '在浏览器中直接调整 MP4、MOV 等视频尺寸且不失真。轻松适配 1080p 全高清、720p 及 16:9 / 9:16 比例。',
+      heroSubtitle: '快速安全地修改视频分辨率与画面规格。100% 浏览器本地运算，零文件上传。'
+    },
+    no: {
+      h1Prefix: 'Endre Videostørrelse',
+      h1Highlight: 'Online Gratis',
+      h1Suffix: 'HD Oppløsning',
+      badge: '📐 Smart Videoresizer',
+      metaTitle: 'Endre Videostørrelse Online Gratis — Oppløsning og Sideforhold',
+      metaDescription: 'Endre størrelse på MP4- og MOV-videoer online uten tap av kvalitet. Juster til Full HD 1080p, 720p eller 16:9 og 9:16 i nettleseren.',
+      heroSubtitle: 'Juster videooppløsning og dimensjoner raskt og trygt. 100% prosessert lokalt i nettleseren.'
+    },
+    tr: {
+      h1Prefix: 'Video Boyutunu',
+      h1Highlight: 'Yeniden Boyutlandır',
+      h1Suffix: 'Çevrimiçi Ücretsiz',
+      badge: '📐 Akıllı Video Boyutlandırıcı',
+      metaTitle: 'Video Yeniden Boyutlandır Çevrimiçi Ücretsiz — Çözünürlük Değiştir',
+      metaDescription: 'Kalite kaybetmeden MP4 ve MOV videolarını çevrimiçi olarak yeniden boyutlandırın. Full HD 1080p, 720p veya 16:9 / 9:16 oranlarına uyarlayın.',
+      heroSubtitle: 'Video çözünürlüğünü ve boyutlarını tarayıcınızda hızlı ve güvenli bir şekilde değiştirin.'
+    },
+    pl: {
+      h1Prefix: 'Zmień Rozmiar',
+      h1Highlight: 'Wideo Online',
+      h1Suffix: 'Wysoka Rozdzielczość',
+      badge: '📐 Inteligentne Skalowanie Wideo',
+      metaTitle: 'Zmień Rozmiar Wideo Online Za Darmo — Zmień Rozdzielczość i Proporcje',
+      metaDescription: 'Zmieniaj rozmiar filmów MP4 i MOV online bez utraty jakości. Dopasuj do Full HD 1080p, 720p lub proporcji 16:9 i 9:16 w przeglądarce.',
+      heroSubtitle: 'Zmieniaj rozdzielczość i wymiary swoich filmów szybko i bezpiecznie. 100% lokalnie w przeglądarce.'
+    }
+  },
+  'redimensionar-video-online': {
+    en: {
+      h1Prefix: 'Resize Video',
+      h1Highlight: 'Online in Browser',
+      h1Suffix: 'Free',
+      badge: '🌐 In-Browser • No Software Required',
+      metaTitle: 'Resize Video Online in Browser — No Software Download',
+      metaDescription: 'Resize video resolution online for free without downloading heavy editing software. Works directly in Chrome, Safari, and Edge with total privacy.',
+      heroSubtitle: 'Adjust video dimensions and resolution instantly inside your browser window without installing plugins or software.'
+    },
+    es: {
+      h1Prefix: 'Redimensionar Video',
+      h1Highlight: 'Online en el Navegador',
+      h1Suffix: 'Gratis',
+      badge: '🌐 En el Navegador • Sin Instalación',
+      metaTitle: 'Redimensionar Video Online en el Navegador — Sin Descargas',
+      metaDescription: 'Redimensiona videos online gratis sin descargar programas pesados. Funciona directo en Chrome, Safari y Edge con privacidad total.',
+      heroSubtitle: 'Ajusta dimensiones y resolución de videos al instante en la ventana de tu navegador.'
+    },
+    fr: {
+      h1Prefix: 'Redimensionner Vidéo',
+      h1Highlight: 'en Ligne dans le Navigateur',
+      h1Suffix: 'Gratuit',
+      badge: '🌐 Dans le Navigateur • Sans Logiciel',
+      metaTitle: 'Redimensionner Vidéo en Ligne — Sans Téléchargement',
+      metaDescription: 'Redimensionnez des vidéos en ligne gratuitement sans installer de logiciels lourds. Fonctionne sur Chrome, Safari et Edge en local.',
+      heroSubtitle: 'Ajustez les dimensions et la résolution de vos vidéos instantanément dans votre navigateur.'
+    },
+    ja: {
+      h1Prefix: 'ブラウザで完結',
+      h1Highlight: '動画サイズ変更オンライン',
+      h1Suffix: 'インストール不要',
+      badge: '🌐 インストール不要・Web完結',
+      metaTitle: 'ブラウザで動画サイズを変更 — ソフト不要オンラインリサイズ',
+      metaDescription: '重い動画編集ソフトをダウンロードせず、ブラウザ上で直接動画解像度を変更。Chrome、Safari、Edge で高速動作。',
+      heroSubtitle: 'ブラウザの画面内で動画の縦横サイズと解像度を瞬時に調整できます。'
+    },
+    zh: {
+      h1Prefix: '网页端直接',
+      h1Highlight: '在线调整视频分辨率',
+      h1Suffix: '免安装软件',
+      badge: '🌐 网页端运行 • 无需安装',
+      metaTitle: '在线网页调整视频尺寸 — 无需下载剪辑软件',
+      metaDescription: '无需下载庞大的视频编辑软件，直接在 Chrome、Safari 或 Edge 中免费调整视频分辨率与尺寸。',
+      heroSubtitle: '直接在浏览器窗口内秒速调整视频大小与分辨率，零插件安装。'
+    },
+    no: {
+      h1Prefix: 'Endre Videostørrelse',
+      h1Highlight: 'Online i Nettleseren',
+      h1Suffix: 'Gratis',
+      badge: '🌐 I Nettleseren • Ingen Programvare',
+      metaTitle: 'Endre Videostørrelse i Nettleseren — Uten Installasjon',
+      metaDescription: 'Endre videooppløsning online gratis uten å laste ned tung programvare. Fungerer direkte i Chrome, Safari og Edge.',
+      heroSubtitle: 'Juster videodimensjoner og oppløsning umiddelbart i nettleservinduet.'
+    },
+    tr: {
+      h1Prefix: 'Tarayıcıda',
+      h1Highlight: 'Video Boyutlandır',
+      h1Suffix: 'Kurulumsuz',
+      badge: '🌐 Tarayıcı İçi • Program Gerektirmez',
+      metaTitle: 'Tarayıcıda Video Boyutlandır — Program İndirmeden',
+      metaDescription: 'Ağır video düzenleme programları indirmeden videoları çevrimiçi yeniden boyutlandırın. Chrome, Safari ve Edge üzerinde doğrudan çalışır.',
+      heroSubtitle: 'Eklenti veya program yüklemeden video boyutlarını tarayıcınızda anında ayarlayın.'
+    },
+    pl: {
+      h1Prefix: 'Skaluj Wideo',
+      h1Highlight: 'Online w Przeglądarce',
+      h1Suffix: 'Bez Instalacji',
+      badge: '🌐 W Przeglądarce • Bez Instalacji',
+      metaTitle: 'Skaluj Wideo Online w Przeglądarce — Bez Programów',
+      metaDescription: 'Zmieniaj rozdzielczość wideo online za darmo bez pobierania ciężkich programów. Działa w Chrome, Safari i Edge.',
+      heroSubtitle: 'Dopasuj wymiary i rozdzielczość wideo natychmiast w oknie przeglądarki.'
+    }
+  },
+  'redimensionar-video-para-tiktok': {
+    en: {
+      h1Prefix: 'Resize Video for',
+      h1Highlight: 'TikTok Online',
+      h1Suffix: '9:16 Vertical',
+      badge: '📱 TikTok Optimized (9:16 Vertical)',
+      metaTitle: 'Resize Video for TikTok Online — Format 9:16 Vertical',
+      metaDescription: 'Resize landscape or camera footage into TikTok 9:16 vertical full screen format. 100% free and private in browser.',
+      heroSubtitle: 'Format clips and recordings into TikTok’s official vertical standard with high clarity and no awkward cropping.'
+    },
+    es: {
+      h1Prefix: 'Redimensionar Video para',
+      h1Highlight: 'TikTok Online',
+      h1Suffix: '9:16 Vertical',
+      badge: '📱 Optimizado para TikTok (9:16 Vertical)',
+      metaTitle: 'Redimensionar Video para TikTok Online — Formato Vertical 9:16',
+      metaDescription: 'Redimensiona videos horizontales al formato vertical 9:16 de TikTok. 100% gratis y privado en tu navegador.',
+      heroSubtitle: 'Formatea clips y grabaciones en el estándar vertical oficial de TikTok con alta definición.'
+    },
+    fr: {
+      h1Prefix: 'Redimensionner Vidéo pour',
+      h1Highlight: 'TikTok en Ligne',
+      h1Suffix: '9:16 Vertical',
+      badge: '📱 Optimisé pour TikTok (9:16 Vertical)',
+      metaTitle: 'Redimensionner Vidéo pour TikTok — Format Vertical 9:16',
+      metaDescription: 'Redimensionnez des vidéos horizontales au format vertical 9:16 de TikTok. 100% gratuit et privé dans votre navigateur.',
+      heroSubtitle: 'Formatez vos vidéos aux normes verticales officielles de TikTok avec une netteté族 impeccable.'
+    },
+    ja: {
+      h1Prefix: 'TikTok 向け',
+      h1Highlight: '9:16 縦型動画リサイズ',
+      h1Suffix: 'オンライン',
+      badge: '📱 TikTok 最適化 (9:16 縦型)',
+      metaTitle: 'TikTok 用 動画リサイズ オンライン — 9:16 縦型フルスクリーン変換',
+      metaDescription: '横向き動画やカメラ録画を TikTok 最適の 9:16 縦型フルスクリーン動画にリサイズ。ブラウザ完結で安全。',
+      heroSubtitle: 'TikTok が推奨する 9:16 縦型標準フォーマットに高画質でスマート変換します。'
+    },
+    zh: {
+      h1Prefix: '调整视频适配',
+      h1Highlight: 'TikTok 竖屏格式',
+      h1Suffix: '9:16 全屏',
+      badge: '📱 适配 TikTok 竖屏 (9:16)',
+      metaTitle: '调整视频适配 TikTok — 9:16 竖屏全屏格式转换',
+      metaDescription: '将横屏或相机录制的视频重塑为 TikTok 官方推荐的 9:16 竖屏规格。100% 免费且保护隐私。',
+      heroSubtitle: '将各类视频裁剪调整为 TikTok 9:16 标准竖屏尺寸，画面清晰无多余黑边。'
+    },
+    no: {
+      h1Prefix: 'Tilpass Video for',
+      h1Highlight: 'TikTok Online',
+      h1Suffix: '9:16 Vertikalt',
+      badge: '📱 Optimalisert for TikTok (9:16)',
+      metaTitle: 'Tilpass Video for TikTok Online — 9:16 Vertikalt Format',
+      metaDescription: 'Endre liggende videoer til TikToks 9:16 vertikale format. 100% gratis og privat i nettleseren.',
+      heroSubtitle: 'Formater klipp til TikToks offisielle vertikale standard med skarp bildekvalitet.'
+    },
+    tr: {
+      h1Prefix: 'TikTok İçin',
+      h1Highlight: 'Video Boyutlandır',
+      h1Suffix: '9:16 Dikey',
+      badge: '📱 TikTok İçin Optimize (9:16)',
+      metaTitle: 'TikTok İçin Video Boyutlandır — 9:16 Dikey Format',
+      metaDescription: 'Yatay videoları TikTok’un 9:16 dikey tam ekran formatına uyarlayın. %100 ücretsiz ve tarayıcıda.',
+      heroSubtitle: 'Videoları TikTok’un resmi dikey standardına uygun olarak net şekilde biçimlendirin.'
+    },
+    pl: {
+      h1Prefix: 'Dopasuj Wideo do',
+      h1Highlight: 'TikTok Online',
+      h1Suffix: 'Pionowe 9:16',
+      badge: '📱 Zoptymalizowane pod TikTok (9:16)',
+      metaTitle: 'Dopasuj Wideo do TikTok Online — Format Pionowy 9:16',
+      metaDescription: 'Skaluj poziome wideo do pionowego formatu 9:16 w TikTok. 100% za darmo i prywatnie w przeglądarce.',
+      heroSubtitle: 'Formatuj klipy zgodnie z oficjalnym pionowym standardem TikTok z zachowaniem wysokiej ostrości.'
+    }
+  },
+  'redimensionar-video-para-instagram': {
+    en: {
+      h1Prefix: 'Resize Video for',
+      h1Highlight: 'Instagram Online',
+      h1Suffix: 'Reels & Stories',
+      badge: '📸 Reels, Stories & Feed (9:16)',
+      metaTitle: 'Resize Video for Instagram Online — Reels and Stories 9:16',
+      metaDescription: 'Resize any video for Instagram Reels, Stories, and Feed in 9:16. No watermarks, no quality loss, 100% in browser.',
+      heroSubtitle: 'Adapt your clips for Instagram’s official vertical format with perfect framing and crisp clarity.'
+    },
+    es: {
+      h1Prefix: 'Redimensionar Video para',
+      h1Highlight: 'Instagram Online',
+      h1Suffix: 'Reels y Stories',
+      badge: '📸 Reels, Stories y Feed (9:16)',
+      metaTitle: 'Redimensionar Video para Instagram Online — Reels y Stories 9:16',
+      metaDescription: 'Redimensiona cualquier video para Instagram Reels, Stories y Feed en proporción 9:16. Sin marcas de agua y 100% en el navegador.',
+      heroSubtitle: 'Adapta tus videos al formato vertical oficial de Instagram con encuadre perfecto y alta nitidez.'
+    },
+    fr: {
+      h1Prefix: 'Redimensionner Vidéo pour',
+      h1Highlight: 'Instagram en Ligne',
+      h1Suffix: 'Reels et Stories',
+      badge: '📸 Reels, Stories et Feed (9:16)',
+      metaTitle: 'Redimensionner Vidéo pour Instagram — Reels et Stories 9:16',
+      metaDescription: 'Redimensionnez toute vidéo pour Instagram Reels, Stories et Feed en 9:16. Sans filigrane, sans perte de qualité.',
+      heroSubtitle: 'Adaptez vos vidéos au format vertical officiel d’Instagram avec un cadrage parfait.'
+    },
+    ja: {
+      h1Prefix: 'Instagram 向け',
+      h1Highlight: 'リール / ストーリーズ動画リサイズ',
+      h1Suffix: '9:16',
+      badge: '📸 Reels / Stories 最適化 (9:16)',
+      metaTitle: 'Instagram 用 動画リサイズ — Reels・Stories 9:16 縦型変換',
+      metaDescription: 'Instagram リールやストーリーズ用に動画を 9:16 縦型にリサイズ。画質劣化や透かしなしでブラウザ完結。',
+      heroSubtitle: 'Instagram 公式の 9:16 縦型フォーマットに合わせて動画を高画質に再フォーマットします。'
+    },
+    zh: {
+      h1Prefix: '调整视频适配',
+      h1Highlight: 'Instagram Reels / 快拍',
+      h1Suffix: '9:16 竖屏',
+      badge: '📸 Reels 与快拍优化 (9:16)',
+      metaTitle: '调整视频适配 Instagram — Reels 与 Stories 9:16 竖屏转换',
+      metaDescription: '将任何视频调整为 Instagram Reels、快拍（Stories）的 9:16 竖屏规格。无水印、无画质压缩。',
+      heroSubtitle: '完美适配 Instagram 官方竖屏尺寸，画面清晰饱满，无需付费。'
+    },
+    no: {
+      h1Prefix: 'Tilpass Video for',
+      h1Highlight: 'Instagram Online',
+      h1Suffix: 'Reels og Stories',
+      badge: '📸 Reels, Stories og Feed (9:16)',
+      metaTitle: 'Tilpass Video for Instagram Online — Reels og Stories 9:16',
+      metaDescription: 'Tilpass videoer for Instagram Reels, Stories og Feed i 9:16. Ingen vannmerker, 100% i nettleseren.',
+      heroSubtitle: 'Tilpass klippene dine til Instagrams offisielle vertikale format med perfekt beskjæring.'
+    },
+    tr: {
+      h1Prefix: 'Instagram İçin',
+      h1Highlight: 'Video Boyutlandır',
+      h1Suffix: 'Reels ve Hikayeler',
+      badge: '📸 Reels, Hikayeler ve Akış (9:16)',
+      metaTitle: 'Instagram İçin Video Boyutlandır — Reels ve Hikayeler 9:16',
+      metaDescription: 'Instagram Reels, Hikayeler ve Akış için videoları 9:16 oranında yeniden boyutlandırın. Filigransız ve net.',
+      heroSubtitle: 'Videolarınızı mükemmel çerçeveleme ile Instagram’ın resmi dikey formatına uyarlayın.'
+    },
+    pl: {
+      h1Prefix: 'Dopasuj Wideo do',
+      h1Highlight: 'Instagram Online',
+      h1Suffix: 'Reels i Stories',
+      badge: '📸 Reels, Stories i Posty (9:16)',
+      metaTitle: 'Dopasuj Wideo do Instagram — Reels i Stories 9:16',
+      metaDescription: 'Dopasuj dowolne wideo do Instagram Reels, Stories i Feed w formacie 9:16. Bez znaków wodnych, 100% w przeglądarce.',
+      heroSubtitle: 'Dostosuj swoje wideo do oficjalnego pionowego formatu Instagram z idealnym kadrowaniem.'
+    }
+  },
+  'converter-video-para-gif': {
+    en: {
+      h1Prefix: 'Convert Video to',
+      h1Highlight: 'GIF Online',
+      h1Suffix: 'Free',
+      badge: '🎞️ Fast Animated GIF Creator',
+      metaTitle: 'Convert Video to GIF Online Free — Create Animated GIF',
+      metaDescription: 'Convert video clips into animated GIFs with optimized color palette and smooth loop. 100% free, no watermarks, right in your browser.',
+      heroSubtitle: 'Transform MP4 and MOV video clips into lightweight animated GIFs to share on WhatsApp, Telegram, Discord, and social media.'
+    },
+    es: {
+      h1Prefix: 'Convertir Video a',
+      h1Highlight: 'GIF Online',
+      h1Suffix: 'Gratis',
+      badge: '🎞️ Creador Rápido de GIFs Animados',
+      metaTitle: 'Convertir Video a GIF Online Gratis — Crear GIF Animado',
+      metaDescription: 'Convierte fragmentos de video en GIFs animados con paleta de color optimizada y bucle suave. 100% gratis y sin marcas de agua.',
+      heroSubtitle: 'Transforma videos MP4 y MOV en GIFs animados ligeros para compartir en WhatsApp, Telegram, Discord y redes sociales.'
+    },
+    fr: {
+      h1Prefix: 'Convertir Vidéo en',
+      h1Highlight: 'GIF en Ligne',
+      h1Suffix: 'Gratuit',
+      badge: '🎞️ Créateur Rapide de GIF Animé',
+      metaTitle: 'Convertir Vidéo en GIF en Ligne Gratuit — Créer GIF Animé',
+      metaDescription: 'Convertissez des clips vidéo en GIF animés avec palette de couleurs optimisée et boucle fluide. 100% gratuit, sans filigrane.',
+      heroSubtitle: 'Transformez vos vidéos MP4 et MOV en GIF animés légers pour WhatsApp, Telegram, Discord et réseaux sociaux.'
+    },
+    ja: {
+      h1Prefix: '動画ファイルを',
+      h1Highlight: 'アニメーション GIF に変換',
+      h1Suffix: '無料',
+      badge: '🎞️ 高画質 GIF アニメ作成ツール',
+      metaTitle: '動画を GIF に変換 無料オンライン — ループ GIF アニメ作成',
+      metaDescription: 'MP4、MOV 動画から滑らかなループ GIF アニメーションを作成。最適化パレット採用、透かしなしで完全無料。',
+      heroSubtitle: '動画クリップを軽量で滑らかな GIF アニメに変換し、LINE や Discord、SNS で手軽に共有。'
+    },
+    zh: {
+      h1Prefix: '将视频剪辑转换为',
+      h1Highlight: '动态 GIF 动图',
+      h1Suffix: '在线免费',
+      badge: '🎞️ 快速动态 GIF 生成器',
+      metaTitle: '视频转 GIF 在线免费转换 — 制作流畅循环动图',
+      metaDescription: '将视频片段转换为具有优化调色板和流畅循环效果的动态 GIF 动图。100% 免费无水印，浏览器本地生成。',
+      heroSubtitle: '把 MP4 和 MOV 视频制作为小巧轻便的表情动图，轻松分享至微信、QQ、Discord 及社交平台。'
+    },
+    no: {
+      h1Prefix: 'Konverter Video til',
+      h1Highlight: 'GIF Online',
+      h1Suffix: 'Gratis',
+      badge: '🎞️ Rask Animert GIF-skaper',
+      metaTitle: 'Konverter Video til GIF Online Gratis — Lag Animert GIF',
+      metaDescription: 'Gjør om videoklipp til animerte GIF-er med optimalisert fargepalett og jevn loop. 100% gratis og uten vannmerker i nettleseren.',
+      heroSubtitle: 'Gjør om MP4- og MOV-klipp til lette GIF-animasjoner for deling på WhatsApp, Discord og sosiale medier.'
+    },
+    tr: {
+      h1Prefix: 'Videoyu',
+      h1Highlight: 'GIF’e Dönüştür',
+      h1Suffix: 'Çevrimiçi Ücretsiz',
+      badge: '🎞️ Hızlı Hareketli GIF Yapıcı',
+      metaTitle: 'Videoyu GIF’e Dönüştür Çevrimiçi Ücretsiz — GIF Animasyonu Yap',
+      metaDescription: 'Video kesitlerini optimize renk paleti ve akıcı döngü ile hareketli GIF’lere dönüştürün. %100 ücretsiz ve filigransız.',
+      heroSubtitle: 'MP4 ve MOV videolarını WhatsApp, Discord ve sosyal medyada paylaşmak için hafif GIF animasyonlarına dönüştürün.'
+    },
+    pl: {
+      h1Prefix: 'Konwertuj Wideo na',
+      h1Highlight: 'GIF Online',
+      h1Suffix: 'Za Darmo',
+      badge: '🎞️ Szybki Kreator Animowanych GIF',
+      metaTitle: 'Konwertuj Wideo na GIF Online Za Darmo — Twórz Animowane GIFy',
+      metaDescription: 'Konwertuj fragmenty wideo na animowane GIFy ze zoptymalizowaną paletą kolorów i płynną pętlą. 100% za darmo, bez znaków wodnych.',
+      heroSubtitle: 'Przekształcaj klipy MP4 i MOV w lekkie animowane GIFy do udostępniania na WhatsApp, Discord i w social mediach.'
+    }
+  },
+  'conversor-de-video-para-gif': {
+    en: {
+      h1Prefix: 'Video to',
+      h1Highlight: 'Animated GIF Converter',
+      h1Suffix: 'Online',
+      badge: '✨ Watermark-Free Loop GIF Generator',
+      metaTitle: 'Video to Animated GIF Converter Online — No Watermark',
+      metaDescription: 'The best online video to GIF converter: create smooth 12 fps looping stickers and memes with Bayer Dithering, no watermarks, no registration.',
+      heroSubtitle: 'Create seamless looping animations from your videos with advanced color palette control and compact file size.'
+    },
+    es: {
+      h1Prefix: 'Convertidor de Video a',
+      h1Highlight: 'GIF Animado',
+      h1Suffix: 'Online',
+      badge: '✨ Generador de GIFs en Bucle Sin Marca de Agua',
+      metaTitle: 'Convertidor de Video a GIF Animado Online — Sin Marcas de Agua',
+      metaDescription: 'El mejor convertidor de video a GIF online: crea stickers y memes fluidos a 12 fps con Bayer Dithering sin marcas de agua ni registros.',
+      heroSubtitle: 'Crea animaciones en bucle perfectas a partir de tus videos con control avanzado de paleta y tamaño reducido.'
+    },
+    fr: {
+      h1Prefix: 'Convertisseur Vidéo vers',
+      h1Highlight: 'GIF Animé',
+      h1Suffix: 'en Ligne',
+      badge: '✨ Générateur de GIF en Boucle Sans Filigrane',
+      metaTitle: 'Convertisseur Vidéo vers GIF Animé en Ligne — Sans Filigrane',
+      metaDescription: 'Le meilleur convertisseur vidéo en GIF en ligne : créez des stickers fluides à 12 fps avec tramage Bayer, sans filigrane ni inscription.',
+      heroSubtitle: 'Créez des animations en boucle parfaites à partir de vos vidéos avec une palette optimisée et un poids réduit.'
+    },
+    ja: {
+      h1Prefix: '透かしなし',
+      h1Highlight: '動画からアニメーション GIF 変換',
+      h1Suffix: 'オンライン',
+      badge: '✨ 透かしなし ループ GIF 作成',
+      metaTitle: '動画からアニメーション GIF 変換ツール — 透かしなし・登録不要',
+      metaDescription: '最高品質のオンライン動画 GIF 変換ツール：Bayer ディザリングと 12 fps で滑らかなステッカーやミームを作成。完全無料。',
+      heroSubtitle: '動画から高品質なループアニメーションを作成し、色鮮やかで軽量な GIF ファイルを出力します。'
+    },
+    zh: {
+      h1Prefix: '专业无水印',
+      h1Highlight: '视频转 GIF 动图转换器',
+      h1Suffix: '在线工具',
+      badge: '✨ 无水印循环 GIF 制作器',
+      metaTitle: '视频转动态 GIF 动图转换器 — 绝无水印与广告',
+      metaDescription: '顶尖的在线视频转 GIF 动图转换器：采用 Bayer 抖动算法与 12 帧流畅循环，制作纯净无水印的表情包与动图。',
+      heroSubtitle: '利用高级 128 色调色板控制与小体积压缩算法，将视频转化为完美的循环动图。'
+    },
+    no: {
+      h1Prefix: 'Video til',
+      h1Highlight: 'Animert GIF Konverterer',
+      h1Suffix: 'Online',
+      badge: '✨ Vannmerkefri GIF-generator',
+      metaTitle: 'Video til Animert GIF Konverterer — Uten Vannmerke',
+      metaDescription: 'Den beste online video til GIF konverteren: lag jevne 12 fps stickers og memes med Bayer Dithering uten vannmerker.',
+      heroSubtitle: 'Lag sømløse loopende animasjoner fra videoene dine med avansert palettkontroll og kompakt størrelse.'
+    },
+    tr: {
+      h1Prefix: 'Videodan',
+      h1Highlight: 'Hareketli GIF Dönüştürücü',
+      h1Suffix: 'Çevrimiçi',
+      badge: '✨ Filigransız Döngülü GIF Yapıcı',
+      metaTitle: 'Videodan Hareketli GIF Dönüştürücü — Filigransız ve Ücretsiz',
+      metaDescription: 'En iyi çevrimiçi video-GIF dönüştürücü: Bayer Dithering ve 12 fps ile akıcı çıkartmalar ve memler oluşturun, filigransız ve kayıtsız.',
+      heroSubtitle: 'Gelişmiş renk paleti kontrolü ve küçük dosya boyutu ile videolarınızdan kusursuz döngülü animasyonlar oluşturun.'
+    },
+    pl: {
+      h1Prefix: 'Konwerter Wideo na',
+      h1Highlight: 'Animowany GIF',
+      h1Suffix: 'Online',
+      badge: '✨ Generator GIF w Pętli Bez Znaku Wodnego',
+      metaTitle: 'Konwerter Wideo na Animowany GIF Online — Bez Znaku Wodnego',
+      metaDescription: 'Najlepszy konwerter wideo na GIF online: twórz płynne naklejki i memy 12 fps z ditheringiem Bayera bez znaków wodnych i rejestracji.',
+      heroSubtitle: 'Twórz idealne pętle animowane ze swoich filmów z zaawansowaną paletą kolorów i małym rozmiarem pliku.'
+    }
   }
 };
 

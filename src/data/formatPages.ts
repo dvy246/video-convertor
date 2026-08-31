@@ -258,7 +258,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     metaDescription: 'Transforme trechos de vídeo em GIFs animados de alta qualidade no navegador. 100% gratuito, sem marca d’água e sem upload de arquivos.',
     heroSubtitle: 'Transforme clipes de vídeo em GIFs animados leves e fluidos no navegador. Perfeito para figurinhas do WhatsApp, memes e reações.',
     dropzoneTitle: 'Arraste o vídeo para gerar a animação em GIF',
-    keywords: ['video para gif', 'converter video para gif', 'criar gif animado', 'transformar video em gif', 'convertidor de video a gif'],
+    keywords: ['video para gif', 'converter video para gif', 'vídeo para gif', 'conversor de video para gif', 'criar gif animado', 'transformar video em gif', 'video para gif online', 'converte video para gif'],
     explainerTitle: 'Por que criar GIFs animados a partir de vídeos?',
     explainerParagraphs: [
       'GIFs animados são a linguagem universal da internet para memes, demonstrações rápidas de produtos, reações em bate-papo e figurinhas.',
@@ -1754,6 +1754,308 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
       {
         question: 'É necessário fazer cadastro ou pagar alguma taxa?',
         answer: 'Não. O ConversordeVideo.com é 100% gratuito e aberto a todos os usuários.'
+      }
+    ]
+  },
+
+  // Video Resizer Cluster (High Volume Brazil Keywords)
+  'redimensionar-video': {
+    slug: 'redimensionar-video',
+    targetFormat: 'mp4',
+    initialPreset: 'resize_1080p',
+    badge: '📐 Redimensionamento Inteligente',
+    h1Prefix: 'Redimensionar Vídeo',
+    h1Highlight: 'Online Grátis',
+    h1Suffix: 'em Alta Resolução',
+    metaTitle: 'Redimensionar Vídeo Online Grátis — Mudar Resolução e Proporção',
+    metaDescription: 'Redimensione vídeos MP4 e MOV online sem perder qualidade. Ajuste para Full HD 1080p, 720p ou proporções 16:9 e 9:16 diretamente no seu navegador.',
+    heroSubtitle: 'Altere a resolução e as dimensões dos seus vídeos de forma rápida e segura. Processamento 100% no seu navegador via WebAssembly.',
+    dropzoneTitle: 'Arraste seu arquivo de vídeo aqui para redimensionar',
+    keywords: ['redimensionar video', 'redimensionar vídeo', 'como redimensionar vídeo', 'redimensionar vídeo grátis', 'redimensionar video online'],
+    explainerTitle: 'Como redimensionar a resolução de um vídeo sem distorcer a imagem?',
+    explainerParagraphs: [
+      'Plataformas digitais, redes sociais e reprodutores de vídeo frequentemente exigem resoluções ou proporções específicas para evitar barras pretas laterais ou cortes abruptos.',
+      'Nossa ferramenta aplica filtros bicúbicos de reescalonamento em tempo real via WebAssembly, ajustando a matriz de pixels do vídeo com máxima precisão geométrica. O resultado é um arquivo reescalado em Full HD 1080p ou 720p com proporções perfeitas e sem envio para servidores.'
+    ],
+    sourceDetailsTitle: 'Vídeo com Dimensões Inadequadas',
+    sourceDetails: [
+      'Resolução incompatível com telas e plataformas',
+      'Bordas pretas indesejadas ou cortes forçados',
+      'Arquivo pesado com pixels redundantes'
+    ],
+    targetDetailsTitle: 'Vídeo Redimensionado Perfeito',
+    targetDetails: [
+      'Escala precisa em 1080p Full HD ou 720p HD',
+      'Proporção de aspecto correta sem distorções',
+      'Compatibilidade universal e carregamento rápido'
+    ],
+    faqs: [
+      {
+        question: 'Como redimensionar um vídeo pelo navegador?',
+        answer: 'Basta arrastar seu vídeo para o conversor, selecionar a predefinição de redimensionamento e clicar em converter. O vídeo é reescalado localmente no seu dispositivo.'
+      },
+      {
+        question: 'O redimensionamento distorce ou estica o vídeo?',
+        answer: 'Não. Nossos algoritmos calculam a proporção de aspecto (aspect ratio) para preservar as proporções originais da cena sem esticar pessoas ou objetos.'
+      },
+      {
+        question: 'Posso redimensionar vídeos diretamente do celular?',
+        answer: 'Sim! Você pode redimensionar vídeos gravados no iPhone ou Android diretamente pelo navegador do smartphone.'
+      },
+      {
+        question: 'Meus vídeos são enviados para a internet durante o processo?',
+        answer: 'Não. Todo o redimensionamento é processado localmente no navegador via WebAssembly com 100% de privacidade.'
+      }
+    ]
+  },
+
+  'redimensionar-video-online': {
+    slug: 'redimensionar-video-online',
+    targetFormat: 'mp4',
+    initialPreset: 'resize_1080p',
+    badge: '🌐 No Navegador • Sem Instalação',
+    h1Prefix: 'Redimensionar Vídeo',
+    h1Highlight: 'Online no Navegador',
+    h1Suffix: 'Grátis',
+    metaTitle: 'Redimensionar Vídeo Online no Navegador — Sem Instalar Programas',
+    metaDescription: 'Redimensione vídeos online de graça sem baixar softwares de edição pesados. Funciona direto no Chrome, Safari e Edge com privacidade total.',
+    heroSubtitle: 'Ajuste dimensões e resolução de vídeos instantaneamente na janela do seu navegador sem instalar plugins ou programas.',
+    dropzoneTitle: 'Arraste o vídeo para redimensionar online',
+    keywords: ['redimensionar video online', 'redimensionar vídeo online', 'redimensionar vídeo online grátis', 'redimensionar video online gratis'],
+    explainerTitle: 'Por que redimensionar vídeos online no navegador é mais eficiente?',
+    explainerParagraphs: [
+      'Softwares de edição de vídeo convencionais exigem downloads demorados, ocupam gigabytes de espaço em disco e demandam configurações complexas de renderização.',
+      'Com o ConversordeVideo.com, você reescala seus clipes em segundos através da interface web. Aceleração local via WebAssembly garante renderização veloz sem filas de espera e sem custos.'
+    ],
+    sourceDetailsTitle: 'Editores de Vídeo Instalados',
+    sourceDetails: [
+      'Gasto de espaço no disco com programas pesados',
+      'Configurações de exportação confusas',
+      'Curva de aprendizado demorada'
+    ],
+    targetDetailsTitle: 'Redimensionamento Web Instantâneo',
+    targetDetails: [
+      'Acesso direto em qualquer navegador sem instalação',
+      'Predefinições automáticas para 1080p e proporções ideais',
+      'Processamento 100% confidencial na sua máquina'
+    ],
+    faqs: [
+      {
+        question: 'Preciso instalar algum software no meu computador?',
+        answer: 'Não. A ferramenta funciona diretamente no navegador web sem necessidade de plugins ou downloads.'
+      },
+      {
+        question: 'Quais formatos de arquivo são suportados para redimensionar?',
+        answer: 'Suportamos MP4, MOV, MKV, AVI, WebM, WMV, FLV, 3GP e a grande maioria dos formatos de vídeo populares.'
+      },
+      {
+        question: 'A ferramenta é realmente gratuita?',
+        answer: 'Sim, o redimensionador é 100% gratuito, sem limite de uso e sem marcas d’água.'
+      },
+      {
+        question: 'Quanto tempo leva para redimensionar um vídeo online?',
+        answer: 'Geralmente entre 5 e 20 segundos para vídeos comuns de celular, dependendo do poder de processamento do seu dispositivo.'
+      }
+    ]
+  },
+
+  'redimensionar-video-para-tiktok': {
+    slug: 'redimensionar-video-para-tiktok',
+    targetFormat: 'mp4',
+    initialPreset: 'instagram_reels',
+    badge: '📱 Otimizado para TikTok (9:16 Vertical)',
+    h1Prefix: 'Redimensionar Vídeo para',
+    h1Highlight: 'TikTok Online',
+    h1Suffix: '9:16',
+    metaTitle: 'Redimensionar Vídeo para TikTok Online — Formato Vertical 9:16',
+    metaDescription: 'Redimensione vídeos horizontais ou gravados em câmera para o formato vertical 9:16 do TikTok. 100% gratuito e privado no navegador.',
+    heroSubtitle: 'Formate clipes e vídeos no padrão vertical exigido pelo TikTok com alta definição e sem cortes estranhos.',
+    dropzoneTitle: 'Arraste o vídeo para formatar para o TikTok',
+    keywords: ['redimensionar vídeo para tiktok', 'redimensionar video para tiktok', 'formatar video tiktok', 'video para tiktok 9 16'],
+    explainerTitle: 'Como formatar e redimensionar vídeos para o TikTok (9:16 Vertical)?',
+    explainerParagraphs: [
+      'O algoritmo do TikTok favorece conteúdos em tela cheia vertical com proporção 9:16 e resolução 1080x1920 pixels. Vídeos em formatos horizontais (16:9) sofrem com margens pretas indesejadas e menor engajamento.',
+      'Nossa ferramenta adapta qualquer clipe para o enquadramento vertical recomendado pelo TikTok com taxa de quadros fluida e codec H.264 aceito pela plataforma.'
+    ],
+    sourceDetailsTitle: 'Vídeo Horizontal (16:9 / 4:3)',
+    sourceDetails: [
+      'Barras pretas superior e inferior no app',
+      'Menor retenção de atenção dos espectadores',
+      'Desperdício da tela inteira do smartphone'
+    ],
+    targetDetailsTitle: 'Vídeo Vertical TikTok (9:16)',
+    targetDetails: [
+      'Preenchimento total da tela do celular',
+      'Resolução nítida e codec H.264 otimizado',
+      'Máximo apelo visual para retenção no feed'
+    ],
+    faqs: [
+      {
+        question: 'Qual é a proporção ideal de vídeo para o TikTok?',
+        answer: 'A proporção padrão do TikTok é 9:16 vertical (1080x1920 pixels), ocupando toda a tela do smartphone.'
+      },
+      {
+        question: 'A ferramenta remove barras pretas ao converter para o TikTok?',
+        answer: 'Sim, a ferramenta ajusta o vídeo para o enquadramento vertical ideal sem distorcer os elementos da gravação.'
+      },
+      {
+        question: 'O vídeo gerado pode ser postado no TikTok sem reprocessamento?',
+        answer: 'Sim, o arquivo é exportado no formato padrão MP4 H.264 aceito instantaneamente pelo app do TikTok.'
+      },
+      {
+        question: 'Posso formatar vídeos gravados na horizontal da câmera?',
+        answer: 'Sim! Aceitamos vídeos de qualquer proporção e os formatamos para 9:16 vertical.'
+      }
+    ]
+  },
+
+  'redimensionar-video-para-instagram': {
+    slug: 'redimensionar-video-para-instagram',
+    targetFormat: 'mp4',
+    initialPreset: 'instagram_reels',
+    badge: '📸 Reels, Stories & Feed (9:16)',
+    h1Prefix: 'Redimensionar Vídeo para',
+    h1Highlight: 'Instagram Online',
+    h1Suffix: 'Grátis',
+    metaTitle: 'Redimensionar Vídeo para Instagram Online — Reels e Stories 9:16',
+    metaDescription: 'Redimensione qualquer vídeo para Reels, Stories e Feed do Instagram em 9:16. Sem marcas d’água, sem perda de qualidade e 100% no navegador.',
+    heroSubtitle: 'Adapte seus vídeos para o formato vertical oficial do Instagram com enquadramento perfeito e alta nitidez.',
+    dropzoneTitle: 'Arraste o vídeo para redimensionar para o Instagram',
+    keywords: ['redimensionar video para instagram', 'redimensionar vídeo para instagram', 'redimensionar vídeo para instagram online grátis', 'ajustar video instagram reels'],
+    explainerTitle: 'Como preparar e redimensionar vídeos para Reels e Stories do Instagram?',
+    explainerParagraphs: [
+      'O Instagram impõe especificações rigorosas de proporção e bitrate para Reels e Stories. Vídeos com resolução inadequada sofrem compressão agressiva pela plataforma, ficando borrados ou pixelados.',
+      'Nossa ferramenta ajusta a proporção para 9:16 vertical com bitrate equilibrado (CRF 22), garantindo que seu conteúdo chegue ao feed com máxima nitidez visual e sem cortes acidentais.'
+    ],
+    sourceDetailsTitle: 'Vídeo Não Formatado para Instagram',
+    sourceDetails: [
+      'Compressão destrutiva pelo servidor do Instagram',
+      'Bordas pretas ou cortes sobre textos e rostos',
+      'Aspecto amador que reduz o engajamento'
+    ],
+    targetDetailsTitle: 'Vídeo Formatado para Reels & Stories',
+    targetDetails: [
+      'Proporção exata 9:16 Full HD para tela cheia',
+      'Nitidez preservada após o upload no Instagram',
+      'Sem marcas d’água ou assinaturas cobradas'
+    ],
+    faqs: [
+      {
+        question: 'Qual é o tamanho recomendado para vídeos do Instagram Reels?',
+        answer: 'O Instagram recomenda a resolução 1080x1920 pixels na proporção vertical 9:16 com taxa de 30 fps.'
+      },
+      {
+        question: 'Por que meus vídeos no Instagram perdem qualidade ao postar?',
+        answer: 'Se o vídeo enviado tiver bitrate ou resolução fora dos padrões suportados, o Instagram o recodifica de forma agressiva. Ao pré-formatar com nossa ferramenta, essa perda é minimizada.'
+      },
+      {
+        question: 'Funciona para vídeos de Stories e Feed?',
+        answer: 'Sim! O formato 9:16 é ideal para Stories e Reels, e você também pode usar para publicações em tela cheia.'
+      },
+      {
+        question: 'A ferramenta coloca marca d’água no vídeo?',
+        answer: 'Não. Todos os vídeos exportados são 100% limpos e livres de marcas d’água.'
+      }
+    ]
+  },
+
+  // GIF Expansion Cluster
+  'converter-video-para-gif': {
+    slug: 'converter-video-para-gif',
+    targetFormat: 'gif',
+    initialPreset: 'gif_standard',
+    badge: '🎞️ Criação Rápida de GIFs',
+    h1Prefix: 'Converter Vídeo para',
+    h1Highlight: 'GIF Online',
+    h1Suffix: 'Grátis',
+    metaTitle: 'Converter Vídeo para GIF Online Grátis — Criar GIF Animado',
+    metaDescription: 'Converta trechos de vídeo em GIFs animados com paleta de cores otimizada e loop suave. 100% gratuito, sem marcas d’água e no navegador.',
+    heroSubtitle: 'Transforme vídeos MP4 e MOV em GIFs animados leves para compartilhar no WhatsApp, Telegram, Discord e redes sociais.',
+    dropzoneTitle: 'Arraste o vídeo para converter para GIF',
+    keywords: ['converter video para gif', 'converter vídeo para gif', 'converter video para gif online', 'converter vídeo em gif'],
+    explainerTitle: 'Como transformar clipes de vídeo em animações GIF contínuas?',
+    explainerParagraphs: [
+      'GIFs animados são ideais para expressar reações, criar demonstrações rápidas de tutoriais e produzir figurinhas para chats. Converter um vídeo para GIF de forma convencional muitas vezes gera arquivos pesados com ruído na imagem.',
+      'Nossa ferramenta aplica o algoritmo Bayer Dithering com taxa de 12 quadros por segundo, garantindo gradientes suaves de cor com um arquivo extremamente compacto.'
+    ],
+    sourceDetailsTitle: 'Vídeo Pesado com Áudio',
+    sourceDetails: [
+      'Exige tocador de vídeo dedicado',
+      'Não repete em loop contínuo automaticamente',
+      'Arquivo pesado para figurinhas e stickers'
+    ],
+    targetDetailsTitle: 'GIF Animado em Loop Fluido',
+    targetDetails: [
+      'Loop contínuo e automático em qualquer chat',
+      'Arquivo leve otimizado para WhatsApp e Discord',
+      '100% livre de marcas d’água'
+    ],
+    faqs: [
+      {
+        question: 'Como converter um vídeo em GIF animado gratuitamente?',
+        answer: 'Arraste seu arquivo de vídeo para a ferramenta e clique em converter. O GIF em loop é gerado instantaneamente no seu navegador.'
+      },
+      {
+        question: 'Qual é o tamanho máximo de duração recomendado para o GIF?',
+        answer: 'Recomendamos clipes de até 15 segundos para manter o tamanho de arquivo leve e o carregamento instantâneo em mensagens.'
+      },
+      {
+        question: 'O GIF gerado tem áudio?',
+        answer: 'O formato GIF é puramente visual e não suporta áudio, tornando-o ideal para reações e stickers silenciosos.'
+      },
+      {
+        question: 'Posso criar figurinhas do WhatsApp a partir do GIF?',
+        answer: 'Sim! Os GIFs gerados são compatíveis com o WhatsApp, Telegram, Slack e Discord.'
+      }
+    ]
+  },
+
+  'conversor-de-video-para-gif': {
+    slug: 'conversor-de-video-para-gif',
+    targetFormat: 'gif',
+    initialPreset: 'gif_standard',
+    badge: '✨ Gerador de GIFs em Loop Sem Marca d’Água',
+    h1Prefix: 'Conversor de Vídeo para',
+    h1Highlight: 'GIF Animado',
+    h1Suffix: 'Online',
+    metaTitle: 'Conversor de Vídeo para GIF Animado Online — Sem Marca d’Água',
+    metaDescription: 'O melhor conversor de vídeo para GIF online: crie figurinhas e memes fluidos a 12 fps com Bayer Dithering sem marcas d’água e sem cadastro.',
+    heroSubtitle: 'Crie animações em loop perfeitas a partir dos seus vídeos com controle avançado de paleta e tamanho reduzido.',
+    dropzoneTitle: 'Arraste seu arquivo de vídeo para gerar GIF animado',
+    keywords: ['conversor de video para gif', 'conversor de vídeo para gif', 'conversor video para gif', 'converte video para gif'],
+    explainerTitle: 'O que torna nosso conversor de vídeo para GIF superior?',
+    explainerParagraphs: [
+      'Muitos serviços online impõem marcas d’água gigantes nos GIFs gerados ou cobram assinaturas para liberar arquivos sem limites.',
+      'O ConversordeVideo.com é 100% aberto e gratuito: processamos sua mídia diretamente no navegador com otimização profissional de paleta de 128 cores, gerando GIFs nítidos, leves e totalmente limpos.'
+    ],
+    sourceDetailsTitle: 'Conversores de GIF Comuns',
+    sourceDetails: [
+      'Marcas d’água forçadas sobre a imagem',
+      'Cores distorcidas e ruído granulado',
+      'Limites rígidos e cobrança de planos'
+    ],
+    targetDetailsTitle: 'ConversordeVideo.com',
+    targetDetails: [
+      '100% Gratuito e sem marca d’água',
+      'Paleta otimizada com Bayer Dithering',
+      'Processamento veloz e privado na sua máquina'
+    ],
+    faqs: [
+      {
+        question: 'O conversor de vídeo para GIF adiciona marca d’água?',
+        answer: 'Nunca. Seus GIFs são exportados totalmente limpos para uso pessoal ou profissional.'
+      },
+      {
+        question: 'Quais formatos de vídeo posso transformar em GIF?',
+        answer: 'Aceitamos MP4, MOV, WebM, AVI, MKV, FLV e praticamente qualquer formato de vídeo moderno.'
+      },
+      {
+        question: 'Como salvar o GIF gerado no meu aparelho?',
+        answer: 'Assim que a conversão terminar, clique no botão "Baixar GIF" para salvar o arquivo diretamente na pasta de downloads.'
+      },
+      {
+        question: 'Funciona no smartphone sem aplicativo?',
+        answer: 'Sim, o conversor roda perfeitamente no Safari do iPhone e no Chrome do Android.'
       }
     ]
   }
