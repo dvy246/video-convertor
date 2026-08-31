@@ -139,8 +139,8 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
 
   en: {
     // Header & Meta
-    'site.title': 'Free & Secure Online Video Converter — 100% In-Browser',
-    'site.description': 'Convert and compress videos online for free directly in your browser without uploading files. 100% private, instant, and secure. Supports MP4, MOV, MP3, GIF, WebM, and WhatsApp.',
+    'site.title': 'Free Video Converter — 100% Private and Local',
+    'site.description': 'Convert and compress videos online for free directly in your browser without uploading files. 100% private and local. Supports MP4, MOV, MP3, GIF, WebM, and WhatsApp.',
     'header.badge': '100% Local • Zero Upload',
     'header.formats': 'Formats & Tools',
     'header.colPopular': 'Popular & Audio',
@@ -156,10 +156,10 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'header.compress': 'Compress Video',
 
     // Hero
-    'hero.badge': 'WebAssembly Technology 100% In-Browser',
-    'hero.titlePrefix': 'Video Converter',
-    'hero.titleHighlight': '100% Private & Local',
-    'hero.titleSuffix': 'No File Uploads',
+    'hero.badge': 'WebAssembly Technology • 100% In-Browser',
+    'hero.titlePrefix': 'Free Video Converter',
+    'hero.titleHighlight': '100% Private and Local',
+    'hero.titleSuffix': 'Zero Cloud Uploads',
     'hero.subtitle': 'Convert, compress, and extract audio from videos in your device’s local memory. No arbitrary file limits, no queue delays, and guaranteed privacy.',
 
     // Dropzone & Privacy
