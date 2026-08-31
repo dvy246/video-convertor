@@ -1,0 +1,50 @@
+---
+import type { FAQItem } from '../../lib/seo/schema';
+
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  faqs: FAQItem[];
+}
+
+const {
+  title = 'Perguntas Frequentes sobre Conversão de Vídeo',
+  subtitle = 'Tire suas dúvidas sobre privacidade, formatos, limites de arquivo e compatibilidade.',
+  faqs
+} = Astro.props;
+---
+
+<section class="py-12 sm:py-16">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-10">
+    <div class="text-center space-y-2">
+      <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-3 py-1 rounded-full border border-emerald-100 dark:border-emerald-900/60">
+        Dúvidas Frequentes
+      </span>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
+        {title}
+      </h2>
+      <p class="text-sm sm:text-base text-zinc-600 dark:text-zinc-400">
+        {subtitle}
+      </p>
+    </div>
+
+    <div class="space-y-3.5">
+      {faqs.map((faq, index) => (
+        <details
+          class="group bg-white dark:bg-zinc-900 border border-zinc-200/90 dark:border-zinc-800 rounded-2xl p-5 transition-all open:border-emerald-500/60 dark:open:border-emerald-500/60 open:shadow-xs"
+          id={`faq-${index + 1}`}
+        >
+          <summary class="flex items-center justify-between gap-4 font-bold text-base text-zinc-900 dark:text-white cursor-pointer list-none select-none">
+            <span>{faq.question}</span>
+            <span class="w-6 h-6 rounded-full bg-zinc-100 dark:bg-zinc-800 group-open:bg-emerald-50 dark:group-open:bg-emerald-950/80 text-zinc-500 dark:text-zinc-400 group-open:text-emerald-700 dark:group-open:text-emerald-300 flex items-center justify-center text-xs shrink-0 transition-transform group-open:rotate-180">
+              ▼
+            </span>
+          </summary>
+          <div class="pt-3.5 text-xs sm:text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed border-t border-zinc-100 dark:border-zinc-800 mt-3.5">
+            <p>{faq.answer}</p>
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

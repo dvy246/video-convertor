@@ -1,0 +1,123 @@
+---
+const formatLinks1 = [
+  { name: 'Conversor para MP4', href: '/conversor-de-video-para-mp4' },
+  { name: 'MOV para MP4 (iPhone)', href: '/converter-mov-para-mp4' },
+  { name: 'Compressor de Vídeo', href: '/compressor-de-video' },
+  { name: 'Compressor MP4 Online', href: '/compressor-de-video-mp4' },
+  { name: 'Compressor Gratuito', href: '/compressor-de-video-gratuito' },
+  { name: 'Comprimir p/ WhatsApp', href: '/comprimir-video' },
+  { name: 'Vídeo para MP3 (Áudio)', href: '/converter-video-para-mp3' },
+  { name: 'Conversor de Áudio', href: '/conversor-de-audio' },
+  { name: 'Vídeo para GIF Animado', href: '/video-para-gif' },
+  { name: 'Vídeo para Instagram', href: '/converter-video-instagram' }
+];
+
+const formatLinks2 = [
+  { name: 'Vídeo do YouTube & Shorts', href: '/conversor-de-video-youtube' },
+  { name: 'Vídeo para iPhone (iOS)', href: '/converter-video-iphone' },
+  { name: 'Vídeo para Android', href: '/converter-video-android' },
+  { name: 'M2TS para MP4 (Blu-ray)', href: '/converter-m2ts-para-mp4' },
+  { name: 'MTS para MP4 (AVCHD)', href: '/converter-mts-para-mp4' },
+  { name: 'TS para MP4 (TV Digital)', href: '/converter-ts-para-mp4' },
+  { name: 'VOB para MP4 (DVD)', href: '/converter-vob-para-mp4' },
+  { name: 'FLV para MP4 (Flash)', href: '/converter-flv-para-mp4' },
+  { name: '3GP para MP4 (Celular)', href: '/converter-3gp-para-mp4' },
+  { name: 'M4V para MP4 (iTunes)', href: '/converter-m4v-para-mp4' },
+  { name: 'RMVB para MP4', href: '/converter-rmvb-para-mp4' },
+  { name: 'DivX para MP4', href: '/converter-divx-para-mp4' },
+  { name: 'XviD para MP4', href: '/converter-xvid-para-mp4' },
+  { name: 'OGV para MP4 (Ogg)', href: '/converter-ogv-para-mp4' },
+  { name: 'MXF para MP4 (Cinema)', href: '/converter-mxf-para-mp4' },
+  { name: 'MP4 para WebM', href: '/converter-mp4-para-webm' },
+  { name: 'AVI para MP4', href: '/converter-avi-para-mp4' },
+  { name: 'MKV para MP4', href: '/converter-mkv-para-mp4' },
+  { name: 'WebM para MP4', href: '/converter-webm-para-mp4' },
+  { name: 'WMV para MP4', href: '/converter-wmv-para-mp4' }
+];
+
+const resourceLinks = [
+  { name: 'Melhor Conversor Gratuito', href: '/melhor-conversor-de-video-gratuito' },
+  { name: 'Sobre a Tecnologia', href: '/sobre' },
+  { name: 'Política de Privacidade & LGPD', href: '/privacidade' },
+  { name: 'Termos de Uso', href: '/termos' }
+];
+---
+
+<footer class="border-t border-zinc-200/80 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 text-xs sm:text-sm transition-colors duration-200">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 space-y-10">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      {/* Brand Column */}
+      <div class="space-y-4 md:col-span-1">
+        <a href="/" class="flex items-center gap-2.5 font-black text-lg text-zinc-900 dark:text-white tracking-tight">
+          <span class="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center text-sm shadow-xs font-bold">
+            ▶
+          </span>
+          <span>ConversordeVideo<span class="text-emerald-600 dark:text-emerald-400">.com</span></span>
+        </a>
+        <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
+          Conversor de vídeo e áudio gratuito, sem cadastro e 100% privado no navegador via WebAssembly. Zero arquivos enviados para servidores.
+        </p>
+        <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 text-[11px] font-semibold border border-emerald-200/60 dark:border-emerald-800/60">
+          <span>🔒 100% Conforme à LGPD</span>
+        </div>
+      </div>
+
+      {/* Popular Formats Column */}
+      <div class="space-y-3">
+        <h4 class="font-bold text-zinc-900 dark:text-zinc-100 text-xs uppercase tracking-wider">
+          Conversores Populares
+        </h4>
+        <ul class="space-y-2 text-xs">
+          {formatLinks1.map((link) => (
+            <li>
+              <a href={link.href} class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+                {link.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Camcorder & Specialized Formats Column */}
+      <div class="space-y-3">
+        <h4 class="font-bold text-zinc-900 dark:text-zinc-100 text-xs uppercase tracking-wider">
+          Formatos Específicos
+        </h4>
+        <ul class="space-y-2 text-xs">
+          {formatLinks2.map((link) => (
+            <li>
+              <a href={link.href} class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+                {link.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Legal & About Column */}
+      <div class="space-y-3">
+        <h4 class="font-bold text-zinc-900 dark:text-zinc-100 text-xs uppercase tracking-wider">
+          Informações & Legal
+        </h4>
+        <ul class="space-y-2 text-xs">
+          {resourceLinks.map((link) => (
+            <li>
+              <a href={link.href} class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+                {link.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <div class="pt-8 border-t border-zinc-100 dark:border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-400 dark:text-zinc-500">
+      <p>
+        © {new Date().getFullYear()} ConversordeVideo.com. Todos os direitos reservados.
+      </p>
+      <p class="flex items-center gap-1 text-[11px]">
+        Desenvolvido com tecnologia WebAssembly local no navegador.
+      </p>
+    </div>
+  </div>
+</footer>

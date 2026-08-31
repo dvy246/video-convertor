@@ -1,0 +1,276 @@
+---
+import ThemeSlider from './ThemeSlider.astro';
+
+const popularTools = [
+  { href: '/conversor-de-video-para-mp4', name: 'Conversor para MP4', desc: 'MOV, MKV, AVI, WebM para MP4' },
+  { href: '/converter-mov-para-mp4', name: 'MOV para MP4', desc: 'Vídeos de iPhone e Mac' },
+  { href: '/converter-video-para-mp3', name: 'Vídeo para MP3', desc: 'Extração de áudio 192 kbps' },
+  { href: '/conversor-de-audio', name: 'Conversor de Áudio', desc: 'Qualquer áudio para MP3' },
+  { href: '/video-para-gif', name: 'Vídeo para GIF', desc: 'Animações em loop para stickers' },
+  { href: '/converter-mp4-para-webm', name: 'MP4 para WebM', desc: 'Vídeo leve para sites e HTML5' },
+];
+
+const compressorAndSocialTools = [
+  { href: '/compressor-de-video', name: 'Compressor de Vídeo', desc: 'Reduz até 80% do tamanho' },
+  { href: '/compressor-de-video-mp4', name: 'Compressor MP4', desc: 'H.264 leve com faststart' },
+  { href: '/compressor-de-video-gratuito', name: 'Compressor Gratuito', desc: '100% livre sem limites' },
+  { href: '/comprimir-video', name: 'Comprimir p/ WhatsApp', desc: 'Garante tamanho < 16MB' },
+  { href: '/converter-video-instagram', name: 'Vídeo para Instagram', desc: 'Reels e Stories em 9:16' },
+  { href: '/conversor-de-video-youtube', name: 'Vídeo do YouTube', desc: 'Shorts 9:16 e 16:9 Full HD' },
+];
+
+const camcorderAndClassicTools = [
+  { href: '/converter-m2ts-para-mp4', name: 'M2TS para MP4', desc: 'Câmeras Sony e Blu-ray' },
+  { href: '/converter-mts-para-mp4', name: 'MTS para MP4', desc: 'Filmadoras AVCHD' },
+  { href: '/converter-ts-para-mp4', name: 'TS para MP4', desc: 'Gravações de TV Digital' },
+  { href: '/converter-vob-para-mp4', name: 'VOB para MP4', desc: 'Discos e pastas de DVD' },
+  { href: '/converter-video-iphone', name: 'Vídeo para iPhone', desc: 'Rolo de câmera do iOS' },
+  { href: '/converter-video-android', name: 'Vídeo para Android', desc: 'Samsung, Motorola, Xiaomi' },
+  { href: '/converter-flv-para-mp4', name: 'FLV para MP4', desc: 'Flash Video legado' },
+  { href: '/converter-3gp-para-mp4', name: '3GP para MP4', desc: 'Celulares 3G antigos' }
+];
+---
+
+<header class="sticky top-0 z-50 w-full bg-white/95 dark:bg-zinc-900/95 backdrop-blur-md border-b border-zinc-200/80 dark:border-zinc-800 shadow-xs transition-colors duration-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
+    
+    <!-- Logo & Brand Identity -->
+    <a href="/" class="flex items-center gap-2.5 group shrink-0" aria-label="Conversor de Vídeo — Página Inicial">
+      <div class="w-9 h-9 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-xs transition-transform group-hover:scale-105">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+        </svg>
+      </div>
+      <div class="flex flex-col">
+        <span class="font-black text-base tracking-tight text-zinc-900 dark:text-white leading-none">
+          Conversor<span class="text-emerald-600 dark:text-emerald-400">deVídeo</span><span class="text-xs text-zinc-400 dark:text-zinc-500 font-normal">.com</span>
+        </span>
+        <span class="text-[9px] text-zinc-500 dark:text-zinc-400 font-bold tracking-wider uppercase flex items-center gap-1 mt-0.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block animate-pulse"></span>
+          100% Local &bull; Sem Upload
+        </span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden lg:flex items-center gap-1 text-sm font-semibold text-zinc-600 dark:text-zinc-300" aria-label="Navegação Principal">
+      
+      <!-- Mega Menu Dropdown Trigger -->
+      <div class="relative group">
+        <button
+          type="button"
+          class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-zinc-700 dark:text-zinc-200 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100/80 dark:hover:bg-zinc-800/80 transition-all font-bold text-xs uppercase tracking-wider cursor-pointer"
+          aria-expanded="false"
+          aria-haspopup="true"
+        >
+          <span>Ferramentas</span>
+          <svg class="w-3.5 h-3.5 text-zinc-400 group-hover:text-zinc-700 dark:group-hover:text-zinc-200 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <!-- Mega Menu Panel -->
+        <div class="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 transform group-hover:translate-y-0 translate-y-1 w-[720px] pointer-events-none group-hover:pointer-events-auto">
+          <div class="bg-white dark:bg-zinc-900 border border-zinc-200/90 dark:border-zinc-800 rounded-2xl p-6 shadow-xl grid grid-cols-3 gap-6 text-left">
+            
+            <!-- Column 1: Popular -->
+            <div class="space-y-3">
+              <div class="text-[11px] font-extrabold uppercase tracking-wider text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-2.5 py-1 rounded-md inline-block border border-emerald-100 dark:border-emerald-900/60">
+                Populares & Áudio
+              </div>
+              <ul class="space-y-2">
+                {popularTools.map((t) => (
+                  <li>
+                    <a href={t.href} class="block p-1.5 rounded-lg hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors group/item">
+                      <div class="text-xs font-bold text-zinc-900 dark:text-zinc-100 group-hover/item:text-emerald-600 dark:group-hover/item:text-emerald-400">
+                        {t.name}
+                      </div>
+                      <div class="text-[11px] text-zinc-400 dark:text-zinc-500 leading-tight truncate">
+                        {t.desc}
+                      </div>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <!-- Column 2: Compressors & Social -->
+            <div class="space-y-3">
+              <div class="text-[11px] font-extrabold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md inline-block border border-zinc-200 dark:border-zinc-700">
+                Compressores & Redes
+              </div>
+              <ul class="space-y-2">
+                {compressorAndSocialTools.map((t) => (
+                  <li>
+                    <a href={t.href} class="block p-1.5 rounded-lg hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors group/item">
+                      <div class="text-xs font-bold text-zinc-900 dark:text-zinc-100 group-hover/item:text-emerald-600 dark:group-hover/item:text-emerald-400">
+                        {t.name}
+                      </div>
+                      <div class="text-[11px] text-zinc-400 dark:text-zinc-500 leading-tight truncate">
+                        {t.desc}
+                      </div>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <!-- Column 3: Camcorders & Classic -->
+            <div class="space-y-3">
+              <div class="text-[11px] font-extrabold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md inline-block border border-zinc-200 dark:border-zinc-700">
+                Câmeras & DVD
+              </div>
+              <ul class="space-y-2">
+                {camcorderAndClassicTools.slice(0, 5).map((t) => (
+                  <li>
+                    <a href={t.href} class="block p-1.5 rounded-lg hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors group/item">
+                      <div class="text-xs font-bold text-zinc-900 dark:text-zinc-100 group-hover/item:text-emerald-600 dark:group-hover/item:text-emerald-400">
+                        {t.name}
+                      </div>
+                      <div class="text-[11px] text-zinc-400 dark:text-zinc-500 leading-tight truncate">
+                        {t.desc}
+                      </div>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Direct Quick Navigation Links -->
+      <a
+        href="/converter-mov-para-mp4"
+        class="px-3 py-1.5 rounded-xl hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100/80 dark:hover:bg-zinc-800/80 transition-colors text-xs font-bold uppercase tracking-wider"
+      >
+        MOV para MP4
+      </a>
+
+      <a
+        href="/converter-video-para-mp3"
+        class="px-3 py-1.5 rounded-xl hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100/80 dark:hover:bg-zinc-800/80 transition-colors text-xs font-bold uppercase tracking-wider"
+      >
+        Vídeo para MP3
+      </a>
+
+      <a
+        href="/comprimir-video"
+        class="px-3 py-1.5 rounded-xl hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100/80 dark:hover:bg-zinc-800/80 transition-colors text-xs font-bold uppercase tracking-wider"
+      >
+        Comprimir
+      </a>
+
+      <a
+        href="/melhor-conversor-de-video-gratuito"
+        class="px-3 py-1.5 rounded-xl text-emerald-700 dark:text-emerald-400 hover:text-emerald-900 dark:hover:text-emerald-300 hover:bg-emerald-50 dark:hover:bg-emerald-950/60 transition-colors text-xs font-bold uppercase tracking-wider"
+      >
+        Comparativo
+      </a>
+    </nav>
+
+    <!-- Header Actions, Dark/Light Mode Slider & Mobile Drawer Toggle -->
+    <div class="flex items-center gap-3">
+      <!-- Dark / Light Mode Slider -->
+      <div class="flex items-center">
+        <ThemeSlider />
+      </div>
+
+      <a
+        href="/sobre"
+        class="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white px-3 py-2 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+      >
+        <span>Como Funciona</span>
+      </a>
+
+      <a
+        href="/conversor-de-video-para-mp4"
+        class="inline-flex items-center gap-1.5 text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-xl shadow-xs transition-all active:scale-[0.98] cursor-pointer"
+      >
+        <span>Converter</span>
+        <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button
+        type="button"
+        id="mobile-menu-toggle"
+        class="lg:hidden p-2 rounded-xl text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors cursor-pointer"
+        aria-label="Abrir menu de navegação"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu" class="hidden lg:hidden border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-4 py-6 space-y-6 max-h-[80vh] overflow-y-auto transition-colors duration-200">
+    <div class="space-y-2">
+      <div class="text-xs font-bold uppercase tracking-wider text-emerald-800 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-2 py-1 rounded">
+        Conversores Populares
+      </div>
+      <div class="grid grid-cols-2 gap-2 text-xs">
+        {popularTools.map((t) => (
+          <a href={t.href} class="p-2 rounded-lg bg-zinc-50 dark:bg-zinc-800/70 hover:bg-zinc-100 dark:hover:bg-zinc-800 font-semibold text-zinc-800 dark:text-zinc-200">
+            {t.name}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <div class="space-y-2">
+      <div class="text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-800 px-2 py-1 rounded">
+        Compressores & Redes
+      </div>
+      <div class="grid grid-cols-2 gap-2 text-xs">
+        {compressorAndSocialTools.map((t) => (
+          <a href={t.href} class="p-2 rounded-lg bg-zinc-50 dark:bg-zinc-800/70 hover:bg-zinc-100 dark:hover:bg-zinc-800 font-semibold text-zinc-800 dark:text-zinc-200">
+            {t.name}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <div class="space-y-2">
+      <div class="text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-800 px-2 py-1 rounded">
+        Câmeras & DVD
+      </div>
+      <div class="grid grid-cols-2 gap-2 text-xs">
+        {camcorderAndClassicTools.slice(0, 6).map((t) => (
+          <a href={t.href} class="p-2 rounded-lg bg-zinc-50 dark:bg-zinc-800/70 hover:bg-zinc-100 dark:hover:bg-zinc-800 font-semibold text-zinc-800 dark:text-zinc-200">
+            {t.name}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <div class="pt-4 border-t border-zinc-100 dark:border-zinc-800 flex flex-col gap-2 text-xs font-semibold">
+      <a href="/melhor-conversor-de-video-gratuito" class="p-2.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-900 dark:text-emerald-300 text-center font-bold">
+        🏆 Comparativo Concorrentes 2026
+      </a>
+      <a href="/sobre" class="p-2 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 text-center">
+        Sobre a Tecnologia WebAssembly
+      </a>
+    </div>
+  </div>
+</header>
+
+<script is:inline>
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (toggleBtn && mobileMenu) {
+    toggleBtn.addEventListener('click', () => {
+      const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+      toggleBtn.setAttribute('aria-expanded', String(!isExpanded));
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+</script>

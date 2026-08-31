@@ -1,0 +1,66 @@
+---
+export interface Props {
+  title?: string;
+  subtitle?: string;
+}
+
+const {
+  title = 'Como Funciona a Conversão no Navegador',
+  subtitle = 'Um processo simples em 3 passos rápidos, sem filas de espera e sem uploads para a nuvem.'
+} = Astro.props;
+
+const steps = [
+  {
+    number: '01',
+    title: 'Selecione o Vídeo',
+    description: 'Arraste seu arquivo para o conversor ou clique para escolher do seu celular ou computador. O arquivo carrega instantaneamente na memória local.'
+  },
+  {
+    number: '02',
+    title: 'Escolha a Otimização',
+    description: 'Selecione o formato desejado (MP4, MP3, WebM, GIF) e a predefinição inteligente (como "Otimizado para WhatsApp" ou "Alta Fidelidade HD").'
+  },
+  {
+    number: '03',
+    title: 'Baixe o Arquivo Pronto',
+    description: 'A tecnologia WebAssembly codifica o vídeo diretamente no seu dispositivo. Clique no botão de download e salve seu arquivo sem marcas d’água.'
+  }
+];
+---
+
+<section class="py-12 sm:py-16 bg-white dark:bg-zinc-900 border-y border-zinc-200/80 dark:border-zinc-800 transition-colors">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-10">
+    <div class="text-center max-w-2xl mx-auto space-y-2">
+      <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-3 py-1 rounded-full border border-emerald-100 dark:border-emerald-900/60">
+        Simples & Direto
+      </span>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
+        {title}
+      </h2>
+      <p class="text-sm sm:text-base text-zinc-600 dark:text-zinc-400">
+        {subtitle}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+      {steps.map((step) => (
+        <div class="relative bg-zinc-50/80 dark:bg-zinc-800/60 border border-zinc-200/90 dark:border-zinc-700/70 rounded-2xl p-6 sm:p-7 space-y-3 transition-all hover:border-emerald-500/50 hover:bg-white dark:hover:bg-zinc-800 hover:shadow-xs">
+          <div class="flex items-center justify-between">
+            <span class="font-mono text-2xl sm:text-3xl font-black text-emerald-600/80 dark:text-emerald-400/80">
+              {step.number}
+            </span>
+            <div class="w-8 h-8 rounded-full bg-emerald-100/60 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 flex items-center justify-center font-bold text-xs">
+              ✓
+            </div>
+          </div>
+          <h3 class="text-lg font-bold text-zinc-900 dark:text-white">
+            {step.title}
+          </h3>
+          <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+            {step.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,71 @@
+---
+import { SITE_CONFIG } from '../../lib/seo/meta';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  canonicalUrl?: string;
+  ogImage?: string;
+  ogType?: 'website' | 'article';
+  keywords?: string[];
+  schemas?: (Record<string, any> | null)[];
+}
+
+const {
+  title = `${SITE_CONFIG.name} — Conversor de Vídeo Online Grátis e Seguro`,
+  description = 'Converta vídeos online gratuitamente no seu navegador sem upload de arquivos. 100% privado e rápido. Suporte para MP4, MOV, MP3, GIF, WebM e WhatsApp.',
+  canonicalUrl = Astro.url.href,
+  ogImage = SITE_CONFIG.defaultOgImage,
+  ogType = 'website',
+  keywords = SITE_CONFIG.defaultKeywords,
+  schemas = []
+} = Astro.props;
+
+// Filter out null schemas
+const validSchemas = schemas.filter((s): s is Record<string, any> => s !== null && s !== undefined);
+---
+
+<head>
+  <!-- Primary Meta Tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>{title}</title>
+  <meta name="title" content={title} />
+  <meta name="description" content={description} />
+  <meta name="keywords" content={keywords.join(', ')} />
+  <meta name="author" content="Conversor de Vídeo" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="theme-color" content={SITE_CONFIG.themeColor} />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href={canonicalUrl} />
+
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/favicon.svg" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content={ogType} />
+  <meta property="og:url" content={canonicalUrl} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:image:alt" content={title} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content={SITE_CONFIG.name} />
+  <meta property="og:locale" content={SITE_CONFIG.defaultLocale} />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content={canonicalUrl} />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImage} />
+  <meta name="twitter:image:alt" content={title} />
+
+  <!-- JSON-LD Structured Data for Rich Snippets -->
+  {validSchemas.map((schema) => (
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  ))}
+</head>

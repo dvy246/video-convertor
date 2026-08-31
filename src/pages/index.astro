@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ConverterApp } from '../components/converter/ConverterApp';
+import HowItWorks from '../components/sections/HowItWorks.astro';
+import Features from '../components/sections/Features.astro';
+import ComparisonTable from '../components/sections/ComparisonTable.astro';
+import HomeSEOArticle from '../components/sections/HomeSEOArticle.astro';
+import FormatGrid from '../components/sections/FormatGrid.astro';
+import FAQSection from '../components/sections/FAQSection.astro';
+import { 
+  generateWebApplicationSchema, 
+  generateHowToSchema, 
+  generateFAQSchema,
+  generateOrganizationSchema,
+  generateWebSiteSchema
+} from '../lib/seo/schema';
+
+const pageTitle = 'Conversor de Vídeo Online Grátis — Sem Upload e 100% Privado';
+const pageDescription = 'Conversor de vídeo online gratuito no navegador. Converta MOV, MP4, MP3, WebM e GIF sem upload, sem cadastro e 100% privado no seu dispositivo.';
+const canonicalUrl = 'https://conversordevideo.com';
+
+const faqs = [
+  {
+    question: 'O conversor de vídeo é realmente 100% gratuito?',
+    answer: 'Sim! Você pode converter quantos vídeos quiser, sem limites diários, sem cadastro, sem marcas d’água e sem taxas ocultas.'
+  },
+  {
+    question: 'Meus vídeos particulares são enviados para algum servidor na internet?',
+    answer: 'Não. Nosso conversor utiliza a tecnologia WebAssembly (FFmpeg WASM), processando todo o arquivo diretamente na memória do seu próprio navegador (celular ou computador). Seus vídeos nunca saem do seu aparelho.'
+  },
+  {
+    question: 'Como faço para converter um vídeo e enviar no WhatsApp sem estourar 16MB?',
+    answer: 'Basta selecionar seu vídeo e escolher a predefinição "Otimizado para WhatsApp". A ferramenta ajustará a resolução para 720p e aplicará a taxa de bits ideal para que o arquivo fique leve, nítido e com menos de 16MB.'
+  },
+  {
+    question: 'Quais formatos de vídeo posso converter?',
+    answer: 'Aceitamos arquivos nos formatos MP4, MOV (iPhone), AVI, MKV, WebM, WMV, FLV, M4V, 3GP, M2TS, MTS, VOB, TS, MXF e outros. Você pode exportar para MP4, MP3 (áudio), GIF animado, WebM, MOV, AVI ou MKV.'
+  },
+  {
+    question: 'Posso extrair apenas o áudio de uma gravação de vídeo?',
+    answer: 'Com certeza! Escolha o formato de saída "MP3" ou a predefinição "Extrair Áudio". A ferramenta irá extrair a trilha sonora com alta qualidade de 192 kbps.'
+  },
+  {
+    question: 'Existe limite máximo de tamanho de arquivo?',
+    answer: 'Não impomos limites artificiais. Como o processamento usa a memória RAM do seu aparelho, arquivos de até 300MB a 500MB funcionam perfeitamente na maioria dos celulares e computadores modernos.'
+  }
+];
+
+const orgSchema = generateOrganizationSchema();
+const siteSchema = generateWebSiteSchema();
+
+const webAppSchema = generateWebApplicationSchema({
+  name: 'Conversor de Vídeo Online',
+  description: pageDescription,
+  url: canonicalUrl
+});
+
+const howToSchema = generateHowToSchema({
+  name: 'Como converter vídeos gratuitamente no navegador',
+  description: 'Passo a passo rápido para converter qualquer formato de vídeo de forma privada sem upload.',
+  steps: [
+    {
+      position: 1,
+      name: 'Selecione seu arquivo de vídeo',
+      text: 'Arraste o arquivo para a área de conversão ou clique para selecionar do seu dispositivo.'
+    },
+    {
+      position: 2,
+      name: 'Escolha o formato e a predefinição',
+      text: 'Selecione o formato desejado (MP4, MP3, GIF, etc.) e a otimização recomendada.'
+    },
+    {
+      position: 3,
+      name: 'Converta e baixe o vídeo',
+      text: 'Clique em Converter Agora e baixe o arquivo processado diretamente para seu dispositivo.'
+    }
+  ]
+});
+
+const faqSchema = generateFAQSchema(faqs);
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  canonicalUrl={canonicalUrl}
+  schemas={[orgSchema, siteSchema, webAppSchema, howToSchema, faqSchema]}
+>
+  <!-- Hero & Converter Section -->
+  <section class="pt-8 pb-12 sm:pt-14 sm:pb-16 px-4 sm:px-6">
+    <div class="max-w-4xl mx-auto text-center space-y-4 mb-8">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 text-xs font-bold uppercase tracking-wider border border-emerald-200/80 dark:border-emerald-800/60">
+        ✨ A Nova Geração de Conversores Web
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-black text-zinc-900 dark:text-white tracking-tight leading-tight">
+        Conversor de Vídeo Online <span class="text-emerald-600 dark:text-emerald-400">Grátis & Privado</span>
+      </h1>
+      <p class="text-base sm:text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+        Converta seus vídeos diretamente no navegador. <strong>Sem upload</strong> para servidores, <strong>sem cadastro</strong> e <strong>sem limites diários</strong>. Rápido, seguro e 100% gratuito.
+      </p>
+    </div>
+
+    <!-- Interactive Converter App Island -->
+    <ConverterApp client:idle />
+  </section>
+
+  <!-- How It Works Section -->
+  <HowItWorks />
+
+  <!-- Features Section -->
+  <Features />
+
+  <!-- Comparison Section -->
+  <ComparisonTable />
+
+  <!-- In-Depth 600+ Word SEO Article Section -->
+  <HomeSEOArticle />
+
+  <!-- Format Grid / Specialized Tools -->
+  <FormatGrid />
+
+  <!-- FAQ Section -->
+  <FAQSection faqs={faqs} />
+</BaseLayout>

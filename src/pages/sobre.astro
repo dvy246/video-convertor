@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { generateBreadcrumbSchema } from '../lib/seo/schema';
+
+const pageTitle = 'Sobre o Conversor de Vídeo — Tecnologia 100% no Navegador';
+const pageDescription = 'Conheça o ConversordeVideo.com: a primeira ferramenta brasileira de conversão de vídeo focada em privacidade real, sem upload e sem cadastro.';
+const canonicalUrl = 'https://conversordevideo.com/sobre';
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Início', url: 'https://conversordevideo.com' },
+  { name: 'Sobre a Ferramenta', url: canonicalUrl }
+]);
+
+const aboutPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  'name': pageTitle,
+  'description': pageDescription,
+  'url': canonicalUrl,
+  'inLanguage': 'pt-BR',
+  'mainEntity': {
+    '@type': 'Organization',
+    'name': 'Conversor de Vídeo',
+    'url': 'https://conversordevideo.com'
+  }
+};
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  canonicalUrl={canonicalUrl}
+  schemas={[aboutPageSchema, breadcrumbSchema]}
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16 space-y-12 text-zinc-700 dark:text-zinc-300">
+    <div class="space-y-3">
+      <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-3 py-1 rounded-full border border-emerald-100 dark:border-emerald-900/60">
+        Nossa Missão & Tecnologia
+      </span>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
+        Uma Nova Maneira de Converter Mídia Digital
+      </h1>
+      <p class="text-base sm:text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
+        Construímos o <strong>ConversordeVideo.com</strong> para colocar um ponto final nas ferramentas lentas, cheias de propagandas enganosas e que desrespeitam a privacidade dos usuários.
+      </p>
+    </div>
+
+    <div class="space-y-8 text-sm sm:text-base leading-relaxed">
+      <div class="space-y-3">
+        <h2 class="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white">Por que criamos esta ferramenta?</h2>
+        <p class="text-zinc-600 dark:text-zinc-300">
+          Ao analisar o mercado existente de conversores de vídeo (como CloudConvert, Convertio, FreeConvert e VEED), notamos que a grande maioria impõe barreiras desnecessárias: filas de espera demoradas, limites rígidos de 100MB que bloqueiam vídeos comuns de celular, planos pagos caros e, principalmente, a exigência de que você envie seus arquivos pessoais para servidores na nuvem.
+        </p>
+        <p class="text-zinc-600 dark:text-zinc-300">
+          No Brasil e em países de língua espanhola, a necessidade de converter e comprimir vídeos para o WhatsApp, Instagram e e-mail é diária. Ninguém deveria ser obrigado a comprometer sua privacidade apenas para converter um vídeo do iPhone para MP4.
+        </p>
+      </div>
+
+      <div class="space-y-3">
+        <h2 class="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white">Como funciona a tecnologia WebAssembly?</h2>
+        <p class="text-zinc-600 dark:text-zinc-300">
+          Utilizamos o projeto <strong>FFmpeg WebAssembly (WASM)</strong>. Em vez de enviar seu vídeo pela internet para ser processado em um servidor nos Estados Unidos ou na Europa, o próprio código do conversor roda dentro do seu navegador.
+        </p>
+        <ul class="list-disc pl-5 space-y-2 text-zinc-600 dark:text-zinc-300">
+          <li><strong>Zero uso de banda:</strong> Você não gasta seus dados móveis fazendo upload de arquivos pesados.</li>
+          <li><strong>Velocidade imediata:</strong> Sem filas compartilhadas com outros usuários.</li>
+          <li><strong>Privacidade absoluta:</strong> Seus arquivos nunca saem do seu computador ou celular.</li>
+        </ul>
+      </div>
+
+      <div class="p-6 bg-emerald-50/70 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 rounded-2xl space-y-2">
+        <h3 class="text-base font-bold text-emerald-950 dark:text-emerald-300">100% Gratuito e Livre de Rastreamento</h3>
+        <p class="text-xs sm:text-sm text-emerald-900 dark:text-emerald-300 leading-relaxed">
+          Não vendemos seus dados para anunciantes nem exigimos que você crie senhas. Nossa ferramenta foi desenvolvida para ser rápida, sustentável e acessível a qualquer pessoa.
+        </p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { generateBreadcrumbSchema } from '../lib/seo/schema';
+
+const pageTitle = 'Política de Privacidade e LGPD — Conversor de Vídeo';
+const pageDescription = 'Conheça nossa política de privacidade. O ConversordeVideo.com processa todos os vídeos localmente no navegador, sem coletar ou armazenar seus arquivos.';
+const canonicalUrl = 'https://conversordevideo.com/privacidade';
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Início', url: 'https://conversordevideo.com' },
+  { name: 'Política de Privacidade', url: canonicalUrl }
+]);
+
+const privacyPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  'name': pageTitle,
+  'description': pageDescription,
+  'url': canonicalUrl,
+  'inLanguage': 'pt-BR'
+};
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  canonicalUrl={canonicalUrl}
+  schemas={[privacyPageSchema, breadcrumbSchema]}
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16 space-y-10 text-zinc-700 dark:text-zinc-300">
+    <div class="space-y-3">
+      <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-3 py-1 rounded-full border border-emerald-100 dark:border-emerald-900/60">
+        Transparência & LGPD
+      </span>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
+        Política de Privacidade
+      </h1>
+      <p class="text-xs text-zinc-500 dark:text-zinc-400">Última atualização: Agosto de 2026</p>
+    </div>
+
+    <article class="prose prose-zinc dark:prose-invert max-w-none space-y-6 text-sm sm:text-base leading-relaxed">
+      <section class="space-y-2">
+        <h2 class="text-xl font-bold text-zinc-900 dark:text-white">1. Princípio Fundamental: Processamento Local</h2>
+        <p class="text-zinc-600 dark:text-zinc-300">
+          O <strong>ConversordeVideo.com</strong> foi desenvolvido com privacidade desde o design (<em>Privacy by Design</em>). Ao utilizar nossa plataforma, os arquivos de vídeo, áudio ou imagem que você seleciona para conversão são processados <strong>exclusivamente dentro do seu próprio navegador</strong> por meio de código WebAssembly compilado localmente.
+        </p>
+        <p class="text-zinc-600 dark:text-zinc-300">
+          <strong>Nenhum arquivo ou conteúdo de mídia é transmitido, armazenado, copiado ou analisado em nossos servidores.</strong>
+        </p>
+      </section>
+
+      <section class="space-y-2">
+        <h2 class="text-xl font-bold text-zinc-900 dark:text-white">2. Conformidade com a LGPD (Lei nº 13.709/2018)</h2>
+        <p class="text-zinc-600 dark:text-zinc-300">
+          Em total conformidade com a Lei Geral de Proteção de Dados Pessoais do Brasil (LGPD), asseguramos que:
+        </p>
+        <ul class="list-disc pl-5 space-y-1 text-zinc-600 dark:text-zinc-300">
+          <li>Não coletamos dados pessoais sensíveis;</li>
+          <li>Não solicitamos cadastro, e-mail, nome, número de telefone ou senhas;</li>
+          <li>Não vendemos nem compartilhamos bancos de dados de usuários com parceiros de publicidade;</li>
+          <li>Não armazenamos cookies invasivos de rastreamento entre sites.</li>
+        </ul>
+      </section>
+
+      <section class="space-y-2">
+        <h2 class="text-xl font-bold text-zinc-900 dark:text-white">3. Dados Técnicos Anônimos e Métricas</h2>
+        <p class="text-zinc-600 dark:text-zinc-300">
+          Podemos coletar métricas técnicas anônimas estritamente para fins de desempenho (como tempo de carregamento da página e tipo de navegador), sem qualquer identificação pessoal ou vinculação aos arquivos convertidos.
+        </p>
+      </section>
+
+      <section class="space-y-2">
+        <h2 class="text-xl font-bold text-zinc-900 dark:text-white">4. Contato</h2>
+        <p class="text-zinc-600 dark:text-zinc-300">
+          Caso você tenha qualquer dúvida sobre nossa arquitetura de privacidade e segurança, entre em contato através do e-mail oficial de suporte disponibilizado no domínio conversordevideo.com.
+        </p>
+      </section>
+    </article>
+  </div>
+</BaseLayout>

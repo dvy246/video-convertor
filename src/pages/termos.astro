@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { generateBreadcrumbSchema } from '../lib/seo/schema';
+
+const pageTitle = 'Termos de Uso — Conversor de Vídeo';
+const pageDescription = 'Termos e condições de uso do ConversordeVideo.com. Ferramenta gratuita de conversão de arquivos de vídeo e áudio no navegador.';
+const canonicalUrl = 'https://conversordevideo.com/termos';
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Início', url: 'https://conversordevideo.com' },
+  { name: 'Termos de Uso', url: canonicalUrl }
+]);
+
+const termsPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  'name': pageTitle,
+  'description': pageDescription,
+  'url': canonicalUrl,
+  'inLanguage': 'pt-BR'
+};
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  canonicalUrl={canonicalUrl}
+  schemas={[termsPageSchema, breadcrumbSchema]}
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16 space-y-10 text-zinc-700 dark:text-zinc-300">
+    <div class="space-y-3">
+      <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-3 py-1 rounded-full border border-emerald-100 dark:border-emerald-900/60">
+        Condições Gerais
+      </span>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
+        Termos de Uso
+      </h1>
+      <p class="text-xs text-zinc-500 dark:text-zinc-400">Última atualização: Agosto de 2026</p>
+    </div>
+
+    <article class="prose prose-zinc dark:prose-invert max-w-none space-y-6 text-sm sm:text-base leading-relaxed">
+      <section class="space-y-2">
+        <h2 class="text-xl font-bold text-zinc-900 dark:text-white">1. Aceitação dos Termos</h2>
+        <p class="text-zinc-600 dark:text-zinc-300">
+          Ao acessar e utilizar o <strong>ConversordeVideo.com</strong>, você concorda com estes termos de uso e com nossa política de privacidade. O serviço é disponibilizado de forma gratuita para uso pessoal e profissional.
+        </p>
+      </section>
+
+      <section class="space-y-2">
+        <h2 class="text-xl font-bold text-zinc-900 dark:text-white">2. Uso Responsável do Serviço</h2>
+        <p class="text-zinc-600 dark:text-zinc-300">
+          O usuário é o único responsável pelos arquivos que decide processar através da ferramenta. É vedado o uso da ferramenta para violar direitos autorais de terceiros ou processar conteúdos ilícitos.
+        </p>
+      </section>
+
+      <section class="space-y-2">
+        <h2 class="text-xl font-bold text-zinc-900 dark:text-white">3. Disponibilidade e Isenção de Garantias</h2>
+        <p class="text-zinc-600 dark:text-zinc-300">
+          A ferramenta é fornecida "como está" (<em>as is</em>). Como todo o processamento de áudio e vídeo ocorre no hardware do usuário, o desempenho da conversão depende diretamente da capacidade de memória e processamento do dispositivo utilizado.
+        </p>
+      </section>
+    </article>
+  </div>
+</BaseLayout>

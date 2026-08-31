@@ -1,0 +1,58 @@
+# ConversordeVideo.com — Conversor de Vídeo e Áudio 100% no Navegador
+
+> ConversordeVideo.com é uma ferramenta web gratuita, rápida e com foco total em privacidade (LGPD) para converter, comprimir e extrair áudio de vídeos diretamente no navegador via WebAssembly (FFmpeg.wasm). Nenhum arquivo é enviado para servidores externos.
+
+## Visão Geral e Diferencial Técnico
+- **Zero Upload:** O processamento ocorre 100% na memória RAM local do dispositivo do usuário através de WebAssembly.
+- **Privacidade e LGPD:** Em total conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018), garantindo que dados pessoais e mídias nunca saiam do aparelho.
+- **Gratuito e Sem Cadastro:** Sem filas de espera, sem necessidade de login e sem limites abusivos de tamanho de arquivo.
+
+## Principais Ferramentas e Rotas Canônicas
+
+### Conversores de Vídeo Universais
+- [Conversor de Vídeo para MP4](https://conversordevideo.com/conversor-de-video-para-mp4): Converte arquivos MOV, MKV, AVI, WebM, WMV, FLV, VOB, M2TS para MP4 universal compatível com 100% dos celulares, PCs e TVs.
+- [Converter MOV para MP4](https://conversordevideo.com/converter-mov-para-mp4): Otimizado para vídeos capturados no iPhone, iPad e Mac (QuickTime), convertendo para MP4 H.264 sem perda de qualidade visual.
+- [Conversor de Vídeo para WebM](https://conversordevideo.com/converter-mp4-para-webm): Transforma arquivos MP4 no formato aberto e leve WebM para carregamento instantâneo em sites e blogs HTML5.
+- [Converter AVI para MP4](https://conversordevideo.com/converter-avi-para-mp4): Moderniza vídeos legados em formato AVI para reprodução em smartphones modernos.
+- [Converter MKV para MP4](https://conversordevideo.com/converter-mkv-para-mp4): Converte filmes e séries em contêiner Matroska (MKV) para MP4 com alta fidelidade.
+- [Converter WebM para MP4](https://conversordevideo.com/converter-webm-para-mp4): Torna vídeos baixados da web compatíveis com qualquer software de edição (Premiere, CapCut, Final Cut).
+- [Converter WMV para MP4](https://conversordevideo.com/converter-wmv-para-mp4): Converte vídeos do Windows Media Video para padrão universal.
+
+### Conversores de Filmadoras e Formatos Clássicos
+- [Converter M2TS para MP4](https://conversordevideo.com/converter-m2ts-para-mp4): Converte fluxos BDAV Blu-ray e filmadoras Sony/Panasonic AVCHD para MP4.
+- [Converter MTS para MP4](https://conversordevideo.com/converter-mts-para-mp4): Transforma gravações brutas AVCHD de filmadoras em MP4 leve e nítido.
+- [Converter TS para MP4](https://conversordevideo.com/converter-ts-para-mp4): Converte transmissões e gravações de TV Digital (MPEG Transport Stream) para MP4.
+- [Converter VOB para MP4](https://conversordevideo.com/converter-vob-para-mp4): Converte pastas VIDEO_TS e discos de DVD (MPEG-2) em arquivos MP4 modernos.
+- [Converter FLV para MP4](https://conversordevideo.com/converter-flv-para-mp4): Moderniza vídeos Flash FLV legados para padrão MP4 compatível com celulares.
+- [Converter 3GP para MP4](https://conversordevideo.com/converter-3gp-para-mp4): Converte vídeos de celulares 3G antigos para MP4 com áudio AAC estéreo.
+- [Converter M4V para MP4](https://conversordevideo.com/converter-m4v-para-mp4): Transforma vídeos iTunes Apple em MP4 universal para Android e TVs.
+- [Converter RMVB para MP4](https://conversordevideo.com/converter-rmvb-para-mp4): Converte arquivos RealMedia (RMVB/RM) para MP4 moderno.
+- [Converter DivX para MP4](https://conversordevideo.com/converter-divx-para-mp4): Atualiza vídeos DivX antigos para H.264 MP4.
+- [Converter XviD para MP4](https://conversordevideo.com/converter-xvid-para-mp4): Converte arquivos XviD para MP4 com máxima compatibilidade.
+- [Converter OGV para MP4](https://conversordevideo.com/converter-ogv-para-mp4): Transforma vídeos Ogg Theora em MP4 para rodar em iPhone e Safari.
+- [Converter MXF para MP4](https://conversordevideo.com/converter-mxf-para-mp4): Converte vídeos profissionais broadcast MXF (Sony, Canon) para MP4 leve de prévia.
+
+### Dispositivos e Celulares
+- [Conversor de Vídeo para iPhone](https://conversordevideo.com/converter-video-iphone): Formata qualquer vídeo para salvar no rolo de câmera e Fotos do iOS.
+- [Conversor de Vídeo para Android](https://conversordevideo.com/converter-video-android): Otimiza vídeos para modelos Samsung, Motorola e Xiaomi.
+
+### Compressores e Redução de Arquivos
+- [Compressor de Vídeo Online](https://conversordevideo.com/compressor-de-video): Comprime vídeos MP4, MOV e outros formatos diretamente no navegador com redução inteligente de até 80% do tamanho sem upload para a nuvem.
+- [Compressor de Vídeo MP4](https://conversordevideo.com/compressor-de-video-mp4): Comprime arquivos MP4 com codec H.264 rápido e cabeçalho faststart para streaming imediato na web.
+- [Compressor de Vídeo Gratuito](https://conversordevideo.com/compressor-de-video-gratuito): Ferramenta de compressão 100% gratuita, sem limites diários, sem filas de espera e sem marcas d’água.
+- [Comprimir Vídeo para WhatsApp](https://conversordevideo.com/comprimir-video): Algoritmo de taxa de bits dinâmica que calcula a compressão ideal com base na duração do vídeo para garantir arquivos abaixo de 16MB sem borrar a imagem.
+
+### Otimização para Redes Sociais e Mensageiros
+- [Conversor de Vídeo para Instagram](https://conversordevideo.com/converter-video-instagram): Formata vídeos para Reels e Stories na proporção vertical 9:16 (1080x1920) e perfil H.264 aceito pela Meta.
+- [Conversor de Vídeo do YouTube e Shorts](https://conversordevideo.com/conversor-de-video-youtube): Prepara e reformata clipes de vídeo nos padrões de alta definição do YouTube.
+
+### Extração de Áudio e Animações
+- [Conversor de Vídeo para MP3](https://conversordevideo.com/converter-video-para-mp3): Extrai a trilha sonora de qualquer vídeo em formato MP3 estéreo de alta fidelidade (192 kbps) usando LAME MP3.
+- [Conversor de Áudio Universal](https://conversordevideo.com/conversor-de-audio): Converte e extrai áudio de qualquer formato de mídia para MP3.
+- [Converter Vídeo para GIF](https://conversordevideo.com/video-para-gif): Cria animações em loop contínuo (12 fps) com paleta Bayer otimizada para stickers e memes sem marcas d’água.
+
+### Guias e Comparações
+- [Melhor Conversor de Vídeo Gratuito](https://conversordevideo.com/melhor-conversor-de-video-gratuito): Comparativo transparente entre tecnologia WebAssembly local e conversores tradicionais na nuvem (CloudConvert, Convertio, FreeConvert).
+- [Sobre a Tecnologia](https://conversordevideo.com/sobre): Detalhes técnicos sobre a arquitetura WebAssembly client-side.
+- [Política de Privacidade e LGPD](https://conversordevideo.com/privacidade): Garantias legais de não retenção de dados e processamento local.
+- [Termos de Uso](https://conversordevideo.com/termos): Condições gerais de uso gratuito da ferramenta.
