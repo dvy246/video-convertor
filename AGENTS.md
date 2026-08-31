@@ -10,8 +10,8 @@ Welcome! This document provides complete, up-to-date instructions, conventions, 
 - **Core Value Proposition:** A 100% browser-local, zero-signup, privacy-first video & audio converter and compressor utility designed for global and regional search discovery.
 - **Key Differentiator:** Videos are transcoded in browser memory (RAM) via WebAssembly (FFmpeg.wasm). **Zero bytes are uploaded to remote servers**, giving users instant conversions, no queue delays, no file paywalls, and native LGPD/GDPR compliance.
 - **Multi-Language Architecture (9 Locales):**
-  1. **Portuguese (`pt-BR`)**: Default root (unprefixed at `/`)
-  2. **English (`en`)**: `/en/`
+  1. **Portuguese (`pt-BR`)**: Default root (unprefixed at `/`) — Primary SEO keyword: `Conversor de Vídeo Online`
+  2. **English (`en`)**: `/en/` — Primary Headline: `Free Video Converter` (`🔒 100% Private & Local`)
   3. **Spanish (`es`)**: `/es/`
   4. **French (`fr`)**: `/fr/`
   5. **Japanese (`ja`)**: `/ja/`
@@ -19,9 +19,10 @@ Welcome! This document provides complete, up-to-date instructions, conventions, 
   7. **Norwegian (`no`)**: `/no/`
   8. **Turkish (`tr`)**: `/tr/`
   9. **Polish (`pl`)**: `/pl/`
-- **Total Static Pages:** 293 canonical MPA routes with complete bidirectional `hreflang` alternate tags and XML sitemaps.
+- **Total Static Pages:** 317 canonical MPA routes with complete bidirectional `hreflang` alternate tags and XML sitemaps.
 - **Live Production URL:** [https://conversordevideo.pages.dev](https://conversordevideo.pages.dev) (deployed via Cloudflare Pages).
 - **GitHub Repository:** `https://github.com/dvy246/video-convertor.git`
+- **Integration Branch:** `feat/multi-lang-i18n`
 
 ---
 
@@ -32,10 +33,10 @@ Welcome! This document provides complete, up-to-date instructions, conventions, 
 | **Framework** | Astro.js (MPA SSG) | `^5.4.2` | High-performance static HTML generation, perfect TTFB and Core Web Vitals. |
 | **i18n Routing** | Astro i18n + Custom Recipe | Built-in | Unprefixed default locale (`prefixDefaultLocale: false`) with 8 sub-locales. |
 | **Styling & Theming** | Tailwind CSS v4 | `^4.0.9` | Zero-runtime CSS with `@import "tailwindcss"`, `@custom-variant dark`, and ThemeSlider. |
-| **Interactivity** | React 19 Islands | `^19.0.0` | Isolated client-side state machine loaded via `client:idle`. |
+| **Interactivity** | React 19 Islands | `^19.0.0` | Isolated client-side state machine loaded via `client:idle` with localized props. |
 | **Transcoding & Compression** | `@ffmpeg/ffmpeg` + `@ffmpeg/util` | `^0.12.15` | Browser-local WebAssembly video/audio transcode and smart compression engine. |
 | **Icons** | Phosphor Icons + SVG | `^2.1.7` | Accessible, lightweight icon set with `aria-hidden` attributes. |
-| **SEO & Sitemaps** | `@astrojs/sitemap` | `^3.2.1` | Automatic XML sitemap generation for all 293 canonical routes. |
+| **SEO & Sitemaps** | `@astrojs/sitemap` | `^3.2.1` | Automatic XML sitemap generation for all 317 canonical routes. |
 | **Deployment** | Cloudflare Pages + Wrangler | `^4.127.1` | Edge CDN hosting with strict COOP/COEP isolation headers. |
 
 ---
@@ -54,36 +55,40 @@ conversordevideo/
 ├── src/
 │   ├── components/
 │   │   ├── converter/            # Interactive React island components (Dark & Light support)
-│   │   │   ├── ConverterApp.tsx      # Master state machine & file handler
-│   │   │   ├── FileDropZone.tsx      # Drag & drop area with accessibility & limits
+│   │   │   ├── ConverterApp.tsx      # Master state machine & file handler (accepts `lang` prop)
+│   │   │   ├── FileDropZone.tsx      # Drag & drop area with accessibility & localized text
 │   │   │   ├── FormatSelector.tsx    # Format buttons (MP4, MP3, GIF, WebM, etc.)
 │   │   │   ├── PresetSelector.tsx    # Smart presets (WhatsApp, Reels, HD, Compress Balanced, Compress Extreme)
 │   │   │   ├── ConversionProgress.tsx# Live progress bar, frame counter & cancel
 │   │   │   ├── ResultCard.tsx        # File diff, preview, download, embed generator
 │   │   │   └── PrivacyBadge.tsx      # 100% local trust indicator
 │   │   ├── layout/               # Global Layout Components
-│   │   │   ├── Header.astro          # Navigation with LanguageSwitcher & mobile drawer
+│   │   │   ├── Header.astro          # Navigation with LanguageSwitcher & mobile drawer (Clean 'ConversordeVídeo')
 │   │   │   ├── LanguageSwitcher.astro# Accessible dropdown with native language names & flags
 │   │   │   ├── ThemeSlider.astro     # Accessible smooth dark/light mode toggle slider
 │   │   │   ├── Footer.astro          # Categorized localized footer links
 │   │   │   └── SEOHead.astro         # Meta, hreflang alternates, Open Graph, Twitter, JSON-LD
 │   │   └── sections/             # Reusable content sections (Dark & Light mode)
-│   │       ├── HowItWorks.astro      # 3-step guide
-│   │       ├── Features.astro        # 6 core advantage cards
-│   │       ├── ComparisonTable.astro # Competitor comparison table
-│   │       ├── HomeSEOArticle.astro  # 750+ word comprehensive guide
+│   │       ├── HowItWorks.astro      # 3-step guide (dynamically translated)
+│   │       ├── Features.astro        # 6 core advantage cards (dynamically translated)
+│   │       ├── ComparisonTable.astro # Competitor comparison table (dynamically translated)
+│   │       ├── HomeSEOArticle.astro  # 750+ word comprehensive guide (all 9 languages)
 │   │       ├── FormatGrid.astro      # Grid linking specialized converter & compressor tools
 │   │       └── FAQSection.astro      # Schema-backed native details/summary FAQs
 │   ├── data/
 │   │   ├── formatPages.ts        # Typed store for all 37 programmatic format & compressor pages
-│   │   └── localizedFormatPages.ts# Multi-language metadata generator for all 9 locales
+│   │   ├── homeArticles.ts       # In-depth technical guides for all 9 locales
+│   │   ├── legalPages.ts         # Privacy Policy, Terms of Service, and About pages across 9 locales
+│   │   └── localizedFormatPages.ts# Multi-language metadata & comparison guide generator
 │   ├── i18n/                     # Internationalization Module (Astro Recipe Standard)
+│   │   ├── client.ts             # Client-side translation helper (`tClient` & `getClientLang`)
 │   │   ├── languages.ts          # 9 supported languages, ISO codes, and flags
+│   │   ├── navTools.ts           # Localized mega-menu, header quick-links, and footer links
 │   │   ├── ui.ts                 # Verbatim UI dictionaries for all 9 languages
 │   │   └── utils.ts              # getLangFromUrl, useTranslations, useTranslatedPath, getAlternateLanguageUrls
 │   ├── layouts/
 │   │   ├── BaseLayout.astro      # Base HTML shell, Anti-FOUC theme script, dynamic lang code
-│   │   └── ConverterPageLayout.astro # Universal layout for all programmatic routes
+│   │   └── ConverterPageLayout.astro # Universal layout for all programmatic format routes
 │   ├── lib/
 │   │   ├── ffmpeg/               # FFmpeg WebAssembly Domain Module
 │   │   │   ├── engine.ts             # Singleton engine with memory cleanup & cancel
@@ -96,16 +101,19 @@ conversordevideo/
 │   ├── pages/
 │   │   ├── [lang]/               # Dynamic multi-language sub-directories
 │   │   │   ├── index.astro           # Localized homepages (/en/, /es/, /fr/, /ja/, /zh/, /no/, /tr/, /pl/)
-│   │   │   └── [...slug].astro       # Localized format & compressor tools
-│   │   ├── index.astro               # Unprefixed Portuguese homepage
+│   │   │   ├── [...slug].astro       # Localized format & compressor tools
+│   │   │   ├── privacidade.astro     # Localized Privacy Policy & GDPR (/en/privacidade, /es/privacidade, etc.)
+│   │   │   ├── sobre.astro           # Localized About & Technology (/en/sobre, /es/sobre, etc.)
+│   │   │   └── termos.astro          # Localized Terms of Service (/en/termos, /es/termos, etc.)
+│   │   ├── index.astro               # Unprefixed Portuguese homepage ('Conversor de Vídeo Online')
 │   │   ├── compressor-de-video.astro # Hub ("compressor de video", "compressor de video online")
 │   │   ├── compressor-de-video-mp4.astro
 │   │   ├── compressor-de-video-gratuito.astro
 │   │   ├── comprimir-video.astro
 │   │   ├── conversor-de-video-para-mp4.astro
 │   │   ├── [32 other Portuguese format pages...]
-│   │   ├── sobre.astro, privacidade.astro, termos.astro
-│   │   └── 404.astro, 500.astro      # Custom error pages
+│   │   ├── sobre.astro, privacidade.astro, termos.astro # Portuguese legal/about pages
+│   │   └── 404.astro, 500.astro      # Smart multilingual 404 & error recovery pages
 │   └── styles/
 │       └── global.css            # Tailwind v4 import, custom tokens & dark variant
 ├── ARCHITECTURE.md               # Detailed technical architecture reference
@@ -152,6 +160,9 @@ npm run deploy
   - `pl`: `/pl/`
 - **Bidirectional `hreflang` Tagging:** Every page outputs 10 alternate link tags in `<head>` (9 language variants + `x-default` pointing to the canonical Portuguese version).
 - **Zero Cookie/IP Redirects:** Fully compliant with Google Search Essentials to allow search crawlers unrestricted indexing of all regional variants.
+- **Client & Server Translations**:
+  - React Islands receive `lang={currentLang}` prop to ensure server-side pre-rendered (SSG) dropzones and cards render in the correct active locale.
+  - Client state transitions fall back gracefully using `tClient(key, lang)` from `src/i18n/client.ts`.
 
 ---
 
