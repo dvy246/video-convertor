@@ -1,3 +1,5 @@
+import { describe, it } from 'node:test';
+import assert from 'node:assert/strict';
 import { ui } from '../src/i18n/ui.ts';
 import { languages } from '../src/i18n/languages.ts';
 import { 
