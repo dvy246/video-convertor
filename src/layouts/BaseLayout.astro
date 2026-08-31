@@ -6,6 +6,8 @@ import Footer from '../components/layout/Footer.astro';
 import { languages, type SupportedLanguage } from '../i18n/languages';
 import { getLangFromUrl } from '../i18n/utils';
 
+import { GradientBackground } from '../components/ui/gradient-background-4';
+
 export interface Props {
   title?: string;
   description?: string;
@@ -37,9 +39,10 @@ const langCode = languages[currentLang]?.code || 'pt-BR';
     </script>
     <SEOHead {...props} />
   </head>
-  <body class="min-h-full flex flex-col bg-zinc-50/50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 selection:bg-emerald-500 selection:text-white transition-colors duration-200">
+  <body class="min-h-full flex flex-col relative bg-zinc-50/50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 selection:bg-emerald-500 selection:text-white transition-colors duration-200 overflow-x-hidden">
+    <GradientBackground />
     <Header lang={currentLang} />
-    <main class="flex-1">
+    <main class="flex-1 relative">
       <slot />
     </main>
     <Footer lang={currentLang} />
