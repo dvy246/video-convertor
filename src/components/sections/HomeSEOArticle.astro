@@ -1,17 +1,27 @@
 ---
+import { getLangFromUrl } from '../../i18n/utils';
+import { getLocalizedHomeArticle } from '../../data/homeArticles';
+import type { SupportedLanguage } from '../../i18n/languages';
+
+export interface Props {
+  lang?: SupportedLanguage;
+}
+
+const currentLang = Astro.props.lang || getLangFromUrl(Astro.url);
+const article = getLocalizedHomeArticle(currentLang);
 ---
 
 <section class="py-12 sm:py-16 bg-white dark:bg-zinc-900 border-t border-zinc-200/80 dark:border-zinc-800 transition-colors">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-10 text-zinc-700 dark:text-zinc-300">
     <div class="space-y-3">
       <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-3 py-1 rounded-full border border-emerald-100 dark:border-emerald-900/60">
-        Guia Completo & Informações Técnicas
+        {article.badge}
       </span>
       <h2 class="text-2xl sm:text-3xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
-        Tudo o que Você Precisa Saber Sobre Conversão de Vídeos no Navegador
+        {article.title}
       </h2>
       <p class="text-base text-zinc-600 dark:text-zinc-400 leading-relaxed">
-        Entenda como funciona a tecnologia de processamento local, as diferenças reais entre formatos e codecs de vídeo, e como obter o melhor resultado para cada rede social e dispositivo.
+        {article.subtitle}
       </p>
     </div>
 
@@ -21,91 +31,81 @@
       <!-- Section 1 -->
       <div class="space-y-3">
         <h3 class="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white tracking-tight">
-          1. O que é um conversor de vídeo no navegador e por que ele é mais seguro?
+          {article.sec1Title}
         </h3>
         <p class="text-zinc-600 dark:text-zinc-300">
-          Tradicionalmente, a maioria das ferramentas gratuitas na internet exigia que o usuário enviasse (fizesse upload de) seu arquivo de vídeo para um servidor remoto na nuvem. Nesse modelo convencional, o servidor recebia o arquivo, colocava em uma fila de espera compartilhada, processava a codificação e disponibilizava um link de download temporário.
+          {article.sec1P1}
         </p>
         <p class="text-zinc-600 dark:text-zinc-300">
-          Esse método antigo apresenta graves problemas de segurança e privacidade: seus vídeos pessoais, gravações de reuniões de trabalho, momentos em família ou documentos confidenciais passam a trafegar e ficar armazenados em servidores de terceiros. Além disso, muitos serviços utilizam essas mídias para alimentar algoritmos ou compartilham dados com centenas de parceiros de publicidade.
+          {article.sec1P2}
         </p>
         <p class="text-zinc-600 dark:text-zinc-300">
-          O <strong>ConversordeVideo.com</strong> adota uma abordagem totalmente inovadora baseada em <strong>WebAssembly (WASM)</strong> e na biblioteca <strong>FFmpeg</strong>. O processamento ocorre 100% dentro do motor JavaScript do seu próprio navegador (como Google Chrome, Safari, Edge ou Firefox). O arquivo de vídeo é carregado temporariamente na memória RAM do seu celular ou computador, transcodificado localmente pelos núcleos do seu processador e entregue imediatamente para download.
+          {article.sec1P3}
         </p>
         <div class="p-4 bg-emerald-50/70 dark:bg-emerald-950/40 border-l-4 border-emerald-500 rounded-r-xl text-emerald-950 dark:text-emerald-300 text-xs sm:text-sm font-medium">
-          <strong>Garantia de Privacidade:</strong> Nenhum byte do seu vídeo trafega pela internet ou é salvo em qualquer banco de dados. Você pode inclusive desconectar sua internet após carregar a página e a conversão continuará funcionando normalmente.
+          {article.sec1Callout}
         </div>
       </div>
 
       <!-- Section 2 -->
       <div class="space-y-3">
         <h3 class="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white tracking-tight">
-          2. Entendendo a diferença entre Contêineres de Vídeo e Codecs
+          {article.sec2Title}
         </h3>
         <p class="text-zinc-600 dark:text-zinc-300">
-          Um dos erros mais comuns ao lidar com mídia digital é confundir a <em>extensão do arquivo</em> (o contêiner) com o <em>codec</em> (o algoritmo de compressão):
+          {article.sec2P1}
         </p>
         <ul class="list-disc pl-5 space-y-2 text-zinc-600 dark:text-zinc-300">
-          <li>
-            <strong>Contêiner (MP4, MOV, MKV, WebM, AVI):</strong> Funciona como uma "embalagem" digital que empacota a faixa de vídeo, as faixas de áudio, legendas e metadados sincronizados.
-          </li>
-          <li>
-            <strong>Codec de Vídeo (H.264/AVC, H.265/HEVC, VP9, AV1):</strong> É a fórmula matemática responsável por comprimir e descompactar os quadros visuais do vídeo.
-          </li>
-          <li>
-            <strong>Codec de Áudio (AAC, MP3, Opus, Vorbis):</strong> O algoritmo que comprime e reproduz o som da mídia com alta fidelidade e baixo consumo de dados.
-          </li>
+          <li>{article.sec2L1}</li>
+          <li>{article.sec2L2}</li>
+          <li>{article.sec2L3}</li>
         </ul>
         <p class="text-zinc-600 dark:text-zinc-300">
-          O contêiner <strong>MP4</strong> com o codec <strong>H.264</strong> e áudio <strong>AAC</strong> tornou-se o padrão ouro mundial. Ele é reproduzido nativamente em praticamente qualquer tela do planeta: smartphones Android, iPhones, Smart TVs, consoles de videogame, navegadores de internet e sistemas operacionais como Windows, macOS e Linux.
+          {article.sec2P2}
         </p>
       </div>
 
       <!-- Section 3 -->
       <div class="space-y-3">
         <h3 class="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white tracking-tight">
-          3. Otimização para WhatsApp: Como enviar vídeos sem travar e sem perder qualidade
+          {article.sec3Title}
         </h3>
         <p class="text-zinc-600 dark:text-zinc-300">
-          No Brasil, o WhatsApp é a principal ferramenta de comunicação diária, utilizado por mais de 150 milhões de pessoas. No entanto, o aplicativo impõe duas grandes barreiras no compartilhamento de vídeos:
+          {article.sec3P1}
         </p>
         <ol class="list-decimal pl-5 space-y-2 text-zinc-600 dark:text-zinc-300">
-          <li><strong>Limite de 16 MB para envio direto:</strong> Vídeos gravados em resolução 4K ou 1080p a 60fps pelos celulares modernos facilmente ultrapassam 50 MB em poucos segundos de gravação.</li>
-          <li><strong>Compressão destrutiva automática:</strong> Quando você envia um vídeo pesado, o WhatsApp aplica uma compressão agressiva que frequentemente reduz a taxa de quadros e embassa a imagem.</li>
+          <li>{article.sec3L1}</li>
+          <li>{article.sec3L2}</li>
         </ol>
         <p class="text-zinc-600 dark:text-zinc-300">
-          Nossa predefinição <em>"Otimizado para WhatsApp"</em> resolve esse dilema com inteligência: ela redimensiona a imagem para resolução HD (720p), ajusta a taxa de quadros (CRF 28) e compacta o áudio em AAC de 96 kbps. O resultado é um arquivo nítido, perfeitamente audível, menor que 16 MB e que carrega instantaneamente em qualquer conexão móvel (4G/5G).
+          {article.sec3P2}
         </p>
       </div>
 
       <!-- Section 4 -->
       <div class="space-y-3">
         <h3 class="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white tracking-tight">
-          4. Como converter vídeos do iPhone (MOV) para MP4 facilmente
+          {article.sec4Title}
         </h3>
         <p class="text-zinc-600 dark:text-zinc-300">
-          Por padrão, as câmeras dos dispositivos Apple (iPhone e iPad) gravam no formato proprietário <strong>Apple QuickTime MOV</strong>, utilizando muitas vezes o codec HEVC de alta eficiência. Embora esses arquivos funcionem perfeitamente dentro do ecossistema Apple, eles frequentemente apresentam falhas de reprodução quando compartilhados com computadores Windows antigos, editores de vídeo básicos ou plataformas de ensino a distância.
+          {article.sec4P1}
         </p>
         <p class="text-zinc-600 dark:text-zinc-300">
-          Ao converter seu arquivo MOV para MP4 através de nossa ferramenta, a estrutura do vídeo é reformatada com o cabeçalho <code>faststart</code> (que permite reprodução instantânea na web sem esperar o download completo) e codificada em H.264 de perfil amplo, garantindo que qualquer pessoa consiga assistir ao vídeo perfeitamente.
+          {article.sec4P2}
         </p>
       </div>
 
       <!-- Section 5 -->
       <div class="space-y-3">
         <h3 class="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white tracking-tight">
-          5. Extração de Áudio MP3 e Transformação em GIFs Animados
+          {article.sec5Title}
         </h3>
         <p class="text-zinc-600 dark:text-zinc-300">
-          Além da conversão de vídeo para vídeo, oferecemos utilitários essenciais integrados no mesmo fluxo:
+          {article.sec5P1}
         </p>
         <ul class="list-disc pl-5 space-y-2 text-zinc-600 dark:text-zinc-300">
-          <li>
-            <strong>Vídeo para MP3:</strong> Extraia palestras, podcasts ou clipes de áudio diretamente para MP3 estéreo a 192 kbps, economizando até 90% do espaço em disco.
-          </li>
-          <li>
-            <strong>Vídeo para GIF:</strong> Crie animações em loop fluidas (12 fps) com algoritmo Bayer dither para stickers do WhatsApp e Discord sem marcas d’água.
-          </li>
+          <li>{article.sec5L1}</li>
+          <li>{article.sec5L2}</li>
         </ul>
       </div>
 
