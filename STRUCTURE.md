@@ -22,7 +22,9 @@ conversordevideo/
 │   │   │   ├── PresetSelector.tsx    # Smart presets (WhatsApp, Reels, HD, Compress Balanced, Compress Extreme)
 │   │   │   ├── ConversionProgress.tsx# Live progress bar, frame counter & cancel
 │   │   │   ├── ResultCard.tsx        # File diff, preview, download, embed generator
-│   │   │   └── PrivacyBadge.tsx      # 100% local trust indicator
+│   │   ├── ui/                   # Shadcn/UI Foundational Design System Primitives
+│   │   │   ├── gradient-background-4.tsx # High-performance ambient emerald gradient background
+│   │   │   └── demo.tsx              # UI demo component
 │   │   ├── tools/                # Dedicated Tools Directory Island
 │   │   │   └── ToolsDirectory.tsx    # Live search, category tabs, filter badges & empty state
 │   │   ├── layout/               # Global Layout Components
