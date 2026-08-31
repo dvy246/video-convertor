@@ -22,9 +22,9 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     // Hero
     'hero.badge': 'Tecnologia WebAssembly 100% no Navegador',
     'hero.titlePrefix': 'Conversor de Vídeo',
-    'hero.titleHighlight': '100% Privado e Local',
-    'hero.titleSuffix': 'Sem Upload de Arquivos',
-    'hero.subtitle': 'Converta, comprima e extraia áudio de vídeos na memória do seu dispositivo. Sem limites abusivos, sem filas de espera e com conformidade total à LGPD.',
+    'hero.titleHighlight': 'Online',
+    'hero.titleSuffix': '',
+    'hero.subtitle': 'Converta seus vídeos diretamente no navegador. Sem upload para servidores, sem cadastro e sem limites diários. Rápido, seguro e 100% gratuito.',
 
     // Dropzone & Privacy
     'dropzone.title': 'Arraste seu vídeo aqui ou clique para selecionar',
