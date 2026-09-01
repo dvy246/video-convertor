@@ -59,12 +59,13 @@ const faqs = [
 ];
 
 const orgSchema = generateOrganizationSchema();
-const siteSchema = generateWebSiteSchema();
+const siteSchema = generateWebSiteSchema(lang, pageDescription);
 
 const webAppSchema = generateWebApplicationSchema({
   name: t('site.title'),
   description: pageDescription,
-  url: canonicalUrl
+  url: canonicalUrl,
+  lang: lang
 });
 
 const howToSchema = generateHowToSchema({

@@ -133,7 +133,8 @@ export const ResultCard: React.FC<ResultCardProps> = ({
         {isGif && (
           <img
             src={result.downloadUrl}
-            alt="GIF Preview"
+            alt="Converted animated GIF preview"
+            loading="lazy"
             className="w-full max-h-[380px] object-contain"
           />
         )}

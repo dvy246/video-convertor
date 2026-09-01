@@ -1,4 +1,30 @@
-# ConversordeVideo.com — Conversor de Vídeo e Áudio no Navegador
+# ConversordeVideo.com — In-Browser Private Video & Audio Transcoding Suite
+
+> ConversordeVideo.com is a free, high-performance, privacy-first web utility for converting, compressing, and extracting audio from video files directly inside the web browser using WebAssembly (FFmpeg.wasm). All user media is processed locally in client device RAM—zero bytes are uploaded to remote servers.
+
+## Technical Overview & AI Summary
+- **Architecture:** 100% Client-side Static Web Application (Astro SSG + React 19 Islands + WebAssembly).
+- **Engine:** `@ffmpeg/ffmpeg` compiled to WebAssembly (WASM) with SharedArrayBuffer multi-threading.
+- **Privacy Standard:** Zero cloud data retention. Complete LGPD and GDPR compliance by design. No tracking of file contents or metadata.
+- **Key Capabilities:**
+  - Video format conversion (MOV, MKV, AVI, WebM, FLV, M2TS, MTS, VOB to MP4 / WebM)
+  - Audio extraction (Video to MP3 192 kbps LAME CBR)
+  - Smart video compression (CRF-based bitrate control, WhatsApp <16MB target optimization)
+  - Animated GIF creation (12 fps Bayer dithering)
+- **Supported Locales:** 9 languages with complete bidirectional `hreflang` (pt, en, es, fr, ja, zh, no, tr, pl).
+- **Core Canonical URLs:**
+  - English Home: https://conversordevideo.com/en/
+  - Portuguese Home: https://conversordevideo.com/
+  - Tools Directory: https://conversordevideo.com/ferramentas/ (or `/en/ferramentas/`)
+  - Universal MP4 Converter: https://conversordevideo.com/conversor-de-video-para-mp4/
+  - Video to MP3 Converter: https://conversordevideo.com/converter-video-para-mp3/
+  - Video Compressor: https://conversordevideo.com/compressor-de-video/
+  - WhatsApp Video Compressor: https://conversordevideo.com/compactar-video-para-whatsapp/
+  - Video to GIF: https://conversordevideo.com/video-para-gif/
+
+---
+
+# ConversordeVideo.com — Conversor de Vídeo e Áudio no Navegador (Português)
 
 > ConversordeVideo.com é uma ferramenta web gratuita, rápida e com foco em privacidade para converter, comprimir e extrair áudio de vídeos diretamente no navegador via WebAssembly (FFmpeg.wasm). Os arquivos de mídia do usuário são processados localmente e não são enviados para servidores externos.
 

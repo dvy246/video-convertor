@@ -47,12 +47,13 @@ const faqs = [
 ];
 
 const orgSchema = generateOrganizationSchema();
-const siteSchema = generateWebSiteSchema();
+const siteSchema = generateWebSiteSchema('pt', pageDescription);
 
 const webAppSchema = generateWebApplicationSchema({
   name: 'Conversor de Vídeo Online',
   description: pageDescription,
-  url: canonicalUrl
+  url: canonicalUrl,
+  lang: 'pt'
 });
 
 const howToSchema = generateHowToSchema({

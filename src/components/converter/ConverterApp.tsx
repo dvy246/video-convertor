@@ -175,7 +175,10 @@ export const ConverterApp: React.FC<ConverterAppProps> = ({
                 {posterUrl ? (
                   <img
                     src={posterUrl}
-                    alt="Preview"
+                    alt="Video file preview thumbnail"
+                    loading="lazy"
+                    width={56}
+                    height={56}
                     className="w-14 h-14 rounded-xl object-cover border border-zinc-200 dark:border-zinc-700 shrink-0 bg-black"
                   />
                 ) : (

@@ -2418,6 +2418,292 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
   }
 };
 
+interface LocalizedFallback {
+  explainerTitle: string;
+  explainerParagraphs: string[];
+  sourceDetailsTitle: string;
+  sourceDetails: string[];
+  targetDetailsTitle: string;
+  targetDetails: string[];
+  proTip: string;
+  keywords: string[];
+}
+
+function getLocalizedFallbackContent(
+  lang: SupportedLanguage,
+  sourceFormat: string,
+  targetLabel: string,
+  _isCompressor: boolean,
+  isAudio: boolean
+): LocalizedFallback {
+  const src = sourceFormat || (isAudio ? 'Audio' : 'Video');
+  const tgt = targetLabel || (isAudio ? 'MP3' : 'MP4');
+
+  switch (lang) {
+    case 'en':
+      return {
+        explainerTitle: `Why convert ${sourceFormat ? `${src} to ` : ''}${tgt} locally in your browser?`,
+        explainerParagraphs: [
+          `Converting ${sourceFormat ? `${src} files ` : 'media '}to ${tgt} directly in your browser delivers the fastest, most private transcoding workflow. Powered by WebAssembly (FFmpeg.wasm), all processing executes locally in your device RAM without uploading any files to remote servers.`,
+          `The resulting ${tgt} output features optimized encoding for broad compatibility across modern smartphones, computers, TVs, and web players with faststart playback.`
+        ],
+        sourceDetailsTitle: `Source ${src} Format`,
+        sourceDetails: [
+          'May have playback or codec issues in default media players',
+          'Heavy file sizes that are slow to upload or send via messaging apps',
+          'Potential audio/video synchronization drift on unsupported devices'
+        ],
+        targetDetailsTitle: `Universal ${tgt} Standard`,
+        targetDetails: [
+          'Guaranteed cross-platform compatibility across modern systems',
+          'High-efficiency compression preserving sharp video and crystal-clear audio',
+          'Instant local export with no queue delays, limits, or watermarks'
+        ],
+        proTip: `Pro Tip: The "Balanced Quality (CRF 23)" preset provides the ideal balance between visual sharpness and compact file size, applying faststart streaming headers automatically.`,
+        keywords: [
+          `convert ${sourceFormat ? `${src.toLowerCase()} to ` : ''}${tgt.toLowerCase()}`,
+          `${sourceFormat ? `${src.toLowerCase()} to ` : ''}${tgt.toLowerCase()} converter`,
+          `free ${tgt.toLowerCase()} converter`,
+          `online ${tgt.toLowerCase()} converter`,
+          `in browser video converter`
+        ]
+      };
+
+    case 'es':
+      return {
+        explainerTitle: `¿Por qué convertir ${sourceFormat ? `${src} a ` : ''}${tgt} localmente en el navegador?`,
+        explainerParagraphs: [
+          `Convertir archivos ${sourceFormat ? `${src} ` : 'multimedia '}a ${tgt} directamente en tu navegador ofrece la máxima velocidad y privacidad. Gracias a WebAssembly (FFmpeg.wasm), todo el proceso se ejecuta en la memoria RAM de tu equipo sin enviar datos a la nube.`,
+          `El archivo ${tgt} generado cuenta con parámetros optimizados para reproducirse sin fallos en iPhone, Android, ordenadores y Smart TVs con nitidez cristalina.`
+        ],
+        sourceDetailsTitle: `Formato de Entrada ${src}`,
+        sourceDetails: [
+          'Puede presentar incompatibilidades en ciertos reproductores o televisores',
+          'Archivos pesados y lentos para transferir o compartir en mensajería',
+          'Posibles desfasajes de audio o errores de códec en reproductores antiguos'
+        ],
+        targetDetailsTitle: `Formato Estándar ${tgt}`,
+        targetDetails: [
+          'Compatibilidad universal con cualquier sistema y reproductor moderno',
+          'Compresión de alta eficiencia que preserva la fidelidad visual y de audio',
+          'Descarga local inmediata sin colas de espera ni marcas de agua'
+        ],
+        proTip: `Consejo Pro: El perfil "Calidad Equilibrada (CRF 23)" ofrece el balance perfecto entre nitidez de imagen y ligereza de archivo, aplicando la cabecera faststart para streaming sin cortes.`,
+        keywords: [
+          `convertir ${sourceFormat ? `${src.toLowerCase()} a ` : ''}${tgt.toLowerCase()}`,
+          `convertidor de ${sourceFormat ? `${src.toLowerCase()} a ` : ''}${tgt.toLowerCase()}`,
+          `convertidor ${tgt.toLowerCase()} online`,
+          `convertir ${tgt.toLowerCase()} gratis`,
+          `convertidor de video privado`
+        ]
+      };
+
+    case 'fr':
+      return {
+        explainerTitle: `Pourquoi convertir ${sourceFormat ? `${src} en ` : ''}${tgt} localement dans le navigateur ?`,
+        explainerParagraphs: [
+          `Convertir des fichiers ${sourceFormat ? `${src} ` : 'multimédia '}en ${tgt} directement dans votre navigateur offre une rapidité et une confidentialité inégalées. Grâce à WebAssembly (FFmpeg.wasm), tout le transcodage s'exécute dans la mémoire vive de votre appareil, sans téléversement de fichiers.`,
+          `Le fichier ${tgt} obtenu intègre des métadonnées optimisées pour une lecture fluide sur smartphone, ordinateur et télévision connectée.`
+        ],
+        sourceDetailsTitle: `Format d'Origine ${src}`,
+        sourceDetails: [
+          'Risque de non-reconnaissance sur certains appareils mobiles ou Smart TV',
+          'Fichiers volumineux lents à partager par courriel ou messagerie',
+          'Problèmes de synchronisation audio fréquents dans les lecteurs anciens'
+        ],
+        targetDetailsTitle: `Format Universel ${tgt}`,
+        targetDetails: [
+          'Compatibilité totale avec tous les navigateurs et appareils récents',
+          'Encodage haute efficacité préservant la clarté d’image et de son',
+          'Téléchargement local immédiat sans file d’attente ni filigrane'
+        ],
+        proTip: `Conseil Pro : Le profil "Qualité Équilibrée (CRF 23)" offre le juste équilibre entre finesse visuelle et taille de fichier réduite, tout en activant la lecture web instantanée faststart.`,
+        keywords: [
+          `convertir ${sourceFormat ? `${src.toLowerCase()} en ` : ''}${tgt.toLowerCase()}`,
+          `convertisseur ${sourceFormat ? `${src.toLowerCase()} vers ` : ''}${tgt.toLowerCase()}`,
+          `convertisseur ${tgt.toLowerCase()} en ligne`,
+          `convertir ${tgt.toLowerCase()} gratuit`,
+          `convertisseur video prive`
+        ]
+      };
+
+    case 'ja':
+      return {
+        explainerTitle: `${sourceFormat ? `${src} から ` : ''}${tgt} へのブラウザ内ローカル変換が選ばれる理由`,
+        explainerParagraphs: [
+          `ブラウザ上で直接 ${sourceFormat ? `${src} ファイル` : '動画'} を ${tgt} に変換することで、圧倒的な処理速度と完全なプライバシー保護を実現します。WebAssembly (FFmpeg.wasm) 技術により端末のRAM内で安全に処理され、外部サーバーへファイルが送信されることは一切ありません。`,
+          `生成された ${tgt} ファイルは、スマートフォン（iPhone / Android）、パソコン、各種再生機器でスムーズに再生できる最適なメタデータ構造を備えています。`
+        ],
+        sourceDetailsTitle: `変換前の ${src} 形式`,
+        sourceDetails: [
+          '一部のスマートフォンやテレビで再生できない場合がある',
+          'ファイルサイズが大きく共有や送信に時間がかかる',
+          '再生プレイヤーによってコーデック非対応のエラーが発生しやすい'
+        ],
+        targetDetailsTitle: `最適化された ${tgt} 形式`,
+        targetDetails: [
+          'あらゆる最新ブラウザや端末で確実に再生可能な標準形式',
+          '高画質・高音質を維持しながらファイルサイズを効率的に圧縮',
+          '待ち時間なし・ウォーターマークなしの高速ローカルダウンロード'
+        ],
+        proTip: `プロのヒント：「バランス品質 (CRF 23)」プリセットを選択すると、映像の美しさとデータ容量の軽量化を最も効率的に両立できます。`,
+        keywords: [
+          `${sourceFormat ? `${src.toLowerCase()} ` : ''}${tgt.toLowerCase()} 変換`,
+          `${tgt.toLowerCase()} 変換 無料`,
+          `オンライン ${tgt.toLowerCase()} 変換`,
+          `安全な動画変換`,
+          `ブラウザ動画変換`
+        ]
+      };
+
+    case 'zh':
+      return {
+        explainerTitle: `为什么选择在浏览器本地将 ${sourceFormat ? `${src} ` : ''}转换为 ${tgt}？`,
+        explainerParagraphs: [
+          `直接在浏览器中将 ${sourceFormat ? `${src} 文件` : '媒体'} 转换为 ${tgt} 格式，不仅能获得极速转码体验，更能百分之百保护您的个人隐私。基于 WebAssembly (FFmpeg.wasm) 技术，所有解码与编码操作均在您设备的内存中执行，无需上传至任何远程云端。`,
+          `导出的 ${tgt} 文件具有广泛的设备兼容性，支持在各类手机、电脑、车载系统及主流网页播放器中流畅播放，清晰不卡顿。`
+        ],
+        sourceDetailsTitle: `原始 ${src} 输入格式`,
+        sourceDetails: [
+          '可能无法在部分移动端设备或智能电视上直接播放',
+          '文件体积偏大，通过社交网络或邮件发送耗时较长',
+          '容易出现编码格式不支持或音画不同步的异常'
+        ],
+        targetDetailsTitle: `优化后的 ${tgt} 格式`,
+        targetDetails: [
+          '全面兼容主流操作系统、智能手机及现代网页浏览器',
+          '高效率编码算法，在保留画面细腻度的同时显著降低体积',
+          '无需云端排队等待，即转即下，且绝无任何水印限制'
+        ],
+        proTip: `专业提示：推荐选用“平衡品质 (CRF 23)”预设，它能够在保留清晰细腻画质的同时实现理想的文件压缩比，并自动添加 faststart 标头支持在线秒开。`,
+        keywords: [
+          `${sourceFormat ? `${src.toLowerCase()} 转 ` : ''}${tgt.toLowerCase()}`,
+          `在线 ${tgt.toLowerCase()} 转换器`,
+          `免费 ${tgt.toLowerCase()} 转换`,
+          `本地视频转码`,
+          `无水印视频转换`
+        ]
+      };
+
+    case 'no':
+      return {
+        explainerTitle: `Hvorfor konvertere ${sourceFormat ? `${src} til ` : ''}${tgt} lokalt i nettleseren?`,
+        explainerParagraphs: [
+          `Å konvertere ${sourceFormat ? `${src}-filer ` : 'media '}til ${tgt} direkte i nettleseren gir den raskeste og tryggeste opplevelsen. Ved hjelp av WebAssembly (FFmpeg.wasm) skjer all koding lokalt i enhetens minne, uten at filer lastes opp til eksterne servere.`,
+          `Den resulterende ${tgt}-filen er optimalisert for sømløs avspilling på iPhone, Android, PC og Mac med bevart bilde- og lydkvalitet.`
+        ],
+        sourceDetailsTitle: `Opprinnelig ${src}-format`,
+        sourceDetails: [
+          'Kan mangle innebygd støtte på enkelte mobiler eller TV-er',
+          'Store filer som tar lang tid å sende eller laste opp',
+          'Mulige kodekfeil i eldre medieavspillere'
+        ],
+        targetDetailsTitle: `Optimalisert ${tgt}-format`,
+        targetDetails: [
+          'Universell støtte på tvers av moderne enheter og nettlesere',
+          'Svært effektiv komprimering som ivaretar bilde- og lydkvalitet',
+          'Rask lokal eksport uten køer, abonnement eller vannmerker'
+        ],
+        proTip: `Pro-tips: Profilen «Balansert kvalitet (CRF 23)» gir det beste kompromisset mellom skarp bildekvalitet og håndterbar filstørrelse.`,
+        keywords: [
+          `konverter ${sourceFormat ? `${src.toLowerCase()} til ` : ''}${tgt.toLowerCase()}`,
+          `${sourceFormat ? `${src.toLowerCase()} til ` : ''}${tgt.toLowerCase()} konverter`,
+          `gratis ${tgt.toLowerCase()} konvertering`,
+          `online videokonvertering`,
+          `privat videokonvertering`
+        ]
+      };
+
+    case 'tr':
+      return {
+        explainerTitle: `Neden ${sourceFormat ? `${src} dosyasını ` : ''}${tgt} formatına tarayıcıda yerel olarak dönüştürmelisiniz?`,
+        explainerParagraphs: [
+          `${sourceFormat ? `${src} dosyalarını ` : 'Medyalarınızı '}doğrudan tarayıcınızda ${tgt} formatına dönüştürmek en hızlı ve güvenli yöntemdir. WebAssembly (FFmpeg.wasm) teknolojisi sayesinde tüm kodlama cihazınızın RAM belleğinde gerçekleşir; hiçbir veri harici sunuculara yüklenmez.`,
+          `Oluşturulan ${tgt} dosyası, iPhone, Android, bilgisayarlar ve akıllı TV'lerde takılmadan oynatılmak üzere optimize edilmiş üstbilgilerle kaydedilir.`
+        ],
+        sourceDetailsTitle: `Kaynak ${src} Formatı`,
+        sourceDetails: [
+          'Bazı telefonlarda veya televizyonlarda doğrudan açılamayabilir',
+          'Dosya boyutu büyük olduğu için paylaşımı ve gönderimi yavaştır',
+          'Klasik medya oynatıcılarda kodek uyumsuzluğu yaşanabilir'
+        ],
+        targetDetailsTitle: `Optimize Edilmiş ${tgt} Formatı`,
+        targetDetails: [
+          'Tüm modern telefonlar, bilgisayarlar ve tarayıcılarla tam uyumluluk',
+          'Görüntü ve ses netliğini koruyan yüksek verimli sıkıştırma',
+          'Sıra beklemeden, filigransız ve tamamen ücretsiz anında indirme'
+        ],
+        proTip: `Profesyonel İpucu: "Dengeli Kalite (CRF 23)" önayarı, kristal netliğinde görüntü kalitesi ile küçük dosya boyutu arasında ideal dengeyi sağlar.`,
+        keywords: [
+          `${sourceFormat ? `${src.toLowerCase()} ` : ''}${tgt.toLowerCase()} dönüştürme`,
+          `${tgt.toLowerCase()} dönüştürücü`,
+          `ücretsiz ${tgt.toLowerCase()} dönüştürme`,
+          `çevrimiçi video dönüştürücü`,
+          `güvenli video dönüştürme`
+        ]
+      };
+
+    case 'pl':
+      return {
+        explainerTitle: `Dlaczego warto konwertować ${sourceFormat ? `${src} na ` : ''}${tgt} lokalnie w przeglądarce?`,
+        explainerParagraphs: [
+          `Konwersja plików ${sourceFormat ? `${src} ` : 'multimediów '}na ${tgt} w przeglądarce to najszybszy i najbezpieczniejszy sposób. Dzięki technologii WebAssembly (FFmpeg.wasm) całe przetwarzanie odbywa się w pamięci RAM Twojego urządzenia, bez wysyłania jakichkolwiek danych na zewnętrzne serwery.`,
+          `Uzyskany plik ${tgt} posiada zoptymalizowaną strukturę umożliwiającą płynne odtwarzanie na smartfonach (iPhone i Android), komputerach oraz telewizorach Smart TV.`
+        ],
+        sourceDetailsTitle: `Wejściowy Format ${src}`,
+        sourceDetails: [
+          'Może nie działać poprawnie na niektórych telefonach lub telewizorach',
+          'Duży rozmiar pliku utrudniający przesyłanie i udostępnianie',
+          'Częste błędy kodeków w starszych odtwarzaczach multimedialnych'
+        ],
+        targetDetailsTitle: `Zoptymalizowany Format ${tgt}`,
+        targetDetails: [
+          'Pełna kompatybilność ze wszystkimi nowoczesnymi systemami i przeglądarkami',
+          'Wysokowydajne kodowanie zachowujące wysoką jakość obrazu i dźwięku',
+          'Błyskawiczne pobieranie bez kolejek, znaków wodnych i opłat'
+        ],
+        proTip: `Wskazówka: Profil "Zrównoważona Jakość (CRF 23)" zapewnia idealny kompromis między ostrością obrazu a niewielkim rozmiarem pliku.`,
+        keywords: [
+          `konwertuj ${sourceFormat ? `${src.toLowerCase()} na ` : ''}${tgt.toLowerCase()}`,
+          `konwerter ${sourceFormat ? `${src.toLowerCase()} na ` : ''}${tgt.toLowerCase()}`,
+          `konwerter ${tgt.toLowerCase()} online`,
+          `darmowa konwersja ${tgt.toLowerCase()}`,
+          `prywatny konwerter wideo`
+        ]
+      };
+
+    case 'pt':
+    default:
+      return {
+        explainerTitle: `Por que converter ${sourceFormat ? `${src} para ` : ''}${tgt} localmente no navegador?`,
+        explainerParagraphs: [
+          `Converter arquivos ${sourceFormat ? `${src} ` : 'de mídia '}para ${tgt} no navegador oferece o fluxo mais rápido e seguro. Graças ao WebAssembly (FFmpeg.wasm), todo o processamento ocorre na memória RAM do seu próprio aparelho, sem enviar nenhum byte para a nuvem.`,
+          `O arquivo ${tgt} gerado conta com cabeçalhos otimizados para reprodução imediata em celulares (Android e iPhone), computadores e Smart TVs, garantindo máxima nitidez visual e áudio nítido.`
+        ],
+        sourceDetailsTitle: `Formato de Entrada ${src}`,
+        sourceDetails: [
+          'Pode apresentar incompatibilidade em certos reprodutores ou aparelhos',
+          'Arquivos pesados e lentos para transferir ou compartilhar',
+          'Possíveis erros de reprodução ou descompasso de áudio'
+        ],
+        targetDetailsTitle: `Formato ${tgt} Otimizado`,
+        targetDetails: [
+          'Compatibilidade universal com todos os sistemas operacionais e navegadores',
+          'Codificação eficiente com alta fidelidade visual e sonora',
+          'Processamento instantâneo sem filas de espera e sem marcas d’água'
+        ],
+        proTip: `Dica Pro: A predefinição "Qualidade Equilibrada (CRF 23)" oferece o equilíbrio ideal entre nitidez cristalina e tamanho de arquivo reduzido, além de aplicar automaticamente a flag faststart para streaming imediato.`,
+        keywords: [
+          `converter ${sourceFormat ? `${src.toLowerCase()} para ` : ''}${tgt.toLowerCase()}`,
+          `conversor de ${sourceFormat ? `${src.toLowerCase()} para ` : ''}${tgt.toLowerCase()}`,
+          `conversor ${tgt.toLowerCase()} online`,
+          `converter ${tgt.toLowerCase()} gratis`,
+          `conversor de video privado`
+        ]
+      };
+  }
+}
+
 /**
  * Returns localized format page data for any supported language.
  * Defaults to the original Portuguese data if lang === 'pt'.
@@ -2430,6 +2716,7 @@ export function getLocalizedFormatPage(slug: string, lang: SupportedLanguage): F
 
   const p = TRANSLATION_PATTERNS[lang] || TRANSLATION_PATTERNS.en;
   const isCompressor = slug.includes('compressor') || slug.includes('comprimir');
+  const isAudio = original.targetFormat === 'mp3' || slug.includes('audio');
   const targetLabel = original.targetFormat.toUpperCase();
 
   // Extract source format if format is converter-[source]-para-[target]
@@ -2490,18 +2777,20 @@ export function getLocalizedFormatPage(slug: string, lang: SupportedLanguage): F
     if (override.badge) badge = override.badge;
   }
 
+  const fallback = getLocalizedFallbackContent(lang, sourceFormat, targetLabel, isCompressor, isAudio);
+
   const metaTitle = override?.metaTitle || `${h1Prefix} ${h1Highlight} ${p.onlineFree}`;
   const metaDescription = override?.metaDescription || `${h1Prefix} ${h1Highlight} ${p.freeNoUpload} ${p.heroSuffix}`;
   const heroSubtitle = override?.heroSubtitle || `${p.whyDesc} ${p.heroSuffix}`;
   const dropzoneTitle = override?.dropzoneTitle || `${p.dropzoneText} ${targetLabel}`;
-  const keywords = override?.keywords || original.keywords;
-  const explainerTitle = override?.explainerTitle || p.howItWorks;
-  const explainerParagraphs = override?.explainerParagraphs || original.explainerParagraphs;
-  const sourceDetailsTitle = override?.sourceDetailsTitle || original.sourceDetailsTitle;
-  const sourceDetails = override?.sourceDetails || original.sourceDetails;
-  const targetDetailsTitle = override?.targetDetailsTitle || original.targetDetailsTitle;
-  const targetDetails = override?.targetDetails || original.targetDetails;
-  const proTip = override?.proTip !== undefined ? override.proTip : original.proTip;
+  const keywords = override?.keywords || fallback.keywords;
+  const explainerTitle = override?.explainerTitle || fallback.explainerTitle;
+  const explainerParagraphs = override?.explainerParagraphs || fallback.explainerParagraphs;
+  const sourceDetailsTitle = override?.sourceDetailsTitle || fallback.sourceDetailsTitle;
+  const sourceDetails = override?.sourceDetails || fallback.sourceDetails;
+  const targetDetailsTitle = override?.targetDetailsTitle || fallback.targetDetailsTitle;
+  const targetDetails = override?.targetDetails || fallback.targetDetails;
+  const proTip = override?.proTip !== undefined ? override.proTip : fallback.proTip;
   const faqs = override?.faqs || [
     { question: p.faq1Q, answer: p.faq1A },
     { question: p.faq2Q, answer: p.faq2A }

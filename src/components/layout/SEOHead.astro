@@ -1,5 +1,5 @@
 ---
-import { SITE_CONFIG } from '../../lib/seo/meta';
+import { SITE_CONFIG, getDefaultKeywords } from '../../lib/seo/meta';
 import { languages } from '../../i18n/languages';
 import { getLangFromUrl, getAlternateLanguageUrls, stripLangFromPath } from '../../i18n/utils';
 
@@ -28,7 +28,7 @@ const {
   description = 'Converta vídeos online gratuitamente no seu navegador sem upload de arquivos. Privado e rápido. Suporte para MP4, MOV, MP3, GIF, WebM e WhatsApp.',
   ogImage = SITE_CONFIG.defaultOgImage,
   ogType = 'website',
-  keywords = SITE_CONFIG.defaultKeywords,
+  keywords = getDefaultKeywords(currentLang),
   schemas = []
 } = Astro.props;
 
@@ -36,8 +36,7 @@ const {
 const validSchemas = schemas.filter((s): s is Record<string, any> => s !== null && s !== undefined);
 ---
 
-<head>
-  <!-- Primary Meta Tags -->
+<!-- Primary Meta Tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
   <title>{title}</title>
@@ -85,4 +84,3 @@ const validSchemas = schemas.filter((s): s is Record<string, any> => s !== null 
   {validSchemas.map((schema) => (
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   ))}
-</head>

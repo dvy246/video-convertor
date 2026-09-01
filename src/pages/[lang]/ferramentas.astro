@@ -139,7 +139,12 @@ const collectionSchema = {
 };
 
 const faqSchema = generateFAQSchema(faqs);
-const webAppSchema = generateWebApplicationSchema();
+const webAppSchema = generateWebApplicationSchema({
+  name: t('tools.metaTitle'),
+  description: t('tools.metaDesc'),
+  url: canonicalUrl,
+  lang: lang
+});
 
 const labels = {
   searchPlaceholder: t('tools.searchPlaceholder'),

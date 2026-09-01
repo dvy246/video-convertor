@@ -17,11 +17,7 @@ const {
 
 const t = useTranslations(lang);
 const title = Astro.props.title || t('faq.title');
-const subtitle = Astro.props.subtitle || (
-  lang === 'es' ? 'Resuelve tus dudas sobre privacidad, formatos, límites de archivo y compatibilidad.' :
-  lang === 'en' ? 'Clear your doubts about privacy, formats, file size limits, and compatibility.' :
-  'Tire suas dúvidas sobre privacidade, formatos, limites de arquivo e compatibilidade.'
-);
+const subtitle = Astro.props.subtitle || t('faq.subtitle');
 ---
 
 <section class="py-12 sm:py-16">

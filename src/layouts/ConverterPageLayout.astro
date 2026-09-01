@@ -56,8 +56,10 @@ const howToSchema = generateHowToSchema({
   ]
 });
 
+const homeLabel = currentLang === 'pt' ? 'Início' : (currentLang === 'es' ? 'Inicio' : (currentLang === 'fr' ? 'Accueil' : (currentLang === 'ja' ? 'ホーム' : (currentLang === 'zh' ? '首页' : (currentLang === 'no' ? 'Hjem' : (currentLang === 'tr' ? 'Ana Sayfa' : (currentLang === 'pl' ? 'Strona Główna' : 'Home')))))));
+
 const breadcrumbSchema = generateBreadcrumbSchema([
-  { name: 'Home', url: `https://conversordevideo.com${translatePath('/')}` },
+  { name: homeLabel, url: `https://conversordevideo.com${translatePath('/')}` },
   { name: `${data.h1Prefix} ${data.h1Highlight}`, url: canonicalUrl }
 ]);
 

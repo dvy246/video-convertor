@@ -25,7 +25,21 @@ export default defineConfig({
       filter: (page) => !page.includes('/404') && !page.includes('/500'),
       changefreq: 'weekly',
       priority: 0.8,
-      lastmod: new Date()
+      lastmod: new Date(),
+      i18n: {
+        defaultLocale: 'pt',
+        locales: {
+          pt: 'pt-BR',
+          en: 'en',
+          es: 'es',
+          fr: 'fr',
+          ja: 'ja',
+          zh: 'zh-CN',
+          no: 'no',
+          tr: 'tr',
+          pl: 'pl'
+        }
+      }
     })
   ],
   vite: {
