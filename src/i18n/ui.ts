@@ -20,13 +20,13 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'header.compress': 'Comprimir',
 
     // All Tools Directory Page
-    'tools.metaTitle': 'Todas as 36 Ferramentas de Vídeo e Áudio Online Grátis — Catálogo Completo',
-    'tools.metaDesc': 'Catálogo completo com 36 conversores de vídeo, compressores, extratores de áudio MP3, redimensionadores e criadores de GIF. Processamento no navegador e privado.',
-    'tools.heroBadge': 'Catálogo Completo • 36 Ferramentas Locais',
+    'tools.metaTitle': '51 Ferramentas de Vídeo e Áudio Online Grátis — Catálogo',
+    'tools.metaDesc': 'Catálogo completo com 51 conversores de vídeo, compressores, extração de áudio MP3 e GIFs. Processamento local no navegador, sem upload e gratuito.',
+    'tools.heroBadge': 'Catálogo Completo • 51 Ferramentas Locais',
     'tools.heroTitlePrefix': 'Todas as Ferramentas de',
     'tools.heroTitleHighlight': 'Vídeo & Áudio',
     'tools.heroTitleSuffix': 'Online',
-    'tools.heroSubtitle': '36 conversores, compressores e utilitários rápidos com processamento no seu navegador. Sem uploads, sem cadastro, gratuito e privado.',
+    'tools.heroSubtitle': '51 conversores, compressores e utilitários rápidos com processamento no seu navegador. Sem uploads, sem cadastro, gratuito e privado.',
     'tools.searchPlaceholder': 'Buscar ferramentas por formato, nome ou utilidade (ex: MP4, WhatsApp, Áudio, TikTok)...',
     'tools.filterAll': 'Todas as Ferramentas',
     'tools.filterVideo': 'Conversores de Vídeo',
@@ -95,6 +95,11 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'howItWorks.step2Desc': 'Selecione o formato desejado (MP4, MP3, WebM, GIF) e a predefinição inteligente (como "Otimizado para WhatsApp" ou "Alta Fidelidade HD").',
     'howItWorks.step3Title': '03. Baixe o Arquivo Pronto',
     'howItWorks.step3Desc': 'A tecnologia WebAssembly codifica o vídeo diretamente no seu dispositivo. Clique no botão de download e salve seu arquivo sem marcas d’água.',
+    'howItWorks.flowTitle': 'Fluxo de Conversão no Seu Dispositivo',
+    'howItWorks.flowDesc': 'O arquivo é carregado diretamente no buffer de memória do navegador. O motor FFmpeg WASM codifica os quadros em tempo real sem qualquer conexão com servidores externos.',
+    'howItWorks.sourceLabel': 'Origem',
+    'howItWorks.queueLabel': '0ms Fila',
+    'howItWorks.downloadLabel': 'Download',
 
     // Features Section
     'features.badge': 'Vantagens Reais',
@@ -153,6 +158,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     // FAQ Section
     'faq.badge': 'Dúvidas Comuns',
     'faq.title': 'Perguntas Frequentes sobre Conversão de Vídeo',
+    'faq.subtitle': 'Tire suas dúvidas sobre privacidade, formatos, limites de arquivo e compatibilidade.',
     'faq.q1': 'O conversor de vídeo é realmente gratuito?',
     'faq.a1': 'Sim! Você pode converter quantos vídeos quiser, sem limites diários, sem cadastro, sem marcas d’água e sem taxas ocultas.',
     'faq.q2': 'Meus vídeos particulares são enviados para algum servidor na internet?',
@@ -180,7 +186,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     // Header & Meta
     'site.title': 'Free Video Converter — Private & In-Browser',
     'site.description': 'Convert and compress videos online for free directly in your browser without uploading files. private and local. Supports MP4, MOV, MP3, GIF, WebM, and WhatsApp.',
-    'header.badge': 'Processamento Local • Zero Upload',
+    'header.badge': 'In-Browser • Zero Uploads',
     'header.formats': 'Formats & Tools',
     'header.colPopular': 'Popular & Audio',
     'header.colCompress': 'Compressors & Social',
@@ -270,6 +276,11 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'howItWorks.step2Desc': 'Select your target format (MP4, MP3, WebM, GIF) and smart preset (e.g. "WhatsApp Optimized" or "High Quality HD").',
     'howItWorks.step3Title': '03. Download Ready File',
     'howItWorks.step3Desc': 'WebAssembly encodes the video directly on your hardware. Click download to save your ready file with zero watermarks.',
+    'howItWorks.flowTitle': 'Conversion Flow on Your Device',
+    'howItWorks.flowDesc': 'The file loads directly into browser memory buffers. The FFmpeg WASM engine transcodes frames in real time with zero external network transmission.',
+    'howItWorks.sourceLabel': 'Source',
+    'howItWorks.queueLabel': '0ms Queue',
+    'howItWorks.downloadLabel': 'Download',
 
     // Features Section
     'features.badge': 'Core Benefits',
@@ -296,7 +307,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'comparison.colUs': 'ConversordeVideo.com',
     'comparison.newBadge': 'New',
     'comparison.row1Feature': 'File Privacy & Security',
-    'comparison.row1Us': 'Processamento Local (Zero Upload)',
+    'comparison.row1Us': 'Local In-Browser (Zero Upload)',
     'comparison.row1Them': 'Cloud Server Upload',
     'comparison.row2Feature': 'Account / Signup Required',
     'comparison.row2Us': 'No Signup (Direct Access)',
@@ -328,6 +339,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     // FAQ Section
     'faq.badge': 'Common Questions',
     'faq.title': 'Frequently Asked Questions About Video Conversion',
+    'faq.subtitle': 'Clear answers about privacy, formats, file size limits, and compatibility.',
     'faq.q1': 'Is the video converter really free?',
     'faq.a1': 'Yes! You can convert as many videos as you want, with no daily limits, no registration, no watermarks, and no hidden fees.',
     'faq.q2': 'Are my private videos uploaded to any remote server?',
@@ -370,13 +382,13 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'header.compress': 'Comprimir Video',
 
     // All Tools Directory Page
-    'tools.metaTitle': 'Las 36 Herramientas de Video y Audio Online Gratis — Catálogo Completo',
-    'tools.metaDesc': 'Catálogo completo con 36 convertidores de video, compresores, extractores de audio MP3, redimensionadores y creadores de GIF. privado en navegador.',
-    'tools.heroBadge': 'Catálogo Completo • 36 Herramientas Locales',
+    'tools.metaTitle': '51 Herramientas de Video y Audio Online Gratis — Catálogo',
+    'tools.metaDesc': 'Catálogo completo con 51 convertidores de video, compresores, extractores de audio MP3 y creadores de GIF. Procesamiento local en navegador sin upload.',
+    'tools.heroBadge': 'Catálogo Completo • 51 Herramientas Locales',
     'tools.heroTitlePrefix': 'Todas las Herramientas de',
     'tools.heroTitleHighlight': 'Video y Audio',
     'tools.heroTitleSuffix': 'Online',
-    'tools.heroSubtitle': '36 convertidores, compresores y utilidades multimedia procesadas en tu navegador. Sin subir archivos, sin registros, totalmente gratis.',
+    'tools.heroSubtitle': '51 convertidores, compresores y utilidades multimedia procesadas en tu navegador. Sin subir archivos, sin registros, totalmente gratis.',
     'tools.searchPlaceholder': 'Buscar herramientas por formato, nombre o uso (ej: MP4, WhatsApp, Audio, TikTok)...',
     'tools.filterAll': 'Todas las Herramientas',
     'tools.filterVideo': 'Convertidores de Video',
@@ -445,6 +457,11 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'howItWorks.step2Desc': 'Elige MP4, MP3, WebM, GIF o perfiles optimizados para WhatsApp y Reels.',
     'howItWorks.step3Title': '03. Descarga el Archivo Listo',
     'howItWorks.step3Desc': 'El motor WebAssembly procesa todo en tu memoria RAM y genera la descarga al momento.',
+    'howItWorks.flowTitle': 'Flujo de Conversión en tu Dispositivo',
+    'howItWorks.flowDesc': 'El archivo se carga directamente en el búfer de memoria del navegador. El motor FFmpeg WASM procesa los fotogramas en tiempo real sin conexión a servidores externos.',
+    'howItWorks.sourceLabel': 'Origen',
+    'howItWorks.queueLabel': '0ms Cola',
+    'howItWorks.downloadLabel': 'Descarga',
 
     // Features Section
     'features.badge': 'Ventajas Reales',
@@ -503,6 +520,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     // FAQ Section
     'faq.badge': 'Preguntas Frecuentes',
     'faq.title': 'Preguntas Frecuentes sobre la Conversión de Video',
+    'faq.subtitle': 'Resuelve tus dudas sobre privacidad, formatos, límites de archivo y compatibilidad.',
     'faq.q1': '¿El convertidor de video es realmente gratuito?',
     'faq.a1': '¡Sí! Puedes convertir tantos videos como quieras, sin límites diarios, sin registro, sin marcas de agua y sin tarifas ocultas.',
     'faq.q2': '¿Mis videos privados se envían a algún servidor en internet?',
@@ -530,7 +548,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     // Header & Meta
     'site.title': 'Convertisseur Vidéo en Ligne Gratuit et Sécurisé — Traitement dans le Navigateur',
     'site.description': 'Convertissez et compressez des vidéos gratuitement dans votre navigateur sans téléverser de fichiers. confidentiel, instantané et sans inscription.',
-    'header.badge': 'Processamento Local • Aucun Téléversement',
+    'header.badge': 'Traitement Local • Zéro Téléversement',
     'header.formats': 'Formats et Outils',
     'header.colPopular': 'Populaires et Audio',
     'header.colCompress': 'Compresseurs et Réseaux',
@@ -545,13 +563,13 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'header.compress': 'Compresser Vidéo',
 
     // All Tools Directory Page
-    'tools.metaTitle': 'Les 36 Outils Vidéo et Audio en Ligne Gratuits — Répertoire Complet',
-    'tools.metaDesc': 'Catalogue complet de 36 convertisseurs vidéo, compresseurs, extracteurs audio MP3, redimensionneurs et créateurs de GIF. privé dans le navigateur.',
-    'tools.heroBadge': 'Catalogue Complet • 36 Outils Locaux',
+    'tools.metaTitle': '51 Outils Vidéo et Audio en Ligne Gratuits — Répertoire',
+    'tools.metaDesc': 'Catalogue complet de 51 convertisseurs vidéo, compresseurs, extracteurs audio MP3 et créateurs de GIF. Traitement local et privé dans le navigateur.',
+    'tools.heroBadge': 'Catalogue Complet • 51 Outils Locaux',
     'tools.heroTitlePrefix': 'Tous les Outils de',
     'tools.heroTitleHighlight': 'Vidéo & Audio',
     'tools.heroTitleSuffix': 'en Ligne',
-    'tools.heroSubtitle': '36 convertisseurs, compresseurs et utilitaires multimédia ultra-rapides traités dans votre navigateur. Aucun envoi, sans inscription.',
+    'tools.heroSubtitle': '51 convertisseurs, compresseurs et utilitaires multimédia ultra-rapides traités dans votre navigateur. Aucun envoi, sans inscription.',
     'tools.searchPlaceholder': 'Rechercher par format, nom ou usage (ex : MP4, WhatsApp, Audio, TikTok)...',
     'tools.filterAll': 'Tous les Outils',
     'tools.filterVideo': 'Convertisseurs Vidéo',
@@ -583,7 +601,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'dropzone.subtitle': 'MP4, MOV, MKV, AVI, WebM, FLV, M2TS, VOB, TS, WMV et plus',
     'dropzone.button': 'Sélectionner une Vidéo',
     'dropzone.dragActive': 'Déposez votre fichier vidéo ici...',
-    'privacy.badge': '🔒 Processamento Local : Vos fichiers ne quittent jamais votre appareil',
+    'privacy.badge': '🔒 Traitement Local : Vos fichiers ne quittent jamais votre appareil',
 
     // Converter Controls
     'format.selectTitle': '1. Choisissez le Format de Sortie',
@@ -620,6 +638,11 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'howItWorks.step2Desc': 'Sélectionnez le format souhaité (MP4, MP3, WebM, GIF) et le profil adapté (WhatsApp, HD).',
     'howItWorks.step3Title': '03. Téléchargez le Fichier',
     'howItWorks.step3Desc': 'WebAssembly encode la vidéo directement sur votre appareil. Téléchargez votre fichier sans filigrane.',
+    'howItWorks.flowTitle': 'Flux de Conversion sur Votre Appareil',
+    'howItWorks.flowDesc': 'Le fichier se charge directement dans la mémoire tampon du navigateur. Le moteur FFmpeg WASM encode les trames en temps réel sans transfert réseau externe.',
+    'howItWorks.sourceLabel': 'Source',
+    'howItWorks.queueLabel': '0ms File',
+    'howItWorks.downloadLabel': 'Téléchargement',
 
     // Features Section
     'features.badge': 'Avantages Clés',
@@ -646,7 +669,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'comparison.colUs': 'ConversordeVideo.com',
     'comparison.newBadge': 'Nouveau',
     'comparison.row1Feature': 'Confidentialité des Fichiers',
-    'comparison.row1Us': 'Processamento Local (Zéro Téléversement)',
+    'comparison.row1Us': 'Traitement Local (Zéro Téléversement)',
     'comparison.row1Them': 'Téléversement Cloud',
     'comparison.row2Feature': 'Inscription Obligatoire',
     'comparison.row2Us': 'Sans Inscription (Accès Direct)',
@@ -678,6 +701,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     // FAQ Section
     'faq.badge': 'Questions Fréquentes',
     'faq.title': 'Questions Fréquentes sur la Conversion Vidéo',
+    'faq.subtitle': 'Toutes les réponses sur la confidentialité, les formats, les limites et la compatibilité.',
     'faq.q1': 'Le convertisseur vidéo est-il vraiment gratuit ?',
     'faq.a1': 'Oui ! Vous pouvez convertir autant de vidéos que vous le souhaitez, sans limite quotidienne, sans inscription, sans filigrane et sans frais cachés.',
     'faq.q2': 'Mes vidéos privées sont-elles envoyées sur un serveur distant ?',
@@ -720,13 +744,13 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'header.compress': '動画圧縮',
 
     // All Tools Directory Page
-    'tools.metaTitle': '全36種の無料オンライン動画・音声ツール一覧 — 完全カタログ',
-    'tools.metaDesc': '動画変換、圧縮、MP3音声抽出、解像度リサイズ、GIF作成など全36種類のツールを一覧。ブラウザ完結で安全・無料。',
-    'tools.heroBadge': '全36ツール網羅 • 完全ブラウザ完結',
+    'tools.metaTitle': '全51種の無料オンライン動画・音声ツール一覧 — 完全カタログ',
+    'tools.metaDesc': '動画変換、圧縮、MP3音声抽出、解像度リサイズ、GIF作成など全51種類のツールを一覧。ブラウザ完結で安全・無料。',
+    'tools.heroBadge': '全51ツール網羅 • 完全ブラウザ完結',
     'tools.heroTitlePrefix': 'すべての',
     'tools.heroTitleHighlight': '動画・音声ツール一覧',
     'tools.heroTitleSuffix': 'オンライン',
-    'tools.heroSubtitle': 'ブラウザのメモリ内で高速動作する全36種の動画変換・圧縮・編集ツール。クラウド送信ゼロ、登録不要、完全無料。',
+    'tools.heroSubtitle': 'ブラウザのメモリ内で高速動作する全51種の動画変換・圧縮・編集ツール。クラウド送信ゼロ、登録不要、完全無料。',
     'tools.searchPlaceholder': '形式、ツール名、用途で検索（例：MP4、WhatsApp、音声、TikTok）...',
     'tools.filterAll': 'すべてのツール',
     'tools.filterVideo': '動画フォーマット変換',
@@ -795,6 +819,11 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'howItWorks.step2Desc': '希望の形式（MP4、MP3、WebM、GIF）とスマートプリセット（WhatsApp用、高画質HDなど）を選択します。',
     'howItWorks.step3Title': '03. 変換ファイルを保存',
     'howItWorks.step3Desc': 'WebAssembly技術により端末上で直接エンコードされます。ウォーターマークなしで保存できます。',
+    'howItWorks.flowTitle': '端末上での変換処理フロー',
+    'howItWorks.flowDesc': 'ファイルはブラウザのメモリバッファに直接読み込まれます。FFmpeg WASMエンジンが外部サーバー通信なしでリアルタイムにエンコードします。',
+    'howItWorks.sourceLabel': '元ファイル',
+    'howItWorks.queueLabel': '待機0ms',
+    'howItWorks.downloadLabel': 'ダウンロード',
 
     // Features Section
     'features.badge': '主なメリット',
@@ -853,6 +882,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     // FAQ Section
     'faq.badge': 'よくある質問',
     'faq.title': '動画変換に関するよくあるご質問',
+    'faq.subtitle': 'プライバシー、対応フォーマット、容量制限、互換性についてのよくある質問。',
     'faq.q1': 'この動画変換ツールは本当に無料ですか？',
     'faq.a1': 'はい！日次制限なし、会員登録不要、透かしなし、隠れた費用なしで、好きなだけ動画を変換できます。',
     'faq.q2': 'プライベートな動画がサーバーに送信されることはありますか？',
@@ -895,13 +925,13 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'header.compress': '压缩视频',
 
     // All Tools Directory Page
-    'tools.metaTitle': '全部 36 款在线免费视频与音频工具 — 完整工具大全',
-    'tools.metaDesc': '包含 36 款视频格式转换、体积压缩、MP3 原声提取、画面尺寸重塑及动态 GIF 制作工具。浏览器本地运行。',
-    'tools.heroBadge': '完整工具库 • 36 项本地处理工具',
+    'tools.metaTitle': '全部 51 款在线免费视频与音频工具 — 完整工具大全',
+    'tools.metaDesc': '包含 51 款视频格式转换、体积压缩、MP3 原声提取、画面尺寸重塑及动态 GIF 制作工具。浏览器本地运行。',
+    'tools.heroBadge': '完整工具库 • 51 项本地处理工具',
     'tools.heroTitlePrefix': '全套在线',
     'tools.heroTitleHighlight': '视频与音频工具',
     'tools.heroTitleSuffix': '免费大全',
-    'tools.heroSubtitle': '36 款极速视频格式转换、体积瘦身与多媒体编辑工具，浏览器本地运算。零文件上传，无需注册，永久免费。',
+    'tools.heroSubtitle': '51 款极速视频格式转换、体积瘦身与多媒体编辑工具，浏览器本地运算。零文件上传，无需注册，永久免费。',
     'tools.searchPlaceholder': '按格式、工具名称或用途搜索（例如：MP4、微信压缩、音频提取、TikTok）...',
     'tools.filterAll': '全部工具',
     'tools.filterVideo': '视频格式转换',
@@ -970,6 +1000,11 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'howItWorks.step2Desc': '选择目标格式（MP4、MP3、WebM、GIF）及智能预设（如 WhatsApp 优化或高清画质）。',
     'howItWorks.step3Title': '03. 下载转换好的文件',
     'howItWorks.step3Desc': '基于 WebAssembly 在本地完成编码。点击下载即可保存无水印成品文件。',
+    'howItWorks.flowTitle': '设备端本地转码处理流',
+    'howItWorks.flowDesc': '媒体文件直接载入浏览器内存缓冲区，FFmpeg WASM 引擎在本地实时逐帧编码，绝不发生任何外部网络传输。',
+    'howItWorks.sourceLabel': '源文件',
+    'howItWorks.queueLabel': '0秒排队',
+    'howItWorks.downloadLabel': '下载导出',
 
     // Features Section
     'features.badge': '核心优势',
@@ -1028,6 +1063,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     // FAQ Section
     'faq.badge': '常见问题',
     'faq.title': '关于视频转换的常见问题解答',
+    'faq.subtitle': '关于隐私保护、支持格式、文件大小与兼容性的常见问题解答。',
     'faq.q1': '这个视频转换工具真的是免费的吗？',
     'faq.a1': '是的！您可以免费转换任意数量的视频，无每日限制、无需注册、无水印且无任何隐藏费用。',
     'faq.q2': '我的私人视频会被上传到远程服务器吗？',
@@ -1145,6 +1181,11 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'howItWorks.step2Desc': 'Velg ønsket format (MP4, MP3, WebM, GIF) og smart forhåndsinnstilling (f.eks. WhatsApp eller HD).',
     'howItWorks.step3Title': '03. Last Ned Ferdig Fil',
     'howItWorks.step3Desc': 'WebAssembly koder videoen direkte på enheten din. Last ned filen uten vannmerker.',
+    'howItWorks.flowTitle': 'Konverteringsflyt på enheten din',
+    'howItWorks.flowDesc': 'Filen lastes direkte inn i nettleserens minnebuffer. FFmpeg WASM-motoren koder rammer i sanntid uten eksterne servere.',
+    'howItWorks.sourceLabel': 'Kilde',
+    'howItWorks.queueLabel': '0ms Kø',
+    'howItWorks.downloadLabel': 'Last ned',
 
     // Features Section
     'features.badge': 'Viktige Fordeler',
@@ -1171,7 +1212,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'comparison.colUs': 'ConversordeVideo.com',
     'comparison.newBadge': 'Ny',
     'comparison.row1Feature': 'Filsikkerhet og Personvern',
-    'comparison.row1Us': 'Lokal Behandlingt (Ingen Opplasting)',
+    'comparison.row1Us': 'Lokal Behandling (Ingen Opplasting)',
     'comparison.row1Them': 'Opplasting til Skyserver',
     'comparison.row2Feature': 'Krav om Registrering',
     'comparison.row2Us': 'Ingen Registrering (Direkte Tilgang)',
@@ -1203,6 +1244,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     // FAQ Section
     'faq.badge': 'Ofte Stilte Spørsmål',
     'faq.title': 'Spørsmål og Svar om Videokonvertering',
+    'faq.subtitle': 'Få svar på spørsmål om personvern, formater, filstørrelser og kompatibilitet.',
     'faq.q1': 'Er denne videokonverteren helt gratis?',
     'faq.a1': 'Ja! Du kan konvertere så mange videoer du vil, uten daglige grenser, uten registrering, uten vannmerker og uten skjulte kostnader.',
     'faq.q2': 'Blir mine private videoer lastet opp til en ekstern server?',
@@ -1245,13 +1287,13 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'header.compress': 'Video Sıkıştır',
 
     // All Tools Directory Page
-    'tools.metaTitle': '51 Ücretsiz Çevrimiçi Video ve Ses Aracının Tümü — Tam Dizin',
-    'tools.metaDesc': '36 video dönüştürücü, sıkıştırıcı, MP3 ses çıkarıcı, yeniden boyutlandırıcı ve GIF yapıcıdan oluşan eksiksiz katalog. %100 tarayıcıda ve gizli.',
+    'tools.metaTitle': '51 Ücretsiz Çevrimiçi Video ve Ses Aracı — Tam Dizin',
+    'tools.metaDesc': '51 video dönüştürücü, sıkıştırıcı, MP3 ses çıkarıcı, yeniden boyutlandırıcı ve GIF yapıcıdan oluşan eksiksiz katalog. %100 tarayıcıda ve gizli.',
     'tools.heroBadge': 'Tüm Araçlar Dizini • 51 Yerel Araç',
     'tools.heroTitlePrefix': 'Tüm Çevrimiçi',
     'tools.heroTitleHighlight': 'Video & Ses Araçları',
     'tools.heroTitleSuffix': 'Ücretsiz',
-    'tools.heroSubtitle': 'Tarayıcınızda %100 yerel olarak çalışan 36 ultra hızlı dönüştürücü, sıkıştırıcı ve medya aracı. Yükleme yok, kayıt yok, tamamen ücretsiz.',
+    'tools.heroSubtitle': 'Tarayıcınızda %100 yerel olarak çalışan 51 ultra hızlı dönüştürücü, sıkıştırıcı ve medya aracı. Yükleme yok, kayıt yok, tamamen ücretsiz.',
     'tools.searchPlaceholder': 'Format, araç adı veya kullanım amacına göre arayın (örn. MP4, WhatsApp, Ses, TikTok)...',
     'tools.filterAll': 'Tüm Araçlar',
     'tools.filterVideo': 'Video Dönüştürücüler',
@@ -1320,6 +1362,11 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'howItWorks.step2Desc': 'İstediğiniz formatı (MP4, MP3, WebM, GIF) ve akıllı önayarı (WhatsApp veya HD) seçin.',
     'howItWorks.step3Title': '03. Hazır Dosyayı İndirin',
     'howItWorks.step3Desc': 'WebAssembly teknolojisi videoyu doğrudan cihazınızda kodlar. Filigransız indirin.',
+    'howItWorks.flowTitle': 'Cihazınızdaki Dönüştürme Akışı',
+    'howItWorks.flowDesc': 'Dosya doğrudan tarayıcı bellek arabelleğine yüklenir. FFmpeg WASM motoru harici sunucu bağlantısı olmadan kareleri gerçek zamanlı olarak kodlar.',
+    'howItWorks.sourceLabel': 'Kaynak',
+    'howItWorks.queueLabel': '0ms Sıra',
+    'howItWorks.downloadLabel': 'İndir',
 
     // Features Section
     'features.badge': 'Önemli Avantajlar',
@@ -1378,6 +1425,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     // FAQ Section
     'faq.badge': 'Sıkça Sorulan Sorular',
     'faq.title': 'Video Dönüştürme Hakkında Sıkça Sorulan Sorular',
+    'faq.subtitle': 'Gizlilik, formatlar, dosya boyutu sınırları ve uyumluluk hakkındaki tüm sorularınız.',
     'faq.q1': 'Video dönüştürücü gerçekten ücretsiz mi?',
     'faq.a1': 'Evet! Günlük sınır olmadan, kayıt olmadan, filigran olmadan ve hiçbir gizli ücret ödemeden dilediğiniz kadar video dönüştürebilirsiniz.',
     'faq.q2': 'Özel videolarım internetteki bir sunucuya yükleniyor mu?',
@@ -1420,13 +1468,13 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'header.compress': 'Kompresuj Wideo',
 
     // All Tools Directory Page
-    'tools.metaTitle': 'Wszystkie 51 Darmowych Narzędzi Wideo i Audio Online — Pełny Katalog',
-    'tools.metaDesc': 'Kompletny katalog 36 konwerterów wideo, kompresorów, ekstraktorów audio MP3, narzędzi do skalowania i tworzenia GIF. w przeglądarce.',
-    'tools.heroBadge': 'Pełny Katalog • 36 Narzędzi Lokalnych',
+    'tools.metaTitle': '51 Darmowych Narzędzi Wideo i Audio Online — Pełny Katalog',
+    'tools.metaDesc': 'Kompletny katalog 51 konwerterów wideo, kompresorów, ekstraktorów audio MP3, narzędzi do skalowania i tworzenia GIF. W przeglądarce i bez opłat.',
+    'tools.heroBadge': 'Pełny Katalog • 51 Narzędzi Lokalnych',
     'tools.heroTitlePrefix': 'Wszystkie Narzędzia do',
     'tools.heroTitleHighlight': 'Wideo i Audio',
     'tools.heroTitleSuffix': 'Online',
-    'tools.heroSubtitle': '36 ultra-szybkich konwerterów, kompresorów i narzędzi multimedialnych działających w Twojej przeglądarce. Bez wysyłania plików i bez rejestracji.',
+    'tools.heroSubtitle': '51 ultra-szybkich konwerterów, kompresorów i narzędzi multimedialnych działających w Twojej przeglądarce. Bez wysyłania plików i bez rejestracji.',
     'tools.searchPlaceholder': 'Szukaj narzędzi według formatu, nazwy lub zastosowania (np. MP4, WhatsApp, Audio, TikTok)...',
     'tools.filterAll': 'Wszystkie Narzędzia',
     'tools.filterVideo': 'Konwertery Wideo',
@@ -1495,6 +1543,11 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'howItWorks.step2Desc': 'Wybierz format docelowy (MP4, MP3, WebM, GIF) i inteligentny profil (np. WhatsApp lub HD).',
     'howItWorks.step3Title': '03. Pobierz Gotowy Plik',
     'howItWorks.step3Desc': 'Technologia WebAssembly koduje wideo bezpośrednio na urządzeniu. Pobierz plik bez znaków wodnych.',
+    'howItWorks.flowTitle': 'Przepływ Konwersji na Twoim Urządzeniu',
+    'howItWorks.flowDesc': 'Plik jest ładowany bezpośrednio do bufora pamięci przeglądarki. Silnik FFmpeg WASM koduje klatki w czasie rzeczywistym bez połączenia z serwerami zewnętrznymi.',
+    'howItWorks.sourceLabel': 'Źródło',
+    'howItWorks.queueLabel': '0ms Kolejki',
+    'howItWorks.downloadLabel': 'Pobierz',
 
     // Features Section
     'features.badge': 'Główne Zalety',
@@ -1521,7 +1574,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     'comparison.colUs': 'ConversordeVideo.com',
     'comparison.newBadge': 'Nowość',
     'comparison.row1Feature': 'Bezpieczeństwo Plików i Prywatność',
-    'comparison.row1Us': 'Lokal Behandlingnie (Zero Wysyłania)',
+    'comparison.row1Us': 'Lokalne Przetwarzanie (Zero Wysyłania)',
     'comparison.row1Them': 'Przesyłanie na Serwery w Chmurze',
     'comparison.row2Feature': 'Wymóg Rejestracji Konta',
     'comparison.row2Us': 'Bez Rejestracji (Dostęp Bezpośredni)',
@@ -1553,6 +1606,7 @@ export const ui: Record<SupportedLanguage, Record<string, string>> = {
     // FAQ Section
     'faq.badge': 'Często Zadawane Pytania',
     'faq.title': 'Pytania i Odpowiedzi o Konwersji Wideo',
+    'faq.subtitle': 'Odpowiedzi na pytania dotyczące prywatności, formatów, limitów plików i kompatybilności.',
     'faq.q1': 'Czy konwerter wideo jest naprawdę bezpłatny?',
     'faq.a1': 'Tak! Możesz konwertować dowolną liczbę filmów bez dziennych limitów, bez rejestracji, bez znaków wodnych i bez ukrytych opłat.',
     'faq.q2': 'Czy moje prywatne filmy są wysyłane na jakikolwiek serwer?',

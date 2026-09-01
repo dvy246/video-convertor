@@ -45,6 +45,14 @@ Welcome! This document provides complete, up-to-date instructions, conventions, 
 > - **Always consult [`ARCHITECTURE.md`](./ARCHITECTURE.md)** for system design, WebAssembly engine lifecycle, and data flow patterns.
 > - **Always build (`npm run build`) and test before claiming completion.**
 
+> [!IMPORTANT]
+> **3. Core Engineering Principles (Always Active)**
+> All coding and refactoring work in this repository MUST strictly follow the [`principles`](.agents/skills/principles/SKILL.md) skill:
+> 1. **Think Before Coding**: State assumptions explicitly, surface tradeoffs, and never guess silently on ambiguity.
+> 2. **Simplicity First**: Write the minimum code that solves the problem. No speculative abstractions or unrequested features.
+> 3. **Surgical Changes**: Touch only lines required for the task. Do not refactor adjacent code, comments, or unrelated styling. Clean up only your own orphans.
+> 4. **Goal-Driven Execution**: Define verifiable criteria before making changes. Loop and test until verified with evidence.
+
 ---
 
 ## 🛠️ Technology Stack
