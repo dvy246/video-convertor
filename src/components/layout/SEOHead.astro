@@ -16,12 +16,16 @@ export interface Props {
 const currentLang = getLangFromUrl(Astro.url);
 const currentLangInfo = languages[currentLang];
 const alternateUrls = getAlternateLanguageUrls(Astro.url.pathname);
-const xDefaultHref = `${SITE_CONFIG.url.replace(/\/$/, '')}${stripLangFromPath(Astro.url.pathname) === '/' ? '' : stripLangFromPath(Astro.url.pathname)}`;
+const cleanXDefault = stripLangFromPath(Astro.url.pathname);
+const normXDefault = cleanXDefault === '/' ? '/' : (cleanXDefault.endsWith('/') ? cleanXDefault : `${cleanXDefault}/`);
+const xDefaultHref = `${SITE_CONFIG.url.replace(/\/$/, '')}${normXDefault}`;
+
+const rawCanonical = Astro.props.canonicalUrl || Astro.url.href;
+const canonicalUrl = rawCanonical.endsWith('/') ? rawCanonical : `${rawCanonical}/`;
 
 const {
   title = `${SITE_CONFIG.name} — Conversor de Vídeo Online Grátis e Seguro`,
   description = 'Converta vídeos online gratuitamente no seu navegador sem upload de arquivos. Privado e rápido. Suporte para MP4, MOV, MP3, GIF, WebM e WhatsApp.',
-  canonicalUrl = Astro.url.href,
   ogImage = SITE_CONFIG.defaultOgImage,
   ogType = 'website',
   keywords = SITE_CONFIG.defaultKeywords,

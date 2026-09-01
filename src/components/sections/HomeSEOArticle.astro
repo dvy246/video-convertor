@@ -1,5 +1,5 @@
 ---
-import { getLangFromUrl } from '../../i18n/utils';
+import { getLangFromUrl, useTranslatedPath } from '../../i18n/utils';
 import { getLocalizedHomeArticle } from '../../data/homeArticles';
 import type { SupportedLanguage } from '../../i18n/languages';
 
@@ -8,6 +8,7 @@ export interface Props {
 }
 
 const currentLang = Astro.props.lang || getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(currentLang);
 const article = getLocalizedHomeArticle(currentLang);
 ---
 
@@ -108,6 +109,45 @@ const article = getLocalizedHomeArticle(currentLang);
           <li>{article.sec5L2}</li>
         </ul>
       </div>
+
+      <!-- Section 6: Dedicated Tool Hubs & Internal Links -->
+      {article.sec6Title && (
+        <div class="space-y-4 pt-4 border-t border-zinc-100 dark:border-zinc-800/80">
+          <h3 class="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white tracking-tight">
+            {article.sec6Title}
+          </h3>
+          <p class="text-zinc-600 dark:text-zinc-300">
+            {article.sec6P1}
+          </p>
+          <ul class="list-disc pl-5 space-y-3 text-zinc-600 dark:text-zinc-300">
+            <li>
+              <a href={translatePath('/compressor-de-video')} class="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">
+                {article.sec6L1Title}
+              </a>: {article.sec6L1Desc}
+            </li>
+            <li>
+              <a href={translatePath('/converter-video-em-audio')} class="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">
+                {article.sec6L2Title}
+              </a>: {article.sec6L2Desc}
+            </li>
+            <li>
+              <a href={translatePath('/compactar-video-para-whatsapp')} class="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">
+                {article.sec6L3Title}
+              </a>: {article.sec6L3Desc}
+            </li>
+            <li>
+              <a href={translatePath('/redimensionar-video')} class="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">
+                {article.sec6L4Title}
+              </a>: {article.sec6L4Desc}
+            </li>
+            <li>
+              <a href={translatePath('/video-para-gif')} class="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">
+                {article.sec6L5Title}
+              </a>: {article.sec6L5Desc}
+            </li>
+          </ul>
+        </div>
+      )}
 
     </article>
   </div>

@@ -72,5 +72,38 @@ const steps = [
         </div>
       ))}
     </div>
+
+    {/* Visual Local Processing Workflow Demo Card (E-E-A-T Experience Signal) */}
+    <div class="mt-8 rounded-2xl bg-zinc-50 dark:bg-zinc-950/60 border border-zinc-200/80 dark:border-zinc-800/80 p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 overflow-hidden relative">
+      <div class="space-y-2 max-w-lg">
+        <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-emerald-100/70 dark:bg-emerald-950/70 text-emerald-800 dark:text-emerald-300 text-xs font-semibold">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          WebAssembly RAM Transcoding
+        </div>
+        <h4 class="text-base sm:text-lg font-bold text-zinc-900 dark:text-white">
+          Fluxo de Conversão no Seu Dispositivo
+        </h4>
+        <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+          O arquivo é carregado diretamente no buffer de memória do navegador. O motor FFmpeg WASM codifica os quadros em tempo real sem qualquer conexão com servidores externos.
+        </p>
+      </div>
+
+      <div class="flex items-center gap-2 sm:gap-4 shrink-0 font-mono text-xs font-medium text-zinc-600 dark:text-zinc-400 bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 p-3 sm:p-4 rounded-xl shadow-xs">
+        <div class="flex flex-col items-center gap-1">
+          <span class="px-2.5 py-1 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-bold">MOV / MP4</span>
+          <span class="text-[10px] text-zinc-400">Origem</span>
+        </div>
+        <span class="text-emerald-500 font-bold text-base">➔</span>
+        <div class="flex flex-col items-center gap-1">
+          <span class="px-2.5 py-1 rounded bg-emerald-50 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 font-bold border border-emerald-200/60 dark:border-emerald-800/60">WASM RAM</span>
+          <span class="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold">0ms Fila</span>
+        </div>
+        <span class="text-emerald-500 font-bold text-base">➔</span>
+        <div class="flex flex-col items-center gap-1">
+          <span class="px-2.5 py-1 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-bold">MP4 / MP3</span>
+          <span class="text-[10px] text-zinc-400">Download</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

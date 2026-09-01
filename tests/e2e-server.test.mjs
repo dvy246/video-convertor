@@ -1,13 +1,9 @@
-import { describe, it, before, after } from 'node:test';
+import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
-import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
 
-describe('E2E HTTP Server & Headers Test', () => {
-  let server;
-  const PORT = 43210;
-  const BASE_URL = `http://localhost:${PORT}`;
+describe('E2E Static Files & Headers Audit', () => {
   const distDir = path.resolve('dist');
 
   // Parse headers from _headers file
@@ -23,48 +19,31 @@ describe('E2E HTTP Server & Headers Test', () => {
     }
   }
 
-  before((done) => {
-    server = http.createServer((req, res) => {
-      let reqPath = req.url.split('?')[0];
-      if (reqPath.endsWith('/')) {
-        reqPath += 'index.html';
-      } else if (!path.extname(reqPath)) {
-        reqPath += '/index.html';
-      }
+  function resolveRouteFile(route) {
+    let reqPath = route.split('?')[0];
+    if (reqPath.endsWith('/')) {
+      reqPath += 'index.html';
+    } else if (!path.extname(reqPath)) {
+      reqPath += '/index.html';
+    }
+    const cleanPath = reqPath.replace(/^\//, '');
+    return path.join(distDir, cleanPath);
+  }
 
-      const cleanPath = reqPath.replace(/^\//, '');
-      const filePath = path.join(distDir, cleanPath);
-      if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
-        // Apply security headers
-        for (const [k, v] of Object.entries(customHeaders)) {
-          res.setHeader(k, v);
-        }
-        res.setHeader('Content-Type', filePath.endsWith('.html') ? 'text/html; charset=utf-8' : 'application/octet-stream');
-        res.writeHead(200);
-        res.end(fs.readFileSync(filePath));
-      } else {
-        res.writeHead(404);
-        res.end('Not Found');
-      }
-    });
-
-    server.listen(PORT, done);
+  it('dist contains required COOP/COEP isolation headers in _headers', () => {
+    assert.ok(fs.existsSync(headersFile), '_headers file missing in dist');
+    assert.equal(customHeaders['cross-origin-opener-policy'], 'same-origin');
+    assert.equal(customHeaders['cross-origin-embedder-policy'], 'require-corp');
   });
 
-  after((done) => {
-    server.close(done);
+  it('serves homepage with valid HTML content and title', () => {
+    const homeFile = resolveRouteFile('/');
+    assert.ok(fs.existsSync(homeFile), 'Home page index.html missing');
+    const text = fs.readFileSync(homeFile, 'utf-8');
+    assert.ok(text.includes('Conversor de Vídeo') || text.includes('ConversordeVideo'));
   });
 
-  it('serves homepage with status 200 and required COOP/COEP isolation headers', async () => {
-    const res = await fetch(`${BASE_URL}/`);
-    assert.equal(res.status, 200);
-    assert.equal(res.headers.get('cross-origin-opener-policy'), 'same-origin');
-    assert.equal(res.headers.get('cross-origin-embedder-policy'), 'require-corp');
-    const text = await res.text();
-    assert.ok(text.includes('ConversordeVídeo') || text.includes('Conversor de Vídeo'));
-  });
-
-  it('serves core tool routes across multiple locales with status 200', async () => {
+  it('serves core tool routes across multiple locales with valid HTML', () => {
     const testRoutes = [
       '/conversor-de-video-para-mp4',
       '/converter-mov-para-mp4',
@@ -90,20 +69,20 @@ describe('E2E HTTP Server & Headers Test', () => {
     ];
 
     for (const route of testRoutes) {
-      const res = await fetch(`${BASE_URL}${route}`);
-      assert.equal(res.status, 200, `Failed to load ${route} (status: ${res.status})`);
-      const body = await res.text();
+      const filePath = resolveRouteFile(route);
+      assert.ok(fs.existsSync(filePath), `Route file missing for ${route}: ${filePath}`);
+      const body = fs.readFileSync(filePath, 'utf-8');
       assert.ok(body.length > 500, `Response body too short for ${route}`);
     }
   });
 
-  it('serves robots.txt, sitemap-index.xml, and llms.txt with status 200', async () => {
-    const staticAssets = ['/robots.txt', '/sitemap-index.xml', '/llms.txt'];
+  it('serves robots.txt, sitemap-index.xml, and llms.txt with non-empty content', () => {
+    const staticAssets = ['robots.txt', 'sitemap-index.xml', 'llms.txt'];
     for (const asset of staticAssets) {
-      const res = await fetch(`${BASE_URL}${asset}`);
-      assert.equal(res.status, 200, `Static asset ${asset} returned status ${res.status}`);
-      const text = await res.text();
-      assert.ok(text.length > 0, `Empty static asset ${asset}`);
+      const filePath = path.join(distDir, asset);
+      assert.ok(fs.existsSync(filePath), `Static asset missing: ${asset}`);
+      const text = fs.readFileSync(filePath, 'utf-8');
+      assert.ok(text.length > 0, `Empty static asset: ${asset}`);
     }
   });
 });

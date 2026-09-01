@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import ToolsDirectory from '../../components/tools/ToolsDirectory';
+import ToolsDirectory from '../../components/tools/ToolsDirectory.astro';
 import { getLocalizedDirectoryTools } from '../../data/allToolsData';
 import { useTranslations } from '../../i18n/utils';
 import { nonDefaultLangs, type SupportedLanguage } from '../../i18n/languages';
@@ -56,43 +56,43 @@ const faqSectionTitles: Record<SupportedLanguage, { title: string; subtitle: str
 
 const localizedFaqs: Record<SupportedLanguage, { q: string; a: string }[]> = {
   pt: [
-    { q: 'As ferramentas deste catálogo exigem upload de arquivos?', a: 'Não. Todas as 51 ferramentas realizam o processamento 100% no seu navegador através de WebAssembly (FFmpeg.wasm). Nenhum byte do seu vídeo ou áudio é enviado para servidores externos.' },
+    { q: 'As ferramentas deste catálogo exigem upload de arquivos?', a: 'Não. Todas as 51 ferramentas realizam o processamento no seu navegador através de WebAssembly (FFmpeg.wasm). Nenhum byte do seu vídeo ou áudio é enviado para servidores externos.' },
     { q: 'Existe limite diário de uso ou tamanho de arquivo?', a: 'Não há limite de conversões diárias. Você pode converter e comprimir quantos arquivos precisar, sem assinaturas ou cobranças ocultas.' },
     { q: 'Posso usar as ferramentas no celular (Android e iPhone)?', a: 'Sim! Nossas ferramentas são totalmente compatíveis com smartphones (Chrome no Android, Safari no iOS), tablets e computadores.' },
     { q: 'Qual é a qualidade de áudio ao extrair para MP3?', a: 'A extração para áudio MP3 utiliza taxa de amostragem constante de 192 kbps com codificação LAME de alta fidelidade.' }
   ],
   en: [
-    { q: 'Do these tools upload files to remote servers?', a: 'No. All 51 tools run 100% locally in your browser using WebAssembly (FFmpeg.wasm). Your files are processed entirely in device memory and never leave your machine.' },
+    { q: 'Do these tools upload files to remote servers?', a: 'No. All 51 tools run locally in your browser using WebAssembly (FFmpeg.wasm). Your files are processed entirely in device memory and never leave your machine.' },
     { q: 'Is there a daily limit or file size paywall?', a: 'There are no usage limits or paywalls. You can convert, compress, and resize as many media files as you need, completely free.' },
     { q: 'Can I use these tools on mobile devices (iPhone & Android)?', a: 'Yes! All tools are fully responsive and work seamlessly on mobile browsers including Safari for iOS and Chrome for Android.' },
     { q: 'What audio quality is extracted for MP3s?', a: 'MP3 extraction uses high-fidelity 192 kbps constant bitrate encoding powered by the official LAME engine.' }
   ],
   es: [
-    { q: '¿Estas herramientas suben archivos a servidores?', a: 'No. Las 51 herramientas funcionan 100% en tu navegador mediante WebAssembly (FFmpeg.wasm). Ningún dato sale de tu dispositivo.' },
+    { q: '¿Estas herramientas suben archivos a servidores?', a: 'No. Las 51 herramientas funcionan en tu navegador mediante WebAssembly (FFmpeg.wasm). Ningún dato sale de tu dispositivo.' },
     { q: '¿Hay límite de uso diario o costos ocultos?', a: 'No hay límites de archivos ni suscripciones. Puedes convertir y comprimir todos los archivos que desees sin restricciones.' },
     { q: '¿Puedo usar las herramientas en mi móvil?', a: '¡Sí! Es totalmente compatible con Chrome en Android y Safari en iPhone/iPad sin necesidad de instalar apps.' },
     { q: '¿Qué calidad tiene el audio MP3 extraído?', a: 'La extracción a MP3 ofrece una tasa de bits de 192 kbps de alta fidelidad.' }
   ],
   fr: [
-    { q: 'Ces outils nécessitent-ils l’envoi de fichiers sur un serveur ?', a: 'Non. Les 51 outils fonctionnent à 100% localement dans votre navigateur via WebAssembly. Vos fichiers restent confidentiels sur votre appareil.' },
+    { q: 'Ces outils nécessitent-ils l’envoi de fichiers sur un serveur ?', a: 'Non. Les 51 outils fonctionnent localement dans votre navigateur via WebAssembly. Vos fichiers restent confidentiels sur votre appareil.' },
     { q: 'Y a-t-il une limite quotidienne de conversion ?', a: 'Aucune limite ni abonnement. Vous pouvez convertir et compresser autant de fichiers que nécessaire, gratuitement.' },
     { q: 'Puis-je utiliser ces outils sur smartphone ?', a: 'Oui, nos outils fonctionnent parfaitement sur Safari iOS (iPhone) et Chrome Android sans aucune application supplémentaire.' },
     { q: 'Quelle est la qualité de l’audio MP3 extrait ?', a: 'L’extraction audio utilise un débit constant de 192 kbps haute fidélité.' }
   ],
   ja: [
-    { q: 'ファイルはサーバーにアップロードされますか？', a: 'いいえ。全51種類のツールはWebAssemblyにより端末のブラウザ内（メモリ上）で100%ローカル処理されます。外部サーバーへの送信は一切ありません。' },
+    { q: 'ファイルはサーバーにアップロードされますか？', a: 'いいえ。全51種類のツールはWebAssemblyにより端末のブラウザ内（メモリ上）でローカル処理されます。外部サーバーへの送信は一切ありません。' },
     { q: '1日の利用制限や容量課金はありますか？', a: '制限や課金は一切ありません。何度でも完全無料で動画の変換や圧縮をご利用いただけます。' },
     { q: 'スマホ（iPhoneやAndroid）でも利用できますか？', a: 'はい！iOS SafariやAndroid Chromeなどのスマホブラウザでも快適に動作します。' },
     { q: 'MP3抽出時の音質はどのくらいですか？', a: '高音質な192 kbpsの一定ビットレート（CBR）でクリアな音声を抽出します。' }
   ],
   zh: [
-    { q: '这些工具需要上传文件到远程服务器吗？', a: '绝不需要。全部 51 款工具均基于 WebAssembly（FFmpeg.wasm）在您的浏览器内存中本地运行，文件 100% 留存在本地，绝无云端上传。' },
+    { q: '这些工具需要上传文件到远程服务器吗？', a: '绝不需要。全部 51 款工具均基于 WebAssembly（FFmpeg.wasm）在您的浏览器内存中本地运行，文件 留存在本地，绝无云端上传。' },
     { q: '有每日使用次数限制或隐藏收费吗？', a: '完全没有。无任何付费门槛或文件数量限制，随时随地免费使用。' },
     { q: '可以在手机（iPhone / 安卓）上使用吗？', a: '可以！完全适配移动端，支持 iOS Safari 和安卓 Chrome 浏览器，免安装 App。' },
     { q: '提取为 MP3 音频的音质如何？', a: '采用 192 kbps 高保真恒定比特率进行无损级音轨剥离。' }
   ],
   no: [
-    { q: 'Laster disse verktøyene opp filene mine til en server?', a: 'Nei. Alle 51 verktøy kjører 100% lokalt i nettleseren din via WebAssembly. Ingen filer sendes ut.' },
+    { q: 'Laster disse verktøyene opp filene mine til en server?', a: 'Nei. Alle 51 verktøy kjører lokalt i nettleseren din via WebAssembly. Ingen filer sendes ut.' },
     { q: 'Er det noen daglige begrensninger eller betalingsmurer?', a: 'Ingen begrensninger eller abonnement. Konverter og komprimer så mye du vil helt gratis.' },
     { q: 'Kan jeg bruke verktøyene på mobil (iPhone og Android)?', a: 'Ja, verktøyene er fullt tilpasset Safari på iOS og Chrome på Android.' },
     { q: 'Hvilken lydkvalitet får jeg ved MP3-uttrekk?', a: 'Lyduttrekk kodes i 192 kbps konstant bithastighet med høy presisjon.' }
@@ -104,7 +104,7 @@ const localizedFaqs: Record<SupportedLanguage, { q: string; a: string }[]> = {
     { q: 'MP3 ses kalitesi nasıldır?', a: 'MP3 ses çıkarma işlemi 192 kbps yüksek kaliteli sabit bit hızında gerçekleşir.' }
   ],
   pl: [
-    { q: 'Czy te narzędzia wysyłają pliki na serwer?', a: 'Nie. Wszystkie 51 narzędzi działa w 100% lokalnie w przeglądarce za pomocą WebAssembly. Twoje pliki są w pełni bezpieczne.' },
+    { q: 'Czy te narzędzia wysyłają pliki na serwer?', a: 'Nie. Wszystkie 51 narzędzi działa lokalnie w przeglądarce za pomocą WebAssembly. Twoje pliki są w pełni bezpieczne.' },
     { q: 'Czy istnieje dzienny limit konwersji?', a: 'Nie ma żadnych limitów ani płatności. Korzystaj z narzędzi bez ograniczeń za darmo.' },
     { q: 'Czy mogę korzystać z narzędzi na telefonie?', a: 'Tak! Narzędzia działają bezproblemowo w Safari na iOS i Chrome na Androidzie.' },
     { q: 'Jaka jest jakość wyodrębnionego dźwięku MP3?', a: 'Dźwięk MP3 jest zapisywany ze stałą przepływnością 192 kbps wysokiej jakości.' }
@@ -195,7 +195,7 @@ const labels = {
   </div>
 
   <!-- Interactive Directory Island -->
-  <ToolsDirectory client:idle tools={tools} lang={lang} labels={labels} />
+  <ToolsDirectory tools={tools} lang={lang} labels={labels} />
 
   <!-- Educational & FAQ Section -->
   <section class="max-w-5xl mx-auto px-4 sm:px-6 py-16 space-y-12 border-t border-zinc-200/80 dark:border-zinc-800">

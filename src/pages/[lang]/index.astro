@@ -29,16 +29,32 @@ const t = useTranslations(lang);
 
 const pageTitle = t('site.title');
 const pageDescription = t('site.description');
-const canonicalUrl = `https://conversordevideo.com/${lang}`;
+const canonicalUrl = `https://conversordevideo.com/${lang}/`;
 
 const faqs = [
   {
-    question: t('faq.title'),
-    answer: t('features.privacyDesc')
+    question: t('faq.q1'),
+    answer: t('faq.a1')
   },
   {
-    question: t('howItWorks.title'),
-    answer: t('hero.subtitle')
+    question: t('faq.q2'),
+    answer: t('faq.a2')
+  },
+  {
+    question: t('faq.q3'),
+    answer: t('faq.a3')
+  },
+  {
+    question: t('faq.q4'),
+    answer: t('faq.a4')
+  },
+  {
+    question: t('faq.q5'),
+    answer: t('faq.a5')
+  },
+  {
+    question: t('faq.q6'),
+    answer: t('faq.a6')
   }
 ];
 
@@ -70,7 +86,8 @@ const howToSchema = generateHowToSchema({
       name: t('howItWorks.step3Title'),
       text: t('howItWorks.step3Desc')
     }
-  ]
+  ],
+  lang: lang
 });
 
 const faqSchema = generateFAQSchema(faqs);
@@ -120,5 +137,5 @@ const faqSchema = generateFAQSchema(faqs);
   <HomeSEOArticle lang={lang} />
 
   <!-- FAQ Section -->
-  <FAQSection faqs={faqs} />
+  <FAQSection faqs={faqs} lang={lang} />
 </BaseLayout>

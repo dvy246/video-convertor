@@ -1,0 +1,297 @@
+---
+import { COLOR_PALETTES } from '../../lib/theme/palettes';
+---
+
+<div class="fixed bottom-5 right-5 z-40 select-none font-sans" id="palette-studio-container">
+  <!-- 1. Floating Pill Trigger Button -->
+  <button
+    type="button"
+    id="palette-studio-toggle"
+    class="group relative flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-white/95 dark:bg-zinc-900/95 backdrop-blur-xl border border-zinc-200/90 dark:border-zinc-800 shadow-xl shadow-zinc-950/15 hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer"
+    aria-label="Personalizar Paleta de Cores"
+    aria-expanded="false"
+  >
+    <!-- Animated Gradient Ring / Pill Indicator -->
+    <span class="relative flex h-4 w-4 shrink-0 items-center justify-center">
+      <span
+        id="studio-ping-dot"
+        class="absolute inline-flex h-full w-full rounded-full opacity-75 animate-ping"
+        style="background-color: #10b981;"
+      ></span>
+      <span
+        id="studio-core-dot"
+        class="relative inline-flex rounded-full h-3 w-3 border border-white/40 shadow-xs transition-colors"
+        style="background-color: #10b981;"
+      ></span>
+    </span>
+
+    <span class="text-xs font-bold text-zinc-800 dark:text-zinc-200 tracking-tight flex items-center gap-1.5">
+      <span id="studio-active-emoji">🌿</span>
+      <span class="hidden sm:inline" id="studio-active-name">Emerald Mint</span>
+      <span class="sm:hidden">Cores</span>
+    </span>
+
+    <span class="text-[10px] font-bold px-1.5 py-0.5 rounded-md bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 border border-zinc-200/80 dark:border-zinc-700/80 leading-none">
+      {COLOR_PALETTES.length}
+    </span>
+  </button>
+
+  <!-- 2. Color Studio Popover Modal -->
+  <div
+    id="palette-studio-modal"
+    class="hidden absolute bottom-14 right-0 w-[340px] sm:w-[380px] max-w-[92vw] rounded-3xl bg-white/98 dark:bg-zinc-900/98 backdrop-blur-2xl border border-zinc-200/90 dark:border-zinc-800 shadow-2xl shadow-zinc-950/30 overflow-hidden flex flex-col z-50 animate-in fade-in slide-in-from-bottom-3 duration-200"
+  >
+    <!-- Header -->
+    <div class="px-5 py-4 border-b border-zinc-100 dark:border-zinc-800/80 flex items-center justify-between bg-zinc-50/50 dark:bg-zinc-900/50">
+      <div class="flex items-center gap-2">
+        <div
+          id="studio-header-icon"
+          class="w-7 h-7 rounded-lg flex items-center justify-center text-white text-xs shadow-xs transition-colors"
+          style="background-color: #10b981;"
+        >
+          🎨
+        </div>
+        <div>
+          <h3 class="font-bold text-sm text-zinc-900 dark:text-white leading-tight">
+            Color Palette Studio
+          </h3>
+          <p class="text-[11px] text-zinc-400 dark:text-zinc-500">
+            Teste todas as {COLOR_PALETTES.length} paletas ao vivo no servidor
+          </p>
+        </div>
+      </div>
+
+      <button
+        type="button"
+        id="palette-studio-close"
+        class="p-1.5 rounded-lg text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors cursor-pointer"
+        aria-label="Fechar"
+      >
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Palette Selection List -->
+    <div class="p-3.5 max-h-[360px] overflow-y-auto space-y-1.5 scrollbar-thin">
+      {COLOR_PALETTES.map((p) => (
+        <button
+          type="button"
+          data-studio-palette-id={p.id}
+          class="studio-item-btn w-full flex items-center justify-between p-2.5 rounded-2xl transition-all duration-150 cursor-pointer text-left hover:bg-zinc-50 dark:hover:bg-zinc-800/40 border border-transparent"
+        >
+          <div class="flex items-center gap-3">
+            <!-- Dual Swatch Circle -->
+            <div class="relative flex items-center shrink-0 w-8 h-8">
+              <div
+                class="w-6 h-6 rounded-full shadow-xs border-2 border-white dark:border-zinc-900 absolute left-0 z-10"
+                style={`background-color: ${p.primary};`}
+              />
+              <div
+                class="w-5 h-5 rounded-full shadow-xs border-2 border-white dark:border-zinc-900 absolute right-0 opacity-90"
+                style={`background-color: ${p.secondary};`}
+              />
+            </div>
+
+            <div class="flex flex-col">
+              <div class="flex items-center gap-1.5">
+                <span class="text-xs font-bold text-zinc-900 dark:text-white">
+                  {p.name}
+                </span>
+                <span class="text-xs">{p.emoji}</span>
+              </div>
+              <span class="text-[11px] text-zinc-500 dark:text-zinc-400 leading-tight">
+                {p.tagline}
+              </span>
+            </div>
+          </div>
+
+          <span class="studio-check-icon hidden text-xs font-extrabold px-2 py-0.5 rounded-full bg-zinc-200 dark:bg-zinc-700 text-zinc-900 dark:text-white">
+            Ativo
+          </span>
+        </button>
+      ))}
+    </div>
+
+    <!-- Quick Actions Footer -->
+    <div class="p-3 border-t border-zinc-100 dark:border-zinc-800 bg-zinc-50/60 dark:bg-zinc-950/60 flex items-center justify-between gap-2 text-xs">
+      <!-- Randomize Button -->
+      <button
+        type="button"
+        id="studio-random-btn"
+        class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:text-zinc-950 dark:hover:text-white hover:bg-zinc-50 dark:hover:bg-zinc-700/80 font-medium transition-colors cursor-pointer shadow-2xs"
+      >
+        <span>🔀</span>
+        <span>Aleatório</span>
+      </button>
+
+      <!-- Dark / Light Quick Mode Toggle -->
+      <button
+        type="button"
+        id="studio-theme-toggle-btn"
+        class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-200 hover:text-zinc-950 dark:hover:text-white hover:bg-zinc-50 dark:hover:bg-zinc-700/80 font-medium transition-colors cursor-pointer shadow-2xs"
+      >
+        <span id="studio-theme-mode-text">☀️ Modo Claro</span>
+      </button>
+
+      <!-- Reset to Default -->
+      <button
+        type="button"
+        id="studio-reset-btn"
+        class="text-[11px] text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200 hover:underline cursor-pointer"
+      >
+        Restaurar
+      </button>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  (function() {
+    const ALL_IDS = ['emerald', 'caramel', 'espresso', 'meadow', 'oxford', 'gelato', 'candy', 'slate', 'pastel', 'beige', 'indigo', 'cyan', 'purple', 'amber', 'blue', 'rose', 'mono'];
+    const PALETTE_META = {
+      emerald: { primary: '#10b981', secondary: '#14b8a6', name: 'Emerald Mint', emoji: '🌿' },
+      caramel: { primary: '#8c5a3c', secondary: '#c08552', name: 'Warm Caramel', emoji: '🍯' },
+      espresso: { primary: '#664343', secondary: '#795757', name: 'Roasted Espresso', emoji: '🪵' },
+      meadow: { primary: '#2a7c13', secondary: '#76c457', name: 'Botanical Meadow', emoji: '🌱' },
+      oxford: { primary: '#0a2947', secondary: '#8b5e3c', name: 'Oxford Navy', emoji: '⚓' },
+      gelato: { primary: '#f9b2d7', secondary: '#daf9de', name: 'Pastel Gelato', emoji: '🍧' },
+      candy: { primary: '#aa96da', secondary: '#fcbad3', name: 'Cotton Candy', emoji: '🍬' },
+      slate: { primary: '#00adb5', secondary: '#393e46', name: 'Slate & Teal', emoji: '🌊' },
+      pastel: { primary: '#946d6d', secondary: '#a290b7', name: 'Pastel Dream', emoji: '🌸' },
+      beige: { primary: '#8d5b36', secondary: '#c4a47c', name: 'Beige & Chocolate', emoji: '☕' },
+      indigo: { primary: '#6366f1', secondary: '#8b5cf6', name: 'Electric Indigo', emoji: '⚡' },
+      cyan: { primary: '#06b6d4', secondary: '#0ea5e9', name: 'Cyber Cyan', emoji: '🌌' },
+      purple: { primary: '#a855f7', secondary: '#d946ef', name: 'Neon Purple', emoji: '🔮' },
+      amber: { primary: '#f59e0b', secondary: '#f97316', name: 'Sunset Amber', emoji: '🌅' },
+      blue: { primary: '#3b82f6', secondary: '#0ea5e9', name: 'Cobalt Sapphire', emoji: '💎' },
+      rose: { primary: '#f43f5e', secondary: '#ec4899', name: 'Crimson Rose', emoji: '🌹' },
+      mono: { primary: '#71717a', secondary: '#a1a1aa', name: 'Titanium Mono', emoji: '🖤' }
+    };
+
+    function updateStudioUI(paletteId) {
+      const p = PALETTE_META[paletteId] || PALETTE_META.emerald;
+      
+      const pingDot = document.getElementById('studio-ping-dot');
+      const coreDot = document.getElementById('studio-core-dot');
+      const emojiSpan = document.getElementById('studio-active-emoji');
+      const nameSpan = document.getElementById('studio-active-name');
+      const headerIcon = document.getElementById('studio-header-icon');
+      const themeText = document.getElementById('studio-theme-mode-text');
+
+      if (pingDot) pingDot.style.backgroundColor = p.primary;
+      if (coreDot) coreDot.style.backgroundColor = p.primary;
+      if (emojiSpan) emojiSpan.textContent = p.emoji;
+      if (nameSpan) nameSpan.textContent = p.name;
+      if (headerIcon) headerIcon.style.backgroundColor = p.primary;
+
+      const isDark = document.documentElement.classList.contains('dark');
+      if (themeText) themeText.textContent = isDark ? '☀️ Modo Claro' : '🌙 Modo Escuro';
+
+      // Update active list items
+      document.querySelectorAll('[data-studio-palette-id]').forEach((btn) => {
+        const id = btn.getAttribute('data-studio-palette-id');
+        const check = btn.querySelector('.studio-check-icon');
+        if (id === paletteId) {
+          btn.classList.add('bg-zinc-100/90', 'dark:bg-zinc-800/90', 'border-zinc-300/80', 'dark:border-zinc-700', 'shadow-xs', 'scale-[1.01]');
+          btn.classList.remove('border-transparent');
+          if (check) check.classList.remove('hidden');
+        } else {
+          btn.classList.remove('bg-zinc-100/90', 'dark:bg-zinc-800/90', 'border-zinc-300/80', 'dark:border-zinc-700', 'shadow-xs', 'scale-[1.01]');
+          btn.classList.add('border-transparent');
+          if (check) check.classList.add('hidden');
+        }
+      });
+    }
+
+    function setPalette(paletteId) {
+      document.documentElement.setAttribute('data-palette', paletteId);
+      localStorage.setItem('color-palette', paletteId);
+      updateStudioUI(paletteId);
+      window.dispatchEvent(new CustomEvent('palette-changed', { detail: { palette: paletteId } }));
+    }
+
+    function initStudio() {
+      const container = document.getElementById('palette-studio-container');
+      const toggleBtn = document.getElementById('palette-studio-toggle');
+      const modal = document.getElementById('palette-studio-modal');
+      const closeBtn = document.getElementById('palette-studio-close');
+      const randomBtn = document.getElementById('studio-random-btn');
+      const resetBtn = document.getElementById('studio-reset-btn');
+      const themeToggleBtn = document.getElementById('studio-theme-toggle-btn');
+
+      if (!container || !toggleBtn || !modal) return;
+
+      const current = localStorage.getItem('color-palette') || 'gelato';
+      updateStudioUI(current);
+
+      toggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        modal.classList.toggle('hidden');
+        const isClosed = modal.classList.contains('hidden');
+        toggleBtn.setAttribute('aria-expanded', String(!isClosed));
+      });
+
+      closeBtn?.addEventListener('click', () => {
+        modal.classList.add('hidden');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+      });
+
+      document.querySelectorAll('[data-studio-palette-id]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const id = btn.getAttribute('data-studio-palette-id');
+          if (id) setPalette(id);
+        });
+      });
+
+      randomBtn?.addEventListener('click', () => {
+        const cur = localStorage.getItem('color-palette') || 'gelato';
+        const choices = ALL_IDS.filter((id) => id !== cur);
+        const random = choices[Math.floor(Math.random() * choices.length)];
+        setPalette(random);
+      });
+
+      resetBtn?.addEventListener('click', () => {
+        setPalette('gelato');
+      });
+
+      themeToggleBtn?.addEventListener('click', () => {
+        const isDark = document.documentElement.classList.contains('dark');
+        if (isDark) {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('theme', 'light');
+        } else {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('theme', 'dark');
+        }
+        const cur = localStorage.getItem('color-palette') || 'gelato';
+        updateStudioUI(cur);
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!container.contains(e.target)) {
+          modal.classList.add('hidden');
+          toggleBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          modal.classList.add('hidden');
+          toggleBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      window.addEventListener('palette-changed', (e) => {
+        if (e.detail?.palette) updateStudioUI(e.detail.palette);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initStudio);
+    } else {
+      initStudio();
+    }
+  })();
+</script>

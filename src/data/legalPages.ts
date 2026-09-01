@@ -23,7 +23,7 @@ export const PRIVACY_PAGES: Record<SupportedLanguage, LegalPageData> = {
     updatedDate: 'Agosto de 2026',
     sections: [
       {
-        title: '1. Princípio Fundamental: Processamento 100% Local',
+        title: '1. Princípio Fundamental: Processamento Local',
         paragraphs: [
           'O ConversordeVideo.com foi desenvolvido com o conceito de Privacidade desde o Design (Privacy by Design). Ao utilizar nossa plataforma, todos os arquivos de vídeo, áudio ou imagem que você seleciona para conversão são processados exclusivamente dentro do seu próprio navegador através de tecnologia WebAssembly compilada localmente.',
           'Nenhum arquivo de mídia é transmitido, copiado, gravado ou analisado em servidores externos ou na nuvem. Todo o ciclo de vida do arquivo permanece estritamente na memória RAM temporária do seu computador ou celular.'
@@ -48,17 +48,17 @@ export const PRIVACY_PAGES: Record<SupportedLanguage, LegalPageData> = {
         ]
       }
     ],
-    contactText: 'Para dúvidas sobre nossa política e segurança, consulte os canais oficiais do domínio conversordevideo.com.'
+    contactText: 'Para dúvidas sobre nossa política e segurança, entre em contato pelo e-mail suporte@conversordevideo.com.'
   },
   en: {
     title: 'Privacy Policy',
     metaTitle: 'Privacy Policy & GDPR Compliance — Free Video Converter',
-    metaDescription: 'Read our privacy policy. ConversordeVideo.com processes 100% of video files locally in your browser memory. Zero files are uploaded or stored.',
+    metaDescription: 'Read our privacy policy. ConversordeVideo.com processes video files locally in your browser memory. Zero files are uploaded or stored.',
     badge: 'Privacy & GDPR Compliance',
     updatedDate: 'August 2026',
     sections: [
       {
-        title: '1. Core Principle: 100% In-Browser Local Processing',
+        title: '1. Core Principle: In-Browser Local Processing',
         paragraphs: [
           'ConversordeVideo.com is engineered around Privacy by Design. When you use our tool, all video, audio, and media files you select are transcoded exclusively in your browser memory using client-side WebAssembly technology.',
           'Zero bytes are uploaded to remote servers, cloud infrastructure, or third parties. Your media files never leave your computer, tablet, or smartphone.'
@@ -83,17 +83,17 @@ export const PRIVACY_PAGES: Record<SupportedLanguage, LegalPageData> = {
         ]
       }
     ],
-    contactText: 'If you have questions regarding our privacy architecture, feel free to contact us via the official domain conversordevideo.com.'
+    contactText: 'If you have questions regarding our privacy architecture, contact us at suporte@conversordevideo.com.'
   },
   es: {
     title: 'Política de Privacidad',
     metaTitle: 'Política de Privacidad y RGPD — Convertidor de Video',
-    metaDescription: 'Conozca nuestra política de privacidad. ConversordeVideo.com procesa el 100% de los videos localmente en tu navegador sin subir archivos.',
+    metaDescription: 'Conozca nuestra política de privacidad. ConversordeVideo.com procesa el los videos localmente en tu navegador sin subir archivos.',
     badge: 'Transparencia y RGPD',
     updatedDate: 'Agosto de 2026',
     sections: [
       {
-        title: '1. Principio Fundamental: Procesamiento 100% Local',
+        title: '1. Principio Fundamental: Procesamiento Local',
         paragraphs: [
           'ConversordeVideo.com fue creado bajo el principio de Privacidad desde el Diseño. Al usar nuestra herramienta, todos los archivos de video y audio se procesan exclusivamente en la memoria de tu navegador mediante WebAssembly.',
           'Ningún archivo es subido, almacenado ni analizado en servidores externos. Tus archivos nunca salen de tu dispositivo.'
@@ -118,17 +118,17 @@ export const PRIVACY_PAGES: Record<SupportedLanguage, LegalPageData> = {
         ]
       }
     ],
-    contactText: 'Para cualquier consulta sobre nuestra política de privacidad, contáctenos a través de conversordevideo.com.'
+    contactText: 'Para cualquier consulta sobre nuestra política de privacidad, contáctenos en suporte@conversordevideo.com.'
   },
   fr: {
     title: 'Politique de Confidentialité',
     metaTitle: 'Politique de Confidentialité & RGPD — Convertisseur Vidéo',
-    metaDescription: 'Découvrez notre politique de confidentialité. ConversordeVideo.com traite 100% des vidéos localement dans votre navigateur sans téléversement.',
+    metaDescription: 'Découvrez notre politique de confidentialité. ConversordeVideo.com traite les vidéos localement dans votre navigateur sans téléversement.',
     badge: 'Confidentialité & RGPD',
     updatedDate: 'Août 2026',
     sections: [
       {
-        title: '1. Principe Fondamental : Traitement 100% Local',
+        title: '1. Principe Fondamental : Traitement Local',
         paragraphs: [
           'ConversordeVideo.com est conçu selon le principe du respect de la vie privée dès la conception. Tous les fichiers multimédias sont transcodés exclusivement dans la mémoire vive de votre navigateur via WebAssembly.',
           'Aucun fichier n’est envoyé sur des serveurs distants ou dans le cloud. Vos médias ne quittent jamais votre appareil.'
@@ -153,7 +153,7 @@ export const PRIVACY_PAGES: Record<SupportedLanguage, LegalPageData> = {
         ]
       }
     ],
-    contactText: 'Pour toute question relative à notre architecture de sécurité, contactez-nous via conversordevideo.com.'
+    contactText: 'Pour toute question relative à la confidentialité, écrivez-nous à suporte@conversordevideo.com.'
   },
   ja: {
     title: 'プライバシーポリシー',
@@ -163,7 +163,7 @@ export const PRIVACY_PAGES: Record<SupportedLanguage, LegalPageData> = {
     updatedDate: '2026年8月',
     sections: [
       {
-        title: '1. 基本理念：100% ブラウザ内ローカル処理',
+        title: '1. 基本理念：ブラウザ内ローカル処理',
         paragraphs: [
           'ConversordeVideo.com は「プライバシー・バイ・デザイン（設計段階からのプライバシー保護）」を最優先に開発されました。選択された動画や音声は、WebAssembly 技術によりすべてお使いの端末（PC・スマートフォン）のメモリ内でのみ処理されます。',
           'ファイルが外部サーバーやクラウドに送信、保存、解析されることは一切ありません。'
@@ -188,7 +188,7 @@ export const PRIVACY_PAGES: Record<SupportedLanguage, LegalPageData> = {
         ]
       }
     ],
-    contactText: 'プライバシーポリシーに関するお問い合わせは conversordevideo.com よりご連絡ください。'
+    contactText: 'プライバシーポリシーに関するお問い合わせは suporte@conversordevideo.com までご連絡ください。'
   },
   zh: {
     title: '隐私政策',
@@ -198,7 +198,7 @@ export const PRIVACY_PAGES: Record<SupportedLanguage, LegalPageData> = {
     updatedDate: '2026年8月',
     sections: [
       {
-        title: '1. 核心原则：100% 浏览器本地安全处理',
+        title: '1. 核心原则：浏览器本地安全处理',
         paragraphs: [
           'ConversordeVideo.com 秉持“从设计之初保障隐私”的理念。用户选择转码的视频和音频文件，全部通过 WebAssembly 技术在您的电脑或手机本地内存中直接运算。',
           '绝无任何文件或媒体数据被上传至远程云端服务器进行存储或转码。您的文件自始至终不会离开您的设备。'
@@ -223,17 +223,17 @@ export const PRIVACY_PAGES: Record<SupportedLanguage, LegalPageData> = {
         ]
       }
     ],
-    contactText: '如果您对本站的隐私保护有任何疑问，请通过 conversordevideo.com 联系我们。'
+    contactText: '如对隐私安全有任何疑问，请发送邮件至 suporte@conversordevideo.com。'
   },
   no: {
     title: 'Personvernerklæring',
     metaTitle: 'Personvernerklæring & GDPR — Videokonvertering',
-    metaDescription: 'Les om vårt personvern. ConversordeVideo.com behandler 100% av videofilene lokalt i nettleseren uten skyopplasting.',
+    metaDescription: 'Les om vårt personvern. ConversordeVideo.com behandler videofilene lokalt i nettleseren uten skyopplasting.',
     badge: 'Personvern & GDPR',
     updatedDate: 'August 2026',
     sections: [
       {
-        title: '1. Kjernefunksjon: 100% Lokal Behandling i Nettleseren',
+        title: '1. Kjernefunksjon: Lokal Behandling i Nettleseren',
         paragraphs: [
           'ConversordeVideo.com er bygget med innebygd personvern (Privacy by Design). Alle filer du konverterer behandles utelukkende i nettleserminnet ditt via WebAssembly.',
           'Ingen filer lastes opp til eksterne servere eller skylagring. Mediefilene dine forlater aldri enheten din.'
@@ -258,7 +258,7 @@ export const PRIVACY_PAGES: Record<SupportedLanguage, LegalPageData> = {
         ]
       }
     ],
-    contactText: 'Har du spørsmål om personvern, kontakt oss via conversordevideo.com.'
+    contactText: 'Har du spørsmål om personvern, kontakt oss på suporte@conversordevideo.com.'
   },
   tr: {
     title: 'Gizlilik Politikası',
@@ -293,17 +293,17 @@ export const PRIVACY_PAGES: Record<SupportedLanguage, LegalPageData> = {
         ]
       }
     ],
-    contactText: 'Gizlilik politikamız hakkında sorularınız için conversordevideo.com üzerinden iletişime geçebilirsiniz.'
+    contactText: 'Gizlilik politikamız hakkında sorularınız için suporte@conversordevideo.com adresine yazabilirsiniz.'
   },
   pl: {
     title: 'Polityka Prywatności',
     metaTitle: 'Polityka Prywatności i RODO — Konwerter Wideo',
-    metaDescription: 'Poznaj naszą politykę prywatności. ConversordeVideo.com przetwarza pliki w 100% lokalnie w pamięci RAM przeglądarki bez wysyłania do chmury.',
+    metaDescription: 'Poznaj naszą politykę prywatności. ConversordeVideo.com przetwarza pliki lokalnie w pamięci RAM przeglądarki bez wysyłania do chmury.',
     badge: 'Bezpieczeństwo i RODO',
     updatedDate: 'Sierpień 2026',
     sections: [
       {
-        title: '1. Główna Zasada: 100% Przetwarzanie Lokalne w Przeglądarce',
+        title: '1. Główna Zasada: Przetwarzanie Lokalne w Przeglądarce',
         paragraphs: [
           'ConversordeVideo.com powstał w oparciu o zasadę Privacy by Design. Wszystkie pliki multimedialne są kodowane wyłącznie w pamięci RAM Twojego urządzenia za pomocą WebAssembly.',
           'Żaden plik nie jest przesyłany, zapisywany ani analizowany na zewnętrznych serwerach. Twoje materiały nigdy nie opuszczają Twojego komputera lub telefonu.'
@@ -343,7 +343,7 @@ export const TERMS_PAGES: Record<SupportedLanguage, LegalPageData> = {
       {
         title: '1. Aceitação dos Termos',
         paragraphs: [
-          'Ao acessar e utilizar o ConversordeVideo.com, você concorda expressamente com estes termos de uso e com nossa política de privacidade. O serviço é disponibilizado de forma 100% gratuita para uso pessoal e profissional.'
+          'Ao acessar e utilizar o ConversordeVideo.com, você concorda expressamente com estes termos de uso e com nossa política de privacidade. O serviço é disponibilizado de forma gratuita para uso pessoal e profissional.'
         ]
       },
       {
@@ -359,7 +359,7 @@ export const TERMS_PAGES: Record<SupportedLanguage, LegalPageData> = {
         ]
       }
     ],
-    contactText: 'Dúvidas sobre os termos podem ser esclarecidas através do site conversordevideo.com.'
+    contactText: 'Dúvidas sobre os termos podem ser esclarecidas pelo e-mail suporte@conversordevideo.com.'
   },
   en: {
     title: 'Terms of Service',
@@ -371,7 +371,7 @@ export const TERMS_PAGES: Record<SupportedLanguage, LegalPageData> = {
       {
         title: '1. Acceptance of Terms',
         paragraphs: [
-          'By accessing and using ConversordeVideo.com, you agree to these Terms of Service and our Privacy Policy. The platform is provided 100% free of charge for both personal and commercial use without subscription paywalls.'
+          'By accessing and using ConversordeVideo.com, you agree to these Terms of Service and our Privacy Policy. The platform is provided free of charge for both personal and commercial use without subscription paywalls.'
         ]
       },
       {
@@ -387,7 +387,7 @@ export const TERMS_PAGES: Record<SupportedLanguage, LegalPageData> = {
         ]
       }
     ],
-    contactText: 'For inquiries regarding these terms, visit conversordevideo.com.'
+    contactText: 'For inquiries regarding these terms, contact us at suporte@conversordevideo.com.'
   },
   es: {
     title: 'Términos de Uso',
@@ -415,7 +415,7 @@ export const TERMS_PAGES: Record<SupportedLanguage, LegalPageData> = {
         ]
       }
     ],
-    contactText: 'Consultas sobre los términos a través de conversordevideo.com.'
+    contactText: 'Consultas sobre los términos a través de suporte@conversordevideo.com.'
   },
   fr: {
     title: 'Conditions d’Utilisation',
@@ -443,7 +443,7 @@ export const TERMS_PAGES: Record<SupportedLanguage, LegalPageData> = {
         ]
       }
     ],
-    contactText: 'Pour toute question, contactez-nous via conversordevideo.com.'
+    contactText: 'Pour toute question sur les conditions, écrivez-nous à suporte@conversordevideo.com.'
   },
   ja: {
     title: '利用規約',
@@ -471,7 +471,7 @@ export const TERMS_PAGES: Record<SupportedLanguage, LegalPageData> = {
         ]
       }
     ],
-    contactText: 'ご不明な点は conversordevideo.com よりお問い合わせください。'
+    contactText: 'ご不明な点は suporte@conversordevideo.com よりお問い合わせください。'
   },
   zh: {
     title: '服务条款',
@@ -499,7 +499,7 @@ export const TERMS_PAGES: Record<SupportedLanguage, LegalPageData> = {
         ]
       }
     ],
-    contactText: '如有条款疑问，请通过 conversordevideo.com 咨询。'
+    contactText: '如有条款疑问，请通过邮箱 suporte@conversordevideo.com 咨询。'
   },
   no: {
     title: 'Brukervilkår',
@@ -511,7 +511,7 @@ export const TERMS_PAGES: Record<SupportedLanguage, LegalPageData> = {
       {
         title: '1. Aksept av Vilkår',
         paragraphs: [
-          'Ved å bruke ConversordeVideo.com godtar du disse brukervilkårene. Tjenesten er 100% gratis for både personlig og profesjonell bruk.'
+          'Ved å bruke ConversordeVideo.com godtar du disse brukervilkårene. Tjenesten er gratis for både personlig og profesjonell bruk.'
         ]
       },
       {
@@ -527,7 +527,7 @@ export const TERMS_PAGES: Record<SupportedLanguage, LegalPageData> = {
         ]
       }
     ],
-    contactText: 'Spørsmål om vilkår rettes til conversordevideo.com.'
+    contactText: 'Spørsmål om vilkår rettes til suporte@conversordevideo.com.'
   },
   tr: {
     title: 'Kullanım Koşulları',
@@ -555,7 +555,7 @@ export const TERMS_PAGES: Record<SupportedLanguage, LegalPageData> = {
         ]
       }
     ],
-    contactText: 'Kullanım koşulları ile ilgili sorularınız için conversordevideo.com adresini ziyaret edin.'
+    contactText: 'Kullanım koşulları ile ilgili sorularınız için suporte@conversordevideo.com adresine yazabilirsiniz.'
   },
   pl: {
     title: 'Regulamin Serwisu',
@@ -567,7 +567,7 @@ export const TERMS_PAGES: Record<SupportedLanguage, LegalPageData> = {
       {
         title: '1. Akceptacja Regulaminu',
         paragraphs: [
-          'Korzystając z ConversordeVideo.com, akceptujesz niniejszy regulamin oraz politykę prywatności. Usługa jest w 100% bezpłatna do użytku prywatnego i komercyjnego.'
+          'Korzystając z ConversordeVideo.com, akceptujesz niniejszy regulamin oraz politykę prywatności. Usługa jest bezpłatna do użytku prywatnego i komercyjnego.'
         ]
       },
       {
@@ -583,14 +583,14 @@ export const TERMS_PAGES: Record<SupportedLanguage, LegalPageData> = {
         ]
       }
     ],
-    contactText: 'Pytania dotyczące regulaminu prosimy kierować przez stronę conversordevideo.com.'
+    contactText: 'Pytania dotyczące regulaminu prosimy kierować na adres: suporte@conversordevideo.com.'
   }
 };
 
 export const ABOUT_PAGES: Record<SupportedLanguage, LegalPageData> = {
   pt: {
     title: 'Sobre a Ferramenta',
-    metaTitle: 'Sobre o Conversor de Vídeo — Tecnologia 100% no Navegador',
+    metaTitle: 'Sobre o Conversor de Vídeo — Tecnologia no Navegador',
     metaDescription: 'Conheça o ConversordeVideo.com: a primeira ferramenta focada em privacidade real, sem upload e sem cadastro.',
     badge: 'Nossa Missão & Tecnologia',
     updatedDate: 'Agosto de 2026',
@@ -614,7 +614,7 @@ export const ABOUT_PAGES: Record<SupportedLanguage, LegalPageData> = {
         ]
       }
     ],
-    contactText: 'Saiba mais acessando conversordevideo.com.'
+    contactText: 'Dúvidas ou sugestões? Entre em contato pelo e-mail suporte@conversordevideo.com.'
   },
   en: {
     title: 'About the Technology',
@@ -642,7 +642,7 @@ export const ABOUT_PAGES: Record<SupportedLanguage, LegalPageData> = {
         ]
       }
     ],
-    contactText: 'Discover more at conversordevideo.com.'
+    contactText: 'Questions or feedback? Reach out directly to suporte@conversordevideo.com.'
   },
   es: {
     title: 'Sobre la Tecnología',
@@ -655,7 +655,7 @@ export const ABOUT_PAGES: Record<SupportedLanguage, LegalPageData> = {
         title: '¿Por qué creamos esta herramienta?',
         paragraphs: [
           'Los convertidores tradicionales en la nube imponen esperas largas y límites de 100MB obligando a subir videos privados a servidores remotos.',
-          'ConversordeVideo.com ofrece una solución moderna, gratuita y 100% privada.'
+          'ConversordeVideo.com ofrece una solución moderna, gratuita y privada.'
         ]
       },
       {
@@ -670,7 +670,7 @@ export const ABOUT_PAGES: Record<SupportedLanguage, LegalPageData> = {
         ]
       }
     ],
-    contactText: 'Más información en conversordevideo.com.'
+    contactText: '¿Preguntas o sugerencias? Escríbenos a suporte@conversordevideo.com.'
   },
   fr: {
     title: 'À Propos de la Technologie',
@@ -698,7 +698,7 @@ export const ABOUT_PAGES: Record<SupportedLanguage, LegalPageData> = {
         ]
       }
     ],
-    contactText: 'En savoir plus sur conversordevideo.com.'
+    contactText: 'Des questions ou des retours ? Contactez-nous à suporte@conversordevideo.com.'
   },
   ja: {
     title: '技術について',
@@ -726,7 +726,7 @@ export const ABOUT_PAGES: Record<SupportedLanguage, LegalPageData> = {
         ]
       }
     ],
-    contactText: '詳細は conversordevideo.com をご覧ください。'
+    contactText: 'ご質問やご意見は suporte@conversordevideo.com までお気軽にご連絡ください。'
   },
   zh: {
     title: '关于技术',
@@ -754,7 +754,7 @@ export const ABOUT_PAGES: Record<SupportedLanguage, LegalPageData> = {
         ]
       }
     ],
-    contactText: '了解更多请访问 conversordevideo.com。'
+    contactText: '如有任何问题或建议，欢迎联系：suporte@conversordevideo.com。'
   },
   no: {
     title: 'Om Teknologien',
@@ -767,7 +767,7 @@ export const ABOUT_PAGES: Record<SupportedLanguage, LegalPageData> = {
         title: 'Hvorfor vi bygget ConversordeVideo.com',
         paragraphs: [
           'Tradisjonelle konvertere krever opplasting av private videoer til eksterne servere og har strenge filgrenser.',
-          'Vi utviklet en moderne løsning som kjører 100% på din egen enhet.'
+          'Vi utviklet en moderne løsning som kjører på din egen enhet.'
         ]
       },
       {
@@ -782,7 +782,7 @@ export const ABOUT_PAGES: Record<SupportedLanguage, LegalPageData> = {
         ]
       }
     ],
-    contactText: 'Finn ut mer på conversordevideo.com.'
+    contactText: 'Spørsmål eller tilbakemeldinger? Kontakt oss på suporte@conversordevideo.com.'
   },
   tr: {
     title: 'Teknoloji Hakkında',
@@ -806,11 +806,11 @@ export const ABOUT_PAGES: Record<SupportedLanguage, LegalPageData> = {
         listItems: [
           'Yükleme için internet kotası harcanmaz;',
           'Sıra beklemeden anında dönüştürme;',
-          '%100 veri gizliliği.'
+          'Tam veri gizliliği.'
         ]
       }
     ],
-    contactText: 'Daha fazlası için conversordevideo.com adresini ziyaret edin.'
+    contactText: 'Sorularınız veya geri bildirimleriniz için suporte@conversordevideo.com adresine ulaşabilirsiniz.'
   },
   pl: {
     title: 'O Technologii',
@@ -823,7 +823,7 @@ export const ABOUT_PAGES: Record<SupportedLanguage, LegalPageData> = {
         title: 'Dlaczego stworzyliśmy to narzędzie?',
         paragraphs: [
           'Tradycyjne konwertery w chmurze wymagają wysyłania prywatnych nagrań na obce serwery i nakładają limity 100 MB.',
-          'ConversordeVideo.com oferuje nowoczesną, w 100% lokalną alternatywę.'
+          'ConversordeVideo.com oferuje nowoczesną, lokalną alternatywę.'
         ]
       },
       {
@@ -838,6 +838,6 @@ export const ABOUT_PAGES: Record<SupportedLanguage, LegalPageData> = {
         ]
       }
     ],
-    contactText: 'Więcej informacji na conversordevideo.com.'
+    contactText: 'Masz pytania lub uwagi? Napisz do nas: suporte@conversordevideo.com.'
   }
 };

@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "deploy": "astro build && wrangler pages deploy dist --project-name=conversordevideo --branch=main",
+    "test": "node --experimental-strip-types --test tests/presets.test.mjs tests/i18n-integrity.test.mjs tests/redirects.test.mjs tests/e2e-routes-html.test.mjs tests/e2e-server.test.mjs",
+    "deploy": "astro build && npm run test && wrangler pages deploy dist --project-name=conversordevideo --branch=main",
     "astro": "astro"
   },
   "dependencies": {

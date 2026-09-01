@@ -1,0 +1,354 @@
+---
+import type { LocalizedDirectoryToolItem, ToolCategory } from '../../data/allToolsData';
+import type { SupportedLanguage } from '../../i18n/languages';
+
+export interface ToolsDirectoryLabels {
+  searchPlaceholder: string;
+  filterAll: string;
+  filterVideo: string;
+  filterCompress: string;
+  filterAudio: string;
+  filterResize: string;
+  filterGif: string;
+  filterDevices: string;
+  countShowing: string;
+  countOf: string;
+  countTools: string;
+  emptyTitle: string;
+  emptyDesc: string;
+  clearFilters: string;
+  openTool: string;
+  statSpeed: string;
+  statPrivacy: string;
+  statFree: string;
+}
+
+export interface Props {
+  tools: LocalizedDirectoryToolItem[];
+  lang: SupportedLanguage;
+  labels: ToolsDirectoryLabels;
+}
+
+const { tools, lang, labels } = Astro.props;
+
+const categories = [
+  { id: 'all', label: labels.filterAll, icon: '✨' },
+  { id: 'video', label: labels.filterVideo, icon: '🎬' },
+  { id: 'compress', label: labels.filterCompress, icon: '🗜️' },
+  { id: 'audio', label: labels.filterAudio, icon: '🎵' },
+  { id: 'resize', label: labels.filterResize, icon: '📐' },
+  { id: 'gif', label: labels.filterGif, icon: '🎞️' },
+  { id: 'devices', label: labels.filterDevices, icon: '📱' },
+];
+
+const categoryCounts: Record<string, number> = { all: tools.length };
+for (const t of tools) {
+  categoryCounts[t.category] = (categoryCounts[t.category] || 0) + 1;
+}
+---
+
+<div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8" id="tools-directory-root">
+  
+  <!-- Top Controls: Search Bar & Live Counter -->
+  <div class="flex flex-col md:flex-row gap-4 items-stretch md:items-center justify-between">
+    
+    <!-- Search Input -->
+    <div class="relative flex-1 max-w-2xl">
+      <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-zinc-400 dark:text-zinc-500">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </div>
+
+      <input
+        type="text"
+        id="tools-search-input"
+        placeholder={labels.searchPlaceholder}
+        class="w-full pl-11 pr-10 py-3.5 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-zinc-500 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-emerald-500/30 focus:border-emerald-500 transition-all shadow-xs"
+        aria-label={labels.searchPlaceholder}
+      />
+
+      <button
+        type="button"
+        id="tools-search-clear"
+        class="hidden absolute inset-y-0 right-0 pr-3.5 flex items-center text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-200 cursor-pointer"
+        aria-label="Clear search"
+      >
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Live Counter Badge -->
+    <div class="flex items-center gap-2 self-start md:self-auto text-xs font-bold text-zinc-600 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-800/80 px-4 py-2.5 rounded-xl border border-zinc-200/60 dark:border-zinc-700/60">
+      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+      <span>
+        {labels.countShowing} <strong id="tools-showing-count" class="text-zinc-900 dark:text-white">{tools.length}</strong> {labels.countOf} {tools.length} {labels.countTools}
+      </span>
+    </div>
+  </div>
+
+  <!-- Category Pills Navigation -->
+  <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-zinc-300 dark:scrollbar-thumb-zinc-700" id="tools-category-bar">
+    {categories.map((cat, idx) => (
+      <button
+        type="button"
+        data-category={cat.id}
+        class={`category-tab-btn inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-extrabold uppercase tracking-wider transition-all whitespace-nowrap cursor-pointer shrink-0 ${
+          idx === 0
+            ? 'active bg-emerald-600 text-white shadow-md shadow-emerald-600/20 scale-[1.02]'
+            : 'bg-white dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 border border-zinc-200/80 dark:border-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-800 hover:text-zinc-900 dark:hover:text-white'
+        }`}
+      >
+        <span>{cat.icon}</span>
+        <span>{cat.label}</span>
+        <span
+          class={`tab-count px-1.5 py-0.5 rounded-full text-[10px] font-bold ${
+            idx === 0
+              ? 'bg-emerald-700/60 text-white'
+              : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400'
+          }`}
+        >
+          {categoryCounts[cat.id] || 0}
+        </span>
+      </button>
+    ))}
+  </div>
+
+  <!-- Tools Grid (100% Pre-rendered HTML for instant display and search bots) -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="tools-grid-container">
+    {tools.map((tool) => (
+      <a
+        href={tool.href}
+        data-tool-card
+        data-slug={tool.slug.toLowerCase()}
+        data-category={tool.category}
+        data-title={tool.title.toLowerCase()}
+        data-description={tool.description.toLowerCase()}
+        data-target={tool.targetFormat.toLowerCase()}
+        data-sources={tool.sourceFormats.join(' ').toLowerCase()}
+        class="tool-card group relative flex flex-col justify-between p-5.5 rounded-2xl bg-white/95 dark:bg-zinc-900/95 backdrop-blur-sm border border-zinc-200/80 dark:border-zinc-800/80 hover:border-emerald-500/70 dark:hover:border-emerald-500/70 shadow-xs hover:shadow-2xl hover:shadow-emerald-500/10 dark:hover:shadow-emerald-500/10 hover:-translate-y-1.5 hover:scale-[1.012] active:scale-[0.99] active:translate-y-0 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] overflow-hidden before:absolute before:inset-x-0 before:top-0 before:h-[1.5px] before:bg-gradient-to-r before:from-transparent before:via-emerald-400/60 before:to-transparent before:opacity-0 group-hover:before:opacity-100 before:transition-opacity before:duration-300"
+      >
+        {/* Subtle ambient light gradient on hover */}
+        <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+        {/* Top Row: Icon & Badges */}
+        <div class="relative z-10">
+          <div class="flex items-start justify-between gap-3 mb-3.5">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/80 dark:to-teal-950/80 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 border border-emerald-100 dark:border-emerald-900/60 shadow-xs group-hover:scale-110 group-hover:-translate-y-0.5 group-hover:rotate-[-2deg] group-hover:border-emerald-300 dark:group-hover:border-emerald-700 group-hover:shadow-md group-hover:shadow-emerald-500/20 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]">
+              <svg class="w-5 h-5 text-emerald-600 dark:text-emerald-400 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d={tool.icon} />
+              </svg>
+            </div>
+
+            <div class="flex items-center gap-1.5 flex-wrap justify-end">
+              {tool.isNew && (
+                <span class="text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-md bg-amber-100/90 dark:bg-amber-950/80 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-900/50 shadow-2xs group-hover:border-amber-300 transition-colors">
+                  Novo
+                </span>
+              )}
+              {tool.isPopular && !tool.isNew && (
+                <span class="text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-md bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 border border-emerald-100 dark:border-emerald-900/50 shadow-2xs group-hover:border-emerald-300 transition-colors">
+                  Popular
+                </span>
+              )}
+              <span class="text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-md bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 border border-zinc-200/60 dark:border-zinc-700 shadow-2xs group-hover:bg-zinc-200/80 dark:group-hover:bg-zinc-700/80 transition-colors">
+                {tool.targetFormat}
+              </span>
+            </div>
+          </div>
+
+          {/* Title */}
+          <h2 class="text-base font-bold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors duration-200 leading-snug mb-1.5">
+            {tool.title}
+          </h2>
+
+          {/* Description */}
+          <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed line-clamp-2 mb-4">
+            {tool.description}
+          </p>
+        </div>
+
+        {/* Bottom Row: Source Formats & Open CTA */}
+        <div class="relative z-10 pt-3 border-t border-zinc-100 dark:border-zinc-800/80 flex items-center justify-between gap-2 mt-auto">
+          <div class="flex items-center gap-1 overflow-hidden">
+            {tool.sourceFormats.slice(0, 4).map((fmt) => (
+              <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 uppercase tracking-tight group-hover:bg-emerald-50 dark:group-hover:bg-emerald-950/40 group-hover:text-emerald-700 dark:group-hover:text-emerald-300 transition-colors">
+                {fmt}
+              </span>
+            ))}
+            {tool.sourceFormats.length > 4 && (
+              <span class="text-[10px] text-zinc-400 dark:text-zinc-500 font-bold">
+                +{tool.sourceFormats.length - 4}
+              </span>
+            )}
+          </div>
+
+          <span class="inline-flex items-center gap-1 text-xs font-bold text-emerald-600 dark:text-emerald-400 group-hover:translate-x-1 transition-transform duration-200 shrink-0">
+            <span>{labels.openTool}</span>
+            <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </span>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Empty State (Hidden by default, shown when 0 search matches) -->
+  <div id="tools-empty-state" class="hidden text-center py-16 px-4 rounded-3xl bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200/80 dark:border-zinc-800 space-y-4">
+    <div class="w-14 h-14 mx-auto rounded-2xl bg-zinc-200/80 dark:bg-zinc-800 flex items-center justify-center text-2xl">
+      🔍
+    </div>
+    <h3 class="text-base font-bold text-zinc-900 dark:text-white">
+      {labels.emptyTitle}
+    </h3>
+    <p class="text-xs text-zinc-500 dark:text-zinc-400 max-w-md mx-auto">
+      {labels.emptyDesc}
+    </p>
+    <button
+      type="button"
+      id="tools-reset-btn"
+      class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all shadow-xs cursor-pointer"
+    >
+      <span>{labels.clearFilters}</span>
+    </button>
+  </div>
+
+  <!-- Bottom Feature Badges -->
+  <div class="pt-8 border-t border-zinc-200/80 dark:border-zinc-800 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+    <div class="p-4 rounded-2xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/60 dark:border-zinc-800 text-xs font-bold text-zinc-700 dark:text-zinc-300">
+      {labels.statSpeed}
+    </div>
+    <div class="p-4 rounded-2xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/60 dark:border-zinc-800 text-xs font-bold text-zinc-700 dark:text-zinc-300">
+      {labels.statPrivacy}
+    </div>
+    <div class="p-4 rounded-2xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/60 dark:border-zinc-800 text-xs font-bold text-zinc-700 dark:text-zinc-300">
+      {labels.statFree}
+    </div>
+  </div>
+
+</div>
+
+<!-- High-Performance Instant Filter Engine -->
+<script is:inline>
+  (function() {
+    function initDirectoryEngine() {
+      const searchInput = document.getElementById('tools-search-input');
+      const clearBtn = document.getElementById('tools-search-clear');
+      const showingCountEl = document.getElementById('tools-showing-count');
+      const emptyState = document.getElementById('tools-empty-state');
+      const resetBtn = document.getElementById('tools-reset-btn');
+      const cards = Array.from(document.querySelectorAll('[data-tool-card]'));
+      const categoryTabs = Array.from(document.querySelectorAll('.category-tab-btn'));
+
+      if (!searchInput || !cards.length) return;
+
+      let activeCategory = 'all';
+      let searchQuery = '';
+
+      function applyFilter() {
+        const q = searchQuery.toLowerCase().trim();
+        let visibleCount = 0;
+
+        cards.forEach((card) => {
+          const cat = card.getAttribute('data-category');
+          const title = card.getAttribute('data-title') || '';
+          const desc = card.getAttribute('data-description') || '';
+          const slug = card.getAttribute('data-slug') || '';
+          const target = card.getAttribute('data-target') || '';
+          const sources = card.getAttribute('data-sources') || '';
+
+          const matchCat = activeCategory === 'all' || cat === activeCategory;
+          const matchQuery = !q || title.includes(q) || desc.includes(q) || slug.includes(q) || target.includes(q) || sources.includes(q);
+
+          if (matchCat && matchQuery) {
+            card.classList.remove('hidden');
+            visibleCount++;
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+
+        if (showingCountEl) {
+          showingCountEl.textContent = String(visibleCount);
+        }
+
+        if (emptyState) {
+          if (visibleCount === 0) {
+            emptyState.classList.remove('hidden');
+          } else {
+            emptyState.classList.add('hidden');
+          }
+        }
+
+        if (clearBtn) {
+          if (q) {
+            clearBtn.classList.remove('hidden');
+          } else {
+            clearBtn.classList.add('hidden');
+          }
+        }
+      }
+
+      // Search input handler
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value;
+        applyFilter();
+      });
+
+      // Clear search button
+      clearBtn?.addEventListener('click', () => {
+        searchInput.value = '';
+        searchQuery = '';
+        applyFilter();
+        searchInput.focus();
+      });
+
+      // Category tab button click
+      categoryTabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          const cat = tab.getAttribute('data-category') || 'all';
+          activeCategory = cat;
+
+          categoryTabs.forEach((t) => {
+            const isTarget = t === tab;
+            const countBadge = t.querySelector('.tab-count');
+            if (isTarget) {
+              t.classList.add('active', 'bg-emerald-600', 'text-white', 'shadow-md', 'shadow-emerald-600/20', 'scale-[1.02]');
+              t.classList.remove('bg-white', 'dark:bg-zinc-900', 'text-zinc-700', 'dark:text-zinc-300', 'border', 'border-zinc-200/80', 'dark:border-zinc-800');
+              if (countBadge) {
+                countBadge.classList.add('bg-emerald-700/60', 'text-white');
+                countBadge.classList.remove('bg-zinc-100', 'dark:bg-zinc-800', 'text-zinc-500', 'dark:text-zinc-400');
+              }
+            } else {
+              t.classList.remove('active', 'bg-emerald-600', 'text-white', 'shadow-md', 'shadow-emerald-600/20', 'scale-[1.02]');
+              t.classList.add('bg-white', 'dark:bg-zinc-900', 'text-zinc-700', 'dark:text-zinc-300', 'border', 'border-zinc-200/80', 'dark:border-zinc-800');
+              if (countBadge) {
+                countBadge.classList.remove('bg-emerald-700/60', 'text-white');
+                countBadge.classList.add('bg-zinc-100', 'dark:bg-zinc-800', 'text-zinc-500', 'dark:text-zinc-400');
+              }
+            }
+          });
+
+          applyFilter();
+        });
+      });
+
+      // Reset filters button
+      resetBtn?.addEventListener('click', () => {
+        searchInput.value = '';
+        searchQuery = '';
+        const allTab = document.querySelector('.category-tab-btn[data-category="all"]');
+        if (allTab) allTab.click();
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initDirectoryEngine);
+    } else {
+      initDirectoryEngine();
+    }
+  })();
+</script>

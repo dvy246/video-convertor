@@ -3,6 +3,7 @@ import '../styles/global.css';
 import SEOHead from '../components/layout/SEOHead.astro';
 import Header from '../components/layout/Header.astro';
 import Footer from '../components/layout/Footer.astro';
+import PaletteStudio from '../components/layout/PaletteStudio.astro';
 import { languages, type SupportedLanguage } from '../i18n/languages';
 import { getLangFromUrl } from '../i18n/utils';
 
@@ -25,27 +26,30 @@ const langCode = languages[currentLang]?.code || 'pt-BR';
 ---
 
 <!doctype html>
-<html lang={langCode} class="h-full">
+<html lang={langCode} class="dark h-full w-full max-w-full overflow-x-hidden" data-palette="gelato">
   <head>
     <script is:inline>
       (function() {
         const storedTheme = localStorage.getItem('theme');
-        if (storedTheme === 'dark' || (!storedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-          document.documentElement.classList.add('dark');
-        } else {
+        if (storedTheme === 'light') {
           document.documentElement.classList.remove('dark');
+        } else {
+          document.documentElement.classList.add('dark');
         }
+        const storedPalette = localStorage.getItem('color-palette') || 'gelato';
+        document.documentElement.setAttribute('data-palette', storedPalette);
       })();
     </script>
     <SEOHead {...props} />
   </head>
-  <body class="min-h-full flex flex-col relative bg-zinc-50/50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 selection:bg-emerald-500 selection:text-white transition-colors duration-200 overflow-x-hidden">
+  <body class="min-h-full w-full max-w-full flex flex-col relative bg-zinc-50/50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 selection:bg-pink-400 selection:text-white transition-colors duration-200 overflow-x-hidden">
     <GradientBackground />
     <Header lang={currentLang} />
-    <main class="flex-1 relative">
+    <main class="flex-1 relative z-10">
       <slot />
     </main>
-    <Footer lang={currentLang} />
+    <Footer lang={currentLang} class="relative z-10" />
+    <PaletteStudio />
 
     <!-- Service Worker Registration for Offline Cache with Auto-Update -->
     <script is:inline>

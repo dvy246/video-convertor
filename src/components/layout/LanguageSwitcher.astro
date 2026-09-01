@@ -8,26 +8,25 @@ const currentPath = Astro.url.pathname;
 const currentLangInfo = languages[currentLang];
 ---
 
-<div class="relative group/lang inline-block text-left" id="lang-switcher">
+<div class="relative group/lang inline-block text-left shrink-0" id="lang-switcher">
   <button
     type="button"
     aria-label="Selecionar idioma / Change language"
     aria-haspopup="true"
     aria-expanded="false"
-    class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 hover:border-emerald-500/60 dark:hover:border-emerald-500/60 transition-all text-xs font-semibold shadow-xs"
+    class="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-full border border-zinc-200/80 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/50 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-white transition-all text-xs font-medium cursor-pointer shadow-2xs whitespace-nowrap"
   >
-    <span class="text-sm leading-none" aria-hidden="true">{currentLangInfo.flag}</span>
-    <span class="hidden sm:inline font-bold">{currentLangInfo.name}</span>
-    <span class="sm:hidden font-bold uppercase text-[11px]">{currentLang}</span>
-    <svg class="w-3.5 h-3.5 text-zinc-400 group-hover/lang:text-emerald-500 transition-transform group-hover/lang:rotate-180 duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <span class="text-sm leading-none select-none" aria-hidden="true">{currentLangInfo.flag}</span>
+    <span class="font-semibold uppercase text-[11px] tracking-wide">{currentLang}</span>
+    <svg class="w-3 h-3 text-zinc-400 group-hover/lang:text-zinc-600 dark:group-hover/lang:text-zinc-200 transition-transform group-hover/lang:rotate-180 duration-200 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
     </svg>
   </button>
 
   <!-- Dropdown Menu -->
-  <div class="absolute right-0 mt-1.5 w-44 rounded-xl bg-white dark:bg-zinc-800 border border-zinc-200/80 dark:border-zinc-700 shadow-xl opacity-0 invisible group-hover/lang:opacity-100 group-hover/lang:visible group-focus-within/lang:opacity-100 group-focus-within/lang:visible transition-all duration-150 z-50 py-1.5 divide-y divide-zinc-100 dark:divide-zinc-700/50">
-    <div class="px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-wider text-zinc-600 dark:text-zinc-300">
-      Idiomas / Languages
+  <div class="absolute right-0 mt-2 w-48 rounded-2xl bg-white/95 dark:bg-zinc-900/95 backdrop-blur-xl border border-zinc-200/90 dark:border-zinc-800 shadow-2xl shadow-zinc-950/15 opacity-0 invisible group-hover/lang:opacity-100 group-hover/lang:visible group-focus-within/lang:opacity-100 group-focus-within/lang:visible transition-all duration-150 z-50 p-1.5 divide-y divide-zinc-100 dark:divide-zinc-800">
+    <div class="px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">
+      Idioma / Language
     </div>
     <div class="py-1">
       {(Object.entries(languages) as [SupportedLanguage, typeof languages[SupportedLanguage]][]).map(([code, info]) => {
@@ -36,10 +35,10 @@ const currentLangInfo = languages[currentLang];
         return (
           <a
             href={targetUrl}
-            class={`flex items-center justify-between px-3 py-2 text-xs font-medium transition-colors ${
+            class={`flex items-center justify-between px-3 py-1.5 text-xs transition-colors rounded-md mx-1 ${
               isCurrent
-                ? 'bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 font-bold'
-                : 'text-zinc-700 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-700/60 hover:text-emerald-600 dark:hover:text-emerald-400'
+                ? 'bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 font-semibold'
+                : 'text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800 hover:text-zinc-900 dark:hover:text-white font-medium'
             }`}
             hreflang={info.code}
           >

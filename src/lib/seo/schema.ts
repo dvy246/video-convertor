@@ -21,13 +21,16 @@ export function generateOrganizationSchema() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     'name': SITE_CONFIG.name,
+    'alternateName': 'ConversordeVideo.com',
     'url': SITE_CONFIG.url,
     'logo': `${SITE_CONFIG.url}/favicon.svg`,
+    'email': 'suporte@conversordevideo.com',
     'contactPoint': {
       '@type': 'ContactPoint',
       'contactType': 'customer support',
+      'email': 'suporte@conversordevideo.com',
       'url': `${SITE_CONFIG.url}/sobre`,
-      'availableLanguage': ['Portuguese', 'Spanish']
+      'availableLanguage': ['Portuguese', 'English', 'Spanish']
     }
   };
 }
@@ -81,6 +84,7 @@ export function generateHowToSchema(options: {
   description: string;
   totalTime?: string;
   steps: HowToStep[];
+  lang?: string;
 }) {
   return {
     '@context': 'https://schema.org',
@@ -88,7 +92,7 @@ export function generateHowToSchema(options: {
     'name': options.name,
     'description': options.description,
     'totalTime': options.totalTime || 'PT1M',
-    'inLanguage': 'pt-BR',
+    'inLanguage': options.lang || 'pt-BR',
     'step': options.steps.map((step) => ({
       '@type': 'HowToStep',
       'position': step.position,
@@ -126,3 +130,23 @@ export function generateBreadcrumbSchema(items: BreadcrumbItem[]) {
     }))
   };
 }
+
+export function generateCollectionPageSchema(options: {
+  name: string;
+  description: string;
+  url: string;
+  numberOfItems: number;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    'name': options.name,
+    'description': options.description,
+    'url': options.url,
+    'mainEntity': {
+      '@type': 'ItemList',
+      'numberOfItems': options.numberOfItems
+    }
+  };
+}
+

@@ -1,0 +1,918 @@
+/* Color Palette Engine - Overrides for Tailwind CSS v4 Theme Tokens */
+
+/* 1. Pastel Gelato (Default) */
+html[data-palette="gelato"],
+:root {
+  --color-accent: #c53a81;
+  --color-accent-hover: #a52b69;
+  --color-accent-soft: #f6ffdc;
+  --palette-primary: #f9b2d7;
+  --palette-secondary: #daf9de;
+
+  --aurora-primary: rgba(249, 178, 215, 0.12);
+  --aurora-secondary: rgba(207, 236, 243, 0.10);
+  --orb-1: rgba(249, 178, 215, 0.15);
+  --orb-2: rgba(218, 249, 222, 0.12);
+  --orb-3: rgba(246, 255, 220, 0.15);
+
+  --color-emerald-50: #f6ffdc;
+  --color-emerald-100: #fde2f0;
+  --color-emerald-200: #fbc7e3;
+  --color-emerald-300: #f9b2d7;
+  --color-emerald-400: #f085be;
+  --color-emerald-500: #df5d9e;
+  --color-emerald-600: #c53a81;
+  --color-emerald-700: #a52b69;
+  --color-emerald-800: #862455;
+  --color-emerald-900: #6f2147;
+  --color-emerald-950: #440d28;
+
+  --color-teal-50: #f0fbf2;
+  --color-teal-100: #daf9de;
+  --color-teal-200: #cfecf3;
+  --color-teal-300: #a6deea;
+  --color-teal-400: #74c9dc;
+  --color-teal-500: #47aec5;
+  --color-teal-600: #358da5;
+  --color-teal-700: #2d7185;
+  --color-teal-800: #295c6c;
+  --color-teal-900: #254d5a;
+  --color-teal-950: #14313b;
+}
+
+html[data-palette="gelato"].dark,
+.dark {
+  --color-accent: #f9b2d7;
+  --color-accent-hover: #f085be;
+  --color-accent-soft: #440d28;
+
+  --aurora-primary: rgba(249, 178, 215, 0.25);
+  --aurora-secondary: rgba(207, 236, 243, 0.20);
+  --orb-1: rgba(249, 178, 215, 0.28);
+  --orb-2: rgba(218, 249, 222, 0.20);
+  --orb-3: rgba(207, 236, 243, 0.16);
+
+  --color-emerald-50: #f6ffdc;
+  --color-emerald-100: #fde2f0;
+  --color-emerald-200: #fbc7e3;
+  --color-emerald-300: #f9b2d7;
+  --color-emerald-400: #f085be;
+  --color-emerald-500: #df5d9e;
+  --color-emerald-600: #c53a81;
+  --color-emerald-700: #a52b69;
+  --color-emerald-800: #862455;
+  --color-emerald-900: #6f2147;
+  --color-emerald-950: #440d28;
+
+  --color-teal-50: #f0fbf2;
+  --color-teal-100: #daf9de;
+  --color-teal-200: #cfecf3;
+  --color-teal-300: #a6deea;
+  --color-teal-400: #74c9dc;
+  --color-teal-500: #47aec5;
+  --color-teal-600: #358da5;
+  --color-teal-700: #2d7185;
+  --color-teal-800: #295c6c;
+  --color-teal-900: #254d5a;
+  --color-teal-950: #14313b;
+}
+
+/* 2. Warm Beige & Chocolate Brown */
+html[data-palette="beige"] {
+  --color-accent: #785135;
+  --color-accent-hover: #5f3e27;
+  --color-accent-soft: #fdfbf7;
+  --palette-primary: #8d5b36;
+  --palette-secondary: #c4a47c;
+
+  --aurora-primary: rgba(196, 164, 124, 0.10);
+  --aurora-secondary: rgba(221, 204, 168, 0.07);
+  --orb-1: rgba(196, 164, 124, 0.14);
+  --orb-2: rgba(221, 204, 168, 0.10);
+  --orb-3: rgba(141, 91, 54, 0.06);
+
+  --color-emerald-50: #fdfbf7;
+  --color-emerald-100: #f7f2ea;
+  --color-emerald-200: #ede3d4;
+  --color-emerald-300: #ddcca8;
+  --color-emerald-400: #c4a47c;
+  --color-emerald-500: #a07855;
+  --color-emerald-600: #785135;
+  --color-emerald-700: #5f3e27;
+  --color-emerald-800: #482d1c;
+  --color-emerald-900: #352014;
+  --color-emerald-950: #20120a;
+
+  --color-teal-50: #faf6f0;
+  --color-teal-100: #f3ebdf;
+  --color-teal-200: #e6d7c3;
+  --color-teal-300: #d4bfa2;
+  --color-teal-400: #be9f79;
+  --color-teal-500: #9c7a53;
+  --color-teal-600: #7a5a36;
+  --color-teal-700: #624427;
+  --color-teal-800: #4b321a;
+  --color-teal-900: #382412;
+  --color-teal-950: #221509;
+}
+
+html[data-palette="beige"].dark {
+  --color-accent: #ddcca8;
+  --color-accent-hover: #c4a47c;
+  --color-accent-soft: #352014;
+
+  --aurora-primary: rgba(221, 204, 168, 0.22);
+  --aurora-secondary: rgba(180, 115, 60, 0.16);
+  --orb-1: rgba(221, 204, 168, 0.26);
+  --orb-2: rgba(196, 164, 124, 0.20);
+  --orb-3: rgba(141, 91, 54, 0.16);
+}
+
+/* 3. Pastel Dream (Vintage Lilac, Sky & Cedar) */
+html[data-palette="pastel"] {
+  --color-accent: #946d6d;
+  --color-accent-hover: #7d5454;
+  --color-accent-soft: #fdf4d2;
+  --palette-primary: #946d6d;
+  --palette-secondary: #a290b7;
+
+  --aurora-primary: rgba(162, 144, 183, 0.10);
+  --aurora-secondary: rgba(176, 205, 230, 0.08);
+  --orb-1: rgba(162, 144, 183, 0.14);
+  --orb-2: rgba(176, 205, 230, 0.10);
+  --orb-3: rgba(253, 244, 210, 0.12);
+
+  --color-emerald-50: #fdf4d2;
+  --color-emerald-100: #f9e8c3;
+  --color-emerald-200: #ecd2ab;
+  --color-emerald-300: #dcb09e;
+  --color-emerald-400: #b98b8b;
+  --color-emerald-500: #946d6d;
+  --color-emerald-600: #7d5454;
+  --color-emerald-700: #664141;
+  --color-emerald-800: #4f3030;
+  --color-emerald-900: #3b2323;
+  --color-emerald-950: #221212;
+
+  --color-teal-50: #f7f5fa;
+  --color-teal-100: #ece7f3;
+  --color-teal-200: #dad2e5;
+  --color-teal-300: #b0cde6;
+  --color-teal-400: #a290b7;
+  --color-teal-500: #8a74a1;
+  --color-teal-600: #715a88;
+  --color-teal-700: #59446d;
+  --color-teal-800: #453356;
+  --color-teal-900: #332440;
+  --color-teal-950: #1c1324;
+}
+
+html[data-palette="pastel"].dark {
+  --color-accent: #dcb09e;
+  --color-accent-hover: #b98b8b;
+  --color-accent-soft: #3b2323;
+
+  --aurora-primary: rgba(162, 144, 183, 0.24);
+  --aurora-secondary: rgba(176, 205, 230, 0.18);
+  --orb-1: rgba(162, 144, 183, 0.28);
+  --orb-2: rgba(176, 205, 230, 0.20);
+  --orb-3: rgba(148, 109, 109, 0.16);
+}
+
+/* 4. Nordic Slate & Electric Teal (#222831, #393E46, #00ADB5, #EEEEEE) */
+html[data-palette="slate"] {
+  --color-accent: #00adb5;
+  --color-accent-hover: #008b92;
+  --color-accent-soft: #eeeeee;
+  --palette-primary: #00adb5;
+  --palette-secondary: #393e46;
+
+  --aurora-primary: rgba(0, 173, 181, 0.10);
+  --aurora-secondary: rgba(57, 62, 70, 0.06);
+  --orb-1: rgba(0, 173, 181, 0.14);
+  --orb-2: rgba(57, 62, 70, 0.08);
+  --orb-3: rgba(0, 173, 181, 0.06);
+
+  --color-emerald-50: #eefbfb;
+  --color-emerald-100: #d3f6f7;
+  --color-emerald-200: #aaedf0;
+  --color-emerald-300: #6fe0e5;
+  --color-emerald-400: #2dcdd4;
+  --color-emerald-500: #00adb5;
+  --color-emerald-600: #008b92;
+  --color-emerald-700: #056e75;
+  --color-emerald-800: #0a585e;
+  --color-emerald-900: #0c494e;
+  --color-emerald-950: #022c30;
+
+  --color-teal-50: #eeeeee;
+  --color-teal-100: #d8dce2;
+  --color-teal-200: #b3b9c4;
+  --color-teal-300: #8a94a3;
+  --color-teal-400: #5f6978;
+  --color-teal-500: #393e46;
+  --color-teal-600: #2d3239;
+  --color-teal-700: #222831;
+  --color-teal-800: #191d24;
+  --color-teal-900: #12151a;
+  --color-teal-950: #0b0d10;
+}
+
+html[data-palette="slate"].dark {
+  --color-accent: #00adb5;
+  --color-accent-hover: #2dcdd4;
+  --color-accent-soft: #222831;
+
+  --aurora-primary: rgba(0, 173, 181, 0.25);
+  --aurora-secondary: rgba(57, 62, 70, 0.20);
+  --orb-1: rgba(0, 173, 181, 0.30);
+  --orb-2: rgba(34, 40, 49, 0.25);
+  --orb-3: rgba(0, 173, 181, 0.18);
+}
+
+/* 5. Cotton Candy & Iris (#A8D8EA, #AA96DA, #FCBAD3, #FFFFD2) */
+html[data-palette="candy"] {
+  --color-accent: #775cbe;
+  --color-accent-hover: #6146a8;
+  --color-accent-soft: #ffffd2;
+  --palette-primary: #aa96da;
+  --palette-secondary: #fcbad3;
+
+  --aurora-primary: rgba(170, 150, 218, 0.12);
+  --aurora-secondary: rgba(168, 216, 234, 0.10);
+  --orb-1: rgba(170, 150, 218, 0.15);
+  --orb-2: rgba(252, 186, 211, 0.12);
+  --orb-3: rgba(255, 255, 210, 0.15);
+
+  --color-emerald-50: #ffffd2;
+  --color-emerald-100: #f3effb;
+  --color-emerald-200: #e2d9f7;
+  --color-emerald-300: #cbbbf0;
+  --color-emerald-400: #aa96da;
+  --color-emerald-500: #8f76cc;
+  --color-emerald-600: #775cbe;
+  --color-emerald-700: #6146a8;
+  --color-emerald-800: #4d358a;
+  --color-emerald-900: #3b276d;
+  --color-emerald-950: #221447;
+
+  --color-teal-50: #fff5f9;
+  --color-teal-100: #ffe6f0;
+  --color-teal-200: #fcbad3;
+  --color-teal-300: #a8d8ea;
+  --color-teal-400: #86c5dc;
+  --color-teal-500: #5eacc9;
+  --color-teal-600: #4392b0;
+  --color-teal-700: #33758f;
+  --color-teal-800: #285b70;
+  --color-teal-900: #1f4555;
+  --color-teal-950: #102630;
+}
+
+html[data-palette="candy"].dark {
+  --color-accent: #cbbbf0;
+  --color-accent-hover: #aa96da;
+  --color-accent-soft: #221447;
+
+  --aurora-primary: rgba(170, 150, 218, 0.25);
+  --aurora-secondary: rgba(168, 216, 234, 0.20);
+  --orb-1: rgba(170, 150, 218, 0.28);
+  --orb-2: rgba(252, 186, 211, 0.20);
+  --orb-3: rgba(168, 216, 234, 0.16);
+}
+
+/* 6. Emerald Mint (#10B981, #14B8A6) */
+html[data-palette="emerald"] {
+  --color-accent: #059669;
+  --color-accent-hover: #047857;
+  --color-accent-soft: #ecfdf5;
+  --palette-primary: #10b981;
+  --palette-secondary: #14b8a6;
+
+  --aurora-primary: rgba(16, 185, 129, 0.09);
+  --aurora-secondary: rgba(20, 184, 166, 0.05);
+  --orb-1: rgba(16, 185, 129, 0.12);
+  --orb-2: rgba(20, 184, 166, 0.09);
+  --orb-3: rgba(52, 211, 153, 0.07);
+
+  --color-emerald-50: #ecfdf5;
+  --color-emerald-100: #d1fae5;
+  --color-emerald-200: #a7f3d0;
+  --color-emerald-300: #6ee7b7;
+  --color-emerald-400: #34d399;
+  --color-emerald-500: #10b981;
+  --color-emerald-600: #059669;
+  --color-emerald-700: #047857;
+  --color-emerald-800: #065f46;
+  --color-emerald-900: #064e3b;
+  --color-emerald-950: #022c22;
+
+  --color-teal-50: #f0fdfa;
+  --color-teal-100: #ccfbf1;
+  --color-teal-200: #99f6e4;
+  --color-teal-300: #5eead4;
+  --color-teal-400: #2dd4bf;
+  --color-teal-500: #14b8a6;
+  --color-teal-600: #0d9488;
+  --color-teal-700: #0f766e;
+  --color-teal-800: #115e59;
+  --color-teal-900: #134e4a;
+  --color-teal-950: #042f2e;
+}
+
+html[data-palette="emerald"].dark {
+  --color-accent: #10b981;
+  --color-accent-hover: #059669;
+  --color-accent-soft: #064e3b;
+
+  --aurora-primary: rgba(16, 185, 129, 0.22);
+  --aurora-secondary: rgba(20, 184, 166, 0.15);
+  --orb-1: rgba(16, 185, 129, 0.28);
+  --orb-2: rgba(20, 184, 166, 0.20);
+  --orb-3: rgba(52, 211, 153, 0.15);
+
+  --color-emerald-50: #ecfdf5;
+  --color-emerald-100: #d1fae5;
+  --color-emerald-200: #a7f3d0;
+  --color-emerald-300: #6ee7b7;
+  --color-emerald-400: #34d399;
+  --color-emerald-500: #10b981;
+  --color-emerald-600: #059669;
+  --color-emerald-700: #047857;
+  --color-emerald-800: #065f46;
+  --color-emerald-900: #064e3b;
+  --color-emerald-950: #022c22;
+
+  --color-teal-50: #f0fdfa;
+  --color-teal-100: #ccfbf1;
+  --color-teal-200: #99f6e4;
+  --color-teal-300: #5eead4;
+  --color-teal-400: #2dd4bf;
+  --color-teal-500: #14b8a6;
+  --color-teal-600: #0d9488;
+  --color-teal-700: #0f766e;
+  --color-teal-800: #115e59;
+  --color-teal-900: #134e4a;
+  --color-teal-950: #042f2e;
+}
+
+/* 7. Oxford Navy & Sand (#0A2947, #F3E4C9, #D3D4C0, #8B5E3C) */
+html[data-palette="oxford"] {
+  --color-accent: #0a2947;
+  --color-accent-hover: #1c446c;
+  --color-accent-soft: #f3e4c9;
+  --palette-primary: #0a2947;
+  --palette-secondary: #8b5e3c;
+
+  --aurora-primary: rgba(10, 41, 71, 0.10);
+  --aurora-secondary: rgba(139, 94, 60, 0.08);
+  --orb-1: rgba(10, 41, 71, 0.14);
+  --orb-2: rgba(243, 228, 201, 0.18);
+  --orb-3: rgba(211, 212, 192, 0.12);
+
+  --color-emerald-50: #f7f3ec;
+  --color-emerald-100: #eedec7;
+  --color-emerald-200: #dec5a2;
+  --color-emerald-300: #caa778;
+  --color-emerald-400: #8b5e3c;
+  --color-emerald-500: #1c446c;
+  --color-emerald-600: #0a2947;
+  --color-emerald-700: #082038;
+  --color-emerald-800: #06182a;
+  --color-emerald-900: #04101c;
+  --color-emerald-950: #02080e;
+
+  --color-teal-50: #f7f6f1;
+  --color-teal-100: #edece4;
+  --color-teal-200: #d3d4c0;
+  --color-teal-300: #b7b99e;
+  --color-teal-400: #9c9f7e;
+  --color-teal-500: #8b5e3c;
+  --color-teal-600: #744c2f;
+  --color-teal-700: #5d3c24;
+  --color-teal-800: #472d1a;
+  --color-teal-900: #331f11;
+  --color-teal-950: #1f1109;
+}
+
+html[data-palette="oxford"].dark {
+  --color-accent: #dec5a2;
+  --color-accent-hover: #f3e4c9;
+  --color-accent-soft: #082038;
+
+  --aurora-primary: rgba(28, 68, 108, 0.35);
+  --aurora-secondary: rgba(139, 94, 60, 0.22);
+  --orb-1: rgba(243, 228, 201, 0.22);
+  --orb-2: rgba(139, 94, 60, 0.20);
+  --orb-3: rgba(211, 212, 192, 0.15);
+}
+
+/* 8. Botanical Meadow (#2A7C13, #76C457, #FFF8CF, #FBE6C2) */
+html[data-palette="meadow"] {
+  --color-accent: #2a7c13;
+  --color-accent-hover: #1f5e0d;
+  --color-accent-soft: #fff8cf;
+  --palette-primary: #2a7c13;
+  --palette-secondary: #76c457;
+
+  --aurora-primary: rgba(42, 124, 19, 0.10);
+  --aurora-secondary: rgba(118, 196, 87, 0.08);
+  --orb-1: rgba(42, 124, 19, 0.14);
+  --orb-2: rgba(255, 248, 207, 0.20);
+  --orb-3: rgba(251, 230, 194, 0.14);
+
+  --color-emerald-50: #fff8cf;
+  --color-emerald-100: #f3f9d4;
+  --color-emerald-200: #dbf0b0;
+  --color-emerald-300: #bce283;
+  --color-emerald-400: #76c457;
+  --color-emerald-500: #4a9d28;
+  --color-emerald-600: #2a7c13;
+  --color-emerald-700: #226310;
+  --color-emerald-800: #1c4d10;
+  --color-emerald-900: #173f0f;
+  --color-emerald-950: #0b2306;
+
+  --color-teal-50: #fdfbf5;
+  --color-teal-100: #fbe6c2;
+  --color-teal-200: #f5d59a;
+  --color-teal-300: #e7bc6e;
+  --color-teal-400: #c89f4b;
+  --color-teal-500: #76c457;
+  --color-teal-600: #5ea840;
+  --color-teal-700: #488730;
+  --color-teal-800: #396a27;
+  --color-teal-900: #2d5320;
+  --color-teal-950: #142d0b;
+}
+
+html[data-palette="meadow"].dark {
+  --color-accent: #76c457;
+  --color-accent-hover: #bce283;
+  --color-accent-soft: #173f0f;
+
+  --aurora-primary: rgba(118, 196, 87, 0.26);
+  --aurora-secondary: rgba(42, 124, 19, 0.22);
+  --orb-1: rgba(118, 196, 87, 0.30);
+  --orb-2: rgba(251, 230, 194, 0.18);
+  --orb-3: rgba(42, 124, 19, 0.15);
+}
+
+/* 9. Warm Caramel & Mahogany (#FFF8F0, #C08552, #8C5A3C, #4B2E2B) */
+html[data-palette="caramel"] {
+  --color-accent: #8c5a3c;
+  --color-accent-hover: #70442a;
+  --color-accent-soft: #fff8f0;
+  --palette-primary: #8c5a3c;
+  --palette-secondary: #c08552;
+
+  --aurora-primary: rgba(140, 90, 60, 0.10);
+  --aurora-secondary: rgba(192, 133, 82, 0.08);
+  --orb-1: rgba(140, 90, 60, 0.14);
+  --orb-2: rgba(255, 248, 240, 0.20);
+  --orb-3: rgba(192, 133, 82, 0.10);
+
+  --color-emerald-50: #fff8f0;
+  --color-emerald-100: #faebd7;
+  --color-emerald-200: #f3d3b0;
+  --color-emerald-300: #e2b485;
+  --color-emerald-400: #c08552;
+  --color-emerald-500: #a36c44;
+  --color-emerald-600: #8c5a3c;
+  --color-emerald-700: #74452e;
+  --color-emerald-800: #5f3625;
+  --color-emerald-900: #4b2e2b;
+  --color-emerald-950: #2a1715;
+
+  --color-teal-50: #fffbf5;
+  --color-teal-100: #faeedd;
+  --color-teal-200: #f0d8b8;
+  --color-teal-300: #dcba8a;
+  --color-teal-400: #c08552;
+  --color-teal-500: #9e683e;
+  --color-teal-600: #84522f;
+  --color-teal-700: #6b3f24;
+  --color-teal-800: #55301b;
+  --color-teal-900: #432615;
+  --color-teal-950: #221208;
+}
+
+html[data-palette="caramel"].dark {
+  --color-accent: #c08552;
+  --color-accent-hover: #e2b485;
+  --color-accent-soft: #4b2e2b;
+
+  --aurora-primary: rgba(192, 133, 82, 0.30);
+  --aurora-secondary: rgba(140, 90, 60, 0.24);
+  --orb-1: rgba(192, 133, 82, 0.28);
+  --orb-2: rgba(75, 46, 43, 0.25);
+  --orb-3: rgba(140, 90, 60, 0.18);
+}
+
+/* 10. Roasted Espresso (#FFF0D1, #795757, #664343, #3B3030) */
+html[data-palette="espresso"] {
+  --color-accent: #664343;
+  --color-accent-hover: #503333;
+  --color-accent-soft: #fff0d1;
+  --palette-primary: #664343;
+  --palette-secondary: #795757;
+
+  --aurora-primary: rgba(102, 67, 67, 0.10);
+  --aurora-secondary: rgba(121, 87, 87, 0.08);
+  --orb-1: rgba(102, 67, 67, 0.14);
+  --orb-2: rgba(255, 240, 209, 0.20);
+  --orb-3: rgba(59, 48, 48, 0.08);
+
+  --color-emerald-50: #fff0d1;
+  --color-emerald-100: #f7dfb8;
+  --color-emerald-200: #dec29c;
+  --color-emerald-300: #aa8282;
+  --color-emerald-400: #795757;
+  --color-emerald-500: #664343;
+  --color-emerald-600: #553737;
+  --color-emerald-700: #462c2c;
+  --color-emerald-800: #3b3030;
+  --color-emerald-900: #2c2323;
+  --color-emerald-950: #1c1616;
+
+  --color-teal-50: #fcf7f0;
+  --color-teal-100: #f5ebd9;
+  --color-teal-200: #e3d1b6;
+  --color-teal-300: #bfa787;
+  --color-teal-400: #997c5e;
+  --color-teal-500: #795757;
+  --color-teal-600: #664343;
+  --color-teal-700: #503333;
+  --color-teal-800: #3b3030;
+  --color-teal-900: #2b2222;
+  --color-teal-950: #181212;
+}
+
+html[data-palette="espresso"].dark {
+  --color-accent: #dec29c;
+  --color-accent-hover: #fff0d1;
+  --color-accent-soft: #2c2323;
+
+  --aurora-primary: rgba(121, 87, 87, 0.30);
+  --aurora-secondary: rgba(102, 67, 67, 0.24);
+  --orb-1: rgba(255, 240, 209, 0.20);
+  --orb-2: rgba(121, 87, 87, 0.22);
+  --orb-3: rgba(59, 48, 48, 0.18);
+}
+
+/* 3. Electric Indigo & Violet */
+html[data-palette="indigo"] {
+  --color-accent: #4f46e5;
+  --color-accent-hover: #4338ca;
+  --color-accent-soft: #eef2ff;
+  --palette-primary: #6366f1;
+  --palette-secondary: #8b5cf6;
+
+  --aurora-primary: rgba(99, 102, 241, 0.09);
+  --aurora-secondary: rgba(139, 92, 246, 0.06);
+  --orb-1: rgba(99, 102, 241, 0.13);
+  --orb-2: rgba(139, 92, 246, 0.09);
+  --orb-3: rgba(165, 180, 252, 0.06);
+
+  --color-emerald-50: #eef2ff;
+  --color-emerald-100: #e0e7ff;
+  --color-emerald-200: #c7d2fe;
+  --color-emerald-300: #a5b4fc;
+  --color-emerald-400: #818cf8;
+  --color-emerald-500: #6366f1;
+  --color-emerald-600: #4f46e5;
+  --color-emerald-700: #4338ca;
+  --color-emerald-800: #3730a3;
+  --color-emerald-900: #312e81;
+  --color-emerald-950: #1e1b4b;
+
+  --color-teal-50: #f5f3ff;
+  --color-teal-100: #ede9fe;
+  --color-teal-200: #ddd6fe;
+  --color-teal-300: #c4b5fd;
+  --color-teal-400: #a78bfa;
+  --color-teal-500: #8b5cf6;
+  --color-teal-600: #7c3aed;
+  --color-teal-700: #6d28d9;
+  --color-teal-800: #5b21b6;
+  --color-teal-900: #4c1d95;
+  --color-teal-950: #2e1065;
+}
+
+html[data-palette="indigo"].dark {
+  --color-accent: #818cf8;
+  --color-accent-hover: #6366f1;
+  --color-accent-soft: #1e1b4b;
+
+  --aurora-primary: rgba(99, 102, 241, 0.24);
+  --aurora-secondary: rgba(139, 92, 246, 0.18);
+  --orb-1: rgba(99, 102, 241, 0.28);
+  --orb-2: rgba(139, 92, 246, 0.20);
+  --orb-3: rgba(165, 180, 252, 0.15);
+}
+
+/* 4. Cyberpunk Cyan & Sky */
+html[data-palette="cyan"] {
+  --color-accent: #0891b2;
+  --color-accent-hover: #0e7490;
+  --color-accent-soft: #ecfeff;
+  --palette-primary: #06b6d4;
+  --palette-secondary: #0ea5e9;
+
+  --aurora-primary: rgba(6, 182, 212, 0.09);
+  --aurora-secondary: rgba(14, 165, 233, 0.06);
+  --orb-1: rgba(6, 182, 212, 0.13);
+  --orb-2: rgba(14, 165, 233, 0.09);
+  --orb-3: rgba(103, 232, 249, 0.06);
+
+  --color-emerald-50: #ecfeff;
+  --color-emerald-100: #cffafe;
+  --color-emerald-200: #a5f3fc;
+  --color-emerald-300: #67e8f9;
+  --color-emerald-400: #22d3ee;
+  --color-emerald-500: #06b6d4;
+  --color-emerald-600: #0891b2;
+  --color-emerald-700: #0e7490;
+  --color-emerald-800: #155e75;
+  --color-emerald-900: #164e63;
+  --color-emerald-950: #083344;
+
+  --color-teal-50: #f0f9ff;
+  --color-teal-100: #e0f2fe;
+  --color-teal-200: #bae6fd;
+  --color-teal-300: #7dd3fc;
+  --color-teal-400: #38bdf8;
+  --color-teal-500: #0ea5e9;
+  --color-teal-600: #0284c7;
+  --color-teal-700: #0369a1;
+  --color-teal-800: #075985;
+  --color-teal-900: #0c4a6e;
+  --color-teal-950: #082f49;
+}
+
+html[data-palette="cyan"].dark {
+  --color-accent: #22d3ee;
+  --color-accent-hover: #06b6d4;
+  --color-accent-soft: #083344;
+
+  --aurora-primary: rgba(6, 182, 212, 0.24);
+  --aurora-secondary: rgba(14, 165, 233, 0.18);
+  --orb-1: rgba(6, 182, 212, 0.28);
+  --orb-2: rgba(14, 165, 233, 0.20);
+  --orb-3: rgba(103, 232, 249, 0.15);
+}
+
+/* 5. Neon Purple & Fuchsia */
+html[data-palette="purple"] {
+  --color-accent: #9333ea;
+  --color-accent-hover: #7e22ce;
+  --color-accent-soft: #faf5ff;
+  --palette-primary: #a855f7;
+  --palette-secondary: #d946ef;
+
+  --aurora-primary: rgba(168, 85, 247, 0.09);
+  --aurora-secondary: rgba(217, 70, 239, 0.06);
+  --orb-1: rgba(168, 85, 247, 0.13);
+  --orb-2: rgba(217, 70, 239, 0.09);
+  --orb-3: rgba(216, 180, 254, 0.06);
+
+  --color-emerald-50: #faf5ff;
+  --color-emerald-100: #f3e8ff;
+  --color-emerald-200: #e9d5ff;
+  --color-emerald-300: #d8b4fe;
+  --color-emerald-400: #c084fc;
+  --color-emerald-500: #a855f7;
+  --color-emerald-600: #9333ea;
+  --color-emerald-700: #7e22ce;
+  --color-emerald-800: #6b21a8;
+  --color-emerald-900: #581c87;
+  --color-emerald-950: #3b0764;
+
+  --color-teal-50: #fdf4ff;
+  --color-teal-100: #fae8ff;
+  --color-teal-200: #f5d0fe;
+  --color-teal-300: #f0abfc;
+  --color-teal-400: #e879f9;
+  --color-teal-500: #d946ef;
+  --color-teal-600: #c026d3;
+  --color-teal-700: #a21caf;
+  --color-teal-800: #86198f;
+  --color-teal-900: #701a75;
+  --color-teal-950: #4a044e;
+}
+
+html[data-palette="purple"].dark {
+  --color-accent: #c084fc;
+  --color-accent-hover: #a855f7;
+  --color-accent-soft: #3b0764;
+
+  --aurora-primary: rgba(168, 85, 247, 0.24);
+  --aurora-secondary: rgba(217, 70, 239, 0.18);
+  --orb-1: rgba(168, 85, 247, 0.28);
+  --orb-2: rgba(217, 70, 239, 0.20);
+  --orb-3: rgba(216, 180, 254, 0.15);
+}
+
+/* 6. Sunset Amber & Orange */
+html[data-palette="amber"] {
+  --color-accent: #d97706;
+  --color-accent-hover: #b45309;
+  --color-accent-soft: #fffbeb;
+  --palette-primary: #f59e0b;
+  --palette-secondary: #f97316;
+
+  --aurora-primary: rgba(245, 158, 11, 0.09);
+  --aurora-secondary: rgba(249, 115, 22, 0.06);
+  --orb-1: rgba(245, 158, 11, 0.13);
+  --orb-2: rgba(249, 115, 22, 0.09);
+  --orb-3: rgba(253, 211, 77, 0.06);
+
+  --color-emerald-50: #fffbeb;
+  --color-emerald-100: #fef3c7;
+  --color-emerald-200: #fde68a;
+  --color-emerald-300: #fcd34d;
+  --color-emerald-400: #fbbf24;
+  --color-emerald-500: #f59e0b;
+  --color-emerald-600: #d97706;
+  --color-emerald-700: #b45309;
+  --color-emerald-800: #92400e;
+  --color-emerald-900: #78350f;
+  --color-emerald-950: #451a03;
+
+  --color-teal-50: #fff7ed;
+  --color-teal-100: #ffedd5;
+  --color-teal-200: #fed7aa;
+  --color-teal-300: #fdba74;
+  --color-teal-400: #fb923c;
+  --color-teal-500: #f97316;
+  --color-teal-600: #ea580c;
+  --color-teal-700: #c2410c;
+  --color-teal-800: #9a3412;
+  --color-teal-900: #7c2d12;
+  --color-teal-950: #431407;
+}
+
+html[data-palette="amber"].dark {
+  --color-accent: #fbbf24;
+  --color-accent-hover: #f59e0b;
+  --color-accent-soft: #451a03;
+
+  --aurora-primary: rgba(245, 158, 11, 0.22);
+  --aurora-secondary: rgba(249, 115, 22, 0.16);
+  --orb-1: rgba(245, 158, 11, 0.26);
+  --orb-2: rgba(249, 115, 22, 0.18);
+  --orb-3: rgba(253, 211, 77, 0.14);
+}
+
+/* 7. Cobalt Sapphire & Blue */
+html[data-palette="blue"] {
+  --color-accent: #2563eb;
+  --color-accent-hover: #1d4ed8;
+  --color-accent-soft: #eff6ff;
+  --palette-primary: #3b82f6;
+  --palette-secondary: #0ea5e9;
+
+  --aurora-primary: rgba(59, 130, 246, 0.09);
+  --aurora-secondary: rgba(14, 165, 233, 0.06);
+  --orb-1: rgba(59, 130, 246, 0.13);
+  --orb-2: rgba(14, 165, 233, 0.09);
+  --orb-3: rgba(147, 197, 253, 0.06);
+
+  --color-emerald-50: #eff6ff;
+  --color-emerald-100: #dbeafe;
+  --color-emerald-200: #bfdbfe;
+  --color-emerald-300: #93c5fd;
+  --color-emerald-400: #60a5fa;
+  --color-emerald-500: #3b82f6;
+  --color-emerald-600: #2563eb;
+  --color-emerald-700: #1d4ed8;
+  --color-emerald-800: #1e40af;
+  --color-emerald-900: #1e3a8a;
+  --color-emerald-950: #172554;
+
+  --color-teal-50: #f0f9ff;
+  --color-teal-100: #e0f2fe;
+  --color-teal-200: #bae6fd;
+  --color-teal-300: #7dd3fc;
+  --color-teal-400: #38bdf8;
+  --color-teal-500: #0ea5e9;
+  --color-teal-600: #0284c7;
+  --color-teal-700: #0369a1;
+  --color-teal-800: #075985;
+  --color-teal-900: #0c4a6e;
+  --color-teal-950: #082f49;
+}
+
+html[data-palette="blue"].dark {
+  --color-accent: #60a5fa;
+  --color-accent-hover: #3b82f6;
+  --color-accent-soft: #172554;
+
+  --aurora-primary: rgba(59, 130, 246, 0.24);
+  --aurora-secondary: rgba(14, 165, 233, 0.18);
+  --orb-1: rgba(59, 130, 246, 0.28);
+  --orb-2: rgba(14, 165, 233, 0.20);
+  --orb-3: rgba(147, 197, 253, 0.15);
+}
+
+/* 8. Crimson Rose & Ruby */
+html[data-palette="rose"] {
+  --color-accent: #e11d48;
+  --color-accent-hover: #be123c;
+  --color-accent-soft: #fff1f2;
+  --palette-primary: #f43f5e;
+  --palette-secondary: #ec4899;
+
+  --aurora-primary: rgba(244, 63, 94, 0.09);
+  --aurora-secondary: rgba(236, 72, 153, 0.06);
+  --orb-1: rgba(244, 63, 94, 0.13);
+  --orb-2: rgba(236, 72, 153, 0.09);
+  --orb-3: rgba(253, 164, 175, 0.06);
+
+  --color-emerald-50: #fff1f2;
+  --color-emerald-100: #ffe4e6;
+  --color-emerald-200: #fecdd3;
+  --color-emerald-300: #fda4af;
+  --color-emerald-400: #fb7185;
+  --color-emerald-500: #f43f5e;
+  --color-emerald-600: #e11d48;
+  --color-emerald-700: #be123c;
+  --color-emerald-800: #9f1239;
+  --color-emerald-900: #881337;
+  --color-emerald-950: #4c0519;
+
+  --color-teal-50: #fdf2f8;
+  --color-teal-100: #fce7f3;
+  --color-teal-200: #fbcfe8;
+  --color-teal-300: #f472b6;
+  --color-teal-400: #ec4899;
+  --color-teal-500: #db2777;
+  --color-teal-600: #be185d;
+  --color-teal-700: #9d174d;
+  --color-teal-800: #831843;
+  --color-teal-900: #701a75;
+  --color-teal-950: #500724;
+}
+
+html[data-palette="rose"].dark {
+  --color-accent: #fb7185;
+  --color-accent-hover: #f43f5e;
+  --color-accent-soft: #4c0519;
+
+  --aurora-primary: rgba(244, 63, 94, 0.24);
+  --aurora-secondary: rgba(236, 72, 153, 0.18);
+  --orb-1: rgba(244, 63, 94, 0.28);
+  --orb-2: rgba(236, 72, 153, 0.20);
+  --orb-3: rgba(253, 164, 175, 0.15);
+}
+
+/* 9. Titanium Minimalist Monochrome */
+html[data-palette="mono"] {
+  --color-accent: #3f3f46;
+  --color-accent-hover: #27272a;
+  --color-accent-soft: #f4f4f5;
+  --palette-primary: #71717a;
+  --palette-secondary: #a1a1aa;
+
+  --aurora-primary: rgba(113, 113, 122, 0.06);
+  --aurora-secondary: rgba(161, 161, 170, 0.04);
+  --orb-1: rgba(113, 113, 122, 0.08);
+  --orb-2: rgba(161, 161, 170, 0.06);
+  --orb-3: rgba(212, 212, 216, 0.04);
+
+  --color-emerald-50: #fafafa;
+  --color-emerald-100: #f4f4f5;
+  --color-emerald-200: #e4e4e7;
+  --color-emerald-300: #d4d4d8;
+  --color-emerald-400: #a1a1aa;
+  --color-emerald-500: #71717a;
+  --color-emerald-600: #52525b;
+  --color-emerald-700: #3f3f46;
+  --color-emerald-800: #27272a;
+  --color-emerald-900: #18181b;
+  --color-emerald-950: #09090b;
+
+  --color-teal-50: #fafafa;
+  --color-teal-100: #f5f5f5;
+  --color-teal-200: #e5e5e5;
+  --color-teal-300: #d4d4d4;
+  --color-teal-400: #a3a3a3;
+  --color-teal-500: #737373;
+  --color-teal-600: #525252;
+  --color-teal-700: #404040;
+  --color-teal-800: #262626;
+  --color-teal-900: #171717;
+  --color-teal-950: #0a0a0a;
+}
+
+html[data-palette="mono"].dark {
+  --color-accent: #e4e4e7;
+  --color-accent-hover: #fafafa;
+  --color-accent-soft: #27272a;
+
+  --aurora-primary: rgba(161, 161, 170, 0.16);
+  --aurora-secondary: rgba(113, 113, 122, 0.12);
+  --orb-1: rgba(161, 161, 170, 0.20);
+  --orb-2: rgba(113, 113, 122, 0.14);
+  --orb-3: rgba(212, 212, 216, 0.10);
+}

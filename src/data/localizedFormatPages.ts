@@ -20,60 +20,60 @@ const TRANSLATION_PATTERNS: Record<SupportedLanguage, {
   pt: {
     convertPrefix: 'Conversor de Vídeo para',
     compressPrefix: 'Compressor de Vídeo',
-    onlineFree: 'Online Grátis — 100% no Navegador',
+    onlineFree: 'Online Grátis — No Navegador',
     heroSuffix: 'sem enviar nenhum arquivo para servidores externos.',
     dropzoneText: 'Arraste seu arquivo aqui para converter para',
     howItWorks: 'Como funciona a conversão local?',
     whyTitle: 'Por que usar nosso conversor?',
     whyDesc: 'Todo o processamento ocorre dentro do seu navegador usando WebAssembly.',
-    freeNoUpload: '100% gratuito e privado. Sem upload para a nuvem.',
+    freeNoUpload: 'Totalmente gratuito e privado. Sem upload para a nuvem.',
     faq1Q: 'Este serviço é gratuito?',
-    faq1A: 'Sim! O ConversordeVideo.com é 100% gratuito, sem cadastro e sem limites.',
+    faq1A: 'Sim! O ConversordeVideo.com é totalmente gratuito, sem cadastro e sem limites.',
     faq2Q: 'Meus arquivos ficam seguros?',
-    faq2A: 'Totalmente. Nenhum arquivo é enviado para servidores externos. O processamento é 100% local no seu navegador.'
+    faq2A: 'Totalmente. Nenhum arquivo é enviado para servidores externos. O processamento é realizado localmente no seu navegador.'
   },
   en: {
     convertPrefix: 'Video Converter to',
     compressPrefix: 'Video Compressor',
-    onlineFree: 'Free Online — 100% In-Browser',
+    onlineFree: 'Free Online — In-Browser',
     heroSuffix: 'without uploading any files to remote servers.',
     dropzoneText: 'Drag your video file here to convert to',
     howItWorks: 'How does in-browser conversion work?',
     whyTitle: 'Why choose our converter?',
     whyDesc: 'All transcoding is processed securely within your browser memory via WebAssembly.',
-    freeNoUpload: '100% free and private. Zero cloud uploads.',
+    freeNoUpload: 'Completely free and private. Zero cloud uploads.',
     faq1Q: 'Is this conversion service free?',
-    faq1A: 'Yes! Our tool is 100% free with no registration, no watermarks, and no file paywalls.',
+    faq1A: 'Yes! Our tool is completely free with no registration, no watermarks, and no file paywalls.',
     faq2Q: 'Are my video files secure?',
-    faq2A: 'Absolutely. Zero bytes are uploaded to remote servers. All processing runs 100% locally on your device.'
+    faq2A: 'Absolutely. Zero bytes are uploaded to remote servers. All processing runs securely and locally on your device.'
   },
   es: {
     convertPrefix: 'Convertidor de Video a',
     compressPrefix: 'Compresor de Video',
-    onlineFree: 'Online Gratis — 100% en el Navegador',
+    onlineFree: 'Online Gratis — En el Navegador',
     heroSuffix: 'sin subir ningún archivo a servidores externos.',
     dropzoneText: 'Arrastra tu archivo aquí para convertir a',
     howItWorks: '¿Cómo funciona la conversión local?',
     whyTitle: '¿Por qué elegir nuestro convertidor?',
     whyDesc: 'Todo el procesamiento se realiza en la memoria de tu dispositivo mediante WebAssembly.',
-    freeNoUpload: '100% gratuito e privado. Cero subidas a la nube.',
+    freeNoUpload: 'Totalmente gratuito y privado. Cero subidas a la nube.',
     faq1Q: '¿Es gratuito este servicio?',
-    faq1A: '¡Sí! Es 100% gratis, sin registro, sin marcas de agua y sin límites de archivos.',
+    faq1A: '¡Sí! Es totalmente gratis, sin registro, sin marcas de agua y sin límites de archivos.',
     faq2Q: '¿Están seguros mis videos?',
-    faq2A: 'Totalmente. Ningún archivo se envía a servidores externos. Todo el proceso es 100% local en tu navegador.'
+    faq2A: 'Totalmente. Ningún archivo se envía a servidores externos. Todo el proceso es local en tu navegador.'
   },
   fr: {
     convertPrefix: 'Convertisseur Vidéo vers',
     compressPrefix: 'Compresseur Vidéo',
-    onlineFree: 'Gratuit en Ligne — 100% dans le Navigateur',
+    onlineFree: 'Gratuit en Ligne — Dans le Navigateur',
     heroSuffix: 'sans téléverser aucun fichier sur des serveurs externes.',
     dropzoneText: 'Glissez votre fichier ici pour convertir en',
     howItWorks: 'Comment fonctionne la conversion locale ?',
     whyTitle: 'Pourquoi choisir notre convertisseur ?',
     whyDesc: 'Tout le transcodage est exécuté dans la mémoire de votre appareil grâce à WebAssembly.',
-    freeNoUpload: '100% gratuit et confidentiel. Aucun fichier téléversé.',
+    freeNoUpload: 'Totalement gratuit et confidentiel. Aucun fichier téléversé.',
     faq1Q: 'Ce service est-il gratuit ?',
-    faq1A: 'Oui ! Notre outil est 100% gratuit, sans inscription, sans filigrane et sans limite.',
+    faq1A: 'Oui ! Notre outil est totalement gratuit, sans inscription, sans filigrane et sans limite.',
     faq2Q: 'Mes fichiers sont-ils protégés ?',
     faq2A: 'Absolument. Aucun octet n’est envoyé sur des serveurs distants. Tout est traité localement sur votre appareil.'
   },
@@ -86,7 +86,7 @@ const TRANSLATION_PATTERNS: Record<SupportedLanguage, {
     howItWorks: 'ブラウザ内ローカル変換の仕組み',
     whyTitle: '当ツールが選ばれる理由',
     whyDesc: 'WebAssembly技術により、端末のメモリ上で安全かつ高速に動画を変換・圧縮します。',
-    freeNoUpload: '完全無料・100%プライベート。ファイル送信なし。',
+    freeNoUpload: '完全無料・プライベート処理。ファイル送信なし。',
     faq1Q: 'このサービスは本当に無料ですか？',
     faq1A: 'はい！登録不要、ウォーターマークなし、完全無料でご利用いただけます。',
     faq2Q: 'プライバシーやセキュリティは安全ですか？',
@@ -95,13 +95,13 @@ const TRANSLATION_PATTERNS: Record<SupportedLanguage, {
   zh: {
     convertPrefix: '视频转换器 转',
     compressPrefix: '视频压缩器',
-    onlineFree: '免费在线版 — 100% 浏览器本地处理',
+    onlineFree: '免费在线版 — 浏览器本地处理',
     heroSuffix: '无需将任何文件上传至远程云端服务器。',
     dropzoneText: '拖拽视频文件到此处进行转换：',
     howItWorks: '本地转换工作原理',
     whyTitle: '为什么选择我们的转换工具？',
     whyDesc: '基于 WebAssembly 技术，在您的设备内存中高速且安全地完成转码与压缩。',
-    freeNoUpload: '100% 免费私密，零文件上传。',
+    freeNoUpload: '完全免费私密，零文件上传。',
     faq1Q: '这个工具完全免费吗？',
     faq1A: '是的！免注册、无水印、无文件大小付费限制，完全免费使用。',
     faq2Q: '我的视频文件安全吗？',
@@ -110,28 +110,28 @@ const TRANSLATION_PATTERNS: Record<SupportedLanguage, {
   no: {
     convertPrefix: 'Videokonvertering til',
     compressPrefix: 'Videokomprimering',
-    onlineFree: 'Gratis på Nett — 100% i Nettleseren',
+    onlineFree: 'Gratis på Nett — I Nettleseren',
     heroSuffix: 'uten å laste opp filer til eksterne servere.',
     dropzoneText: 'Dra videofilen hit for å konvertere til',
     howItWorks: 'Hvordan fungerer lokal konvertering?',
     whyTitle: 'Hvorfor velge vår konverter?',
     whyDesc: 'All koding behandles direkte i nettleserminnet ditt via WebAssembly.',
-    freeNoUpload: '100% gratis og privat. Ingen skyopplasting.',
+    freeNoUpload: 'Helt gratis og privat. Ingen skyopplasting.',
     faq1Q: 'Er denne tjenesten gratis?',
-    faq1A: 'Ja! Verktøyet er 100% gratis, uten registrering, vannmerker eller gebyrer.',
+    faq1A: 'Ja! Verktøyet er helt gratis, uten registrering, vannmerker eller gebyrer.',
     faq2Q: 'Er videofilene mine trygge?',
     faq2A: 'Helt trygge. Ingen filer sendes over internett. Alt behandles lokalt på enheten din.'
   },
   tr: {
     convertPrefix: 'Video Dönüştürücü ->',
     compressPrefix: 'Video Sıkıştırıcı',
-    onlineFree: 'Ücretsiz Çevrimiçi — %100 Tarayıcıda',
+    onlineFree: 'Ücretsiz Çevrimiçi — Tarayıcıda',
     heroSuffix: 'dosyalarınızı sunuculara yüklemeden güvenle dönüştürün.',
     dropzoneText: 'Dönüştürmek istediğiniz videoyu buraya sürükleyin:',
     howItWorks: 'Yerel dönüştürme nasıl çalışır?',
     whyTitle: 'Neden bizim dönüştürücümüz?',
     whyDesc: 'Tüm kodlama işlemleri WebAssembly ile doğrudan cihazınızın belleğinde çalışır.',
-    freeNoUpload: '%100 ücretsiz ve gizli. Buluta yükleme yok.',
+    freeNoUpload: 'Tamamen ücretsiz ve gizli. Buluta yükleme yok.',
     faq1Q: 'Bu hizmet ücretsiz mi?',
     faq1A: 'Evet! Aracımız üyelik gerektirmeden, filigransız ve tamamen ücretsizdir.',
     faq2Q: 'Dosyalarım güvende mi?',
@@ -140,15 +140,15 @@ const TRANSLATION_PATTERNS: Record<SupportedLanguage, {
   pl: {
     convertPrefix: 'Konwerter Wideo na',
     compressPrefix: 'Kompresor Wideo',
-    onlineFree: 'Online za Darmo — 100% w Przeglądarce',
+    onlineFree: 'Online za Darmo — W Przeglądarce',
     heroSuffix: 'bez przesyłania plików na zewnętrzne serwery.',
     dropzoneText: 'Przeciągnij plik tutaj, aby przekonwertować na',
     howItWorks: 'Jak działa lokalna konwersja?',
     whyTitle: 'Dlaczego warto wybrać nasze narzędzie?',
     whyDesc: 'Całe przetwarzanie odbywa się bezpiecznie w pamięci RAM dzięki WebAssembly.',
-    freeNoUpload: '100% darmowy i prywatny. Zero wysyłania do chmury.',
+    freeNoUpload: 'Całkowicie darmowy i prywatny. Zero wysyłania do chmury.',
     faq1Q: 'Czy ta usługa jest bezpłatna?',
-    faq1A: 'Tak! Nasz konwerter jest w 100% darmowy, bez rejestracji, znaków wodnych i limitów.',
+    faq1A: 'Tak! Nasz konwerter jest w pełni darmowy, bez rejestracji, znaków wodnych i limitów.',
     faq2Q: 'Czy moje pliki są bezpieczne?',
     faq2A: 'Całkowicie. Żaden bajt nie trafia na zewnętrzne serwery. Wszystko działa lokalnie w przeglądarce.'
   }
@@ -163,15 +163,61 @@ interface SlugSpecificOverride {
   metaDescription?: string;
   heroSubtitle?: string;
   dropzoneTitle?: string;
+  keywords?: string[];
   explainerTitle?: string;
   explainerParagraphs?: string[];
   sourceDetailsTitle?: string;
   sourceDetails?: string[];
   targetDetailsTitle?: string;
   targetDetails?: string[];
+  proTip?: string;
+  faqs?: FAQItem[];
 }
 
 const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugSpecificOverride>>> = {
+  'conversor-de-video-para-mp4': {
+    es: {
+      h1Prefix: 'Convertir Video a',
+      h1Highlight: 'MP4 Online Gratis',
+      h1Suffix: 'Universal H.264 y AAC',
+      badge: '🎬 Conversor Universal a MP4',
+      metaTitle: 'Convertir Video a MP4 Online Gratis — Universal H.264 y AAC',
+      metaDescription: 'Convierte cualquier video (MOV, MKV, AVI, WebM, WMV) a MP4 gratis en tu navegador. Estandariza códecs y resolución para editar o unir videos sin errores.',
+      heroSubtitle: 'Transforma cualquier formato de video al estándar universal MP4 con códec H.264 y audio AAC. 100% privado en memoria local.',
+      dropzoneTitle: 'Arrastra tu archivo aquí para convertirlo a MP4 universal',
+      keywords: [
+        'convertir video a mp4 gratis',
+        'convertir un video a mp4',
+        'convertir video a mp4',
+        'conversor de video para mp4',
+        'unir videos online',
+        'unir videos gratis',
+        'como unir videos',
+        'acelerar video'
+      ],
+      explainerTitle: 'Conversión universal a MP4: el estándar para reproducción y edición',
+      explainerParagraphs: [
+        'El formato MP4 con codificación de video H.264 y audio estéreo AAC es el estándar más compatible del planeta, reproducible en Smart TVs, iPhone, Android, ordenadores Windows y Mac, consolas y navegadores web.',
+        'Homogenización esencial antes de unir videos: Si necesitas unir videos online o combinarlos en un editor como CapCut, Premiere o DaVinci Resolve, el problema más común son los errores de desincronización de audio y caídas de fotogramas debidas a clips con diferentes códecs (por ejemplo, mezclar un archivo MOV de iPhone con un MKV o un WebM). Al convertir previamente todos tus fragmentos a MP4 estándar con los mismos parámetros de resolución y tasa de fotogramas, cualquier herramienta podrá unir los videos de forma fluida y sin fallos.',
+        'Sin marcas de agua y sin subir archivos a internet: Nuestro motor WebAssembly procesa la conversión dentro de la memoria RAM de tu equipo, entregando un archivo MP4 limpio, ligero y optimizado con cabecera faststart para reproducción web instantánea.'
+      ],
+      proTip: 'Si vas a unir videos grabados en diferentes dispositivos, conviértelos todos primero a MP4 con el perfil "Calidad Equilibrada (CRF 23)". Esto homogenizará la tasa de fotogramas (fps) y el códec de audio a AAC 128k estéreo, evitando desfasajes de sonido al juntarlos.',
+      faqs: [
+        {
+          question: '¿Por qué es necesario convertir a MP4 antes de unir videos?',
+          answer: 'Para unir videos sin que se corte el audio ni se desincronicen las pistas, todos los clips deben compartir el mismo códec de video (H.264), códec de audio (AAC) y velocidad de fotogramas (fps). Convertir tus archivos a MP4 homogeniza todas las pistas y permite fusionarlos limpiamente en cualquier aplicación o editor.'
+        },
+        {
+          question: '¿Cómo convertir un video a MP4 gratis en el navegador?',
+          answer: 'Solo arrastra cualquier archivo (MOV, MKV, AVI, WebM, WMV) a la caja de conversión superior y haz clic en "Convertir Ahora". El archivo MP4 se procesará en segundos en tu memoria local y estará listo para descargar sin marcas de agua.'
+        },
+        {
+          question: '¿Mis archivos privados se suben a algún servidor?',
+          answer: 'No. Ni un solo byte sale de tu ordenador o móvil. La transcodificación se realiza en local mediante WebAssembly (FFmpeg WASM), garantizando total privacidad conforme al RGPD.'
+        }
+      ]
+    }
+  },
   'melhor-conversor-de-video-gratuito': {
     en: {
       h1Prefix: 'The Best',
@@ -179,12 +225,12 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Online & Safe',
       badge: '🏆 Best Free In-Browser Video Converter',
       metaTitle: 'Best Free Video Converter Online 2026 — Zero Upload & Safe',
-      metaDescription: 'Discover why ConversordeVideo.com is the best free video converter: zero uploads, no file size limits, no registration, and 100% private.',
-      heroSubtitle: 'The ultimate tool to convert MP4, MOV, MP3, WebM, and GIF. Zero wait queues, no intrusive ads, and 100% in your browser.',
+      metaDescription: 'Discover why ConversordeVideo.com is the best free video converter: zero uploads, no file size limits, no registration, and completely private.',
+      heroSubtitle: 'The ultimate tool to convert MP4, MOV, MP3, WebM, and GIF. Zero wait queues, no intrusive ads, and  in your browser.',
       dropzoneTitle: 'Drag any video or audio file here to start converting',
       explainerTitle: 'Why choose our in-browser WebAssembly converter?',
       explainerParagraphs: [
-        'While traditional cloud converters (CloudConvert, Convertio, FreeConvert) charge monthly subscriptions, enforce long wait queues, and force you to upload private files to remote servers, ConversordeVideo.com runs 100% locally on your computer or phone.',
+        'While traditional cloud converters (CloudConvert, Convertio, FreeConvert) charge monthly subscriptions, enforce long wait queues, and force you to upload private files to remote servers, ConversordeVideo.com runs completely locally on your computer or phone.',
         'Powered by WebAssembly, you achieve lightning speed without consuming mobile upload bandwidth and with full data privacy compliance.'
       ],
       sourceDetailsTitle: 'Traditional Cloud Services',
@@ -196,7 +242,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       ],
       targetDetailsTitle: 'ConversordeVideo.com',
       targetDetails: [
-        'Zero upload — 100% in-browser memory processing',
+        'Zero upload — directly in-browser memory processing',
         'No queue delays and unlimited conversions',
         'Instant mobile and camera footage conversions',
         'Completely free with no sign-up required'
@@ -208,12 +254,12 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Online y Seguro',
       badge: '🏆 Mejor Convertidor de Video Gratuito',
       metaTitle: 'El Mejor Convertidor de Video Gratuito Online 2026 — Sin Límites y Seguro',
-      metaDescription: 'Descubre por qué ConversordeVideo.com es el mejor convertidor de video gratuito: sin subidas, sin límites de tamaño, sin registro y 100% privado.',
-      heroSubtitle: 'La herramienta definitiva para convertir MP4, MOV, MP3, WebM y GIF. Cero colas, sin anuncios invasivos y 100% en tu navegador.',
+      metaDescription: 'Descubre por qué ConversordeVideo.com es el mejor convertidor de video gratuito: sin subidas, sin límites de tamaño, sin registro y  privado.',
+      heroSubtitle: 'La herramienta definitiva para convertir MP4, MOV, MP3, WebM y GIF. Cero colas, sin anuncios invasivos y  en tu navegador.',
       dropzoneTitle: 'Arrastra cualquier archivo de video o audio para comenzar',
       explainerTitle: '¿Por qué elegir nuestro convertidor en el navegador?',
       explainerParagraphs: [
-        'Mientras los convertidores tradicionales cobran suscripciones, imponen colas de espera y obligan a subir tus videos a la nube, ConversordeVideo.com funciona 100% en tu dispositivo.',
+        'Mientras los convertidores tradicionales cobran suscripciones, imponen colas de espera y obligan a subir tus videos a la nube, ConversordeVideo.com funciona  en tu dispositivo.',
         'Gracias a WebAssembly, disfrutas de máxima velocidad sin gastar tus datos de subida y con total privacidad.'
       ],
       sourceDetailsTitle: 'Servicios en la Nube Tradicionales',
@@ -225,7 +271,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       ],
       targetDetailsTitle: 'ConversordeVideo.com',
       targetDetails: [
-        'Cero subidas — 100% procesamiento local',
+        'Cero subidas —  procesamiento local',
         'Sin colas ni límites de conversiones',
         'Conversión instantánea en móviles y cámaras',
         'Totalmente gratis y sin registro'
@@ -237,8 +283,8 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'En Ligne et Sécurisé',
       badge: '🏆 Meilleur Convertisseur Vidéo Gratuit',
       metaTitle: 'Meilleur Convertisseur Vidéo Gratuit en Ligne 2026 — Sans Limite et Sécurisé',
-      metaDescription: 'Découvrez pourquoi ConversordeVideo.com est le meilleur convertisseur vidéo gratuit : aucun téléversement, aucune limite de taille et 100% privé.',
-      heroSubtitle: 'L’outil ultime pour convertir MP4, MOV, MP3, WebM et GIF. Aucune file d’attente et 100% dans votre navigateur.',
+      metaDescription: 'Découvrez pourquoi ConversordeVideo.com est le meilleur convertisseur vidéo gratuit : aucun téléversement, aucune limite de taille et  privé.',
+      heroSubtitle: 'L’outil ultime pour convertir MP4, MOV, MP3, WebM et GIF. Aucune file d’attente et  dans votre navigateur.',
       dropzoneTitle: 'Glissez n’importe quel fichier vidéo ou audio pour commencer',
       explainerTitle: 'Pourquoi choisir notre convertisseur dans le navigateur ?',
       explainerParagraphs: [
@@ -254,10 +300,10 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       ],
       targetDetailsTitle: 'ConversordeVideo.com',
       targetDetails: [
-        'Zéro téléversement — 100% traitement local',
+        'Zéro téléversement —  traitement local',
         'Aucune file d’attente et conversions illimitées',
         'Compatibilité instantanée iPhone et caméras',
-        '100% gratuit et sans inscription'
+        'totalement gratuit et sans inscription'
       ]
     },
     ja: {
@@ -271,7 +317,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       dropzoneTitle: 'ここに動画または音声ファイルをドラッグして開始',
       explainerTitle: 'なぜブラウザ内 WebAssembly 変換が選ばれるのか？',
       explainerParagraphs: [
-        '従来のクラウド変換ツールは月額課金や待ち時間があり、大事なプライベート動画をサーバーへ送信する必要がありました。ConversordeVideo.com はお使いの端末内で100%処理します。',
+        '従来のクラウド変換ツールは月額課金や待ち時間があり、大事なプライベート動画をサーバーへ送信する必要がありました。ConversordeVideo.com はお使いの端末内で完全処理します。',
         'WebAssembly技術により、回線速度に左右されず超高速・安全に動画を変換できます。'
       ],
       sourceDetailsTitle: '従来のクラウド変換ツール',
@@ -283,7 +329,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       ],
       targetDetailsTitle: 'ConversordeVideo.com',
       targetDetails: [
-        'ファイル送信不要 — 端末メモリ内で100%処理',
+        'ファイル送信不要 — 端末メモリ内で完全処理',
         '待ち時間ゼロ・回数無制限',
         'スマホ動画やカメラ映像を即時変換',
         '登録不要・完全無料'
@@ -295,12 +341,12 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: '深度评测',
       badge: '🏆 最佳免费视频转换器与评测',
       metaTitle: '2026 最佳免费在线视频转换器 — 零上传无限制安全转码',
-      metaDescription: '了解为什么 ConversordeVideo.com 是最佳免费视频转换器：零文件上传、无文件大小付费限制、免注册且 100% 私密安全。',
-      heroSubtitle: '转换 MP4、MOV、MP3、WebM 和 GIF 的终极利器。免排队、无侵入式广告，100% 浏览器本地运行。',
+      metaDescription: '了解为什么 ConversordeVideo.com 是最佳免费视频转换器：零文件上传、无文件大小付费限制、免注册且  私密安全。',
+      heroSubtitle: '转换 MP4、MOV、MP3、WebM 和 GIF 的终极利器。免排队、无侵入式广告， 浏览器本地运行。',
       dropzoneTitle: '拖拽任意视频或音频文件到此处即可开始转换',
       explainerTitle: '为什么选择我们的浏览器本地 WebAssembly 转换器？',
       explainerParagraphs: [
-        '传统的云端转换网站（如 CloudConvert、Convertio）收取高额订阅费，限制文件大小，并要求将私密视频上传至远程服务器。ConversordeVideo.com 100% 在您的本地电脑或手机内存中完成转码。',
+        '传统的云端转换网站（如 CloudConvert、Convertio）收取高额订阅费，限制文件大小，并要求将私密视频上传至远程服务器。ConversordeVideo.com  在您的本地电脑或手机内存中完成转码。',
         '依托先进的 WebAssembly 技术，无需消耗上传流量，享受极限转换速度与严密隐私保障。'
       ],
       sourceDetailsTitle: '传统云端转换工具',
@@ -312,7 +358,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       ],
       targetDetailsTitle: 'ConversordeVideo.com',
       targetDetails: [
-        '零文件上传 — 100% 浏览器内存安全计算',
+        '零文件上传 —  浏览器内存安全计算',
         '零等待排队，无转换次数限制',
         '手机与高清摄像机视频瞬间转码',
         '免注册、免登录，完全免费'
@@ -324,8 +370,8 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'på Nett og Trygg',
       badge: '🏆 Kåret til Raskeste og Tryggeste Konverterer',
       metaTitle: 'Beste Gratis Videokonverterer på Nett 2026 — Uten Begrensninger',
-      metaDescription: 'Oppdag hvorfor ConversordeVideo.com er den beste gratis videokonvertereren: ingen skyopplasting, ingen størrelsesgrenser og 100% privat.',
-      heroSubtitle: 'Det ultimate verktøyet for MP4, MOV, MP3, WebM og GIF. Null køer, ingen irriterende annonser og 100% i nettleseren.',
+      metaDescription: 'Oppdag hvorfor ConversordeVideo.com er den beste gratis videokonvertereren: ingen skyopplasting, ingen størrelsesgrenser og helt privat.',
+      heroSubtitle: 'Det ultimate verktøyet for MP4, MOV, MP3, WebM og GIF. Null køer, ingen irriterende annonser og  i nettleseren.',
       dropzoneTitle: 'Dra en video- eller lydfil hit for å starte',
       explainerTitle: 'Hvorfor velge vår nettleserbaserte videokonverterer?'
     },
@@ -335,8 +381,8 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Çevrimiçi ve Güvenli',
       badge: '🏆 En Hızlı ve Güvenli Video Dönüştürücü',
       metaTitle: 'En İyi Ücretsiz Video Dönüştürücü Çevrimiçi 2026 — Limitsiz ve Güvenli',
-      metaDescription: 'ConversordeVideo.com’un neden en iyi ücretsiz video dönüştürücü olduğunu keşfedin: buluta yükleme yok, boyut sınırı yok, %100 gizli.',
-      heroSubtitle: 'MP4, MOV, MP3, WebM ve GIF dönüştürmek için mükemmel araç. Bekleme sırası yok, reklam yok ve %100 tarayıcınızda.',
+      metaDescription: 'ConversordeVideo.com’un neden en iyi ücretsiz video dönüştürücü olduğunu keşfedin: buluta yükleme yok, boyut sınırı yok, tamamen gizli.',
+      heroSubtitle: 'MP4, MOV, MP3, WebM ve GIF dönüştürmek için mükemmel araç. Bekleme sırası yok, reklam yok ve  tarayıcınızda.',
       dropzoneTitle: 'Dönüştürmeye başlamak için videoyu buraya sürükleyin',
       explainerTitle: 'Neden tarayıcı içi WebAssembly dönüştürücümüzü seçmelisiniz?'
     },
@@ -346,8 +392,8 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Online i Bezpieczny',
       badge: '🏆 Najszybszy i Najbezpieczniejszy Konwerter',
       metaTitle: 'Najlepszy Darmowy Konwerter Wideo Online 2026 — Bez Limitów i Bezpieczny',
-      metaDescription: 'Dowiedz się, dlaczego ConversordeVideo.com to najlepszy darmowy konwerter wideo: brak wysyłania do chmury, brak limitów rozmiaru i 100% prywatności.',
-      heroSubtitle: 'Niezastąpione narzędzie do konwersji MP4, MOV, MP3, WebM i GIF. Brak kolejek i 100% w Twojej przeglądarce.',
+      metaDescription: 'Dowiedz się, dlaczego ConversordeVideo.com to najlepszy darmowy konwerter wideo: brak wysyłania do chmury, brak limitów rozmiaru i  prywatności.',
+      heroSubtitle: 'Niezastąpione narzędzie do konwersji MP4, MOV, MP3, WebM i GIF. Brak kolejek i  w Twojej przeglądarce.',
       dropzoneTitle: 'Przeciągnij dowolny plik wideo lub audio, aby rozpocząć',
       explainerTitle: 'Dlaczego warto wybrać nasz konwerter w przeglądarce?'
     }
@@ -391,11 +437,48 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'High Quality Loops',
       badge: '✨ Animated GIF Maker'
     },
-    es: {
-      h1Prefix: 'Convertir',
-      h1Highlight: 'Video a GIF Animado',
-      h1Suffix: 'Bucles de Alta Calidad',
-      badge: '✨ Creador de GIFs Animados'
+        es: {
+      h1Prefix: 'Convertir Video a',
+      h1Highlight: 'GIF Online Gratis',
+      h1Suffix: 'sin Marca de Agua',
+      badge: '✨ Creador de GIFs Animados',
+      metaTitle: 'Convertir Video a GIF Online Gratis — Creador de GIF Animado en Bucle',
+      metaDescription: 'Convierte cualquier video a GIF animado online gratis. Crea GIFs fluidos en bucle a 12 fps con paleta de colores optimizada, sin marcas de agua y sin subir archivos.',
+      heroSubtitle: 'Transforma fragmentos de video en animaciones GIF ligeras con paleta Bayer optimizada para stickers de WhatsApp, Discord y memes.',
+      dropzoneTitle: 'Arrastra tu video aquí para convertirlo en GIF animado',
+      keywords: [
+        'convertir video a gif',
+        'convertir video a gif gratis',
+        'convertir video a gif online',
+        'convertir video a gif online gratis',
+        'convertir video a gif sin perder calidad',
+        'video a gif online',
+        'conversor de video a gif',
+        'conversor de vídeo a gif',
+        'conversor video a gif',
+        'convertir vídeo a gif'
+      ],
+      explainerTitle: '¿Cómo convertir videos a GIF animado con la mejor calidad?',
+      explainerParagraphs: [
+        'Crear un GIF a partir de un video suele generar archivos pesados o imágenes con colores degradados si no se utiliza el algoritmo adecuado. Nuestro conversor de video a GIF genera una paleta de colores personalizada de 256 tonos mediante el algoritmo Bayer dither, garantizando transiciones suaves y evitando bandas de color en tus animaciones.',
+        'Configurado a 12 fotogramas por segundo (fps) y con un ancho óptimo de hasta 480 píxeles, el resultado es una animación fluida en bucle continuo perfecta para enviar como sticker en WhatsApp, compartir en canales de Discord, añadir a presentaciones o publicar en foros y redes sociales.',
+        'Totalmente gratis, sin marcas de agua que arruinen tu meme y procesado localmente en tu navegador para que tus clips personales nunca se transmitan a la nube.'
+      ],
+      proTip: 'Para obtener los mejores resultados, utiliza clips de video cortos (entre 2 y 6 segundos). Los GIFs no tienen compresión temporal como el formato MP4, por lo que clips más cortos resultan en archivos mucho más ligeros y rápidos de cargar.',
+      faqs: [
+        {
+          question: '¿Los GIFs creados tienen marca de agua?',
+          answer: 'No. Todos los GIFs exportados son completamente limpios, sin sellos, marcas de agua ni firmas de nuestra web.'
+        },
+        {
+          question: '¿Se pueden usar los GIFs en WhatsApp y Discord?',
+          answer: 'Sí. El formato exportado es un GIF estándar con bucle infinito, 100% compatible con WhatsApp, Telegram, Discord, Slack y cualquier navegador web o red social.'
+        },
+        {
+          question: '¿Cómo convertir un video a GIF gratis?',
+          answer: 'Sube tu clip de video, selecciona la duración deseada y pulsa en convertir. En pocos segundos tendrás un GIF optimizado listo para descargar.'
+        }
+      ]
     },
     fr: {
       h1Prefix: 'Convertir',
@@ -423,8 +506,8 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Free',
       badge: '🎧 Universal Audio Transcoder',
       metaTitle: 'Free Online Audio Converter — Transcode Audio to MP3',
-      metaDescription: 'Convert audio files (WAV, FLAC, M4A, OGG, AAC) and extract audio from videos to 192 kbps MP3 in your browser. 100% free, private with no file uploads.',
-      heroSubtitle: 'Convert sound files and extract audio tracks from videos into universal MP3 with crystal-clear stereo fidelity. 100% processed in your browser.'
+      metaDescription: 'Convert audio files (WAV, FLAC, M4A, OGG, AAC) and extract audio from videos to 192 kbps MP3 in your browser. completely free, private with no file uploads.',
+      heroSubtitle: 'Convert sound files and extract audio tracks from videos into universal MP3 with crystal-clear stereo fidelity.  processed in your browser.'
     },
     es: {
       h1Prefix: 'Convertidor de',
@@ -432,8 +515,8 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Gratis',
       badge: '🎧 Transcodificador de Audio Universal',
       metaTitle: 'Convertidor de Audio Online Gratis — Transcodificar a MP3',
-      metaDescription: 'Convierte archivos de audio (WAV, FLAC, M4A, OGG, AAC) y extrae sonido de videos a MP3 de 192 kbps en tu navegador. 100% gratis y privado sin subir archivos.',
-      heroSubtitle: 'Transforma grabaciones, pistas musicales y audios de video en MP3 universal con alta claridad estéreo. Procesamiento 100% en tu navegador.'
+      metaDescription: 'Convierte archivos de audio (WAV, FLAC, M4A, OGG, AAC) y extrae sonido de videos a MP3 de 192 kbps en tu navegador. totalmente gratis y privado sin subir archivos.',
+      heroSubtitle: 'Transforma grabaciones, pistas musicales y audios de video en MP3 universal con alta claridad estéreo. Procesamiento  en tu navegador.'
     },
     fr: {
       h1Prefix: 'Convertisseur d’',
@@ -441,8 +524,8 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Gratuit',
       badge: '🎧 Transcodeur Audio Universel',
       metaTitle: 'Convertisseur Audio en Ligne Gratuit — Transcoder en MP3',
-      metaDescription: 'Convertissez des fichiers audio (WAV, FLAC, M4A, OGG, AAC) et extrayez le son de vidéos en MP3 192 kbps dans votre navigateur. 100% gratuit, sans upload.',
-      heroSubtitle: 'Transformez enregistrements, pistes audio et vidéos en MP3 universel avec une fidélité stéréo irréprochable. 100% local dans votre navigateur.'
+      metaDescription: 'Convertissez des fichiers audio (WAV, FLAC, M4A, OGG, AAC) et extrayez le son de vidéos en MP3 192 kbps dans votre navigateur. totalement gratuit, sans upload.',
+      heroSubtitle: 'Transformez enregistrements, pistes audio et vidéos en MP3 universel avec une fidélité stéréo irréprochable. completely local dans votre navigateur.'
     },
     ja: {
       h1Prefix: '高音質',
@@ -450,7 +533,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: '無料',
       badge: '🎧 万能オーディオコンバーター',
       metaTitle: '無料オンライン音声変換ツール — 音声・動画を MP3 に変換',
-      metaDescription: 'WAV、FLAC、M4A、OGG、AAC などの音声や動画から 192 kbps 高音質 MP3 へブラウザ上で変換。サーバー送信不要で100%安全・無料。',
+      metaDescription: 'WAV、FLAC、M4A、OGG、AAC などの音声や動画から 192 kbps 高音質 MP3 へブラウザ上で変換。サーバー送信不要で完全安全・無料。',
       heroSubtitle: '録音ファイルや音楽、動画から音声を抽出し、クリアなステレオ MP3 に変換。ブラウザ内完結で完全プライベート。'
     },
     zh: {
@@ -459,7 +542,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: '免费在线',
       badge: '🎧 全格式音频转码器',
       metaTitle: '免费在线音频转换器 — 各类音频转 MP3 高保真',
-      metaDescription: '在浏览器中将 WAV、FLAC、M4A、OGG、AAC 音频及视频转换为 192 kbps MP3。无需上传服务器，100% 隐私安全且完全免费。',
+      metaDescription: '在浏览器中将 WAV、FLAC、M4A、OGG、AAC 音频及视频转换为 192 kbps MP3。无需上传服务器， 隐私安全且完全免费。',
       heroSubtitle: '将录音、音乐及视频音轨转换为高清晰度 MP3 格式。所有转码均在本地浏览器内完成。'
     },
     no: {
@@ -468,8 +551,8 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Gratis',
       badge: '🎧 Universell Lydkonvertering',
       metaTitle: 'Gratis Lydkonverterer Online — Konverter Lyd til MP3',
-      metaDescription: 'Konverter lydfiler (WAV, FLAC, M4A, OGG, AAC) og trekk ut lyd fra videoer til 192 kbps MP3 direkte i nettleseren. 100% gratis og privat.',
-      heroSubtitle: 'Gjør om opptak, musikkspor og videolyd til universell MP3 med krystallklar stereolyd. 100% i nettleseren din.'
+      metaDescription: 'Konverter lydfiler (WAV, FLAC, M4A, OGG, AAC) og trekk ut lyd fra videoer til 192 kbps MP3 direkte i nettleseren. totalmente gratis og privat.',
+      heroSubtitle: 'Gjør om opptak, musikkspor og videolyd til universell MP3 med krystallklar stereolyd.  i nettleseren din.'
     },
     tr: {
       h1Prefix: 'Evrensel',
@@ -477,8 +560,8 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Ücretsiz',
       badge: '🎧 Evrensel Ses Kodlayıcı',
       metaTitle: 'Ücretsiz Çevrimiçi Ses Dönüştürücü — MP3’e Dönüştür',
-      metaDescription: 'Ses dosyalarını (WAV, FLAC, M4A, OGG, AAC) ve videolardaki sesi tarayıcınızda 192 kbps MP3 formatına dönüştürün. %100 ücretsiz, sunucuya yüklemesiz.',
-      heroSubtitle: 'Ses kayıtlarını ve müzik parçalarını kristal netliğinde evrensel MP3 formatına dönüştürün. %100 tarayıcınızda işlenir.'
+      metaDescription: 'Ses dosyalarını (WAV, FLAC, M4A, OGG, AAC) ve videolardaki sesi tarayıcınızda 192 kbps MP3 formatına dönüştürün. tamamen ücretsiz, sunucuya yüklemesiz.',
+      heroSubtitle: 'Ses kayıtlarını ve müzik parçalarını kristal netliğinde evrensel MP3 formatına dönüştürün.  tarayıcınızda işlenir.'
     },
     pl: {
       h1Prefix: 'Uniwersalny',
@@ -486,8 +569,8 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'za Darmo',
       badge: '🎧 Uniwersalny Transkoder Audio',
       metaTitle: 'Darmowy Konwerter Audio Online — Konwertuj na MP3',
-      metaDescription: 'Konwertuj pliki audio (WAV, FLAC, M4A, OGG, AAC) i wyodrębniaj dźwięk z wideo na MP3 192 kbps w przeglądarce. 100% darmowy i w pełni prywatny.',
-      heroSubtitle: 'Przekształcaj nagrania, utwory i ścieżki dźwiękowe z wideo w uniwersalny format MP3. Przetwarzanie w 100% w Twojej przeglądarce.'
+      metaDescription: 'Konwertuj pliki audio (WAV, FLAC, M4A, OGG, AAC) i wyodrębniaj dźwięk z wideo na MP3 192 kbps w przeglądarce. całkowicie darmowy i w pełni prywatny.',
+      heroSubtitle: 'Przekształcaj nagrania, utwory i ścieżki dźwiękowe z wideo w uniwersalny format MP3. Przetwarzanie w  w Twojej przeglądarce.'
     }
   },
   'conversor-de-audio-para-mp3': {
@@ -497,7 +580,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Free',
       badge: '🎵 Hi-Fi Stereo • 192 kbps LAME',
       metaTitle: 'Audio to MP3 Converter Online Free — Fast & Private',
-      metaDescription: 'Convert any audio recording or music file to 192 kbps stereo MP3 in your browser. 100% private, free with no file uploads to the cloud.',
+      metaDescription: 'Convert any audio recording or music file to 192 kbps stereo MP3 in your browser. completely private, free with no file uploads to the cloud.',
       heroSubtitle: 'Transform voice notes, music tracks, and audio recordings into universal MP3 compatible with every audio player. No software installation needed.'
     },
     es: {
@@ -506,7 +589,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Gratis',
       badge: '🎵 Alta Fidelidad Estéreo • 192 kbps LAME',
       metaTitle: 'Convertidor de Audio a MP3 Online Gratis — Rápido y Seguro',
-      metaDescription: 'Convierte cualquier archivo de sonido a MP3 con codificación LAME de 192 kbps estéreo en tu navegador. 100% gratuito y privado sin subir a la nube.',
+      metaDescription: 'Convierte cualquier archivo de sonido a MP3 con codificación LAME de 192 kbps estéreo en tu navegador. totalmente gratuito y privado sin subir a la nube.',
       heroSubtitle: 'Transforma notas de voz, música y pistas de audio en MP3 compatible con todos los reproductores. Sin instalar programas ni esperas.'
     },
     fr: {
@@ -515,7 +598,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Gratuit',
       badge: '🎵 Haute Fidélité Stéréo • 192 kbps LAME',
       metaTitle: 'Convertisseur Audio vers MP3 en Ligne Gratuit — Rapide',
-      metaDescription: 'Convertissez tout fichier audio en MP3 192 kbps stéréo directement dans votre navigateur. 100% gratuit, sans envoi sur serveur et totalement sécurisé.',
+      metaDescription: 'Convertissez tout fichier audio en MP3 192 kbps stéréo directement dans votre navigateur. totalement gratuit, sans envoi sur serveur et totalement sécurisé.',
       heroSubtitle: 'Transformez enregistrements vocaux, musiques et pistes audio en MP3 universel compatible avec tous les lecteurs. Sans logiciel à installer.'
     },
     ja: {
@@ -524,7 +607,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: '無料オンライン',
       badge: '🎵 192 kbps 高音質ステレオ LAME',
       metaTitle: '音声から MP3 変換オンライン無料 — 高音質 192 kbps',
-      metaDescription: 'あらゆる音声や音楽ファイルをブラウザ上で 192 kbps ステレオ MP3 に変換。サーバーへのアップロード不要で100%無料・安全。',
+      metaDescription: 'あらゆる音声や音楽ファイルをブラウザ上で 192 kbps ステレオ MP3 に変換。サーバーへのアップロード不要で完全無料・安全。',
       heroSubtitle: 'ボイスメモや楽曲ファイルを全デバイス対応の MP3 形式に変換。インストール不要で即座に処理されます。'
     },
     zh: {
@@ -533,7 +616,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: '免费在线',
       badge: '🎵 192 kbps 高保真立体声 LAME',
       metaTitle: '音频转 MP3 格式转换器免费在线 — 极速且私密',
-      metaDescription: '在浏览器中将任何音频文件转换为 192 kbps 立体声 MP3。完全本地运行，不上传云端，零等待且100%免费。',
+      metaDescription: '在浏览器中将任何音频文件转换为 192 kbps 立体声 MP3。完全本地运行，不上传云端，零等待且完全免费。',
       heroSubtitle: '将语音备忘录、音乐和各类录音转换为兼容所有播放器的标准 MP3。无需安装软件或排队等待。'
     },
     no: {
@@ -542,7 +625,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Gratis',
       badge: '🎵 Hi-Fi Stereo • 192 kbps LAME',
       metaTitle: 'Lyd til MP3 Konverter Online Gratis — Rask og Sikker',
-      metaDescription: 'Konverter lydfiler til 192 kbps stereo MP3 direkte i nettleseren. 100% privat, gratis og uten opplasting til skyen.',
+      metaDescription: 'Konverter lydfiler til 192 kbps stereo MP3 direkte i nettleseren. helt privat, gratis og uten opplasting til skyen.',
       heroSubtitle: 'Gjør om taleopptak, musikk og lydfiler til universell MP3 som fungerer overalt. Ingen programvareinstallasjon nødvendig.'
     },
     tr: {
@@ -551,7 +634,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Ücretsiz',
       badge: '🎵 Yüksek Kaliteli Stereo • 192 kbps LAME',
       metaTitle: 'Ses Dosyasını MP3’e Dönüştür Çevrimiçi Ücretsiz',
-      metaDescription: 'Tüm ses kayıtlarını ve müzik dosyalarını tarayıcınızda 192 kbps stereo MP3’e dönüştürün. %100 özel, ücretsiz ve buluta yükleme yok.',
+      metaDescription: 'Tüm ses kayıtlarını ve müzik dosyalarını tarayıcınızda 192 kbps stereo MP3’e dönüştürün.  özel, ücretsiz ve buluta yükleme yok.',
       heroSubtitle: 'Ses kayıtlarınızı tüm oynatıcılarla uyumlu MP3 formatına dönüştürün. Program yüklemeye gerek yok.'
     },
     pl: {
@@ -560,7 +643,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'za Darmo',
       badge: '🎵 Wysoka Wierność Stereo • 192 kbps LAME',
       metaTitle: 'Konwerter Audio na MP3 Online za Darmo — Szybko',
-      metaDescription: 'Konwertuj dowolny plik audio na stereo MP3 192 kbps w przeglądarce. 100% prywatny, darmowy i bez wysyłania plików do chmury.',
+      metaDescription: 'Konwertuj dowolny plik audio na stereo MP3 192 kbps w przeglądarce. w pełni prywatny, darmowy i bez wysyłania plików do chmury.',
       heroSubtitle: 'Przekształcaj notatki głosowe i utwory w uniwersalny MP3 zgodny z każdym odtwarzaczem. Bez instalowania programów.'
     }
   },
@@ -569,27 +652,27 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Prefix: 'Free Audio to',
       h1Highlight: 'MP3 Converter No Download',
       h1Suffix: 'Online',
-      badge: '🏆 No Software Download • 100% In-Browser',
+      badge: '🏆 No Software Download • Directly In-Browser',
       metaTitle: 'Free Audio to MP3 Converter — No Software Download Needed',
-      metaDescription: 'Convert audio and video to MP3 free in your browser without downloading risky software. Fast, secure, zero signup and 100% private.',
+      metaDescription: 'Convert audio and video to MP3 free in your browser without downloading risky software. Fast, secure, zero signup and completely private.',
       heroSubtitle: 'Skip bulky desktop app installations: convert any audio to MP3 directly in your browser at full native speed.'
     },
     es: {
       h1Prefix: 'Convertidor de Audio a',
       h1Highlight: 'MP3 Gratis Sin Descargas',
       h1Suffix: 'Online',
-      badge: '🏆 Sin Descargar Programas • 100% Seguro en la Web',
+      badge: '🏆 Sin Descargar Programas •  Seguro en la Web',
       metaTitle: 'Convertidor de Audio a MP3 Gratis — Sin Instalar Programas',
-      metaDescription: 'Convierte audio y video a MP3 gratis en tu navegador sin descargar programas pesados. Rápido, seguro, sin registro y 100% privado.',
+      metaDescription: 'Convierte audio y video a MP3 gratis en tu navegador sin descargar programas pesados. Rápido, seguro, sin registro y  privado.',
       heroSubtitle: 'Olvídate de instalar aplicaciones pesadas: convierte cualquier audio a MP3 en el navegador con velocidad nativa.'
     },
     fr: {
       h1Prefix: 'Convertisseur Audio vers',
       h1Highlight: 'MP3 Gratuit Sans Téléchargement',
       h1Suffix: 'en Ligne',
-      badge: '🏆 Sans Logiciel à Télécharger • 100% Web Sécurisé',
+      badge: '🏆 Sans Logiciel à Télécharger •  Web Sécurisé',
       metaTitle: 'Convertisseur Audio vers MP3 Gratuit — Sans Téléchargement',
-      metaDescription: 'Convertissez audio et vidéo en MP3 gratuitement dans votre navigateur sans installer de logiciel. Rapide, sécurisé et 100% privé.',
+      metaDescription: 'Convertissez audio et vidéo en MP3 gratuitement dans votre navigateur sans installer de logiciel. Rapide, sécurisé et  privé.',
       heroSubtitle: 'Plus besoin de télécharger d’application : convertissez vos pistes audio en MP3 directement dans le navigateur.'
     },
     ja: {
@@ -605,7 +688,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Prefix: '无需下载软件',
       h1Highlight: '免费音频转 MP3 工具',
       h1Suffix: '网页版',
-      badge: '🏆 免下载安装 • 100% 纯网页安全转码',
+      badge: '🏆 免下载安装 •  纯网页安全转码',
       metaTitle: '免费音频转 MP3 工具网页版 — 无需下载任何软件',
       metaDescription: '在浏览器中免费将音频和视频转换为 MP3，无需下载有风险的桌面软件。极速、安全、无限制且零广告插件。',
       heroSubtitle: '告别繁琐的软件安装：直接在浏览器中以本地极速将音频转为 MP3 格式。'
@@ -614,27 +697,27 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Prefix: 'Gratis Lyd til',
       h1Highlight: 'MP3 Uten Nedlasting',
       h1Suffix: 'Online',
-      badge: '🏆 Ingen Programnedlasting • 100% Trygt',
+      badge: '🏆 Ingen Programnedlasting •  Trygt',
       metaTitle: 'Gratis Lyd til MP3 Konverterer — Uten Nedlasting',
-      metaDescription: 'Konverter lyd og video til MP3 gratis i nettleseren uten å laste ned usikre programmer. Raskt, sikkert og 100% privat.',
+      metaDescription: 'Konverter lyd og video til MP3 gratis i nettleseren uten å laste ned usikre programmer. Raskt, sikkert og helt privat.',
       heroSubtitle: 'Hopp over store skrivebordsprogrammer: konverter all lyd til MP3 direkte i nettleseren med full hastighet.'
     },
     tr: {
       h1Prefix: 'İndirme Gerektirmeyen',
       h1Highlight: 'Ücretsiz MP3 Ses Dönüştürücü',
       h1Suffix: 'Çevrimiçi',
-      badge: '🏆 Program İndirmeden • %100 Güvenli Web',
+      badge: '🏆 Program İndirmeden •  Güvenli Web',
       metaTitle: 'Ücretsiz MP3 Ses Dönüştürücü — Program İndirmeden',
-      metaDescription: 'Tarayıcınızda şüpheli programlar indirmeden sesleri ücretsiz MP3’e dönüştürün. Hızlı, güvenli, üyeliksiz ve %100 gizli.',
+      metaDescription: 'Tarayıcınızda şüpheli programlar indirmeden sesleri ücretsiz MP3’e dönüştürün. Hızlı, güvenli, üyeliksiz ve tamamen gizli.',
       heroSubtitle: 'Ağır masaüstü programları yüklemeyi unutun: tüm sesleri doğrudan tarayıcınızda MP3’e dönüştürün.'
     },
     pl: {
       h1Prefix: 'Darmowy Konwerter Audio na',
       h1Highlight: 'MP3 Bez Pobierania Programów',
       h1Suffix: 'Online',
-      badge: '🏆 Bez Instalacji • 100% Bezpiecznie w Przeglądarce',
+      badge: '🏆 Bez Instalacji •  Bezpiecznie w Przeglądarce',
       metaTitle: 'Darmowy Konwerter Audio na MP3 — Bez Pobierania',
-      metaDescription: 'Konwertuj dźwięk i wideo na MP3 za darmo w przeglądarce bez instalowania ryzykownych programów. Szybko, bezpiecznie i 100% prywatnie.',
+      metaDescription: 'Konwertuj dźwięk i wideo na MP3 za darmo w przeglądarce bez instalowania ryzykownych programów. Szybko, bezpiecznie i  prywatnie.',
       heroSubtitle: 'Pomiń instalację ciężkich aplikacji: konwertuj dowolne audio na MP3 bezpośrednio w przeglądarce.'
     }
   },
@@ -645,7 +728,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Online Free',
       badge: '⚡ Fast MP3 Audio Encoder',
       metaTitle: 'Audio MP3 Converter Online Free — Crisp Sound',
-      metaDescription: 'Transform any audio or video file into lightweight 192 kbps MP3. 100% in-browser, no upload to remote servers and zero signup.',
+      metaDescription: 'Transform any audio or video file into lightweight 192 kbps MP3. directly in-browser, no upload to remote servers and zero signup.',
       heroSubtitle: 'The straightforward tool to turn music tracks and recordings into high-fidelity stereo MP3 without queues or limits.'
     },
     es: {
@@ -654,7 +737,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Online Gratis',
       badge: '⚡ Conversión Rápida a Formato MP3',
       metaTitle: 'Convertidor de Audio MP3 Online Gratis — Sonido Nítido',
-      metaDescription: 'Transforma cualquier archivo de audio o video en MP3 ligero a 192 kbps. 100% en tu navegador, sin subidas a servidores y sin registros.',
+      metaDescription: 'Transforma cualquier archivo de audio o video en MP3 ligero a 192 kbps.  en tu navegador, sin subidas a servidores y sin registros.',
       heroSubtitle: 'La herramienta práctica para convertir pistas de sonido en MP3 estéreo de alta fidelidad sin complicaciones.'
     },
     fr: {
@@ -663,7 +746,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'en Ligne Gratuit',
       badge: '⚡ Encodage Rapide au Format MP3',
       metaTitle: 'Convertisseur Audio MP3 en Ligne Gratuit — Son Net',
-      metaDescription: 'Transformez tout fichier audio ou vidéo en MP3 léger de 192 kbps. 100% dans votre navigateur, sans upload et sans inscription.',
+      metaDescription: 'Transformez tout fichier audio ou vidéo en MP3 léger de 192 kbps.  dans votre navigateur, sans upload et sans inscription.',
       heroSubtitle: 'L’outil idéal pour convertir pistes musicales et vocales en MP3 stéréo haute fidélité sans attente.'
     },
     ja: {
@@ -681,7 +764,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: '免费在线',
       badge: '⚡ 极速 MP3 音频转码引擎',
       metaTitle: '音频 MP3 转换器免费在线 — 清晰音质',
-      metaDescription: '将任何音频或视频文件转为轻量级 192 kbps MP3 格式。浏览器内 100% 本地完成，无需上传且无注册要求。',
+      metaDescription: '将任何音频或视频文件转为轻量级 192 kbps MP3 格式。浏览器内  本地完成，无需上传且无注册要求。',
       heroSubtitle: '轻松将音轨和录音转换为高保真立体声 MP3 的便捷工具，无排队与大小限制。'
     },
     no: {
@@ -690,7 +773,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Online Gratis',
       badge: '⚡ Rask MP3 Koding',
       metaTitle: 'Lyd MP3 Konverter Online Gratis — Krystallklar Lyd',
-      metaDescription: 'Gjør om alle lyd- eller videofiler til 192 kbps MP3. 100% i nettleseren, ingen opplasting og ingen registrering.',
+      metaDescription: 'Gjør om alle lyd- eller videofiler til 192 kbps MP3.  i nettleseren, ingen opplasting og ingen registrering.',
       heroSubtitle: 'Et praktisk verktøy for å gjøre lydspor og opptak om til høykvalitets MP3 uten ventetid.'
     },
     tr: {
@@ -699,7 +782,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Çevrimiçi Ücretsiz',
       badge: '⚡ Hızlı MP3 Ses Kodlayıcı',
       metaTitle: 'Ses MP3 Dönüştürücü Çevrimiçi Ücretsiz — Net Ses',
-      metaDescription: 'Tüm ses veya video dosyalarını hafif 192 kbps MP3’e dönüştürün. Tarayıcınızda %100 yerel, sunucuya yüklemesiz ve kayıtsız.',
+      metaDescription: 'Tüm ses veya video dosyalarını hafif 192 kbps MP3’e dönüştürün. Tarayıcınızda tamamen yerel, sunucuya yüklemesiz ve kayıtsız.',
       heroSubtitle: 'Müzikleri ve ses kayıtlarını yüksek kaliteli stereo MP3 formatına dönüştürmenin en pratik yolu.'
     },
     pl: {
@@ -708,7 +791,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Online za Darmo',
       badge: '⚡ Szybki Enkoder Audio MP3',
       metaTitle: 'Konwerter Audio MP3 Online za Darmo — Czysty Dźwięk',
-      metaDescription: 'Przekształć dowolny plik audio lub wideo w lekki MP3 192 kbps. 100% w przeglądarce, bez wysyłania na serwer i bez rejestracji.',
+      metaDescription: 'Przekształć dowolny plik audio lub wideo w lekki MP3 192 kbps.  w przeglądarce, bez wysyłania na serwer i bez rejestracji.',
       heroSubtitle: 'Praktyczne narzędzie do zmiany ścieżek dźwiękowych w pliki MP3 o wysokiej wierności bez zbędnych formalności.'
     }
   },
@@ -717,7 +800,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Prefix: 'Private',
       h1Highlight: 'Online Audio Converter',
       h1Suffix: 'In-Browser',
-      badge: '🌐 100% Online • Zero Upload • Private',
+      badge: '🌐  Online • Zero Upload • Private',
       metaTitle: 'Online Audio Converter — Convert Locally in Your Browser',
       metaDescription: 'Convert audio files online with complete privacy: the entire transcode process runs in your browser without uploading to servers. Free & secure.',
       heroSubtitle: 'Convert music, podcasts, and voice notes in your browser without slow cloud uploads and with guaranteed privacy.'
@@ -726,25 +809,25 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Prefix: 'Convertidor de',
       h1Highlight: 'Audio Online',
       h1Suffix: 'en el Navegador',
-      badge: '🌐 100% Online • Sin Subidas • Privado',
+      badge: '🌐  Online • Sin Subidas • Privado',
       metaTitle: 'Convertidor de Audio Online — Sin Subir Archivos a la Web',
-      metaDescription: 'Convierte archivos de audio online con total privacidad: todo el proceso corre en tu navegador sin subir a servidores. 100% gratis y seguro.',
+      metaDescription: 'Convierte archivos de audio online con total privacidad: todo el proceso corre en tu navegador sin subir a servidores. totalmente gratis y seguro.',
       heroSubtitle: 'Convierte canciones, podcasts y grabaciones en tu navegador sin esperas de subida y con privacidad garantizada.'
     },
     fr: {
       h1Prefix: 'Convertisseur d’',
       h1Highlight: 'Audio en Ligne',
       h1Suffix: 'dans le Navigateur',
-      badge: '🌐 100% en Ligne • Zéro Upload • Privé',
+      badge: '🌐  en Ligne • Zéro Upload • Privé',
       metaTitle: 'Convertisseur Audio en Ligne — Sans Envoi sur Serveur',
-      metaDescription: 'Convertissez vos fichiers audio en ligne en toute confidentialité : le traitement s’exécute dans votre navigateur sans upload. 100% gratuit.',
+      metaDescription: 'Convertissez vos fichiers audio en ligne en toute confidentialité : le traitement s’exécute dans votre navigateur sans upload. totalement gratuit.',
       heroSubtitle: 'Convertissez musiques, podcasts et voix dans votre navigateur sans téléversement lent et en toute sécurité.'
     },
     ja: {
       h1Prefix: '完全プライベート',
       h1Highlight: 'オンライン音声変換',
       h1Suffix: 'ブラウザ処理',
-      badge: '🌐 100% オンライン・アップロード不要・安全',
+      badge: '🌐  オンライン・アップロード不要・安全',
       metaTitle: 'オンライン音声変換 — サーバーへ送信しない安全設計',
       metaDescription: '完全なプライバシーで音声をオンライン変換：全処理がブラウザ内で動作しサーバーへの送信は一切ありません。無料・安全。',
       heroSubtitle: 'アップロード待ち時間ゼロ：音楽や録音をブラウザ内で瞬時に高音質変換します。'
@@ -753,7 +836,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Prefix: '纯本地隐私',
       h1Highlight: '在线音频转换器',
       h1Suffix: '浏览器端转码',
-      badge: '🌐 100% 在线 • 零上传 • 绝对隐私',
+      badge: '🌐  在线 • 零上传 • 绝对隐私',
       metaTitle: '在线音频转换器 — 纯本地浏览器处理无需上传',
       metaDescription: '在线转换音频并享受极致隐私保护：所有转码均在您的浏览器本地执行，绝不向远程服务器上传文件。免费安全。',
       heroSubtitle: '在浏览器中转换音乐、播客和语音备忘录，告别缓慢的云端上传等待，完全保障数据安全。'
@@ -762,7 +845,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Prefix: 'Privat',
       h1Highlight: 'Online Lydkonverterer',
       h1Suffix: 'i Nettleseren',
-      badge: '🌐 100% Online • Ingen Opplasting • Privat',
+      badge: '🌐  Online • Ingen Opplasting • Privat',
       metaTitle: 'Online Lydkonverterer — Konverter Lokalt i Nettleseren',
       metaDescription: 'Konverter lydfiler online med fullt personvern: alt kjøres i nettleseren din uten opplasting til eksterne servere. Gratis og trygt.',
       heroSubtitle: 'Konverter musikk og opptak i nettleseren uten trege skyopplastinger og med garantert personvern.'
@@ -771,7 +854,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Prefix: 'Gizli ve Güvenli',
       h1Highlight: 'Çevrimiçi Ses Dönüştürücü',
       h1Suffix: 'Tarayıcıda',
-      badge: '🌐 %100 Çevrimiçi • Sıfır Yükleme • Gizli',
+      badge: '🌐  Çevrimiçi • Sıfır Yükleme • Gizli',
       metaTitle: 'Çevrimiçi Ses Dönüştürücü — Sunucuya Yüklemesiz',
       metaDescription: 'Ses dosyalarını tam gizlilikle çevrimiçi dönüştürün: tüm işlem sunucuya yüklenmeden tarayıcınızda çalışır. Ücretsiz ve güvenli.',
       heroSubtitle: 'Müzik ve ses kayıtlarını yavaş yükleme süreleri olmadan tarayıcınızda güvenle dönüştürün.'
@@ -780,7 +863,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Prefix: 'Prywatny',
       h1Highlight: 'Konwerter Audio Online',
       h1Suffix: 'w Przeglądarce',
-      badge: '🌐 100% Online • Zero Wysyłania • Prywatny',
+      badge: '🌐  Online • Zero Wysyłania • Prywatny',
       metaTitle: 'Konwerter Audio Online — Bez Wysyłania Plików w Sieć',
       metaDescription: 'Konwertuj pliki audio online z pełną prywatnością: całe przetwarzanie odbywa się w Twojej przeglądarce bez wysyłania na serwery. Bezpiecznie.',
       heroSubtitle: 'Konwertuj utwory i nagrania w przeglądarce bez czekania na przesyłanie plików i z gwarancją prywatności.'
@@ -793,7 +876,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Online',
       badge: '📹 Extract MP3 from Saved YouTube Videos',
       metaTitle: 'YouTube Video to MP3 Audio Converter — Local File Extraction',
-      metaDescription: 'Extract audio from downloaded YouTube videos and Shorts into 192 kbps MP3 format. 100% in-browser, private with no file uploads.',
+      metaDescription: 'Extract audio from downloaded YouTube videos and Shorts into 192 kbps MP3 format. directly in-browser, private with no file uploads.',
       heroSubtitle: 'Convert your saved YouTube video clips into crisp, lightweight MP3 audio files to listen on mobile, headphones, or in your car.'
     },
     es: {
@@ -802,7 +885,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Online',
       badge: '📹 Extraer MP3 de Videos Descargados de YouTube',
       metaTitle: 'Convertidor de Audio de YouTube a MP3 — Formatear Videos',
-      metaDescription: 'Extrae el audio de videos y Shorts descargados de YouTube en formato MP3 a 192 kbps. 100% en el navegador, seguro y sin subir archivos.',
+      metaDescription: 'Extrae el audio de videos y Shorts descargados de YouTube en formato MP3 a 192 kbps.  en el navegador, seguro y sin subir archivos.',
       heroSubtitle: 'Convierte grabaciones y clips guardados de YouTube en audios MP3 ligeros y nítidos para escuchar en el coche o móvil.'
     },
     fr: {
@@ -811,7 +894,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'en Ligne',
       badge: '📹 Extraire le MP3 de Vidéos YouTube Enregistrées',
       metaTitle: 'Convertisseur Vidéo YouTube vers Audio MP3 — Fichiers Locaux',
-      metaDescription: 'Extrayez la piste audio de vidéos et Shorts YouTube enregistrés au format MP3 192 kbps. 100% dans le navigateur, sans upload.',
+      metaDescription: 'Extrayez la piste audio de vidéos et Shorts YouTube enregistrés au format MP3 192 kbps.  dans le navigateur, sans upload.',
       heroSubtitle: 'Convertissez vos vidéos YouTube enregistrées en fichiers MP3 légers et clairs pour les écouter partout.'
     },
     ja: {
@@ -829,7 +912,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: '免费在线',
       badge: '📹 从已下载的 YouTube 视频提取 MP3',
       metaTitle: 'YouTube 视频转 MP3 音频转换器 — 本地文件提取',
-      metaDescription: '从已保存的 YouTube 视频与 Shorts 中提取 192 kbps MP3 音频。100% 浏览器本地运行，安全且不上传任何文件。',
+      metaDescription: '从已保存的 YouTube 视频与 Shorts 中提取 192 kbps MP3 音频。 浏览器本地运行，安全且不上传任何文件。',
       heroSubtitle: '将保存在本地的 YouTube 视频片段转换为轻巧清晰的 MP3 音频，方便在手机、耳机或车载音响上收听。'
     },
     no: {
@@ -838,7 +921,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Online',
       badge: '📹 Trekk ut MP3 fra Lagrede YouTube-videoer',
       metaTitle: 'YouTube Video til MP3 Lydkonverter — Lokal Uttrekking',
-      metaDescription: 'Trekk ut lyd fra lagrede YouTube-videoer og Shorts til 192 kbps MP3-format. 100% i nettleseren, sikkert og uten filopplasting.',
+      metaDescription: 'Trekk ut lyd fra lagrede YouTube-videoer og Shorts til 192 kbps MP3-format.  i nettleseren, sikkert og uten filopplasting.',
       heroSubtitle: 'Gjør om lagrede YouTube-klipp til lette, krystallklare MP3-lydfiler for enkel lytting på farten.'
     },
     tr: {
@@ -847,7 +930,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Çevrimiçi',
       badge: '📹 Kaydedilmiş YouTube Videosundan MP3 Çıkar',
       metaTitle: 'YouTube Videosundan MP3 Ses Çıkarıcı — Yerel Dosyalar',
-      metaDescription: 'İndirilmiş YouTube ve Shorts videolarından 192 kbps MP3 ses çıkarın. %100 tarayıcıda, güvenli ve sunucuya yüklemesiz.',
+      metaDescription: 'İndirilmiş YouTube ve Shorts videolarından 192 kbps MP3 ses çıkarın.  tarayıcıda, güvenli ve sunucuya yüklemesiz.',
       heroSubtitle: 'Kaydettiğiniz YouTube kliplerini araba veya kulaklıkta dinlemek için hafif ve net MP3 ses dosyalarına dönüştürün.'
     },
     pl: {
@@ -856,7 +939,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Online',
       badge: '📹 Wyodrębnij MP3 z Zapisanych Wideo YouTube',
       metaTitle: 'Konwerter Wideo YouTube na Audio MP3 — Pliki Lokalne',
-      metaDescription: 'Wyodrębnij dźwięk z pobranych filmów YouTube i Shorts do formatu MP3 192 kbps. 100% w przeglądarce, bezpiecznie i bez wysyłania plików.',
+      metaDescription: 'Wyodrębnij dźwięk z pobranych filmów YouTube i Shorts do formatu MP3 192 kbps.  w przeglądarce, bezpiecznie i bez wysyłania plików.',
       heroSubtitle: 'Przekształcaj zapisane klipy z YouTube w lekkie i czyste pliki audio MP3 do słuchania w samochodzie lub telefonie.'
     }
   },
@@ -867,17 +950,48 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Free',
       badge: '🎵 Video to Audio Converter',
       metaTitle: 'Convert Video to Audio Online Free — Fast & Private MP3 Extractor',
-      metaDescription: 'Convert any video (MP4, MOV, MKV, AVI, WebM) to crystal-clear MP3 audio in your browser. 100% free, unlimited, private with no file uploads.',
-      heroSubtitle: 'Transform video recordings and clips into lightweight, high-fidelity stereo audio in seconds. 100% processed locally in your browser.'
+      metaDescription: 'Convert any video (MP4, MOV, MKV, AVI, WebM) to crystal-clear MP3 audio in your browser. completely free, unlimited, private with no file uploads.',
+      heroSubtitle: 'Transform video recordings and clips into lightweight, high-fidelity stereo audio in seconds.  processed locally in your browser.'
     },
-    es: {
+        es: {
       h1Prefix: 'Convertir Video en',
-      h1Highlight: 'Audio Online',
-      h1Suffix: 'Gratis',
+      h1Highlight: 'Audio Online Gratis',
+      h1Suffix: 'a MP3 192 kbps',
       badge: '🎵 Conversor de Video a Audio',
-      metaTitle: 'Convertir Video en Audio Online Gratis — Extractor Rápido y Privado',
-      metaDescription: 'Convierte cualquier video (MP4, MOV, MKV, AVI, WebM) a audio MP3 de alta calidad en tu navegador. 100% gratis, sin límites y sin subir archivos.',
-      heroSubtitle: 'Transforma grabaciones y videos en pistas de audio estéreo nítidas y ligeras en segundos. Procesamiento 100% local en tu navegador.'
+      metaTitle: 'Convertir Video en Audio Online Gratis — Pasar Video a MP3 192 kbps',
+      metaDescription: 'Convierte cualquier video en audio MP3 gratis en tu navegador. Pasa videos de YouTube guardados, grabaciones y clips a MP3 estéreo de 192 kbps. Sin subidas ni registro.',
+      heroSubtitle: 'Transforma grabaciones y videos en pistas de audio estéreo nítidas y ligeras en segundos. Procesamiento 100% local en tu navegador.',
+      dropzoneTitle: 'Arrastra tu video aquí para convertirlo en audio MP3',
+      keywords: [
+        'convertir video en audio',
+        'convertir video en audio mp3',
+        'convertir video en audio gratis',
+        'convertir video en audio iphone',
+        'convertir video en audio mp3 gratis',
+        'pasar video a audio',
+        'convertir video a audio'
+      ],
+      explainerTitle: 'Transforma cualquier video en audio MP3 de alta fidelidad',
+      explainerParagraphs: [
+        '¿Tienes una conferencia, un videoclip musical, una entrevista o un podcast en video y solo quieres escuchar el audio? Nuestra herramienta para convertir video en audio procesa archivos MP4, MOV, MKV, AVI y WebM para transformarlos en archivos de sonido MP3 codificados a 192 kbps con el motor LAME.',
+        'Ahorra espacio en la memoria de tu dispositivo y batería al reproducir tus contenidos con la pantalla apagada. Como el proceso ocurre 100% en tu navegador a través de WebAssembly, la conversión de video a audio es casi instantánea y no requiere enviar tus archivos a internet.',
+        'Compatible con videos de iPhone (MOV), grabaciones de Android (MP4) y descargas locales de YouTube o redes sociales. Solo arrastra el archivo y descarga tu pista de audio MP3 lista para reproducir en cualquier dispositivo o reproductor de coche.'
+      ],
+      proTip: 'El estándar MP3 a 192 kbps ofrece una calidad sonora prácticamente indistinguible del audio original ocupando solo una fracción del tamaño del video (aproximadamente 1,4 MB por minuto).',
+      faqs: [
+        {
+          question: '¿Cómo convertir video en audio en iPhone o Android?',
+          answer: 'Abre esta página en Safari o Chrome desde tu móvil, selecciona el video desde tu biblioteca de fotos o archivos y pulsa en "Convertir Ahora". El archivo MP3 se descargará directamente en tu carpeta de descargas sin necesidad de instalar apps de terceros.'
+        },
+        {
+          question: '¿Qué códec de audio se utiliza en la conversión?',
+          answer: 'Utilizamos el codificador oficial LAME MP3 con tasa de bits constante a 192 kbps y muestreo estéreo a 44,1 kHz, garantizando máxima compatibilidad con cualquier reproductor, equipo de sonido o app de música.'
+        },
+        {
+          question: '¿Es gratis convertir video en audio sin límites?',
+          answer: 'Sí, es completamente gratuito e ilimitado. Puedes convertir todos los videos que desees sin suscripciones ni marcas de agua.'
+        }
+      ]
     },
     fr: {
       h1Prefix: 'Convertir Vidéo en',
@@ -885,8 +999,8 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Gratuit',
       badge: '🎵 Convertisseur Vidéo vers Audio',
       metaTitle: 'Convertir Vidéo en Audio en Ligne Gratuit — Extraction Rapide',
-      metaDescription: 'Convertissez toute vidéo (MP4, MOV, MKV, AVI, WebM) en audio MP3 de haute fidélité dans votre navigateur. 100% gratuit, sans limite et sans upload.',
-      heroSubtitle: 'Transformez vos enregistrements et vidéos en pistes audio stéréo légères et nettes en quelques secondes. Traitement 100% local.'
+      metaDescription: 'Convertissez toute vidéo (MP4, MOV, MKV, AVI, WebM) en audio MP3 de haute fidélité dans votre navigateur. totalement gratuit, sans limite et sans upload.',
+      heroSubtitle: 'Transformez vos enregistrements et vidéos en pistes audio stéréo légères et nettes en quelques secondes. Traitement completely local.'
     },
     ja: {
       h1Prefix: '動画ファイルを',
@@ -903,8 +1017,8 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: '在线免费',
       badge: '🎵 视频转音频提取器',
       metaTitle: '视频转音频 在线免费转换 — 快速提取高清 MP3',
-      metaDescription: '在浏览器中直接将各类视频（MP4、MOV、MKV、AVI、WebM）转换为清晰的 MP3 音频。100% 免费无限制，无需上传云端。',
-      heroSubtitle: '数秒内将录像与视频转换为轻巧清晰的立体声音频。100% 浏览器本地安全处理。'
+      metaDescription: '在浏览器中直接将各类视频（MP4、MOV、MKV、AVI、WebM）转换为清晰的 MP3 音频。 免费无限制，无需上传云端。',
+      heroSubtitle: '数秒内将录像与视频转换为轻巧清晰的立体声音频。 浏览器本地安全处理。'
     },
     no: {
       h1Prefix: 'Konverter Video til',
@@ -912,8 +1026,8 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Gratis',
       badge: '🎵 Video til Lyd Konverterer',
       metaTitle: 'Konverter Video til Lyd Online Gratis — Rask MP3 Uttrekking',
-      metaDescription: 'Konverter enhver video (MP4, MOV, MKV, AVI, WebM) til krystallklar MP3-lyd i nettleseren. 100% gratis, uten begrensninger og uten opplasting.',
-      heroSubtitle: 'Gjør om videoopptak og klipp til lette, høykvalitets stereolydfiler på sekunder. 100% lokalt i nettleseren.'
+      metaDescription: 'Konverter enhver video (MP4, MOV, MKV, AVI, WebM) til krystallklar MP3-lyd i nettleseren. totalmente gratis, uten begrensninger og uten opplasting.',
+      heroSubtitle: 'Gjør om videoopptak og klipp til lette, høykvalitets stereolydfiler på sekunder.  lokalt i nettleseren.'
     },
     tr: {
       h1Prefix: 'Videoyu',
@@ -921,7 +1035,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Çevrimiçi Ücretsiz',
       badge: '🎵 Videodan Sese Dönüştürücü',
       metaTitle: 'Videoyu Sese Dönüştür Çevrimiçi Ücretsiz — Hızlı MP3 Çıkarma',
-      metaDescription: 'Herhangi bir videoyu (MP4, MOV, MKV, AVI, WebM) tarayıcınızda kristal netliğinde MP3 sese dönüştürün. %100 ücretsiz, sınırsız ve yüklemesiz.',
+      metaDescription: 'Herhangi bir videoyu (MP4, MOV, MKV, AVI, WebM) tarayıcınızda kristal netliğinde MP3 sese dönüştürün. tamamen ücretsiz, sınırsız ve yüklemesiz.',
       heroSubtitle: 'Video kayıtlarını ve kliplerini saniyeler içinde hafif, yüksek kaliteli stereo ses dosyalarına dönüştürün.'
     },
     pl: {
@@ -930,8 +1044,8 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Za Darmo',
       badge: '🎵 Konwerter Wideo na Audio',
       metaTitle: 'Konwertuj Wideo na Dźwięk Online Za Darmo — Ekstrakcja MP3',
-      metaDescription: 'Konwertuj dowolne wideo (MP4, MOV, MKV, AVI, WebM) na krystalicznie czysty dźwięk MP3 w przeglądarce. 100% bezpłatnie, bez limitów i bez wysyłania.',
-      heroSubtitle: 'Przekształcaj nagrania i klipy wideo w lekkie i czyste pliki audio stereo w kilka sekund. 100% lokalnie w Twojej przeglądarce.'
+      metaDescription: 'Konwertuj dowolne wideo (MP4, MOV, MKV, AVI, WebM) na krystalicznie czysty dźwięk MP3 w przeglądarce.  bezpłatnie, bez limitów i bez wysyłania.',
+      heroSubtitle: 'Przekształcaj nagrania i klipy wideo w lekkie i czyste pliki audio stereo w kilka sekund.  lokalnie w Twojej przeglądarce.'
     }
   },
   'converter-video-em-audio-gratis': {
@@ -939,34 +1053,34 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Prefix: 'Convert Video to Audio',
       h1Highlight: 'Free Online',
       h1Suffix: 'No Limits',
-      badge: '⚡ 100% Free • Unlimited • No Signup',
+      badge: '⚡ Completely Free • Unlimited • No Signup',
       metaTitle: 'Free Video to Audio Converter Online — Unlimited & No Signup',
       metaDescription: 'Convert videos to audio for free without subscriptions, account creation, or watermarks. Experience the fastest and most private web converter.',
-      heroSubtitle: 'Extract audio from your videos completely free: no paid plans, no queues, and 100% local processing on your device.'
+      heroSubtitle: 'Extract audio from your videos completely free: no paid plans, no queues, and completely local processing on your device.'
     },
     es: {
       h1Prefix: 'Convertir Video en Audio',
       h1Highlight: 'Gratis Online',
       h1Suffix: 'Sin Límites',
-      badge: '⚡ 100% Gratis • Ilimitado • Sin Registro',
+      badge: '⚡  Gratis • Ilimitado • Sin Registro',
       metaTitle: 'Convertir Video en Audio Gratis Online — Sin Límites ni Registro',
       metaDescription: 'Convierte videos a audio gratis sin suscripciones, sin crear cuentas y sin marcas de agua. La herramienta web más rápida y privada.',
-      heroSubtitle: 'Extrae audio de tus videos sin costo: sin planes de pago, sin esperas y con procesamiento 100% local en tu dispositivo.'
+      heroSubtitle: 'Extrae audio de tus videos sin costo: sin planes de pago, sin esperas y con procesamiento completely local en tu dispositivo.'
     },
     fr: {
       h1Prefix: 'Convertir Vidéo en Audio',
       h1Highlight: 'Gratuit en Ligne',
       h1Suffix: 'Sans Limite',
-      badge: '⚡ 100% Gratuit • Illimité • Sans Inscription',
+      badge: '⚡  Gratuit • Illimité • Sans Inscription',
       metaTitle: 'Convertir Vidéo en Audio Gratuit en Ligne — Illimité & Sans Inscription',
       metaDescription: 'Convertissez des vidéos en audio gratuitement sans abonnement, sans création de compte et sans filigrane. L’outil le plus rapide et privé.',
-      heroSubtitle: 'Extrayez l’audio de vos vidéos sans frais : aucun plan payant, aucune file d’attente et un traitement 100% local sur votre appareil.'
+      heroSubtitle: 'Extrayez l’audio de vos vidéos sans frais : aucun plan payant, aucune file d’attente et un traitement completely local sur votre appareil.'
     },
     ja: {
       h1Prefix: '完全無料',
       h1Highlight: '動画から音声へ変換',
       h1Suffix: '制限なし',
-      badge: '⚡ 100%無料・登録不要・無制限',
+      badge: '⚡ 完全無料・登録不要・無制限',
       metaTitle: '無料 動画音声変換オンライン — 登録不要・利用制限なし',
       metaDescription: '有料プランや会員登録、透かしなしで動画を音声に完全無料変換。高速かつプライバシー重視のブラウザ内変換ツール。',
       heroSubtitle: '動画から音声を完全無料で抽出：待ち時間なし、日次制限なし、端末内ローカル処理で安全に変換。'
@@ -975,37 +1089,37 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Prefix: '免费在线',
       h1Highlight: '视频转音频工具',
       h1Suffix: '无限次数',
-      badge: '⚡ 100%免费 • 免注册 • 无限制',
+      badge: '⚡ 完全免费 • 免注册 • 无限制',
       metaTitle: '免费视频转音频 在线转换器 — 无需注册且不限次数',
       metaDescription: '零费用将视频转换为音频，无需购买会员、无需注册账号、绝无水印。体验速度最快且保护隐私的本地转换工具。',
-      heroSubtitle: '免费提取视频中的音频：无付费门槛、无需排队，100% 依赖本地设备算力。'
+      heroSubtitle: '免费提取视频中的音频：无付费门槛、无需排队， 依赖本地设备算力。'
     },
     no: {
       h1Prefix: 'Konverter Video til Lyd',
       h1Highlight: 'Gratis Online',
       h1Suffix: 'Ubegrenset',
-      badge: '⚡ 100% Gratis • Ubegrenset • Uten Registrering',
+      badge: '⚡  Gratis • Ubegrenset • Uten Registrering',
       metaTitle: 'Gratis Video til Lyd Konverterer — Ubegrenset & Uten Registrering',
       metaDescription: 'Konverter videoer til lyd gratis uten abonnement, kontooppretting eller vannmerker. Rask og privat nettbasert konvertering.',
-      heroSubtitle: 'Trekk ut lyd fra videoene dine helt gratis: ingen betalingsmurer, ingen køer og 100% lokal prosessering.'
+      heroSubtitle: 'Trekk ut lyd fra videoene dine helt gratis: ingen betalingsmurer, ingen køer og  lokal prosessering.'
     },
     tr: {
       h1Prefix: 'Videoyu Sese Dönüştür',
       h1Highlight: 'Ücretsiz Çevrimiçi',
       h1Suffix: 'Limitsiz',
-      badge: '⚡ %100 Ücretsiz • Limitsiz • Kayıtsız',
+      badge: '⚡  Ücretsiz • Limitsiz • Kayıtsız',
       metaTitle: 'Ücretsiz Videodan Sese Dönüştürücü — Limitsiz ve Kayıtsız',
       metaDescription: 'Abonelik, hesap oluşturma veya filigran olmadan videoları ücretsiz olarak sese dönüştürün. En hızlı ve gizli dönüştürücü.',
-      heroSubtitle: 'Videolarınızdaki sesi tamamen ücretsiz çıkarın: ücretli plan yok, sıra bekleme yok, cihazınızda %100 yerel işlem.'
+      heroSubtitle: 'Videolarınızdaki sesi tamamen ücretsiz çıkarın: ücretli plan yok, sıra bekleme yok, cihazınızda tamamen yerel işlem.'
     },
     pl: {
       h1Prefix: 'Konwertuj Wideo na Audio',
       h1Highlight: 'Za Darmo Online',
       h1Suffix: 'Bez Limitów',
-      badge: '⚡ 100% Za Darmo • Bez Rejestracji • Bez Limitów',
+      badge: '⚡  Za Darmo • Bez Rejestracji • Bez Limitów',
       metaTitle: 'Darmowy Konwerter Wideo na Audio Online — Bez Rejestracji',
-      metaDescription: 'Konwertuj wideo na dźwięk za darmo bez subskrypcji, zakładania konta i znaków wodnych. Najszybsze i w 100% prywatne narzędzie.',
-      heroSubtitle: 'Wyodrębniaj dźwięk z wideo całkowicie za darmo: bez płatności, bez kolejek i z przetwarzaniem w 100% na Twoim urządzeniu.'
+      metaDescription: 'Konwertuj wideo na dźwięk za darmo bez subskrypcji, zakładania konta i znaków wodnych. Najszybsze i w  prywatne narzędzie.',
+      heroSubtitle: 'Wyodrębniaj dźwięk z wideo całkowicie za darmo: bez płatności, bez kolejek i z przetwarzaniem w  na Twoim urządzeniu.'
     }
   },
   'extrair-audio-de-video': {
@@ -1018,14 +1132,47 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       metaDescription: 'Extract audio tracks from any video file (MP4, MOV, MKV, AVI) to high-fidelity 192 kbps MP3 directly in your browser. Fast, free, and private.',
       heroSubtitle: 'Isolate sound tracks from videos, lectures, and recordings into pristine MP3 files without carrying unnecessary video bulk.'
     },
-    es: {
+        es: {
       h1Prefix: 'Extraer Audio de',
-      h1Highlight: 'Video Online',
-      h1Suffix: 'Gratis',
+      h1Highlight: 'Video Online Gratis',
+      h1Suffix: 'en MP3 192 kbps',
       badge: '🎧 Extracción Directa de Pistas de Audio',
-      metaTitle: 'Extraer Audio de Video Online Gratis — Guardar Sonido en MP3',
-      metaDescription: 'Extrae pistas de audio de cualquier video (MP4, MOV, MKV, AVI) a MP3 de 192 kbps de alta fidelidad directamente en tu navegador. Rápido y privado.',
-      heroSubtitle: 'Aísla la banda sonora de videos, conferencias y grabaciones en archivos MP3 nítidos sin cargar con el peso visual.'
+      metaTitle: 'Extraer Audio de Video Online Gratis — Aislar Pista en MP3',
+      metaDescription: 'Extrae el audio de cualquier video (MP4, MOV, MKV, grabaciones de móvil) en MP3 estéreo de 192 kbps. Totalmente gratis, rápido, privado y sin subir archivos a la red.',
+      heroSubtitle: 'Aísla la banda sonora de videos, conferencias y grabaciones en archivos MP3 nítidos sin cargar con el peso visual.',
+      dropzoneTitle: 'Arrastra tu archivo de video aquí para extraer la pista de audio',
+      keywords: [
+        'extraer audio de video',
+        'extraer audio de un video',
+        'extraer audio de video online',
+        'extraer audio de video mp4',
+        'extraer audio de video online gratis',
+        'extraer audio de vídeo',
+        'extraer audio de un video online',
+        'como extraer audio de un video',
+        'extraer audio de un video mp4',
+        'extraer audio de un video gratis'
+      ],
+      explainerTitle: '¿Cómo extraer el audio de un video en segundos?',
+      explainerParagraphs: [
+        'Aislar la pista sonora de una grabación de video nunca fue tan fácil. Nuestra herramienta permite extraer audio de un video MP4, MOV o AVI separando los flujos de audio y recodificándolos en MP3 estéreo nítido de 192 kbps sin perder frecuencias audibles.',
+        'Esta función es perfecta para extraer voces de entrevistas, audios de reels de Instagram o TikTok guardados en tu móvil, notas de voz en video o pistas musicales. Al realizarse el proceso de forma local en tu navegador con tecnología WebAssembly, tus archivos personales nunca se comparten ni se almacenan en servidores externos.',
+        'Si te preguntas cómo extraer audio de un video de forma gratuita y sin marcas, simplemente arrastra tu archivo a la zona superior y haz clic en extraer. Obtendrás un archivo MP3 ligero y universalmente compatible con todos los reproductores.'
+      ],
+      faqs: [
+        {
+          question: '¿Cómo extraer el audio de un video MP4 en mi ordenador o móvil?',
+          answer: 'Solo debes arrastrar tu archivo MP4 a la zona de carga de esta página y hacer clic en "Convertir Ahora". El motor WebAssembly separará el canal de video y generará un archivo MP3 en segundos listo para descargar.'
+        },
+        {
+          question: '¿Puedo extraer audio de un video descargado de YouTube o Instagram?',
+          answer: 'Sí. Si tienes el archivo de video descargado en tu equipo (en formato MP4, WebM o MOV), puedes cargarlo aquí para extraer su pista de sonido en MP3 limpio y sin anuncios.'
+        },
+        {
+          question: '¿Qué ocurre si el video contiene varias pistas de sonido?',
+          answer: 'Por defecto, el extractor selecciona la pista de audio estéreo principal y la convierte a MP3 de 192 kbps manteniendo la sincronización y la amplitud acústica original.'
+        }
+      ]
     },
     fr: {
       h1Prefix: 'Extraire l’Audio d’une',
@@ -1163,17 +1310,37 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Online',
       badge: '🔴 Extract Audio from Saved YouTube Clips',
       metaTitle: 'Extract Audio from YouTube Video to MP3 — Local Files',
-      metaDescription: 'Extract audio tracks from saved YouTube and Shorts video files into 192 kbps MP3 format. 100% private in browser with zero server uploads.',
+      metaDescription: 'Extract audio tracks from saved YouTube and Shorts video files into 192 kbps MP3 format. completely private in browser with zero server uploads.',
       heroSubtitle: 'Turn downloaded YouTube recordings and clips into lightweight, clear MP3 audio files for seamless listening anywhere.'
     },
-    es: {
-      h1Prefix: 'Extraer Audio de Video de',
-      h1Highlight: 'YouTube a MP3',
-      h1Suffix: 'Online',
-      badge: '🔴 Extraer Audio de Videos Guardados de YouTube',
-      metaTitle: 'Extraer Audio de Video de YouTube a MP3 — Archivos Locales',
-      metaDescription: 'Extrae pistas de audio de videos guardados de YouTube y Shorts a MP3 de 192 kbps. 100% privado en tu navegador sin subir archivos.',
-      heroSubtitle: 'Convierte videos y grabaciones descargadas de YouTube en archivos MP3 ligeros y claros para escuchar en cualquier lugar.'
+        es: {
+      h1Prefix: 'Extraer Audio de',
+      h1Highlight: 'Videos de YouTube Guardados',
+      h1Suffix: 'a MP3',
+      badge: '🔴 Extraer Audio de Clips de YouTube',
+      metaTitle: 'Extraer Audio de Video de YouTube Guardado a MP3 — Local y Privado',
+      metaDescription: 'Extrae el audio de tus videos y Shorts de YouTube descargados localmente a MP3 de 192 kbps. Sin subir archivos a servidores externos, rápido y gratuito.',
+      heroSubtitle: 'Convierte tus videos y Shorts descargados de YouTube en pistas MP3 ligeras y nítidas para escuchar con la pantalla apagada.',
+      dropzoneTitle: 'Arrastra tu video de YouTube descargado para extraer el audio',
+      keywords: [
+        'extraer audio de video youtube',
+        'extraer audio de video de youtube',
+        'extraer audio de un video de youtube',
+        'como extraer audio de un video de youtube',
+        'extraer audio de video url gratis',
+        'extraer audio de video url'
+      ],
+      explainerTitle: 'Convierte tus videos y Shorts de YouTube descargados en MP3',
+      explainerParagraphs: [
+        'Convierte archivos de video descargados de YouTube (MP4 o WebM) en audios MP3 ligeros para escuchar en tus auriculares sin gastar datos ni mantener la pantalla encendida. Por motivos de privacidad y seguridad, procesamos directamente los archivos guardados en tu dispositivo en lugar de depender de enlaces URL de terceros que suelen fallar o contener publicidad invasiva.',
+        'El conversor garantiza una extracción fiel a 192 kbps, eliminando el peso del flujo de video y dejando únicamente el sonido nítido para podcasts, música o charlas.'
+      ],
+      faqs: [
+        {
+          question: '¿Por qué procesar archivos descargados en vez de ingresar una URL de YouTube?',
+          answer: 'Las herramientas basadas en URL suelen sufrir caídas por bloqueos de YouTube, captchas y saturación de servidores, además de exponer tu dirección IP. Procesar el archivo que ya tienes en tu ordenador o móvil es 100% privado, instantáneo y no depende de servidores externos.'
+        }
+      ]
     },
     fr: {
       h1Prefix: 'Extraire l’Audio de Vidéos',
@@ -1181,7 +1348,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'en Ligne',
       badge: '🔴 Extraire l’Audio de Vidéos YouTube Enregistrées',
       metaTitle: 'Extraire l’Audio de Vidéos YouTube en MP3 — Fichiers Locaux',
-      metaDescription: 'Extrayez la piste audio de vidéos et Shorts YouTube enregistrés en MP3 192 kbps. 100% privé dans le navigateur, sans upload.',
+      metaDescription: 'Extrayez la piste audio de vidéos et Shorts YouTube enregistrés en MP3 192 kbps.  privé dans le navigateur, sans upload.',
       heroSubtitle: 'Transformez vos clips et vidéos YouTube téléchargés en fichiers audio MP3 légers et clairs à écouter partout.'
     },
     ja: {
@@ -1199,7 +1366,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: '在线工具',
       badge: '🔴 提取已保存 YouTube 视频的音频',
       metaTitle: '从 YouTube 视频提取 MP3 音频 — 本地媒体文件处理',
-      metaDescription: '从已保存的 YouTube 和 Shorts 视频中提取 192 kbps MP3 音轨。100% 浏览器本地安全运行，无需上传文件。',
+      metaDescription: '从已保存的 YouTube 和 Shorts 视频中提取 192 kbps MP3 音轨。 浏览器本地安全运行，无需上传文件。',
       heroSubtitle: '将下载保存的 YouTube 视频与剪辑转化为体积小巧、音质清晰的 MP3 音频。'
     },
     no: {
@@ -1208,7 +1375,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Online',
       badge: '🔴 Trekk ut Lyd fra Lagrede YouTube-klipp',
       metaTitle: 'Trekk ut Lyd fra YouTube-video til MP3 — Lokale Filer',
-      metaDescription: 'Trekk ut lydspor fra lagrede YouTube- og Shorts-videofiler til 192 kbps MP3. 100% privat i nettleseren uten filopplasting.',
+      metaDescription: 'Trekk ut lydspor fra lagrede YouTube- og Shorts-videofiler til 192 kbps MP3. helt privat i nettleseren uten filopplasting.',
       heroSubtitle: 'Gjør om lagrede YouTube-opptak og klipp til lette, krystallklare MP3-lydfiler for enkel lytting.'
     },
     tr: {
@@ -1217,7 +1384,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Çevrimiçi',
       badge: '🔴 Kaydedilmiş YouTube Videolarından MP3',
       metaTitle: 'YouTube Videosundan MP3 Ses Çıkar — Yerel Dosyalar',
-      metaDescription: 'İndirilmiş YouTube ve Shorts video dosyalarından 192 kbps MP3 ses parçasını çıkarın. %100 tarayıcıda, özel ve yüklemesiz.',
+      metaDescription: 'İndirilmiş YouTube ve Shorts video dosyalarından 192 kbps MP3 ses parçasını çıkarın.  tarayıcıda, özel ve yüklemesiz.',
       heroSubtitle: 'İndirdiğiniz YouTube kayıtlarını her yerde dinlemek için hafif ve net MP3 ses dosyalarına dönüştürün.'
     },
     pl: {
@@ -1226,11 +1393,11 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Online',
       badge: '🔴 Wyodrębnij Audio z Zapisanych Klipów YouTube',
       metaTitle: 'Wyodrębnij Dźwięk z Wideo YouTube do MP3 — Pliki Lokalne',
-      metaDescription: 'Wyodrębnij ścieżkę audio z zapisanych filmów YouTube i Shorts do formatu MP3 192 kbps. 100% prywatnie w przeglądarce.',
+      metaDescription: 'Wyodrębnij ścieżkę audio z zapisanych filmów YouTube i Shorts do formatu MP3 192 kbps.  prywatnie w przeglądarce.',
       heroSubtitle: 'Zmieniaj pobrane klipy z YouTube w lekkie i czyste pliki MP3 do wygodnego słuchania.'
     }
   },
-  'compactar-video': {
+  'compressor-de-video': {
     en: {
       h1Prefix: 'Compress Video',
       h1Highlight: 'Online Free',
@@ -1238,16 +1405,68 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       badge: '📦 Smart Video Compressor',
       metaTitle: 'Compress Video Online Free — Reduce Size Without Losing Quality',
       metaDescription: 'Compress MP4, MOV, and other video files online directly in your browser. Reduce file size by up to 80% with maximum visual clarity, no uploads, no signups.',
-      heroSubtitle: 'Shrink heavy videos in seconds while preserving crisp 1080p and 720p HD resolution. 100% private local processing in your browser.'
+      heroSubtitle: 'Shrink heavy videos in seconds while preserving crisp 1080p and 720p HD resolution. completely private local processing in your browser.'
     },
-    es: {
+        es: {
       h1Prefix: 'Comprimir Video',
       h1Highlight: 'Online Gratis',
       h1Suffix: 'sin Perder Calidad',
       badge: '📦 Compresor Inteligente de Video',
       metaTitle: 'Comprimir Video Online Gratis — Reducir Tamaño sin Perder Calidad',
-      metaDescription: 'Comprime videos MP4, MOV y otros formatos online directamente en tu navegador. Reduce hasta un 80% del tamaño con nitidez visual máxima y sin subir archivos.',
-      heroSubtitle: 'Reduce el peso de tus videos en segundos manteniendo excelente resolución en 1080p y 720p. Procesamiento 100% privado en tu navegador.'
+      metaDescription: 'Comprime videos online gratis en tu navegador. Reduce hasta un 80% el tamaño de tus videos (MP4, MOV, MKV) sin perder nitidez, sin marcas de agua y 100% privado.',
+      heroSubtitle: 'Reduce el peso de tus videos en segundos manteniendo excelente resolución en 1080p y 720p. Procesamiento 100% privado en tu navegador.',
+      dropzoneTitle: 'Arrastra tu video aquí para comprimir y reducir tamaño',
+      keywords: [
+        'comprimir video',
+        'comprimir video online',
+        'comprimir video gratis',
+        'comprimir video online gratis',
+        'comprimir video sin perder calidad',
+        'reducir tamaño de video',
+        'reducir tamaño de vídeo',
+        'reducir tamaño de video online',
+        'comprimir mp4',
+        'comprimir video para whatsapp'
+      ],
+      explainerTitle: '¿Cómo comprimir videos online sin perder calidad visual?',
+      explainerParagraphs: [
+        'Nuestra herramienta para comprimir video en el navegador utiliza el motor FFmpeg WebAssembly, permitiendo reducir el tamaño de video drásticamente sin sacrificar la nitidez de la imagen. Al ajustar el factor de frecuencia constante (CRF 26 o 30) y reorganizar los fotogramas clave, el compresor elimina datos redundantes que el ojo humano no percibe, logrando reducir el peso del archivo entre un 50% y un 80%.',
+        'A diferencia de otros servicios en la nube que limitan el tamaño a 100 MB o te hacen esperar en lentas colas de procesamiento, aquí puedes comprimir video gratis y de forma ilimitada directamente en la memoria RAM de tu equipo. Ni un solo byte de tu video se transmite por internet, lo que garantiza velocidad máxima y privacidad absoluta conforme al RGPD.',
+        'Ya sea que necesites comprimir un video para enviarlo por WhatsApp sin sobrepasar el límite de 16 MB, adjuntarlo en un correo electrónico de Gmail o Outlook, o aligerar archivos para tu página web, puedes elegir entre perfiles de compresión equilibrada, máxima o presets específicos para redes sociales.'
+      ],
+      proTip: 'Para comprimir video sin perder calidad perceptible, selecciona el perfil "Compresión Media (CRF 26)". Mantiene la resolución nativa hasta 1080p Full HD y reduce el peso aproximadamente a la mitad, ideal para presentaciones y publicaciones en redes.',
+      sourceDetailsTitle: 'Formatos de entrada compatibles:',
+      sourceDetails: [
+        'MP4 (H.264 / AVC, H.265 / HEVC)',
+        'MOV (iPhone / QuickTime de Apple)',
+        'MKV, AVI, WebM, WMV, FLV',
+        'Archivos de cámaras GoPro, Sony MTS/M2TS'
+      ],
+      targetDetailsTitle: 'Ventajas de la compresión en el navegador:',
+      targetDetails: [
+        'Reducción real de hasta un 80% en megabytes',
+        'Sin marcas de agua ni límites de duración',
+        'Procesamiento en memoria RAM (cero subidas a servidores)',
+        'Optimizado con contenedor MP4 de inicio rápido (faststart)'
+      ],
+      faqs: [
+        {
+          question: '¿Cómo comprimir un video sin perder calidad visual?',
+          answer: 'Para comprimir un video manteniendo la máxima fidelidad, utiliza nuestro perfil "Compresión Media" (CRF 26). Este ajuste aplica una cuantización adaptativa que comprime los fondos y escenas estáticas sin tocar los detalles nítidos de los sujetos principales ni el audio estéreo.'
+        },
+        {
+          question: '¿Puedo comprimir video gratis sin límites de archivos ni marcas de agua?',
+          answer: 'Sí, 100% gratis. Al ejecutarse directamente en tu navegador con WebAssembly, no asumimos costes de servidores remotos. Por eso no imponemos marcas de agua, registros de usuario ni límites en la cantidad de videos que puedes comprimir.'
+        },
+        {
+          question: '¿Cómo comprimir video para enviar por WhatsApp?',
+          answer: 'WhatsApp tiene un límite de envío directo de 16 MB. Selecciona el ajuste "Optimizado para WhatsApp": el sistema calculará automáticamente la tasa de bits (bitrate) ideal según la duración del clip para que el archivo final pese menos de 16 MB en resolución 720p HD.'
+        },
+        {
+          question: '¿Mis videos privados se suben a algún servidor?',
+          answer: 'No. Ningún byte sale de tu dispositivo. Todo el proceso de compresión de video ocurre de forma local en la memoria RAM de tu móvil u ordenador, garantizando confidencialidad absoluta.'
+        }
+      ]
     },
     fr: {
       h1Prefix: 'Compresser Vidéo',
@@ -1256,7 +1475,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       badge: '📦 Compression Vidéo Intelligente',
       metaTitle: 'Compresser Vidéo en Ligne Gratuit — Réduire la Taille sans Perte',
       metaDescription: 'Compressez des vidéos MP4, MOV et d’autres formats en ligne directement dans votre navigateur. Réduisez jusqu’à 80% du poids sans perte de netteté.',
-      heroSubtitle: 'Réduisez le poids de vos vidéos en quelques secondes tout en conservant une excellente résolution 1080p et 720p. Traitement 100% local.'
+      heroSubtitle: 'Réduisez le poids de vos vidéos en quelques secondes tout en conservant une excellente résolution 1080p et 720p. Traitement completely local.'
     },
     ja: {
       h1Prefix: '画質を落とさずに',
@@ -1274,7 +1493,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       badge: '📦 智能视频压缩器',
       metaTitle: '在线免费压缩视频 — 无损画质大幅缩小视频体积',
       metaDescription: '在浏览器中直接压缩 MP4、MOV 等视频文件。体积最高缩减 80%，完美保留 1080p/720p 清晰画质，零云端上传。',
-      heroSubtitle: '数秒内将庞大的视频文件体积缩减过半，同时保留清晰细腻的画质。100% 本地运算保护隐私。'
+      heroSubtitle: '数秒内将庞大的视频文件体积缩减过半，同时保留清晰细腻的画质。 本地运算保护隐私。'
     },
     no: {
       h1Prefix: 'Komprimer Video',
@@ -1283,7 +1502,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       badge: '📦 Smart Videokomprimering',
       metaTitle: 'Komprimer Video Online Gratis — Reduser Størrelse Uten Kvalitetstap',
       metaDescription: 'Komprimer MP4, MOV og andre videoer online direkte i nettleseren. Reduser filstørrelsen med opptil 80% uten uskarpe bilder og uten opplasting.',
-      heroSubtitle: 'Krymp tunge videoer på sekunder og behold skarp 1080p og 720p HD-oppløsning. 100% privat i nettleseren.'
+      heroSubtitle: 'Krymp tunge videoer på sekunder og behold skarp 1080p og 720p HD-oppløsning. helt privat i nettleseren.'
     },
     tr: {
       h1Prefix: 'Kalite Kaybı Olmadan',
@@ -1302,6 +1521,183 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       metaTitle: 'Kompresuj Wideo Online Za Darmo — Zmniejsz Rozmiar bez Utraty Jakości',
       metaDescription: 'Kompresuj pliki MP4, MOV i inne wideo online w przeglądarce. Zmniejsz rozmiar nawet o 80% z zachowaniem ostrości obrazu, bez wysyłania plików.',
       heroSubtitle: 'Zmniejsz wagę ciężkich filmów w kilka sekund, zachowując wyrazistą rozdzielczość 1080p i 720p HD.'
+    }
+  },
+  'compactar-video': {
+    en: {
+      h1Prefix: 'Compress Video',
+      h1Highlight: 'Online Free',
+      h1Suffix: 'Without Losing Quality',
+      badge: '📦 Smart Video Compressor',
+      metaTitle: 'Compress Video Online Free — Reduce Size Without Losing Quality',
+      metaDescription: 'Compress MP4, MOV, and other video files online directly in your browser. Reduce file size by up to 80% with maximum visual clarity, no uploads, no signups.',
+      heroSubtitle: 'Shrink heavy videos in seconds while preserving crisp 1080p and 720p HD resolution. completely private local processing in your browser.'
+    },
+    es: {
+      h1Prefix: 'Comprimir Video',
+      h1Highlight: 'Online Gratis',
+      h1Suffix: 'sin Perder Calidad',
+      badge: '📦 Compresor Inteligente de Video',
+      metaTitle: 'Comprimir Video Online Gratis — Reducir Tamaño sin Perder Calidad',
+      metaDescription: 'Comprime videos MP4, MOV y otros formatos online directamente en tu navegador. Reduce hasta un 80% del tamaño con nitidez visual máxima y sin subir archivos.',
+      heroSubtitle: 'Reduce el peso de tus videos en segundos manteniendo excelente resolución en 1080p y 720p. Procesamiento  privado en tu navegador.'
+    },
+    fr: {
+      h1Prefix: 'Compresser Vidéo',
+      h1Highlight: 'en Ligne Gratuit',
+      h1Suffix: 'sans Perdre en Qualité',
+      badge: '📦 Compression Vidéo Intelligente',
+      metaTitle: 'Compresser Vidéo en Ligne Gratuit — Réduire la Taille sans Perte',
+      metaDescription: 'Compressez des vidéos MP4, MOV et d’autres formats en ligne directement dans votre navigateur. Réduisez jusqu’à 80% du poids sans perte de netteté.',
+      heroSubtitle: 'Réduisez le poids de vos vidéos en quelques secondes tout en conservant une excellente résolution 1080p et 720p. Traitement completely local.'
+    },
+    ja: {
+      h1Prefix: '画質を落とさずに',
+      h1Highlight: '動画サイズを圧縮',
+      h1Suffix: '無料オンライン',
+      badge: '📦 スマート動画圧縮ツール',
+      metaTitle: '動画圧縮 無料オンライン — 画質を落とさずに容量削減',
+      metaDescription: 'MP4、MOV などの動画をブラウザ内で直接スマート圧縮。最大80%容量削減しながら鮮明な画質を維持。クラウド送信なしで完全安全。',
+      heroSubtitle: '1080p / 720p の高画質を保ったまま、重い動画のファイルサイズを数秒で軽量化します。'
+    },
+    zh: {
+      h1Prefix: '智能无损',
+      h1Highlight: '视频压缩工具',
+      h1Suffix: '在线免费',
+      badge: '📦 智能视频压缩器',
+      metaTitle: '在线免费压缩视频 — 无损画质大幅缩小视频体积',
+      metaDescription: '在浏览器中直接压缩 MP4、MOV 等视频文件。体积最高缩减 80%，完美保留 1080p/720p 清晰画质，零云端上传。',
+      heroSubtitle: '数秒内将庞大的视频文件体积缩减过半，同时保留清晰细腻的画质。 本地运算保护隐私。'
+    },
+    no: {
+      h1Prefix: 'Komprimer Video',
+      h1Highlight: 'Online Gratis',
+      h1Suffix: 'Uten Kvalitetstap',
+      badge: '📦 Smart Videokomprimering',
+      metaTitle: 'Komprimer Video Online Gratis — Reduser Størrelse Uten Kvalitetstap',
+      metaDescription: 'Komprimer MP4, MOV og andre videoer online direkte i nettleseren. Reduser filstørrelsen med opptil 80% uten uskarpe bilder og uten opplasting.',
+      heroSubtitle: 'Krymp tunge videoer på sekunder og behold skarp 1080p og 720p HD-oppløsning. helt privat i nettleseren.'
+    },
+    tr: {
+      h1Prefix: 'Kalite Kaybı Olmadan',
+      h1Highlight: 'Video Sıkıştır',
+      h1Suffix: 'Çevrimiçi Ücretsiz',
+      badge: '📦 Akıllı Video Sıkıştırıcı',
+      metaTitle: 'Video Sıkıştır Çevrimiçi Ücretsiz — Kalite Kaybı Olmadan Boyut Küçült',
+      metaDescription: 'MP4, MOV ve diğer videoları tarayıcınızda doğrudan sıkıştırın. Maksimum netlikle dosya boyutunu %80’e kadar küçültün, yükleme ve kayıt yok.',
+      heroSubtitle: '1080p ve 720p netliğini koruyarak ağır videolarınızın boyutunu saniyeler içinde küçültün.'
+    },
+    pl: {
+      h1Prefix: 'Kompresuj Wideo',
+      h1Highlight: 'Online Za Darmo',
+      h1Suffix: 'Bez Utraty Jakości',
+      badge: '📦 Inteligentna Kompresja Wideo',
+      metaTitle: 'Kompresuj Wideo Online Za Darmo — Zmniejsz Rozmiar bez Utraty Jakości',
+      metaDescription: 'Kompresuj pliki MP4, MOV i inne wideo online w przeglądarce. Zmniejsz rozmiar nawet o 80% z zachowaniem ostrości obrazu, bez wysyłania plików.',
+      heroSubtitle: 'Zmniejsz wagę ciężkich filmów w kilka sekund, zachowując wyrazistą rozdzielczość 1080p i 720p HD.'
+    }
+  },
+  'compressor-de-video-mp4': {
+    en: {
+      h1Prefix: 'Compress Video',
+      h1Highlight: 'MP4 Online',
+      h1Suffix: 'Free',
+      badge: '🎬 MP4 File Optimizer',
+      metaTitle: 'Compress MP4 Video Online Free — Reduce MP4 File Size',
+      metaDescription: 'Compress MP4 video files online without losing resolution. Reduce megabytes with fast web H.264 video and crystal-clear AAC audio.',
+      heroSubtitle: 'Shrink heavy MP4 files without sacrificing image crispness or universal device compatibility.'
+    },
+        es: {
+      h1Prefix: 'Comprimir Video',
+      h1Highlight: 'MP4 Online Gratis',
+      h1Suffix: 'sin Perder Calidad',
+      badge: '🎬 Optimizador de Archivos MP4',
+      metaTitle: 'Comprimir Video MP4 Online Gratis — Reducir Tamaño de MP4',
+      metaDescription: 'Comprime archivos MP4 online gratis en tu navegador. Reduce los megabytes de tus videos MP4 manteniendo códec H.264 rápido y audio AAC nítido. Sin subida de archivos.',
+      heroSubtitle: 'Reduce el tamaño de cualquier video MP4 sin comprometer la calidad visual ni la compatibilidad universal en dispositivos.',
+      dropzoneTitle: 'Arrastra tu archivo MP4 aquí para comprimirlo',
+      keywords: [
+        'comprimir video mp4',
+        'comprimir video mp4 gratis',
+        'comprimir mp4',
+        'comprimir mp4 online',
+        'comprimir mp4 gratis',
+        'comprimir mp4 gratuito',
+        'comprimir mp4 online gratis',
+        'reducir tamaño de video',
+        'reducir tamaño de vídeo'
+      ],
+      explainerTitle: 'Compresión especializada para archivos MP4',
+      explainerParagraphs: [
+        'El formato MP4 con códec H.264 es el estándar universal de internet. Nuestro optimizador permite comprimir video MP4 online reescribiendo la estructura del contenedor con la bandera faststart (moov atom al inicio del archivo), permitiendo que el video comience a reproducirse instantáneamente antes de terminar de descargarse.',
+        'Al comprimir MP4 con algoritmos de cuantización adaptativa, eliminamos tasas de bits excesivas generadas por grabaciones de teléfonos móviles y cámaras réflex, reduciendo el peso del archivo a la mitad sin que se perciba pérdida de resolución ni artefactos de compresión.',
+        'Ideal para enviar por correo electrónico, subir a plataformas web o almacenar en la nube ahorrando espacio en disco.'
+      ],
+      proTip: 'Si vas a publicar el video en una web o enviarlo por correo, comprimir MP4 con resolución máxima de 1080p y audio AAC a 128 kbps ofrece el mejor balance entre peso pluma y nitidez profesional.',
+      faqs: [
+        {
+          question: '¿Por qué comprimir MP4 con esta herramienta en lugar de otros sitios?',
+          answer: 'Porque es instantáneo y seguro: no tienes que esperar a subir un archivo de cientos de megabytes a un servidor externo. Todo ocurre en tu navegador en segundos, sin riesgo de fugas de privacidad.'
+        },
+        {
+          question: '¿Qué diferencia hay entre comprimir MP4 y cambiar de formato?',
+          answer: 'Comprimir MP4 conserva el contenedor y la compatibilidad universal del estándar H.264/AAC, pero reescala el bitrate para reducir el tamaño en MB. No necesitas instalar códecs adicionales.'
+        }
+      ]
+    },
+    fr: {
+      h1Prefix: 'Compresser Vidéo',
+      h1Highlight: 'MP4 en Ligne',
+      h1Suffix: 'Gratuit',
+      badge: '🎬 Optimiseur de Fichiers MP4',
+      metaTitle: 'Compresser Vidéo MP4 en Ligne Gratuit — Réduire la Taille MP4',
+      metaDescription: 'Compressez vos vidéos MP4 en ligne sans perte de résolution. Réduisez les mégaoctets avec un encodage H.264 rapide et audio AAC pur.',
+      heroSubtitle: 'Diminuez la taille de tout fichier MP4 sans compromettre la netteté ni la compatibilité universelle.'
+    },
+    ja: {
+      h1Prefix: 'MP4 動画の容量を',
+      h1Highlight: 'スマート圧縮',
+      h1Suffix: '無料',
+      badge: '🎬 MP4 ファイル最適化ツール',
+      metaTitle: 'MP4 動画圧縮 無料オンライン — MP4 のファイルサイズを軽量化',
+      metaDescription: '解像度を落とさずに MP4 動画をオンライン圧縮。高速 H.264 エンコードと高音質 AAC で Web 最適化。',
+      heroSubtitle: '画質と全デバイス再生互換性を損なわずに、重い MP4 動画のデータ容量をスリム化します。'
+    },
+    zh: {
+      h1Prefix: '高效压缩',
+      h1Highlight: 'MP4 视频文件',
+      h1Suffix: '在线免费',
+      badge: '🎬 MP4 视频轻量化工具',
+      metaTitle: '在线压缩 MP4 视频 — 快速减少 MP4 占用空间',
+      metaDescription: '在线压缩 MP4 视频文件且不损失分辨率。通过高速 H.264 编码与清晰 AAC 音频显著削减兆字节。',
+      heroSubtitle: '在不牺牲画质清晰度与通用播放兼容性的前提下，极速缩减 MP4 视频体积。'
+    },
+    no: {
+      h1Prefix: 'Komprimer Video',
+      h1Highlight: 'MP4 Online',
+      h1Suffix: 'Gratis',
+      badge: '🎬 MP4 Filoptimalisering',
+      metaTitle: 'Komprimer MP4 Video Online Gratis — Reduser MP4 Filstørrelse',
+      metaDescription: 'Komprimer MP4-videofiler online uten å miste oppløsning. Reduser megabytes med rask H.264-video og krystallklar AAC-lyd.',
+      heroSubtitle: 'Krymp tunge MP4-filer uten å ofre bildeskarphet eller universell kompatibilitet.'
+    },
+    tr: {
+      h1Prefix: 'MP4 Video',
+      h1Highlight: 'Sıkıştır Çevrimiçi',
+      h1Suffix: 'Ücretsiz',
+      badge: '🎬 MP4 Dosya Optimize Edici',
+      metaTitle: 'MP4 Video Sıkıştır Çevrimiçi Ücretsiz — MP4 Boyutunu Küçült',
+      metaDescription: 'Çözünürlük kaybetmeden MP4 video dosyalarını çevrimiçi sıkıştırın. Hızlı H.264 video ve net AAC ses ile megabaytları azaltın.',
+      heroSubtitle: 'Görüntü netliğinden veya cihaz uyumluluğundan ödün vermeden büyük MP4 dosyalarını küçültün.'
+    },
+    pl: {
+      h1Prefix: 'Kompresuj Wideo',
+      h1Highlight: 'MP4 Online',
+      h1Suffix: 'Za Darmo',
+      badge: '🎬 Optymalizator Plików MP4',
+      metaTitle: 'Kompresuj Wideo MP4 Online Za Darmo — Zmniejsz Rozmiar MP4',
+      metaDescription: 'Kompresuj pliki wideo MP4 online bez utraty rozdzielczości. Zmniejsz megabajty dzięki szybkiemu wideo H.264 i czystemu audio AAC.',
+      heroSubtitle: 'Zmniejsz rozmiar ciężkich plików MP4 bez poświęcania ostrości obrazu ani uniwersalnej kompatybilności.'
     }
   },
   'compactar-video-mp4': {
@@ -1385,17 +1781,41 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Under 16MB',
       badge: '📱 Optimized for WhatsApp (< 16 MB)',
       metaTitle: 'Compress Video for WhatsApp Online — Send Without 16MB Limit',
-      metaDescription: 'Compress heavy videos under 16MB and send them via WhatsApp without size errors or aggressive app blur. 100% free and private in browser.',
+      metaDescription: 'Compress heavy videos under 16MB and send them via WhatsApp without size errors or aggressive app blur. completely free and private in browser.',
       heroSubtitle: 'Fit large videos under WhatsApp’s 16MB limit while preserving 720p HD resolution and crisp stereo sound.'
     },
-    es: {
+        es: {
       h1Prefix: 'Comprimir Video para',
-      h1Highlight: 'WhatsApp Online',
+      h1Highlight: 'WhatsApp Online Gratis',
       h1Suffix: 'Menos de 16MB',
       badge: '📱 Optimizado para WhatsApp (< 16 MB)',
       metaTitle: 'Comprimir Video para WhatsApp Online — Enviar sin Límite de 16MB',
-      metaDescription: 'Comprime videos pesados a menos de 16MB y envíalos por WhatsApp sin errores ni pérdida de nitidez. 100% gratis y privado.',
-      heroSubtitle: 'Ajusta videos grandes al límite de 16 MB de WhatsApp manteniendo resolución 720p HD y audio nítido.'
+      metaDescription: 'Comprime videos para enviar por WhatsApp sin superar el límite de 16MB. Ajuste automático de bitrate y resolución 720p HD. Rápido, gratis y sin subir archivos.',
+      heroSubtitle: 'Ajusta videos grandes al límite de 16 MB de WhatsApp manteniendo resolución 720p HD y audio estéreo nítido.',
+      dropzoneTitle: 'Arrastra tu video aquí para comprimirlo para WhatsApp',
+      keywords: [
+        'comprimir video para whatsapp',
+        'comprimir video para whatsapp online',
+        'comprimir video whatsapp gratis',
+        'reducir video para whatsapp',
+        'comprimir video online',
+        'comprimir mp4 para whatsapp'
+      ],
+      explainerTitle: 'Envía videos completos por WhatsApp sin cortes ni errores',
+      explainerParagraphs: [
+        'WhatsApp impone un límite estricto de 16 MB para el envío de videos en chats sin convertirlos en documentos. Nuestra herramienta calcula automáticamente la tasa de bits exacta en función de la duración de tu video para garantizar que el archivo final quede siempre por debajo de ese límite con resolución 720p HD.',
+        'Evita que el compresor interno de WhatsApp destruya la nitidez de tus videos o los pixele en exceso. Al comprimirlos previamente con nuestro algoritmo de alta fidelidad, la calidad visual se mantiene limpia y fluida.'
+      ],
+      faqs: [
+        {
+          question: '¿Cómo enviar un video largo por WhatsApp sin perder calidad?',
+          answer: 'Carga tu video aquí y selecciona la preselección "Optimizado para WhatsApp". Nuestro motor ajustará dinámicamente el bitrate a menos de 14,5 MB, permitiendo enviar minutos de video sin que WhatsApp lo rechace ni lo corte.'
+        },
+        {
+          question: '¿Funciona en el móvil (Android y iPhone)?',
+          answer: 'Sí, funciona en cualquier navegador móvil moderno (Chrome, Safari, Firefox). Puedes seleccionar el video desde tu galería, comprimirlo localmente en segundos y compartirlo directamente en WhatsApp.'
+        }
+      ]
     },
     fr: {
       h1Prefix: 'Compresser Vidéo pour',
@@ -1403,7 +1823,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Sous 16 Mo',
       badge: '📱 Optimisé pour WhatsApp (< 16 Mo)',
       metaTitle: 'Compresser Vidéo pour WhatsApp — Envoyer sans Limite de 16 Mo',
-      metaDescription: 'Compressez des vidéos lourdes sous les 16 Mo pour les envoyer sur WhatsApp sans erreur ni flou agressif. 100% gratuit et privé.',
+      metaDescription: 'Compressez des vidéos lourdes sous les 16 Mo pour les envoyer sur WhatsApp sans erreur ni flou agressif. totalement gratuit et privé.',
       heroSubtitle: 'Adaptez vos vidéos volumineuses à la limite de 16 Mo de WhatsApp tout en préservant la résolution HD 720p.'
     },
     ja: {
@@ -1430,7 +1850,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Under 16MB',
       badge: '📱 Optimalisert for WhatsApp (< 16 MB)',
       metaTitle: 'Komprimer Video for WhatsApp Online — Send Uten 16MB Grense',
-      metaDescription: 'Komprimer store videoer til under 16MB og del på WhatsApp uten feilmeldinger eller bildeødeleggelse. 100% gratis i nettleseren.',
+      metaDescription: 'Komprimer store videoer til under 16MB og del på WhatsApp uten feilmeldinger eller bildeødeleggelse. totalmente gratis i nettleseren.',
       heroSubtitle: 'Tilpass store videoer til WhatsApps 16MB-grense og behold skarp 720p HD-oppløsning.'
     },
     tr: {
@@ -1439,7 +1859,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: '16MB Altı',
       badge: '📱 WhatsApp İçin Optimize (< 16 MB)',
       metaTitle: 'WhatsApp İçin Video Sıkıştır — 16MB Sınırına Takılmadan Gönder',
-      metaDescription: 'Büyük videoları 16MB altına sıkıştırarak WhatsApp üzerinden hatasız ve net şekilde gönderin. %100 ücretsiz ve tarayıcıda.',
+      metaDescription: 'Büyük videoları 16MB altına sıkıştırarak WhatsApp üzerinden hatasız ve net şekilde gönderin. tamamen ücretsiz ve tarayıcıda.',
       heroSubtitle: '720p HD çözünürlüğü koruyarak videoları WhatsApp’ın 16MB dosya sınırına göre küçültün.'
     },
     pl: {
@@ -1448,7 +1868,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Poniżej 16MB',
       badge: '📱 Zoptymalizowane pod WhatsApp (< 16 MB)',
       metaTitle: 'Kompresuj Wideo dla WhatsApp — Wysyłaj bez Limitu 16MB',
-      metaDescription: 'Kompresuj ciężkie wideo poniżej 16MB i wysyłaj przez WhatsApp bez błędów rozmiaru i bez utraty ostrości. 100% za darmo i prywatnie.',
+      metaDescription: 'Kompresuj ciężkie wideo poniżej 16MB i wysyłaj przez WhatsApp bez błędów rozmiaru i bez utraty ostrości.  za darmo i prywatnie.',
       heroSubtitle: 'Dopasuj duże pliki wideo do limitu 16MB w WhatsApp, zachowując rozdzielczość 720p HD i czysty dźwięk.'
     }
   },
@@ -1534,16 +1954,42 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       badge: '📐 Smart Video Resizer',
       metaTitle: 'Resize Video Online Free — Change Resolution and Aspect Ratio',
       metaDescription: 'Resize MP4 and MOV videos online without losing quality. Adjust to Full HD 1080p, 720p, or 16:9 and 9:16 aspect ratios directly in your browser.',
-      heroSubtitle: 'Change video resolution and dimensions quickly and securely. 100% processed in your browser via WebAssembly.'
+      heroSubtitle: 'Change video resolution and dimensions quickly and securely.  processed in your browser via WebAssembly.'
     },
-    es: {
+        es: {
       h1Prefix: 'Redimensionar Video',
       h1Highlight: 'Online Gratis',
-      h1Suffix: 'en Alta Resolución',
-      badge: '📐 Redimensionador Inteligente',
-      metaTitle: 'Redimensionar Video Online Gratis — Cambiar Resolución y Proporción',
-      metaDescription: 'Redimensiona videos MP4 y MOV online sin perder calidad. Ajusta a Full HD 1080p, 720p o proporciones 16:9 y 9:16 en tu navegador.',
-      heroSubtitle: 'Cambia la resolución y dimensiones de tus videos de forma rápida y segura. Procesamiento 100% local en tu navegador.'
+      h1Suffix: 'sin Deformar',
+      badge: '📐 Escalado y Ajuste de Proporción',
+      metaTitle: 'Redimensionar Video Online Gratis — Cambiar Tamaño y Proporción',
+      metaDescription: 'Redimensiona videos online gratis a 1080p, 720p, vertical 9:16 (TikTok, Reels) o 16:9. Cambia el tamaño de tus videos sin deformar la imagen y sin subir archivos.',
+      heroSubtitle: 'Adapta la resolución de tus videos a 1080p, 720p o formatos verticales 9:16 sin distorsión visual ni marcas de agua.',
+      dropzoneTitle: 'Arrastra tu video aquí para redimensionar o cambiar tamaño',
+      keywords: [
+        'redimensionar video online',
+        'redimensionar video gratis',
+        'redimensionar vídeo online gratis',
+        'redimensionar video para instagram',
+        'redimensionar video para tiktok',
+        'cambiar tamaño de video',
+        'como redimensionar vídeo',
+        'redimensionar video online gratis'
+      ],
+      explainerTitle: 'Adapta la resolución y relación de aspecto de cualquier video',
+      explainerParagraphs: [
+        'Cambiar el tamaño de un video o ajustar su relación de aspecto es fundamental para evitar que las plataformas sociales recorten o distorsionen tu contenido. Nuestra herramienta permite redimensionar videos a resolución estándar 1080p Full HD, 720p HD o proporciones verticales 9:16 para TikTok, Instagram Reels y YouTube Shorts.',
+        'El motor de reescalado bicúbico asegura que el video conserve líneas definidas y bordes nítidos sin estirar la imagen ni alterar la velocidad del fotograma. Todo el proceso se ejecuta directamente en la memoria de tu equipo, sin subir datos a la red.'
+      ],
+      faqs: [
+        {
+          question: '¿Cómo redimensionar un video para Instagram o TikTok?',
+          answer: 'Selecciona tu archivo y elige el perfil "Reels / Shorts (9:16)" o la resolución 1080p. El sistema adaptará el lienzo para que encaje a la perfección en pantallas móviles verticales sin bandas negras indeseadas ni recortes bruscos.'
+        },
+        {
+          question: '¿Al cambiar el tamaño del video se pierde calidad?',
+          answer: 'No. Al reducir de 4K a 1080p o de 1080p a 720p se mantiene una alta densidad de píxeles y se ajusta el bitrate para que el archivo sea más ligero y fácil de reproducir sin perder nitidez visual.'
+        }
+      ]
     },
     fr: {
       h1Prefix: 'Redimensionner Vidéo',
@@ -1552,7 +1998,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       badge: '📐 Redimensionnement Vidéo Intelligent',
       metaTitle: 'Redimensionner Vidéo en Ligne Gratuit — Changer la Résolution',
       metaDescription: 'Redimensionnez des vidéos MP4 et MOV en ligne sans perte de qualité. Ajustez en Full HD 1080p, 720p ou ratios 16:9 et 9:16 dans votre navigateur.',
-      heroSubtitle: 'Modifiez la résolution et les dimensions de vos vidéos rapidement et en toute sécurité. Traitement 100% local.'
+      heroSubtitle: 'Modifiez la résolution et les dimensions de vos vidéos rapidement et en toute sécurité. Traitement completely local.'
     },
     ja: {
       h1Prefix: '画質を落とさずに',
@@ -1570,7 +2016,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       badge: '📐 智能视频尺寸重塑',
       metaTitle: '在线免费调整视频尺寸 — 修改分辨率与宽高比',
       metaDescription: '在浏览器中直接调整 MP4、MOV 等视频尺寸且不失真。轻松适配 1080p 全高清、720p 及 16:9 / 9:16 比例。',
-      heroSubtitle: '快速安全地修改视频分辨率与画面规格。100% 浏览器本地运算，零文件上传。'
+      heroSubtitle: '快速安全地修改视频分辨率与画面规格。 浏览器本地运算，零文件上传。'
     },
     no: {
       h1Prefix: 'Endre Videostørrelse',
@@ -1579,7 +2025,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       badge: '📐 Smart Videoresizer',
       metaTitle: 'Endre Videostørrelse Online Gratis — Oppløsning og Sideforhold',
       metaDescription: 'Endre størrelse på MP4- og MOV-videoer online uten tap av kvalitet. Juster til Full HD 1080p, 720p eller 16:9 og 9:16 i nettleseren.',
-      heroSubtitle: 'Juster videooppløsning og dimensjoner raskt og trygt. 100% prosessert lokalt i nettleseren.'
+      heroSubtitle: 'Juster videooppløsning og dimensjoner raskt og trygt.  prosessert lokalt i nettleseren.'
     },
     tr: {
       h1Prefix: 'Video Boyutunu',
@@ -1597,7 +2043,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       badge: '📐 Inteligentne Skalowanie Wideo',
       metaTitle: 'Zmień Rozmiar Wideo Online Za Darmo — Zmień Rozdzielczość i Proporcje',
       metaDescription: 'Zmieniaj rozmiar filmów MP4 i MOV online bez utraty jakości. Dopasuj do Full HD 1080p, 720p lub proporcji 16:9 i 9:16 w przeglądarce.',
-      heroSubtitle: 'Zmieniaj rozdzielczość i wymiary swoich filmów szybko i bezpiecznie. 100% lokalnie w przeglądarce.'
+      heroSubtitle: 'Zmieniaj rozdzielczość i wymiary swoich filmów szybko i bezpiecznie.  lokalnie w przeglądarce.'
     }
   },
   'redimensionar-video-online': {
@@ -1681,7 +2127,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: '9:16 Vertical',
       badge: '📱 TikTok Optimized (9:16 Vertical)',
       metaTitle: 'Resize Video for TikTok Online — Format 9:16 Vertical',
-      metaDescription: 'Resize landscape or camera footage into TikTok 9:16 vertical full screen format. 100% free and private in browser.',
+      metaDescription: 'Resize landscape or camera footage into TikTok 9:16 vertical full screen format. completely free and private in browser.',
       heroSubtitle: 'Format clips and recordings into TikTok’s official vertical standard with high clarity and no awkward cropping.'
     },
     es: {
@@ -1690,7 +2136,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: '9:16 Vertical',
       badge: '📱 Optimizado para TikTok (9:16 Vertical)',
       metaTitle: 'Redimensionar Video para TikTok Online — Formato Vertical 9:16',
-      metaDescription: 'Redimensiona videos horizontales al formato vertical 9:16 de TikTok. 100% gratis y privado en tu navegador.',
+      metaDescription: 'Redimensiona videos horizontales al formato vertical 9:16 de TikTok. totalmente gratis y privado en tu navegador.',
       heroSubtitle: 'Formatea clips y grabaciones en el estándar vertical oficial de TikTok con alta definición.'
     },
     fr: {
@@ -1699,7 +2145,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: '9:16 Vertical',
       badge: '📱 Optimisé pour TikTok (9:16 Vertical)',
       metaTitle: 'Redimensionner Vidéo pour TikTok — Format Vertical 9:16',
-      metaDescription: 'Redimensionnez des vidéos horizontales au format vertical 9:16 de TikTok. 100% gratuit et privé dans votre navigateur.',
+      metaDescription: 'Redimensionnez des vidéos horizontales au format vertical 9:16 de TikTok. totalement gratuit et privé dans votre navigateur.',
       heroSubtitle: 'Formatez vos vidéos aux normes verticales officielles de TikTok avec une netteté族 impeccable.'
     },
     ja: {
@@ -1717,7 +2163,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: '9:16 全屏',
       badge: '📱 适配 TikTok 竖屏 (9:16)',
       metaTitle: '调整视频适配 TikTok — 9:16 竖屏全屏格式转换',
-      metaDescription: '将横屏或相机录制的视频重塑为 TikTok 官方推荐的 9:16 竖屏规格。100% 免费且保护隐私。',
+      metaDescription: '将横屏或相机录制的视频重塑为 TikTok 官方推荐的 9:16 竖屏规格。 免费且保护隐私。',
       heroSubtitle: '将各类视频裁剪调整为 TikTok 9:16 标准竖屏尺寸，画面清晰无多余黑边。'
     },
     no: {
@@ -1726,7 +2172,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: '9:16 Vertikalt',
       badge: '📱 Optimalisert for TikTok (9:16)',
       metaTitle: 'Tilpass Video for TikTok Online — 9:16 Vertikalt Format',
-      metaDescription: 'Endre liggende videoer til TikToks 9:16 vertikale format. 100% gratis og privat i nettleseren.',
+      metaDescription: 'Endre liggende videoer til TikToks 9:16 vertikale format. totalmente gratis og privat i nettleseren.',
       heroSubtitle: 'Formater klipp til TikToks offisielle vertikale standard med skarp bildekvalitet.'
     },
     tr: {
@@ -1735,7 +2181,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: '9:16 Dikey',
       badge: '📱 TikTok İçin Optimize (9:16)',
       metaTitle: 'TikTok İçin Video Boyutlandır — 9:16 Dikey Format',
-      metaDescription: 'Yatay videoları TikTok’un 9:16 dikey tam ekran formatına uyarlayın. %100 ücretsiz ve tarayıcıda.',
+      metaDescription: 'Yatay videoları TikTok’un 9:16 dikey tam ekran formatına uyarlayın. tamamen ücretsiz ve tarayıcıda.',
       heroSubtitle: 'Videoları TikTok’un resmi dikey standardına uygun olarak net şekilde biçimlendirin.'
     },
     pl: {
@@ -1744,7 +2190,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Pionowe 9:16',
       badge: '📱 Zoptymalizowane pod TikTok (9:16)',
       metaTitle: 'Dopasuj Wideo do TikTok Online — Format Pionowy 9:16',
-      metaDescription: 'Skaluj poziome wideo do pionowego formatu 9:16 w TikTok. 100% za darmo i prywatnie w przeglądarce.',
+      metaDescription: 'Skaluj poziome wideo do pionowego formatu 9:16 w TikTok.  za darmo i prywatnie w przeglądarce.',
       heroSubtitle: 'Formatuj klipy zgodnie z oficjalnym pionowym standardem TikTok z zachowaniem wysokiej ostrości.'
     }
   },
@@ -1755,7 +2201,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Reels & Stories',
       badge: '📸 Reels, Stories & Feed (9:16)',
       metaTitle: 'Resize Video for Instagram Online — Reels and Stories 9:16',
-      metaDescription: 'Resize any video for Instagram Reels, Stories, and Feed in 9:16. No watermarks, no quality loss, 100% in browser.',
+      metaDescription: 'Resize any video for Instagram Reels, Stories, and Feed in 9:16. No watermarks, no quality loss,  in browser.',
       heroSubtitle: 'Adapt your clips for Instagram’s official vertical format with perfect framing and crisp clarity.'
     },
     es: {
@@ -1764,7 +2210,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Reels y Stories',
       badge: '📸 Reels, Stories y Feed (9:16)',
       metaTitle: 'Redimensionar Video para Instagram Online — Reels y Stories 9:16',
-      metaDescription: 'Redimensiona cualquier video para Instagram Reels, Stories y Feed en proporción 9:16. Sin marcas de agua y 100% en el navegador.',
+      metaDescription: 'Redimensiona cualquier video para Instagram Reels, Stories y Feed en proporción 9:16. Sin marcas de agua y  en el navegador.',
       heroSubtitle: 'Adapta tus videos al formato vertical oficial de Instagram con encuadre perfecto y alta nitidez.'
     },
     fr: {
@@ -1800,7 +2246,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Reels og Stories',
       badge: '📸 Reels, Stories og Feed (9:16)',
       metaTitle: 'Tilpass Video for Instagram Online — Reels og Stories 9:16',
-      metaDescription: 'Tilpass videoer for Instagram Reels, Stories og Feed i 9:16. Ingen vannmerker, 100% i nettleseren.',
+      metaDescription: 'Tilpass videoer for Instagram Reels, Stories og Feed i 9:16. Ingen vannmerker,  i nettleseren.',
       heroSubtitle: 'Tilpass klippene dine til Instagrams offisielle vertikale format med perfekt beskjæring.'
     },
     tr: {
@@ -1818,7 +2264,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Reels i Stories',
       badge: '📸 Reels, Stories i Posty (9:16)',
       metaTitle: 'Dopasuj Wideo do Instagram — Reels i Stories 9:16',
-      metaDescription: 'Dopasuj dowolne wideo do Instagram Reels, Stories i Feed w formacie 9:16. Bez znaków wodnych, 100% w przeglądarce.',
+      metaDescription: 'Dopasuj dowolne wideo do Instagram Reels, Stories i Feed w formacie 9:16. Bez znaków wodnych,  w przeglądarce.',
       heroSubtitle: 'Dostosuj swoje wideo do oficjalnego pionowego formatu Instagram z idealnym kadrowaniem.'
     }
   },
@@ -1829,7 +2275,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Free',
       badge: '🎞️ Fast Animated GIF Creator',
       metaTitle: 'Convert Video to GIF Online Free — Create Animated GIF',
-      metaDescription: 'Convert video clips into animated GIFs with optimized color palette and smooth loop. 100% free, no watermarks, right in your browser.',
+      metaDescription: 'Convert video clips into animated GIFs with optimized color palette and smooth loop. completely free, no watermarks, right in your browser.',
       heroSubtitle: 'Transform MP4 and MOV video clips into lightweight animated GIFs to share on WhatsApp, Telegram, Discord, and social media.'
     },
     es: {
@@ -1838,7 +2284,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Gratis',
       badge: '🎞️ Creador Rápido de GIFs Animados',
       metaTitle: 'Convertir Video a GIF Online Gratis — Crear GIF Animado',
-      metaDescription: 'Convierte fragmentos de video en GIFs animados con paleta de color optimizada y bucle suave. 100% gratis y sin marcas de agua.',
+      metaDescription: 'Convierte fragmentos de video en GIFs animados con paleta de color optimizada y bucle suave. totalmente gratis y sin marcas de agua.',
       heroSubtitle: 'Transforma videos MP4 y MOV en GIFs animados ligeros para compartir en WhatsApp, Telegram, Discord y redes sociales.'
     },
     fr: {
@@ -1847,7 +2293,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Gratuit',
       badge: '🎞️ Créateur Rapide de GIF Animé',
       metaTitle: 'Convertir Vidéo en GIF en Ligne Gratuit — Créer GIF Animé',
-      metaDescription: 'Convertissez des clips vidéo en GIF animés avec palette de couleurs optimisée et boucle fluide. 100% gratuit, sans filigrane.',
+      metaDescription: 'Convertissez des clips vidéo en GIF animés avec palette de couleurs optimisée et boucle fluide. totalement gratuit, sans filigrane.',
       heroSubtitle: 'Transformez vos vidéos MP4 et MOV en GIF animés légers pour WhatsApp, Telegram, Discord et réseaux sociaux.'
     },
     ja: {
@@ -1865,7 +2311,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: '在线免费',
       badge: '🎞️ 快速动态 GIF 生成器',
       metaTitle: '视频转 GIF 在线免费转换 — 制作流畅循环动图',
-      metaDescription: '将视频片段转换为具有优化调色板和流畅循环效果的动态 GIF 动图。100% 免费无水印，浏览器本地生成。',
+      metaDescription: '将视频片段转换为具有优化调色板和流畅循环效果的动态 GIF 动图。 免费无水印，浏览器本地生成。',
       heroSubtitle: '把 MP4 和 MOV 视频制作为小巧轻便的表情动图，轻松分享至微信、QQ、Discord 及社交平台。'
     },
     no: {
@@ -1874,7 +2320,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Gratis',
       badge: '🎞️ Rask Animert GIF-skaper',
       metaTitle: 'Konverter Video til GIF Online Gratis — Lag Animert GIF',
-      metaDescription: 'Gjør om videoklipp til animerte GIF-er med optimalisert fargepalett og jevn loop. 100% gratis og uten vannmerker i nettleseren.',
+      metaDescription: 'Gjør om videoklipp til animerte GIF-er med optimalisert fargepalett og jevn loop. totalmente gratis og uten vannmerker i nettleseren.',
       heroSubtitle: 'Gjør om MP4- og MOV-klipp til lette GIF-animasjoner for deling på WhatsApp, Discord og sosiale medier.'
     },
     tr: {
@@ -1883,7 +2329,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Çevrimiçi Ücretsiz',
       badge: '🎞️ Hızlı Hareketli GIF Yapıcı',
       metaTitle: 'Videoyu GIF’e Dönüştür Çevrimiçi Ücretsiz — GIF Animasyonu Yap',
-      metaDescription: 'Video kesitlerini optimize renk paleti ve akıcı döngü ile hareketli GIF’lere dönüştürün. %100 ücretsiz ve filigransız.',
+      metaDescription: 'Video kesitlerini optimize renk paleti ve akıcı döngü ile hareketli GIF’lere dönüştürün. tamamen ücretsiz ve filigransız.',
       heroSubtitle: 'MP4 ve MOV videolarını WhatsApp, Discord ve sosyal medyada paylaşmak için hafif GIF animasyonlarına dönüştürün.'
     },
     pl: {
@@ -1892,7 +2338,7 @@ const SLUG_LOCALIZATIONS: Record<string, Partial<Record<SupportedLanguage, SlugS
       h1Suffix: 'Za Darmo',
       badge: '🎞️ Szybki Kreator Animowanych GIF',
       metaTitle: 'Konwertuj Wideo na GIF Online Za Darmo — Twórz Animowane GIFy',
-      metaDescription: 'Konwertuj fragmenty wideo na animowane GIFy ze zoptymalizowaną paletą kolorów i płynną pętlą. 100% za darmo, bez znaków wodnych.',
+      metaDescription: 'Konwertuj fragmenty wideo na animowane GIFy ze zoptymalizowaną paletą kolorów i płynną pętlą.  za darmo, bez znaków wodnych.',
       heroSubtitle: 'Przekształcaj klipy MP4 i MOV w lekkie animowane GIFy do udostępniania na WhatsApp, Discord i w social mediach.'
     }
   },
@@ -2048,12 +2494,18 @@ export function getLocalizedFormatPage(slug: string, lang: SupportedLanguage): F
   const metaDescription = override?.metaDescription || `${h1Prefix} ${h1Highlight} ${p.freeNoUpload} ${p.heroSuffix}`;
   const heroSubtitle = override?.heroSubtitle || `${p.whyDesc} ${p.heroSuffix}`;
   const dropzoneTitle = override?.dropzoneTitle || `${p.dropzoneText} ${targetLabel}`;
+  const keywords = override?.keywords || original.keywords;
   const explainerTitle = override?.explainerTitle || p.howItWorks;
   const explainerParagraphs = override?.explainerParagraphs || original.explainerParagraphs;
   const sourceDetailsTitle = override?.sourceDetailsTitle || original.sourceDetailsTitle;
   const sourceDetails = override?.sourceDetails || original.sourceDetails;
   const targetDetailsTitle = override?.targetDetailsTitle || original.targetDetailsTitle;
   const targetDetails = override?.targetDetails || original.targetDetails;
+  const proTip = override?.proTip !== undefined ? override.proTip : original.proTip;
+  const faqs = override?.faqs || [
+    { question: p.faq1Q, answer: p.faq1A },
+    { question: p.faq2Q, answer: p.faq2A }
+  ];
 
   return {
     ...original,
@@ -2065,16 +2517,15 @@ export function getLocalizedFormatPage(slug: string, lang: SupportedLanguage): F
     metaDescription,
     heroSubtitle,
     dropzoneTitle,
+    keywords,
     explainerTitle,
     explainerParagraphs,
     sourceDetailsTitle,
     sourceDetails,
     targetDetailsTitle,
     targetDetails,
-    faqs: [
-      { question: p.faq1Q, answer: p.faq1A },
-      { question: p.faq2Q, answer: p.faq2A }
-    ]
+    proTip,
+    faqs
   };
 }
 
@@ -2521,9 +2972,9 @@ const RAW_GRID_TOOLS = [
       pl: 'Najlepszy Darmowy Konwerter Wideo'
     },
     descs: {
-      pt: 'Compare nossa tecnologia 100% local contra ferramentas tradicionais na nuvem.',
+      pt: 'Compare nossa tecnologia completely local contra ferramentas tradicionais na nuvem.',
       en: 'Compare in-browser WebAssembly architecture against traditional cloud converters.',
-      es: 'Compara nuestra tecnología 100% local contra herramientas antiguas en la nube.',
+      es: 'Compara nuestra tecnología completely local contra herramientas antiguas en la nube.',
       fr: 'Comparez le traitement WebAssembly local aux anciens services cloud.',
       ja: '端末内ローカル処理と従来のクラウド型ツールの違いを徹底比較します。',
       zh: '对比浏览器本地 WebAssembly 架构与传统云端转换工具的差异。',

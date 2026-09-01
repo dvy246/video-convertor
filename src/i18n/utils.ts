@@ -50,10 +50,11 @@ export function useTranslations(lang: SupportedLanguage) {
 export function useTranslatedPath(lang: SupportedLanguage) {
   return function translatePath(path: string, targetLang: SupportedLanguage = lang): string {
     const cleanPath = stripLangFromPath(path);
+    const normalized = cleanPath === '/' ? '/' : (cleanPath.endsWith('/') ? cleanPath : `${cleanPath}/`);
     if (!showDefaultLang && targetLang === defaultLang) {
-      return cleanPath;
+      return normalized;
     }
-    return cleanPath === '/' ? `/${targetLang}` : `/${targetLang}${cleanPath}`;
+    return normalized === '/' ? `/${targetLang}/` : `/${targetLang}${normalized}`;
   };
 }
 
@@ -62,18 +63,19 @@ export function useTranslatedPath(lang: SupportedLanguage) {
  */
 export function getAlternateLanguageUrls(pathname: string): { lang: SupportedLanguage; hreflang: string; href: string }[] {
   const cleanPath = stripLangFromPath(pathname);
+  const normalized = cleanPath === '/' ? '/' : (cleanPath.endsWith('/') ? cleanPath : `${cleanPath}/`);
   const siteUrl = SITE_CONFIG.url.replace(/\/$/, '');
 
   const alternates = (Object.keys(languages) as SupportedLanguage[]).map((lang) => {
     const langInfo = languages[lang];
     const path = !showDefaultLang && lang === defaultLang
-      ? (cleanPath === '/' ? '' : cleanPath)
-      : `/${lang}${cleanPath === '/' ? '' : cleanPath}`;
+      ? (normalized === '/' ? '/' : normalized)
+      : `/${lang}${normalized === '/' ? '/' : normalized}`;
     
     return {
       lang,
       hreflang: langInfo.code,
-      href: `${siteUrl}${path || '/'}`
+      href: `${siteUrl}${path}`
     };
   });
 

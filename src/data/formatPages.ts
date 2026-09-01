@@ -21,6 +21,7 @@ export interface FormatPageData {
   sourceDetails: string[];
   targetDetailsTitle: string;
   targetDetails: string[];
+  proTip?: string;
   faqs: FAQItem[];
 }
 
@@ -35,13 +36,13 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Highlight: 'MP4 Online',
     h1Suffix: 'Grátis',
     metaTitle: 'Conversor de Vídeo para MP4 Online Grátis — Universal e Privado',
-    metaDescription: 'Converta qualquer arquivo de vídeo (MOV, MKV, AVI, WebM, WMV, FLV) para MP4 no navegador. 100% gratuito, sem limites e sem upload para a nuvem.',
-    heroSubtitle: 'Transforme vídeos de qualquer formato no padrão universal MP4 com alta fidelidade visual. 100% no seu navegador e sem filas de espera.',
+    metaDescription: 'Converta qualquer arquivo de vídeo (MOV, MKV, AVI, WebM, WMV, FLV) para MP4 no navegador. Totalmente gratuito, sem limites e sem upload para a nuvem.',
+    heroSubtitle: 'Transforme vídeos de qualquer formato no padrão universal MP4 com alta fidelidade visual. Processamento no seu navegador e sem filas de espera.',
     dropzoneTitle: 'Arraste seu arquivo de vídeo aqui para converter para MP4',
     keywords: ['conversor de video para mp4', 'conversor de video mp4', 'converter video para mp4', 'conversor de vídeo para mp4'],
     explainerTitle: 'Por que o formato MP4 é o padrão universal?',
     explainerParagraphs: [
-      'O contêiner MP4 (MPEG-4 Part 14) com codec H.264 e áudio AAC é o formato multimídia mais aceito no mundo. Ele roda perfeitamente em 100% dos smartphones (Android e iPhone), computadores (Windows, Mac e Linux), Smart TVs e consoles de videogame.',
+      'O contêiner MP4 (MPEG-4 Part 14) com codec H.264 e áudio AAC é o formato multimídia mais aceito no mundo. Ele roda perfeitamente em praticamente todos os smartphones (Android e iPhone), computadores (Windows, Mac e Linux), Smart TVs e consoles de videogame.',
       'Ao converter qualquer vídeo para MP4 em nosso conversor, o arquivo recebe o cabeçalho "faststart", permitindo reprodução instantânea na web sem travamentos.'
     ],
     sourceDetailsTitle: 'Outros Formatos de Vídeo',
@@ -52,10 +53,11 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     ],
     targetDetailsTitle: 'Formato MP4 Universal',
     targetDetails: [
-      '100% compatível com qualquer aparelho',
+      'Compatível com qualquer aparelho e sistema',
       'Compressão H.264 de alta eficiência',
       'Envio rápido por e-mail e mensageiros'
     ],
+    proTip: 'Para streaming web de altíssima velocidade, nosso motor aplica automaticamente a flag -movflags +faststart, movendo o cabeçalho moov para o início do arquivo. Isso permite que navegadores e reprodutores iniciem o vídeo antes do download completo.',
     faqs: [
       {
         question: 'Quais formatos de vídeo posso converter para MP4?',
@@ -63,7 +65,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
       },
       {
         question: 'Preciso pagar ou me cadastrar para converter vídeos em MP4?',
-        answer: 'Não! O ConversordeVideo.com é 100% gratuito, sem cadastro, sem assinaturas e sem marcas d’água.'
+        answer: 'Não! O ConversordeVideo.com é totalmente gratuito, sem cadastro, sem assinaturas e sem marcas d’água.'
       }
     ]
   },
@@ -77,8 +79,8 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Highlight: 'YouTube e Shorts',
     h1Suffix: 'Online',
     metaTitle: 'Conversor de Vídeo do YouTube Online Grátis — MP4, Shorts e MP3',
-    metaDescription: 'Converta e formate vídeos baixados do YouTube e YouTube Shorts para MP4 ou MP3 no navegador. Rápido, 100% seguro e sem upload de arquivos.',
-    heroSubtitle: 'Converta e formate clipes e gravações para o formato padrão do YouTube (16:9 HD ou Shorts 9:16 vertical). 100% privado no seu aparelho.',
+    metaDescription: 'Converta e formate vídeos baixados do YouTube e YouTube Shorts para MP4 ou MP3 no navegador. Rápido, totalmente seguro e sem upload de arquivos.',
+    heroSubtitle: 'Converta e formate clipes e gravações para o formato padrão do YouTube (16:9 HD ou Shorts 9:16 vertical). totalmente privado no seu aparelho.',
     dropzoneTitle: 'Arraste o arquivo de vídeo para formatar para o YouTube',
     keywords: ['conversor de video do youtube', 'conversor de video youtube', 'conversor de vídeo do youtube', 'conversor de video youtube mp3'],
     explainerTitle: 'Como preparar e converter vídeos para o YouTube?',
@@ -119,13 +121,13 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Highlight: 'Conversor de Vídeo Gratuito',
     h1Suffix: 'Online',
     metaTitle: 'Melhor Conversor de Vídeo Gratuito Online — Sem Limites e Seguro',
-    metaDescription: 'Descubra por que o ConversordeVideo.com é o melhor conversor de vídeo gratuito: sem upload, sem limites de tamanho, sem cadastro e 100% privado.',
-    heroSubtitle: 'A ferramenta definitiva para converter MP4, MOV, MP3, WebM e GIF. Zero espera, sem anúncios invasivos e 100% no seu navegador.',
+    metaDescription: 'Descubra por que o ConversordeVideo.com é o melhor conversor de vídeo gratuito: sem upload, sem limites de tamanho, sem cadastro e totalmente privado.',
+    heroSubtitle: 'A ferramenta definitiva para converter MP4, MOV, MP3, WebM e GIF. Zero espera, sem anúncios invasivos e totalmente no seu navegador.',
     dropzoneTitle: 'Arraste qualquer arquivo de vídeo para começar',
     keywords: ['melhor conversor de vídeo gratuito', 'melhor conversor de video gratis', 'melhor conversor de vídeo online', 'conversor de video confiavel'],
     explainerTitle: 'Por que somos o melhor conversor de vídeo do Brasil?',
     explainerParagraphs: [
-      'Enquanto os concorrentes tradicionais (CloudConvert, Convertio, FreeConvert) cobram assinaturas mensais, impõem filas de espera e obrigam você a fazer upload dos seus vídeos para servidores estrangeiros, o ConversordeVideo.com funciona 100% no seu computador ou celular.',
+      'Enquanto os concorrentes tradicionais (CloudConvert, Convertio, FreeConvert) cobram assinaturas mensais, impõem filas de espera e obrigam você a fazer upload dos seus vídeos para servidores estrangeiros, o ConversordeVideo.com funciona totalmente no seu computador ou celular.',
       'Graças à tecnologia WebAssembly, você tem velocidade máxima sem depender da sua taxa de upload e com garantia de privacidade absoluta sob a LGPD.'
     ],
     sourceDetailsTitle: 'Concorrentes Tradicionais',
@@ -137,7 +139,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     ],
     targetDetailsTitle: 'ConversordeVideo.com',
     targetDetails: [
-      'Zero upload — 100% processamento local',
+      'Zero upload — totalmente processamento local',
       'Sem filas e sem limite de conversões diárias',
       'Arquivos de celular convertidos instantaneamente',
       'Totalmente gratuito e sem cadastro'
@@ -145,7 +147,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     faqs: [
       {
         question: 'O conversor é realmente gratuito sem pegadinhas?',
-        answer: 'Sim, 100% gratuito. Não exigimos cartão de crédito, cadastro nem limitamos o número de arquivos que você pode converter por dia.'
+        answer: 'Sim, totalmente gratuito. Não exigimos cartão de crédito, cadastro nem limitamos o número de arquivos que você pode converter por dia.'
       },
       {
         question: 'Meus vídeos ficam salvos em algum lugar?',
@@ -163,7 +165,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Highlight: 'MOV para MP4',
     h1Suffix: 'Online Grátis',
     metaTitle: 'Converter MOV para MP4 Online Grátis — Sem Perda de Qualidade',
-    metaDescription: 'Converta arquivos de vídeo MOV do iPhone e Mac para MP4 no navegador. Rápido, gratuito, sem upload de arquivos e 100% privado no seu dispositivo.',
+    metaDescription: 'Converta arquivos de vídeo MOV do iPhone e Mac para MP4 no navegador. Rápido, gratuito, sem upload de arquivos e totalmente privado no seu dispositivo.',
     heroSubtitle: 'Transforme vídeos da Apple (.MOV) no formato universal MP4 sem instalar programas e sem enviar seus arquivos particulares para servidores externos.',
     dropzoneTitle: 'Arraste seu arquivo .MOV aqui para converter para MP4',
     keywords: ['converter mov para mp4', 'mov para mp4 online', 'converter video iphone para mp4', 'transformar mov em mp4'],
@@ -181,7 +183,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     ],
     targetDetailsTitle: 'Formato MP4 (Padrão Universal)',
     targetDetails: [
-      '100% compatível com qualquer celular, TV e PC',
+      'totalmente compatível com qualquer celular, TV e PC',
       'Tamanho otimizado com cabeçalho faststart',
       'Reprodução instantânea na web e redes sociais',
       'Qualidade visual idêntica com compressão H.264'
@@ -211,8 +213,8 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Highlight: 'MP3 Online',
     h1Suffix: 'Grátis',
     metaTitle: 'Conversor de Vídeo para MP3 Online Grátis — Extrair Áudio',
-    metaDescription: 'Extraia o áudio de qualquer vídeo em formato MP3 de alta qualidade (192 kbps) diretamente no navegador. 100% gratuito, sem cadastro e sem upload.',
-    heroSubtitle: 'Extraia a trilha de áudio de qualquer gravação ou clipe e salve como MP3 estéreo leve. 100% no navegador e sem upload para servidores.',
+    metaDescription: 'Extraia o áudio de qualquer vídeo em formato MP3 de alta qualidade (192 kbps) diretamente no navegador. totalmente gratuito, sem cadastro e sem upload.',
+    heroSubtitle: 'Extraia a trilha de áudio de qualquer gravação ou clipe e salve como MP3 estéreo leve. totalmente no navegador e sem upload para servidores.',
     dropzoneTitle: 'Arraste o vídeo para extrair a trilha de áudio MP3',
     keywords: ['conversor de video para mp3', 'conversor de video mp3', 'conversor de vídeo para mp3', 'conversor de video em mp3', 'conversor de vídeo mp3', 'converter video em mp3', 'extrair audio de video'],
     explainerTitle: 'Como funciona a extração de áudio MP3 de vídeos?',
@@ -255,14 +257,15 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Highlight: 'Vídeo para GIF',
     h1Suffix: 'Online',
     metaTitle: 'Converter Vídeo para GIF Online Grátis — Criar GIF Animado',
-    metaDescription: 'Transforme trechos de vídeo em GIFs animados de alta qualidade no navegador. 100% gratuito, sem marca d’água e sem upload de arquivos.',
+    metaDescription: 'Transforme trechos de vídeo em GIFs animados de alta qualidade no navegador. totalmente gratuito, sem marca d’água e sem upload de arquivos.',
     heroSubtitle: 'Transforme clipes de vídeo em GIFs animados leves e fluidos no navegador. Perfeito para figurinhas do WhatsApp, memes e reações.',
     dropzoneTitle: 'Arraste o vídeo para gerar a animação em GIF',
-    keywords: ['video para gif', 'converter video para gif', 'vídeo para gif', 'conversor de video para gif', 'criar gif animado', 'transformar video em gif', 'video para gif online', 'converte video para gif'],
+    keywords: ['video para gif', 'converter video para gif', 'vídeo para gif', 'conversor de video para gif', 'criar gif animado', 'transformar video em gif', 'video para gif online', 'converte video para gif', 'converter vídeo para gif', 'conversor de vídeo para gif', 'conversor video para gif', 'converter video para gif online'],
     explainerTitle: 'Por que criar GIFs animados a partir de vídeos?',
     explainerParagraphs: [
       'GIFs animados são a linguagem universal da internet para memes, demonstrações rápidas de produtos, reações em bate-papo e figurinhas.',
-      'Nossa ferramenta aplica otimização de paleta de cores (Bayer Dithering) com 12 quadros por segundo, garantindo animações contínuas, sem ruídos e com tamanho de arquivo reduzido.'
+      'Nossa ferramenta aplica otimização de paleta de cores (Bayer Dithering) com 12 quadros por segundo, garantindo animações contínuas, sem ruídos e com tamanho de arquivo reduzido.',
+      'Você pode converter vídeo para GIF online e gratuitamente para criar figurinhas de WhatsApp personalizadas, stickers para o Discord e Telegram, ou reações em formato de meme. O conversor de vídeo para GIF gera animações em loop sem marca d’água, prontas para compartilhar.'
     ],
     sourceDetailsTitle: 'Vídeo com Áudio',
     sourceDetails: [
@@ -279,49 +282,15 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     faqs: [
       {
         question: 'Como transformar um vídeo em GIF animado sem marca d’água?',
-        answer: 'Basta arrastar seu clipe de vídeo para nossa ferramenta, selecionar a opção GIF e clicar em converter. O GIF gerado é 100% livre de marcas d’água.'
+        answer: 'Basta arrastar seu clipe de vídeo para nossa ferramenta, selecionar a opção GIF e clicar em converter. O GIF gerado é totalmente livre de marcas d’água.'
       },
       {
         question: 'Qual a duração recomendada para o GIF?',
         answer: 'Recomendamos clipes de 3 a 15 segundos para manter o arquivo leve e fácil de carregar em conexões móveis.'
-      }
-    ]
-  },
-
-  'comprimir-video': {
-    slug: 'comprimir-video',
-    targetFormat: 'mp4',
-    initialPreset: 'whatsapp',
-    badge: '📦 Redução Inteligente de até 70% do Tamanho',
-    h1Prefix: 'Comprimir Vídeo',
-    h1Highlight: 'sem Perder Qualidade',
-    h1Suffix: 'Online',
-    metaTitle: 'Comprimir Vídeo Online Grátis — Reduzir Tamanho sem Perder Qualidade',
-    metaDescription: 'Diminua o tamanho de vídeos pesados (MP4, MOV) para enviar no WhatsApp e e-mail. 100% gratuito no navegador, sem upload e sem marcas d’água.',
-    heroSubtitle: 'Reduza os megabytes dos seus vídeos para enviar por e-mail, WhatsApp e economizar espaço de armazenamento. 100% no navegador e sem upload.',
-    dropzoneTitle: 'Arraste o vídeo que deseja comprimir',
-    keywords: ['comprimir video sem perder qualidade', 'diminuir tamanho de video', 'reduzir tamanho de video online', 'comprimir video whatsapp'],
-    explainerTitle: 'Como comprimir vídeos sem deixá-los embaçados?',
-    explainerParagraphs: [
-      'Vídeos gravados em celulares modernos gravam em taxas de bits muito altas (bitrates inflados) que geram arquivos pesados desnecessariamente.',
-      'Ao aplicar compressão inteligente com fator de taxa constante (CRF), eliminamos dados redundantes mantendo a nitidez dos rostos, textos e detalhes visuais importantes.'
-    ],
-    sourceDetailsTitle: 'Vídeo Pesado Original',
-    sourceDetails: [
-      'Taxa de bits desnecessariamente alta',
-      'Ultrapassa o limite de 16 MB do WhatsApp',
-      'Demora para carregar e enviar no 4G/5G'
-    ],
-    targetDetailsTitle: 'Vídeo Otimizado e Leve',
-    targetDetails: [
-      'Tamanho até 70% menor',
-      'Resolução nítida em 720p HD ou 1080p',
-      'Envio instantâneo sem travar o WhatsApp'
-    ],
-    faqs: [
+      },
       {
-        question: 'Qual a melhor predefinição para comprimir para o WhatsApp?',
-        answer: 'Escolha a predefinição "Otimizado para WhatsApp". Ela ajusta a resolução e o áudio para garantir que o arquivo fique abaixo de 16MB com excelente nitidez.'
+        question: 'Posso converter vídeo para GIF online sem instalar programas?',
+        answer: 'Sim! Todo o processamento roda diretamente no navegador via WebAssembly. Não é necessário baixar nem instalar nenhum software — funciona no computador e no celular.'
       }
     ]
   },
@@ -335,8 +304,8 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Highlight: 'MP4 para WebM',
     h1Suffix: 'Online Grátis',
     metaTitle: 'Converter MP4 para WebM Online Grátis — Vídeo para Web',
-    metaDescription: 'Converta arquivos MP4 para o formato leve e moderno WebM para sites e HTML5. 100% gratuito no navegador, sem upload e sem cadastro.',
-    heroSubtitle: 'Transforme vídeos MP4 no padrão aberto e ultraleve WebM para carregamento instantâneo em páginas web. 100% no seu navegador.',
+    metaDescription: 'Converta arquivos MP4 para o formato leve e moderno WebM para sites e HTML5. totalmente gratuito no navegador, sem upload e sem cadastro.',
+    heroSubtitle: 'Transforme vídeos MP4 no padrão aberto e ultraleve WebM para carregamento instantâneo em páginas web. totalmente no seu navegador.',
     dropzoneTitle: 'Arraste o vídeo para converter para WebM',
     keywords: ['converter mp4 para webm', 'mp4 para webm online', 'conversor mp4 webm gratis'],
     explainerTitle: 'Por que utilizar o formato WebM em sites e blogs?',
@@ -351,7 +320,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     faqs: [
       {
         question: 'O formato WebM funciona em todos os navegadores?',
-        answer: 'Sim, praticamente 100% dos navegadores modernos (Chrome, Firefox, Safari, Edge) reproduzem WebM nativamente.'
+        answer: 'Sim, praticamente todos os navegadores modernos (Chrome, Firefox, Safari, Edge) reproduzem WebM nativamente.'
       }
     ]
   },
@@ -365,7 +334,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Highlight: 'Instagram',
     h1Suffix: 'Online',
     metaTitle: 'Conversor de Vídeo para Instagram Online — Reels, Stories e Feed',
-    metaDescription: 'Converta e formate vídeos para o Instagram (Reels, Stories e Feed) nos formatos recomendados MP4 e H.264. 100% gratuito e privado no navegador.',
+    metaDescription: 'Converta e formate vídeos para o Instagram (Reels, Stories e Feed) nos formatos recomendados MP4 e H.264. totalmente gratuito e privado no navegador.',
     heroSubtitle: 'Prepare seus vídeos para postar no Instagram com a melhor nitidez possível. Sem distorções e no formato padrão MP4 H.264.',
     dropzoneTitle: 'Arraste o vídeo para otimizar para o Instagram',
     keywords: ['conversor de video instagram', 'conversor de video do instagram', 'converter video para reels', 'converter video para stories', 'formato video instagram'],
@@ -395,7 +364,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Highlight: 'AVI para MP4',
     h1Suffix: 'Online Grátis',
     metaTitle: 'Converter AVI para MP4 Online Grátis — Rápido e Seguro',
-    metaDescription: 'Converta vídeos no formato AVI para MP4 universal no navegador. Sem necessidade de upload, sem cadastro e 100% privado.',
+    metaDescription: 'Converta vídeos no formato AVI para MP4 universal no navegador. Sem necessidade de upload, sem cadastro e totalmente privado.',
     heroSubtitle: 'Modernize vídeos antigos em formato AVI para o padrão universal MP4. Compatível com todos os celulares e Smart TVs.',
     dropzoneTitle: 'Arraste seu arquivo .AVI aqui para converter para MP4',
     keywords: ['converter avi para mp4', 'avi para mp4 online gratis', 'transformar avi em mp4'],
@@ -425,8 +394,8 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Highlight: 'MKV para MP4',
     h1Suffix: 'Online Grátis',
     metaTitle: 'Converter MKV para MP4 Online Grátis — Sem Travar',
-    metaDescription: 'Converta vídeos MKV para MP4 universal no navegador sem enviar arquivos para a nuvem. Rápido, seguro e 100% gratuito.',
-    heroSubtitle: 'Transforme vídeos MKV no padrão universal MP4 com alta fidelidade visual. 100% no navegador e sem upload para a nuvem.',
+    metaDescription: 'Converta vídeos MKV para MP4 universal no navegador sem enviar arquivos para a nuvem. Rápido, seguro e totalmente gratuito.',
+    heroSubtitle: 'Transforme vídeos MKV no padrão universal MP4 com alta fidelidade visual. totalmente no navegador e sem upload para a nuvem.',
     dropzoneTitle: 'Arraste seu arquivo .MKV aqui para converter para MP4',
     keywords: ['converter mkv para mp4', 'mkv para mp4 online gratis', 'transformar mkv em mp4'],
     explainerTitle: 'Como converter vídeos MKV para MP4?',
@@ -455,8 +424,8 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Highlight: 'WebM para MP4',
     h1Suffix: 'Online Grátis',
     metaTitle: 'Converter WebM para MP4 Online Grátis — Fácil e Seguro',
-    metaDescription: 'Transforme vídeos WebM da internet em MP4 amplamente compatível. 100% gratuito, sem cadastro, sem marcas d’água e com processamento local.',
-    heroSubtitle: 'Transforme vídeos baixados em WebM no padrão universal MP4 com alta fidelidade visual. 100% no navegador.',
+    metaDescription: 'Transforme vídeos WebM da internet em MP4 amplamente compatível. totalmente gratuito, sem cadastro, sem marcas d’água e com processamento local.',
+    heroSubtitle: 'Transforme vídeos baixados em WebM no padrão universal MP4 com alta fidelidade visual. totalmente no navegador.',
     dropzoneTitle: 'Arraste seu arquivo .WebM aqui para converter para MP4',
     keywords: ['converter webm para mp4', 'webm para mp4 online gratis', 'transformar webm em mp4'],
     explainerTitle: 'Por que converter WebM para MP4?',
@@ -466,7 +435,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     sourceDetailsTitle: 'Vídeo WebM',
     sourceDetails: ['Pode não abrir em editores de vídeo', 'Incompatível com alguns players de TV'],
     targetDetailsTitle: 'Vídeo MP4',
-    targetDetails: ['Compatível com Premiere, Final Cut, CapCut', 'Reprodução em 100% dos dispositivos'],
+    targetDetails: ['Compatível com Premiere, Final Cut, CapCut', 'Reprodução em todos os dispositivos'],
     faqs: [
       {
         question: 'Por que converter arquivos WebM para MP4?',
@@ -484,8 +453,8 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Highlight: 'WMV para MP4',
     h1Suffix: 'Online Grátis',
     metaTitle: 'Converter WMV para MP4 Online Grátis — Windows Media para MP4',
-    metaDescription: 'Converta vídeos no formato Windows Media Video (WMV) para MP4 universal no navegador. Rápido, sem upload de arquivos e 100% gratuito.',
-    heroSubtitle: 'Modernize vídeos antigos do Windows Media para o padrão universal MP4. Rápido, seguro e 100% local.',
+    metaDescription: 'Converta vídeos no formato Windows Media Video (WMV) para MP4 universal no navegador. Rápido, sem upload de arquivos e totalmente gratuito.',
+    heroSubtitle: 'Modernize vídeos antigos do Windows Media para o padrão universal MP4. Rápido, seguro e totalmente local.',
     dropzoneTitle: 'Arraste seu arquivo .WMV aqui para converter para MP4',
     keywords: ['converter wmv para mp4', 'wmv para mp4 online gratis', 'transformar wmv em mp4'],
     explainerTitle: 'Por que atualizar WMV para MP4?',
@@ -514,7 +483,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Highlight: 'M2TS para MP4',
     h1Suffix: 'Online Grátis',
     metaTitle: 'Converter M2TS para MP4 Online Grátis — Sem Perda de Qualidade',
-    metaDescription: 'Converta gravações de filmadoras M2TS (AVCHD Blu-ray) para MP4 no navegador. Rápido, sem upload de arquivos e 100% privado.',
+    metaDescription: 'Converta gravações de filmadoras M2TS (AVCHD Blu-ray) para MP4 no navegador. Rápido, sem upload de arquivos e totalmente privado.',
     heroSubtitle: 'Transforme vídeos de câmeras digitais e discos Blu-ray (.m2ts) no formato universal MP4 sem travar seu computador.',
     dropzoneTitle: 'Arraste seu arquivo .M2TS aqui para converter para MP4',
     keywords: ['converter m2ts para mp4', 'm2ts para mp4 online', 'm2ts converter'],
@@ -526,7 +495,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     sourceDetailsTitle: 'Formato M2TS (AVCHD)',
     sourceDetails: ['Exclusivo de filmadoras e Blu-ray', 'Não roda em celulares ou navegadores', 'Tamanho de arquivo muito pesado'],
     targetDetailsTitle: 'Formato MP4 Universal',
-    targetDetails: ['Compatível com 100% dos dispositivos', 'Reprodução imediata na web', 'Fácil de compartilhar no WhatsApp'],
+    targetDetails: ['Compatível com todos os dispositivos', 'Reprodução imediata na web', 'Fácil de compartilhar no WhatsApp'],
     faqs: [
       { question: 'Como converter vídeos M2TS gravados na câmera para MP4?', answer: 'Basta arrastar o arquivo .m2ts para o conversor e clicar em Converter. O arquivo gerado será um MP4 leve e nítido.' }
     ]
@@ -541,7 +510,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Highlight: 'MTS para MP4',
     h1Suffix: 'Online Grátis',
     metaTitle: 'Converter MTS para MP4 Online Grátis — AVCHD para MP4',
-    metaDescription: 'Converta arquivos MTS de filmadoras Sony, Canon e Panasonic para MP4 universal no navegador. 100% gratuito e privado.',
+    metaDescription: 'Converta arquivos MTS de filmadoras Sony, Canon e Panasonic para MP4 universal no navegador. totalmente gratuito e privado.',
     heroSubtitle: 'Transforme gravações brutas de filmadoras digitais (.mts) em vídeos MP4 modernos prontos para compartilhar.',
     dropzoneTitle: 'Arraste seu arquivo .MTS aqui para converter para MP4',
     keywords: ['converter mts para mp4', 'mts para mp4 online', 'mts converter'],
@@ -567,7 +536,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Highlight: 'TS para MP4',
     h1Suffix: 'Online Grátis',
     metaTitle: 'Converter TS para MP4 Online Grátis — Transport Stream para MP4',
-    metaDescription: 'Converta gravações de TV Digital e transmissões TS para MP4 no navegador. Rápido, sem upload de arquivos e 100% seguro.',
+    metaDescription: 'Converta gravações de TV Digital e transmissões TS para MP4 no navegador. Rápido, sem upload de arquivos e totalmente seguro.',
     heroSubtitle: 'Modernize transmissões MPEG Transport Stream (.ts) para o padrão universal MP4 com alta fidelidade.',
     dropzoneTitle: 'Arraste seu arquivo .TS aqui para converter para MP4',
     keywords: ['converter ts para mp4', 'ts para mp4 online', 'ts converter'],
@@ -604,7 +573,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     sourceDetailsTitle: 'Arquivo VOB (DVD)',
     sourceDetails: ['Requer leitor de DVD ou VLC', 'Incompatível com celulares modernos', 'Codec MPEG-2 antigo'],
     targetDetailsTitle: 'Arquivo MP4 Moderno',
-    targetDetails: ['Roda em 100% dos celulares e Smart TVs', 'Redução de até 70% do tamanho', 'Fácil de guardar na nuvem ou pen drive'],
+    targetDetails: ['Roda em todos os celulares e Smart TVs', 'Redução de até 70% do tamanho', 'Fácil de guardar na nuvem ou pen drive'],
     faqs: [
       { question: 'Como converter a pasta VIDEO_TS de um DVD?', answer: 'Basta selecionar os arquivos .VOB principais e convertê-los diretamente em MP4 no seu navegador.' }
     ]
@@ -619,7 +588,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Highlight: 'FLV para MP4',
     h1Suffix: 'Online Grátis',
     metaTitle: 'Converter FLV para MP4 Online Grátis — Flash Video para MP4',
-    metaDescription: 'Transforme vídeos antigos em formato Flash (.flv) para MP4 universal no navegador. 100% gratuito, sem upload e sem cadastro.',
+    metaDescription: 'Transforme vídeos antigos em formato Flash (.flv) para MP4 universal no navegador. totalmente gratuito, sem upload e sem cadastro.',
     heroSubtitle: 'Atualize vídeos Flash FLV legados para o formato universal MP4 suportado por todos os navegadores modernos.',
     dropzoneTitle: 'Arraste seu arquivo .FLV aqui para converter para MP4',
     keywords: ['converter flv para mp4', 'flv para mp4 online', 'flv converter'],
@@ -645,7 +614,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Highlight: '3GP para MP4',
     h1Suffix: 'Online Grátis',
     metaTitle: 'Converter 3GP para MP4 Online Grátis — 3GPP para MP4',
-    metaDescription: 'Converta vídeos 3GP e 3GPP de celulares antigos para MP4 moderno no navegador. Rápido, seguro e 100% gratuito.',
+    metaDescription: 'Converta vídeos 3GP e 3GPP de celulares antigos para MP4 moderno no navegador. Rápido, seguro e totalmente gratuito.',
     heroSubtitle: 'Restaure gravações antigas de celulares 3G (.3gp) no formato universal MP4 com alta fidelidade sonora.',
     dropzoneTitle: 'Arraste seu arquivo .3GP aqui para converter para MP4',
     keywords: ['converter 3gp para mp4', '3gp para mp4 online', '3gp converter', 'converter 3gpp para mp4'],
@@ -671,7 +640,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Highlight: 'M4V para MP4',
     h1Suffix: 'Online Grátis',
     metaTitle: 'Converter M4V para MP4 Online Grátis — Apple M4V para MP4',
-    metaDescription: 'Converta vídeos no formato M4V para MP4 universal no navegador sem upload. Rápido, seguro e 100% gratuito.',
+    metaDescription: 'Converta vídeos no formato M4V para MP4 universal no navegador sem upload. Rápido, seguro e totalmente gratuito.',
     heroSubtitle: 'Transforme vídeos M4V do ecossistema Apple em MP4 universal compatível com Android, Windows e TVs.',
     dropzoneTitle: 'Arraste seu arquivo .M4V aqui para converter para MP4',
     keywords: ['converter m4v para mp4', 'm4v para mp4 online', 'm4v converter'],
@@ -682,7 +651,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     sourceDetailsTitle: 'Formato M4V',
     sourceDetails: ['Específico do ecossistema Apple', 'Pode falhar em celulares Android'],
     targetDetailsTitle: 'Formato MP4',
-    targetDetails: ['100% universal em qualquer aparelho', 'Fácil reprodução web'],
+    targetDetails: ['totalmente universal em qualquer aparelho', 'Fácil reprodução web'],
     faqs: [
       { question: 'A conversão de M4V para MP4 é rápida?', answer: 'Sim, a conversão ocorre em poucos segundos diretamente na memória do seu aparelho.' }
     ]
@@ -697,7 +666,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Highlight: 'RMVB para MP4',
     h1Suffix: 'Online Grátis',
     metaTitle: 'Converter RMVB para MP4 Online Grátis — RealMedia para MP4',
-    metaDescription: 'Converta vídeos RMVB e RM antigos para MP4 universal no navegador. 100% gratuito, sem upload e sem marcas d’água.',
+    metaDescription: 'Converta vídeos RMVB e RM antigos para MP4 universal no navegador. totalmente gratuito, sem upload e sem marcas d’água.',
     heroSubtitle: 'Modernize filmes e animes antigos em formato RealMedia (.rmvb) para o padrão universal MP4.',
     dropzoneTitle: 'Arraste seu arquivo .RMVB aqui para converter para MP4',
     keywords: ['converter rmvb para mp4', 'rmvb para mp4 online', 'rmvb converter', 'converter rm para mp4'],
@@ -708,7 +677,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     sourceDetailsTitle: 'Formato RMVB',
     sourceDetails: ['Requer codecs RealPlayer antigos', 'Incompatível com celulares modernos'],
     targetDetailsTitle: 'Formato MP4',
-    targetDetails: ['Compatível com 100% dos aparelhos atuais', 'Reprodução nítida em qualquer tela'],
+    targetDetails: ['Compatível com todos os aparelhos atuais', 'Reprodução nítida em qualquer tela'],
     faqs: [
       { question: 'Consigo converter filmes antigos em RMVB?', answer: 'Sim! Nosso motor WebAssembly decodifica o formato RealMedia e converte para MP4 moderno com perfeição.' }
     ]
@@ -723,7 +692,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Highlight: 'DivX para MP4',
     h1Suffix: 'Online Grátis',
     metaTitle: 'Converter DivX para MP4 Online Grátis — Rápido e Seguro',
-    metaDescription: 'Converta vídeos no formato DivX para MP4 universal no navegador. Sem cadastro, sem upload de arquivos e 100% gratuito.',
+    metaDescription: 'Converta vídeos no formato DivX para MP4 universal no navegador. Sem cadastro, sem upload de arquivos e totalmente gratuito.',
     heroSubtitle: 'Atualize vídeos codificados em DivX para o formato moderno MP4 H.264 compatível com todos os celulares.',
     dropzoneTitle: 'Arraste seu arquivo .DIVX aqui para converter para MP4',
     keywords: ['converter divx para mp4', 'divx para mp4 online', 'divx converter'],
@@ -749,7 +718,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Highlight: 'XviD para MP4',
     h1Suffix: 'Online Grátis',
     metaTitle: 'Converter XviD para MP4 Online Grátis — Sem Perda de Qualidade',
-    metaDescription: 'Transforme vídeos no formato XviD em MP4 universal no navegador. 100% gratuito, sem upload de arquivos e sem filas.',
+    metaDescription: 'Transforme vídeos no formato XviD em MP4 universal no navegador. totalmente gratuito, sem upload de arquivos e sem filas.',
     heroSubtitle: 'Converta gravações e filmes em XviD para o padrão moderno MP4 com áudio AAC cristalino.',
     dropzoneTitle: 'Arraste seu arquivo .XVID aqui para converter para MP4',
     keywords: ['converter xvid para mp4', 'xvid para mp4 online', 'xvid converter'],
@@ -760,9 +729,9 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     sourceDetailsTitle: 'Codec XviD',
     sourceDetails: ['Incompatível com iPhones e Smart TVs novas'],
     targetDetailsTitle: 'Codec MP4 H.264',
-    targetDetails: ['Compatibilidade absoluta em 100% dos aparelhos'],
+    targetDetails: ['Compatibilidade absoluta em todos os aparelhos'],
     faqs: [
-      { question: 'Preciso instalar programas para converter XviD?', answer: 'Não! Todo o processo roda 100% no seu navegador sem instalar nada.' }
+      { question: 'Preciso instalar programas para converter XviD?', answer: 'Não! Todo o processo roda totalmente no seu navegador sem instalar nada.' }
     ]
   },
 
@@ -827,7 +796,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Highlight: 'iPhone e iOS',
     h1Suffix: 'Online',
     metaTitle: 'Conversor de Vídeo para iPhone Online Grátis — Formato Compatível',
-    metaDescription: 'Converta qualquer vídeo para o formato compatível com iPhone e iPad (MP4 H.264 + AAC). 100% no navegador, sem upload e seguro.',
+    metaDescription: 'Converta qualquer vídeo para o formato compatível com iPhone e iPad (MP4 H.264 + AAC). totalmente no navegador, sem upload e seguro.',
     heroSubtitle: 'Converta vídeos de qualquer formato para rodar perfeitamente no reprodutor nativo e no rolo de câmera do iPhone.',
     dropzoneTitle: 'Arraste o vídeo para formatar para o iPhone',
     keywords: ['converter video para iphone', 'video converter iphone', 'conversor de video para celular iphone'],
@@ -853,7 +822,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Highlight: 'Android',
     h1Suffix: 'Online Grátis',
     metaTitle: 'Conversor de Vídeo para Android Online Grátis — Todos os Modelos',
-    metaDescription: 'Converta qualquer arquivo de vídeo para o formato ideal para celulares Android (Samsung, Motorola, Xiaomi). Rápido, sem cadastro e 100% privado.',
+    metaDescription: 'Converta qualquer arquivo de vídeo para o formato ideal para celulares Android (Samsung, Motorola, Xiaomi). Rápido, sem cadastro e totalmente privado.',
     heroSubtitle: 'Transforme vídeos pesados ou incompatíveis no formato universal MP4 otimizado para celulares Android.',
     dropzoneTitle: 'Arraste o vídeo para formatar para Android',
     keywords: ['converter video para android', 'conversor de video android', 'video converter android'],
@@ -866,7 +835,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     targetDetailsTitle: 'Vídeo Otimizado Android',
     targetDetails: ['Execução instantânea na Galeria', 'Envio veloz no 4G/5G'],
     faqs: [
-      { question: 'Qual o melhor formato para celulares Android?', answer: 'O formato padrão MP4 com codec H.264 é o mais leve e compatível com 100% dos modelos Android.' }
+      { question: 'Qual o melhor formato para celulares Android?', answer: 'O formato padrão MP4 com codec H.264 é o mais leve e compatível com todos os modelos Android.' }
     ]
   },
 
@@ -879,8 +848,8 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Highlight: 'Áudio Online',
     h1Suffix: 'Grátis',
     metaTitle: 'Conversor de Áudio Online Grátis — Transcodificação e MP3',
-    metaDescription: 'Converta arquivos de áudio (WAV, FLAC, M4A, OGG, AAC) e extraia som de vídeos para MP3 a 192 kbps. 100% no navegador, sem upload e sem cadastro.',
-    heroSubtitle: 'Transforme gravações, faixas musicais e trilhas sonoras de vídeos no padrão universal MP3 com alta nitidez estéreo. Processamento 100% no seu navegador.',
+    metaDescription: 'Converta arquivos de áudio (WAV, FLAC, M4A, OGG, AAC) e extraia som de vídeos para MP3 a 192 kbps. totalmente no navegador, sem upload e sem cadastro.',
+    heroSubtitle: 'Transforme gravações, faixas musicais e trilhas sonoras de vídeos no padrão universal MP3 com alta nitidez estéreo. Processamento totalmente no seu navegador.',
     dropzoneTitle: 'Arraste qualquer arquivo de áudio ou vídeo para converter para MP3',
     keywords: ['conversor de audio', 'conversor de áudio', 'conversor de audio online', 'converter audio para mp3', 'conversor de áudio gratuito'],
     explainerTitle: 'Como funciona o conversor de áudio universal no navegador?',
@@ -896,7 +865,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     ],
     targetDetailsTitle: 'Saída em MP3 Universal (192 kbps)',
     targetDetails: [
-      'Compatível com 100% dos celulares, TVs e rádios',
+      'Compatível com todos os celulares, TVs e rádios',
       'Codificação LAME estéreo de alta fidelidade',
       'Redução drástica do tamanho com áudio nítido'
     ],
@@ -907,7 +876,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
       },
       {
         question: 'O conversor de áudio é realmente gratuito e sem limites?',
-        answer: 'Sim. O ConversordeVideo.com é 100% gratuito, sem limite diário de conversões, sem necessidade de cadastro e sem marcas d’água.'
+        answer: 'Sim. O ConversordeVideo.com é totalmente gratuito, sem limite diário de conversões, sem necessidade de cadastro e sem marcas d’água.'
       },
       {
         question: 'Minhas gravações de voz ou músicas são enviadas para algum servidor?',
@@ -930,14 +899,15 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Suffix: 'e Sem Perda de Qualidade',
     metaTitle: 'Compressor de Vídeo Online Grátis — Reduzir Tamanho sem Upload',
     metaDescription: 'Comprima vídeos MP4, MOV e outros formatos online diretamente no seu navegador. Reduza até 80% do tamanho de arquivo sem perder nitidez, sem upload e sem cadastro.',
-    heroSubtitle: 'Reduza o peso dos seus vídeos em segundos para enviar por WhatsApp, e-mail e economizar espaço. Processamento 100% local no seu aparelho.',
+    heroSubtitle: 'Reduza o peso dos seus vídeos em segundos para enviar por WhatsApp, e-mail e economizar espaço. Processamento totalmente local no seu aparelho.',
     dropzoneTitle: 'Arraste o vídeo que você deseja comprimir',
-    keywords: ['compressor de video', 'compressor de video online', 'compressor de video gratis', 'comprimir video online', 'compactar video', 'comprimir vídeo online grátis', 'reduzir tamanho do video'],
+    keywords: ['compressor de video', 'compressor de video online', 'compressor de video gratis', 'comprimir video online', 'compactar video', 'comprimir vídeo online grátis', 'compactar video mp4', 'compactar video para whatsapp', 'compactar video online', 'comprimir video online gratis', 'comprimir vídeo online', 'reduzir tamanho do video', 'reduzir tamanho do vídeo', 'compactar vídeo mp4', 'compactar video gratis', 'compactar video sem perder qualidade', 'compactar vídeo para whatsapp', 'compactar vídeo online', 'como compactar video', 'comprimir mp4', 'comprimir mp4 online', 'comprimir mp4 gratis', 'reduzir tamanho mp4'],
     explainerTitle: 'Como funciona a compressão de vídeo inteligente no navegador?',
     explainerParagraphs: [
       'Celulares e câmeras gravam vídeos com taxas de bits elevadas que geram arquivos pesados sem ganho visível de nitidez na maioria das telas.',
       'Nosso compressor utiliza a tecnologia FFmpeg WebAssembly para reescalar e reencodificar o vídeo com fator de taxa constante (CRF), eliminando megabytes redundantes sem criar artefatos ou desfoque na imagem.',
-      'Ao contrário de ferramentas convencionais que exigem o upload do arquivo para servidores remotos, todo o cálculo é executado na memória RAM do seu próprio dispositivo, garantindo velocidade instantânea e privacidade total.'
+      'Ao contrário de ferramentas convencionais que exigem o upload do arquivo para servidores remotos, todo o cálculo é executado na memória RAM do seu próprio dispositivo, garantindo velocidade instantânea e privacidade total.',
+      'Para arquivos MP4 especificamente, o compressor aplica o perfil H.264 High com cabeçalho faststart e áudio AAC otimizado, reduzindo o tamanho em até 80% mantendo a compatibilidade universal com WhatsApp, e-mail, Smart TVs e navegadores.'
     ],
     sourceDetailsTitle: 'Vídeo Pesado Original',
     sourceDetails: [
@@ -958,7 +928,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
       },
       {
         question: 'Meus vídeos são enviados para a nuvem durante a compressão?',
-        answer: 'Não. Todo o processamento ocorre 100% no seu próprio navegador via WebAssembly. Nenhum byte do seu arquivo sai do seu celular ou computador.'
+        answer: 'Não. Todo o processamento ocorre totalmente no seu próprio navegador via WebAssembly. Nenhum byte do seu arquivo sai do seu celular ou computador.'
       },
       {
         question: 'Qual é o limite máximo de tamanho de arquivo aceito?',
@@ -967,6 +937,14 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
       {
         question: 'Posso comprimir vídeos diretamente do celular?',
         answer: 'Sim! A ferramenta é totalmente compatível com navegadores móveis no Android (Chrome) e iPhone/iPad (Safari).'
+      },
+      {
+        question: 'Como comprimir um arquivo MP4 online sem instalar programas?',
+        answer: 'Basta arrastar o arquivo MP4 para o conversor e selecionar a predefinição de compressão. O motor WebAssembly reduz o tamanho recodificando o vídeo com bitrate otimizado e áudio AAC, sem necessidade de instalação.'
+      },
+      {
+        question: 'É possível reduzir o tamanho do vídeo sem perder muita qualidade?',
+        answer: 'Sim. Nosso compressor utiliza o método CRF (Constant Rate Factor), que prioriza a preservação de detalhes em cenas com rostos e textos, removendo apenas dados redundantes imperceptíveis ao olho humano.'
       }
     ]
   },
@@ -981,7 +959,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Suffix: 'Grátis',
     metaTitle: 'Compressor de Vídeo MP4 Online Grátis — Diminuir Tamanho do MP4',
     metaDescription: 'Comprima arquivos de vídeo MP4 online sem perder resolução. Reduza megabytes mantendo áudio AAC cristalino e vídeo H.264 rápido para web.',
-    heroSubtitle: 'Diminua o tamanho de qualquer vídeo MP4 sem comprometer a qualidade da imagem. Rápido, 100% privado e sem marcas d’água.',
+    heroSubtitle: 'Diminua o tamanho de qualquer vídeo MP4 sem comprometer a qualidade da imagem. Rápido, totalmente privado e sem marcas d’água.',
     dropzoneTitle: 'Arraste o arquivo MP4 para comprimir',
     keywords: ['compressor de video mp4', 'compressor de vídeo mp4', 'comprimir mp4', 'diminuir tamanho de mp4'],
     explainerTitle: 'Por que comprimir arquivos MP4 com codec H.264 e Faststart?',
@@ -1008,49 +986,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
       },
       {
         question: 'O arquivo MP4 comprimido funciona em TVs e iPhones?',
-        answer: 'Sim. O formato resultante é um MP4 universal padrão H.264 com áudio AAC, compatível com 100% dos aparelhos e sistemas operacionais.'
-      }
-    ]
-  },
-
-  'compressor-de-video-gratuito': {
-    slug: 'compressor-de-video-gratuito',
-    targetFormat: 'mp4',
-    initialPreset: 'compress_balanced',
-    badge: '🏆 100% Grátis • Sem Limites Diários • Sem Cadastro',
-    h1Prefix: 'Melhor Compressor de Vídeo',
-    h1Highlight: 'Gratuito Online',
-    h1Suffix: '',
-    metaTitle: 'Melhor Compressor de Vídeo Gratuito Online — Sem Filas e Sem Limites',
-    metaDescription: 'Comprima vídeos de graça sem pagar mensalidades, sem criar contas e sem marcas d’água. Conheça o compressor de vídeo gratuito mais rápido e privado da internet.',
-    heroSubtitle: 'Uma ferramenta de compressão verdadeiramente livre: sem planos pagos, sem limites de minutos e sem anúncios abusivos.',
-    dropzoneTitle: 'Arraste seu vídeo para comprimir gratuitamente',
-    keywords: ['compressor de vídeo gratuito', 'compressor de video gratis', 'compressor de vídeo online grátis', 'compressor de video gratuito'],
-    explainerTitle: 'O que torna o nosso compressor de vídeo gratuito superior aos concorrentes?',
-    explainerParagraphs: [
-      'Enquanto a maioria dos compressores da internet impõe limites de 100MB, filas de espera demoradas e marcas d’água forçadas para exigir planos mensais pagos, o ConversordeVideo.com é 100% gratuito e ilimitado.',
-      'Ao utilizar a capacidade de processamento do seu próprio navegador via WebAssembly, não temos os custos astronômicos de servidores que outros serviços repassam aos usuários. O resultado é um compressor veloz, limpo e acessível a todos.'
-    ],
-    sourceDetailsTitle: 'Conversores Tradicionais',
-    sourceDetails: [
-      'Limites rígidos de tamanho (100 MB)',
-      'Cobrança de assinaturas caras',
-      'Filas de espera lentas na nuvem'
-    ],
-    targetDetailsTitle: 'ConversordeVideo.com',
-    targetDetails: [
-      '100% Gratuito sem limites diários',
-      'Zero cadastro ou inserção de dados',
-      'Processamento veloz no próprio dispositivo'
-    ],
-    faqs: [
-      {
-        question: 'Existe alguma versão paga ou recurso bloqueado?',
-        answer: 'Não! Todas as resoluções, formatos e predefinições de compressão são 100% gratuitas e abertas a todos os usuários.'
-      },
-      {
-        question: 'O compressor adiciona marca d’água no vídeo?',
-        answer: 'Nunca. Seus vídeos são exportados totalmente limpos, exatamente como você os gravou.'
+        answer: 'Sim. O formato resultante é um MP4 universal padrão H.264 com áudio AAC, compatível com todos os aparelhos e sistemas operacionais.'
       }
     ]
   },
@@ -1065,7 +1001,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Highlight: 'MP3 Online',
     h1Suffix: 'Grátis',
     metaTitle: 'Conversor de Áudio para MP3 Online Grátis — Rápido e Seguro',
-    metaDescription: 'Converta qualquer arquivo de som para MP3 com codificação LAME 192 kbps estéreo. 100% no navegador, sem upload para a nuvem e totalmente gratuito.',
+    metaDescription: 'Converta qualquer arquivo de som para MP3 com codificação LAME 192 kbps estéreo. totalmente no navegador, sem upload para a nuvem e totalmente gratuito.',
     heroSubtitle: 'Transforme gravações de voz, músicas e áudios em MP3 compatível com todos os players. Sem instalar programas e sem fila de espera.',
     dropzoneTitle: 'Arraste seu arquivo de áudio aqui para converter para MP3',
     keywords: ['conversor de audio para mp3', 'conversor de áudio para mp3', 'converter audio para mp3', 'transformar audio em mp3'],
@@ -1082,7 +1018,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     ],
     targetDetailsTitle: 'Padrão MP3 Estéreo (192 kbps)',
     targetDetails: [
-      '100% universal em qualquer reprodutor ou TV',
+      'totalmente universal em qualquer reprodutor ou TV',
       'Tamanho compacto com fidelidade acústica',
       'Fácil de compartilhar e arquivar sem perdas visíveis'
     ],
@@ -1106,307 +1042,66 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     ]
   },
 
-  'baixar-conversor-de-audio-mp3-gratuito': {
-    slug: 'baixar-conversor-de-audio-mp3-gratuito',
-    targetFormat: 'mp3',
-    initialPreset: 'audio_mp3',
-    badge: '🏆 Sem Download de Programas • 100% Web Seguro',
-    h1Prefix: 'Conversor de Áudio para',
-    h1Highlight: 'MP3 Gratuito',
-    h1Suffix: 'Online',
-    metaTitle: 'Conversor de Áudio para MP3 Gratuito — Sem Baixar Programas',
-    metaDescription: 'Converta áudios e vídeos para MP3 gratuitamente no navegador sem baixar programas pesados ou arriscados. Rápido, seguro, sem cadastro e 100% privado.',
-    heroSubtitle: 'Dispense a instalação de softwares pesados: converta qualquer áudio para MP3 direto no navegador com a mesma velocidade de um programa instalado.',
-    dropzoneTitle: 'Arraste seu arquivo para converter para MP3 gratuitamente',
-    keywords: ['baixar conversor de áudio para mp3 gratuito', 'baixar conversor de audio para mp3 gratis', 'conversor de audio gratuito', 'programa converter audio mp3 gratis'],
-    explainerTitle: 'Por que você não precisa baixar um programa para converter áudio?',
-    explainerParagraphs: [
-      'Tradicionalmente, para converter músicas ou gravações de som era necessário baixar instaladores executáveis (.exe ou .dmg), que frequentemente vinham acompanhados de barras de ferramentas indesejadas, anúncios invasivos ou limitações de versão de teste.',
-      'Com a evolução do WebAssembly, o ConversordeVideo.com traz o motor profissional do FFmpeg para rodar diretamente dentro do seu navegador. Você obtém a mesma potência e velocidade de um software profissional de desktop sem instalar absolutamente nada e sem expor seu computador a vírus ou malwares.'
-    ],
-    sourceDetailsTitle: 'Programas Antigos para Baixar',
-    sourceDetails: [
-      'Risco de vírus, adwares e instaladores suspeitos',
-      'Ocupam espaço no disco e exigem atualizações',
-      'Frequentemente cobram taxas após período de teste'
-    ],
-    targetDetailsTitle: 'ConversordeVideo.com no Navegador',
-    targetDetails: [
-      'Zero instalação — abra a página e use na hora',
-      '100% gratuito para sempre sem pegadinhas',
-      'Processamento local seguro e sem rastreamento'
-    ],
-    faqs: [
-      {
-        question: 'Preciso baixar algum aplicativo para usar este conversor de áudio?',
-        answer: 'Não! Todo o processo de conversão para MP3 ocorre dentro do seu navegador web sem necessidade de baixar ou instalar qualquer arquivo executável.'
-      },
-      {
-        question: 'O conversor online é tão rápido quanto um programa instalado no PC?',
-        answer: 'Sim. Nosso motor utiliza WebAssembly com aceleração por múltiplos núcleos do processador, entregando velocidade similar a programas nativos.'
-      },
-      {
-        question: 'Existe risco de segurança ao usar o conversor no navegador?',
-        answer: 'Ao contrário de programas baixados da web, nosso conversor roda no ambiente isolado (sandbox) do seu navegador e não possui acesso aos seus arquivos do sistema.'
-      },
-      {
-        question: 'Posso converter arquivos grandes sem limite de tamanho?',
-        answer: 'Sim. Como o processamento usa a memória RAM do seu próprio dispositivo, você pode converter arquivos de áudio e gravações extensas sem restrições de servidor.'
-      }
-    ]
-  },
-
-  'conversor-de-audio-mp3': {
-    slug: 'conversor-de-audio-mp3',
-    targetFormat: 'mp3',
-    initialPreset: 'audio_mp3',
-    badge: '⚡ Conversão Rápida para Formato MP3',
-    h1Prefix: 'Conversor de',
-    h1Highlight: 'Áudio MP3',
-    h1Suffix: 'Online Grátis',
-    metaTitle: 'Conversor de Áudio MP3 Online Grátis — Som Cristalino',
-    metaDescription: 'Transforme qualquer arquivo de áudio ou vídeo em MP3 leve com qualidade 192 kbps. 100% no navegador, sem upload para servidores e sem registros.',
-    heroSubtitle: 'A ferramenta prática para transformar faixas sonoras e vídeos no padrão MP3 com alta fidelidade estéreo e sem burocracia.',
-    dropzoneTitle: 'Arraste seu arquivo para gerar o áudio em MP3',
-    keywords: ['conversor de audio mp3', 'conversor de áudio mp3', 'conversor audio mp3', 'converter em mp3 online'],
-    explainerTitle: 'Como o conversor de áudio MP3 preserva a clareza sonora?',
-    explainerParagraphs: [
-      'Ao converter um arquivo de áudio para MP3, o algoritmo de compressão precisa balancear a redução de tamanho com a fidelidade das frequências audíveis humanas. Nossa ferramenta utiliza a biblioteca LAME com parâmetros ajustados para preservar frequências de até 20 kHz em estéreo real.',
-      'O resultado é um arquivo leve, fácil de enviar por mensageiros ou anexar em apresentações, com clareza impecável tanto para voz quanto para instrumentos musicais.'
-    ],
-    sourceDetailsTitle: 'Arquivos Pesados ou Incompatíveis',
-    sourceDetails: [
-      'Formatos WAV, AIFF ou FLAC volumosos',
-      'Arquivos com codecs que travam players móveis',
-      'Consumo excessivo de espaço de armazenamento'
-    ],
-    targetDetailsTitle: 'Áudio MP3 Calibrado',
-    targetDetails: [
-      'Bitrate constante de 192 kbps estéreo',
-      'Compatibilidade universal em 100% dos aparelhos',
-      'Tamanho até 90% menor preservando a nitidez'
-    ],
-    faqs: [
-      {
-        question: 'Como converter áudio para MP3 mantendo o volume original?',
-        answer: 'Nosso conversor mantém o nível de ganho e canais estéreo da faixa de origem sem aplicar compressão dinâmica destrutiva.'
-      },
-      {
-        question: 'É possível converter notas de voz do celular para MP3?',
-        answer: 'Sim. Aceitamos gravações de voz de celulares Android e iPhones (m4a, aac, amr, ogg) e convertemos diretamente em MP3.'
-      },
-      {
-        question: 'Quanto tempo demora para converter uma música para MP3?',
-        answer: 'A maioria das músicas e gravações de áudio de 3 a 5 minutos é convertida em menos de 2 segundos diretamente no seu navegador.'
-      },
-      {
-        question: 'Preciso criar conta ou informar e-mail para baixar o MP3?',
-        answer: 'Não. O download do arquivo MP3 convertido é liberado imediatamente sem nenhum cadastro ou exigência de dados pessoais.'
-      }
-    ]
-  },
-
-  'conversor-de-audio-online': {
-    slug: 'conversor-de-audio-online',
-    targetFormat: 'mp3',
-    initialPreset: 'audio_mp3',
-    badge: '🌐 100% Online • Sem Upload • Privado',
-    h1Prefix: 'Conversor de',
-    h1Highlight: 'Áudio Online',
-    h1Suffix: 'no Navegador',
-    metaTitle: 'Conversor de Áudio Online — Sem Enviar Arquivos para a Web',
-    metaDescription: 'Converta arquivos de áudio online com total privacidade: todo o processo roda no seu navegador sem upload para servidores. 100% gratuito e seguro.',
-    heroSubtitle: 'Converta músicas, podcasts e gravações no navegador sem esperar uploads demorados e com garantia de privacidade absoluta sob a LGPD.',
-    dropzoneTitle: 'Arraste seu arquivo para converter online no navegador',
-    keywords: ['conversor de audio online', 'conversor de áudio online', 'converter audio online gratis', 'conversor de audio web'],
-    explainerTitle: 'Qual a diferença entre nosso conversor online e os conversores comuns?',
-    explainerParagraphs: [
-      'A maioria dos conversores online da internet exige que você envie (faça upload) do seu arquivo para servidores remotos na nuvem. Em conexões lentas, enviar um arquivo de 100 MB pode demorar vários minutos, além de expor dados confidenciais a servidores de terceiros.',
-      'O ConversordeVideo.com funciona de maneira totalmente diferente: todo o código de conversão roda localmente no seu navegador através de WebAssembly. O arquivo não é transmitido pela internet, o que proporciona conversão instantânea mesmo sem uma conexão de alta velocidade e protege 100% da sua privacidade.'
-    ],
-    sourceDetailsTitle: 'Conversores Online Tradicionais',
-    sourceDetails: [
-      'Upload demorado dependente da sua internet',
-      'Arquivos armazenados em servidores externos',
-      'Filas de espera e limites diários de conversão'
-    ],
-    targetDetailsTitle: 'Nosso Conversor Local Online',
-    targetDetails: [
-      'Zero tempo de upload — início imediato',
-      'Arquivos 100% seguros na memória do seu aparelho',
-      'Sem limites de uso diário e sem filas'
-    ],
-    faqs: [
-      {
-        question: 'Como este conversor online funciona sem enviar o arquivo para a internet?',
-        answer: 'Utilizamos a tecnologia WebAssembly, que permite rodar código nativo de alto desempenho (FFmpeg) diretamente na memória do seu navegador web.'
-      },
-      {
-        question: 'O conversor online funciona em computadores corporativos ou Chromebooks?',
-        answer: 'Sim! Por funcionar diretamente no navegador (Chrome, Edge, Firefox, Safari), funciona em qualquer sistema operacional sem necessitar de permissões de administrador.'
-      },
-      {
-        question: 'Preciso de internet rápida para converter áudios grandes?',
-        answer: 'Não! Como não há upload nem download de servidores remotos durante o processamento, a conversão ocorre na velocidade do seu processador local.'
-      },
-      {
-        question: 'O conversor funciona no modo anônimo ou sem conexão?',
-        answer: 'Sim. Uma vez carregada a página, a conversão ocorre localmente no seu dispositivo mesmo em abas anônimas.'
-      }
-    ]
-  },
-
-  'conversor-de-audio-do-youtube': {
-    slug: 'conversor-de-audio-do-youtube',
-    targetFormat: 'mp3',
-    initialPreset: 'audio_mp3',
-    badge: '📹 Extração de Áudio de Vídeos Baixados do YouTube',
-    h1Prefix: 'Conversor de Áudio do',
-    h1Highlight: 'YouTube para MP3',
-    h1Suffix: 'Online',
-    metaTitle: 'Conversor de Áudio do YouTube para MP3 — Formatar Vídeos',
-    metaDescription: 'Extraia o áudio de vídeos baixados do YouTube e YouTube Shorts em formato MP3 de 192 kbps. 100% no navegador, seguro e sem upload de arquivos.',
-    heroSubtitle: 'Converta gravações e clipes salvos do YouTube em arquivos de áudio MP3 leves e nítidos para ouvir no carro, fone de ouvido ou celular.',
-    dropzoneTitle: 'Arraste o arquivo de vídeo do YouTube para extrair o áudio MP3',
-    keywords: ['conversor de audio youtube', 'conversor de audio do youtube', 'conversor de áudio do youtube', 'converter video do youtube em mp3'],
-    explainerTitle: 'Como converter o áudio de vídeos do YouTube salvos no seu computador?',
-    explainerParagraphs: [
-      'Se você possui gravações, palestras, podcasts ou clipes de vídeo salvos do YouTube no seu computador ou celular (em contêineres MP4 ou WebM), nossa ferramenta permite descartar a pesada trilha visual e extrair apenas o som em formato MP3 estéreo de alta fidelidade (192 kbps).',
-      'Importante: este conversor processa arquivos de mídia já armazenados localmente no seu dispositivo. Todo o processamento é feito no seu próprio navegador via WebAssembly, sem enviar nenhum arquivo para servidores externos e sem armazenar suas mídias na nuvem.'
-    ],
-    sourceDetailsTitle: 'Vídeo Baixado do YouTube (MP4/WebM)',
-    sourceDetails: [
-      'Arquivo de vídeo volumoso (> 50 MB)',
-      'Consome muita bateria para reproduzir com tela desligada',
-      'Desnecessário quando você só quer ouvir o conteúdo'
-    ],
-    targetDetailsTitle: 'Áudio MP3 Extraído (192 kbps)',
-    targetDetails: [
-      'Redução de até 95% do tamanho em disco',
-      'Reprodução perfeita com tela desligada no celular',
-      'Compatível com qualquer tocador de música ou pendrive de carro'
-    ],
-    faqs: [
-      {
-        question: 'Esta ferramenta baixa vídeos diretamente de links ou URLs do YouTube?',
-        answer: 'Não. Nossa ferramenta é um conversor de arquivos locais. Você deve selecionar um arquivo de vídeo (MP4, WebM, etc.) já salvo no seu aparelho para que extraiamos a trilha de som em MP3.'
-      },
-      {
-        question: 'Qual é a qualidade do áudio extraído do vídeo?',
-        answer: 'A trilha sonora é codificada em MP3 estéreo a 192 kbps usando a biblioteca LAME, preservando a máxima clareza de voz e instrumentos.'
-      },
-      {
-        question: 'Posso converter vídeos do YouTube Shorts para áudio MP3?',
-        answer: 'Sim! Aceitamos arquivos de vídeo tanto no formato horizontal 16:9 quanto no formato vertical 9:16 do Shorts.'
-      },
-      {
-        question: 'O arquivo de vídeo original é alterado durante a conversão?',
-        answer: 'Não. O arquivo original permanece intocado no seu aparelho e um novo arquivo de áudio .mp3 separado é gerado para download.'
-      }
-    ]
-  },
-
   // Video to Audio Cluster (High Volume Brazil Keywords)
   'converter-video-em-audio': {
     slug: 'converter-video-em-audio',
     targetFormat: 'mp3',
     initialPreset: 'audio_mp3',
-    badge: '🎵 Conversão Universal de Vídeo em Áudio',
+    badge: '🎵 Converter Qualquer Vídeo em Áudio MP3',
     h1Prefix: 'Converter Vídeo em',
     h1Highlight: 'Áudio Online',
     h1Suffix: 'Grátis',
-    metaTitle: 'Converter Vídeo em Áudio Online Grátis — Rápido e Sem Upload',
-    metaDescription: 'Converta qualquer vídeo (MP4, MOV, MKV, AVI, WebM) em áudio MP3 de alta qualidade diretamente no navegador. 100% gratuito, sem limites e sem cadastro.',
-    heroSubtitle: 'Transforme gravações e clipes de vídeo em faixas de áudio estéreo nítidas e leves em segundos. Processamento 100% no seu navegador.',
-    dropzoneTitle: 'Arraste seu arquivo de vídeo para converter em áudio MP3',
-    keywords: ['converter video em audio', 'converter vídeo em áudio', 'converter video em áudio', 'converter vídeo em áudio online', 'como converter video em audio', 'converter vídeo em áudio mp3'],
-    explainerTitle: 'Como transformar qualquer arquivo de vídeo em uma faixa de áudio leve?',
+    metaTitle: 'Converter Vídeo em Áudio Online Grátis — Extrair MP3 Rápido e Privado',
+    metaDescription: 'Converta qualquer vídeo em áudio MP3 de 192 kbps no navegador. Rápido, gratuito, sem upload e sem cadastro. Funciona no celular e computador.',
+    heroSubtitle: 'Transforme gravações de vídeo em áudio MP3 estéreo de alta fidelidade em segundos. Processamento totalmente local no seu navegador, sem enviar arquivos.',
+    dropzoneTitle: 'Arraste o vídeo para converter em áudio MP3',
+    keywords: ['converter video em audio', 'converter vídeo em áudio', 'converter vídeo em áudio grátis', 'converter video em áudio', 'converter vídeo em áudio online', 'como converter video em audio', 'converter vídeo em áudio mp3', 'converter video em audio gratis', 'como converter vídeo em áudio'],
+    explainerTitle: 'Como converter vídeo em áudio MP3 diretamente no navegador?',
     explainerParagraphs: [
-      'Gravações de videoaulas, palestras, podcasts, reuniões e shows frequentemente possuem valor concentrado no conteúdo sonoro. Manter esses arquivos em contêineres de vídeo consome centenas de megabytes desnecessários e impede a reprodução em segundo plano no celular.',
-      'Nossa ferramenta descarta os quadros visuais e codifica exclusivamente a faixa de áudio no padrão MP3 de 192 kbps estéreo com a biblioteca LAME. O arquivo resultante é até 95% mais leve, mantendo fidelidade cristalina para vozes e instrumentos.'
+      'Converter vídeo em áudio é uma das tarefas mais comuns do dia a dia digital: você gravou uma palestra, uma reunião, um show ao vivo ou um vídeo de aula no celular, mas precisa apenas do som para escutar no carro, no fone bluetooth ou no aparelho de som sem gastar dados nem bateria com a tela ligada.',
+      'Ao utilizar nosso conversor de vídeo para áudio, o motor FFmpeg WebAssembly descarta toda a trilha visual do arquivo e codifica exclusivamente a faixa de som original no padrão MP3 estéreo de 192 kbps com a consagrada biblioteca LAME. O resultado é um arquivo de áudio compacto — geralmente com redução de até 95% do tamanho — mantendo a nitidez de vozes, instrumentos e efeitos sonoros.',
+      'Todo o processamento ocorre na memória RAM do seu próprio dispositivo, garantindo privacidade absoluta e velocidade instantânea. Seus vídeos nunca são enviados para servidores e você pode até desconectar a internet após carregar a página.'
     ],
     sourceDetailsTitle: 'Arquivo de Vídeo Original',
     sourceDetails: [
-      'Arquivo pesado ocupando muito armazenamento',
-      'Consome bateria excessiva ao rodar com tela ligada',
-      'Incompatível com players dedicados de música e fones'
+      'Contém imagem e áudio juntos em um contêiner pesado',
+      'Consome bateria e dados para reproduzir o vídeo completo',
+      'Desnecessário quando você só precisa ouvir o conteúdo',
+      'Difícil de enviar por e-mail ou mensageiros'
     ],
-    targetDetailsTitle: 'Faixa de Áudio MP3 Extraída',
+    targetDetailsTitle: 'Áudio MP3 Convertido (192 kbps)',
     targetDetails: [
-      'Redução de até 95% do tamanho em disco',
-      'Reprodução perfeita em segundo plano em qualquer celular',
-      'Compatibilidade universal com som automotivo e caixas de som'
+      'Somente a trilha sonora nítida e estéreo',
+      'Arquivo até 95% mais leve que o vídeo original',
+      'Toca em qualquer celular, rádio de carro e fone bluetooth',
+      'Escuta em segundo plano com a tela apagada'
     ],
+    proTip: 'Para gravações de voz e palestras, a taxa de 192 kbps oferece qualidade superior ao necessário. Se preferir arquivos ainda menores, utilize a taxa de 128 kbps no codec LAME sem perda perceptível em conteúdo de fala.',
     faqs: [
       {
-        question: 'Como converter vídeo em áudio pelo navegador?',
-        answer: 'Basta arrastar seu arquivo de vídeo para a caixa de upload, selecionar o formato de áudio MP3 e clicar em converter. O processamento é executado localmente na velocidade do seu dispositivo.'
+        question: 'Como converter um vídeo em áudio MP3 grátis?',
+        answer: 'Basta arrastar o arquivo de vídeo (MP4, MOV, MKV, AVI, WebM) para o conversor, selecionar o formato MP3 e clicar em Converter. O áudio é extraído instantaneamente no seu próprio navegador sem upload.'
       },
       {
-        question: 'Qual é o melhor formato de áudio para extrair de vídeos?',
-        answer: 'O formato MP3 com taxa constante de 192 kbps é a escolha universal ideal, combinando alta nitidez acústica e compatibilidade com 100% dos aparelhos.'
+        question: 'Converter vídeo em áudio funciona no celular?',
+        answer: 'Sim! A ferramenta é totalmente compatível com navegadores móveis no Android (Chrome) e iPhone/iPad (Safari). Basta acessar o site e selecionar o vídeo da sua galeria.'
       },
       {
-        question: 'Posso converter vídeos do celular ou do WhatsApp em áudio?',
-        answer: 'Sim! A ferramenta aceita vídeos enviados por WhatsApp, gravações de câmera do iPhone/Android e arquivos baixados da internet.'
+        question: 'Posso converter vídeos em áudio do YouTube?',
+        answer: 'Sim, desde que o vídeo já esteja salvo no armazenamento do seu aparelho (MP4 ou WebM). Nossa ferramenta opera sobre arquivos locais e não faz downloads de URLs externas.'
       },
       {
-        question: 'Meus arquivos de vídeo são enviados para algum servidor?',
-        answer: 'Não. Todo o processo de conversão ocorre 100% no seu próprio navegador via WebAssembly, garantindo total privacidade e segurança.'
+        question: 'Qual a diferença entre converter vídeo em áudio e extrair áudio de vídeo?',
+        answer: 'Na prática, são operações equivalentes: ambas isolam a faixa de som do arquivo de vídeo e a salvam como MP3. Nosso conversor oferece ferramentas dedicadas para cada fluxo de trabalho.'
+      },
+      {
+        question: 'Preciso me cadastrar ou pagar para converter vídeo em áudio?',
+        answer: 'Não. O serviço é totalmente gratuito, sem limite de conversões, sem exigência de e-mail e sem marcas d’água no arquivo de saída.'
       }
     ]
   },
 
-  'converter-video-em-audio-gratis': {
-    slug: 'converter-video-em-audio-gratis',
-    targetFormat: 'mp3',
-    initialPreset: 'audio_mp3',
-    badge: '⚡ 100% Grátis • Sem Limites • Sem Cadastro',
-    h1Prefix: 'Converter Vídeo em Áudio',
-    h1Highlight: 'Grátis Online',
-    h1Suffix: '',
-    metaTitle: 'Converter Vídeo em Áudio Grátis Online — Sem Limites e Sem Cadastro',
-    metaDescription: 'Converta vídeos em áudio gratuitamente sem pagar assinaturas, sem criar contas e sem marcas d’água. Conheça a ferramenta mais rápida e privada da internet.',
-    heroSubtitle: 'Extraia o áudio dos seus vídeos sem custos: sem planos pagos, sem filas de espera e com processamento 100% local no seu aparelho.',
-    dropzoneTitle: 'Arraste seu vídeo para converter em áudio gratuitamente',
-    keywords: ['converter vídeo em áudio grátis', 'converter video em audio gratis', 'converter vídeo em áudio gratuito', 'conversor de video em audio gratis'],
-    explainerTitle: 'Por que o nosso conversor de vídeo em áudio gratuito é ilimitado?',
-    explainerParagraphs: [
-      'A maioria dos conversores online impõe limites diários de uso, filas de espera lentas e cobrança de assinaturas caras porque dependem de servidores na nuvem caros para processar seus arquivos.',
-      'O ConversordeVideo.com funciona de maneira diferente: utilizando o poder de processamento do seu próprio navegador via WebAssembly, eliminamos intermediários na nuvem e oferecemos conversões ilimitadas, gratuitas e instantâneas para sempre.'
-    ],
-    sourceDetailsTitle: 'Conversores Pagos Tradicionais',
-    sourceDetails: [
-      'Filas de espera lentas e tempo limite por arquivo',
-      'Cobrança de planos mensais e cadastro obrigatório',
-      'Upload obrigatório dos seus dados para servidores externos'
-    ],
-    targetDetailsTitle: 'ConversordeVideo.com',
-    targetDetails: [
-      '100% Gratuito e sem qualquer limite diário',
-      'Zero cadastro, zero e-mails coletados',
-      'Processamento instantâneo na memória do seu dispositivo'
-    ],
-    faqs: [
-      {
-        question: 'Existe algum limite de conversões de vídeo para áudio por dia?',
-        answer: 'Não. Você pode converter quantos vídeos desejar, sem limite de quantidade ou de duração.'
-      },
-      {
-        question: 'Preciso fornecer dados de cartão de crédito ou criar conta?',
-        answer: 'Nunca. O serviço é totalmente livre, sem cadastro e sem solicitação de dados pessoais.'
-      },
-      {
-        question: 'O áudio convertido tem alguma marca d’água sonora?',
-        answer: 'Não. O áudio gerado é 100% limpo, exatamente como na gravação original.'
-      },
-      {
-        question: 'Funciona em computadores e celulares?',
-        answer: 'Sim, você pode converter vídeos em áudio tanto no computador (Windows, Mac, Linux) quanto em celulares (Android, iPhone).'
-      }
-    ]
-  },
-
+  // Audio Extraction Cluster (High Volume Brazil Keywords)
   'extrair-audio-de-video': {
     slug: 'extrair-audio-de-video',
     targetFormat: 'mp3',
@@ -1416,14 +1111,15 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Highlight: 'Vídeo Online',
     h1Suffix: 'Grátis',
     metaTitle: 'Extrair Áudio de Vídeo Online Grátis — Isolar Faixa de Som em MP3',
-    metaDescription: 'Extraia o áudio de qualquer arquivo de vídeo (MP4, MOV, MKV, AVI) em MP3 de 192 kbps diretamente no navegador. Rápido, 100% gratuito e privado.',
+    metaDescription: 'Extraia o áudio de qualquer arquivo de vídeo (MP4, MOV, MKV, AVI) em MP3 de 192 kbps diretamente no navegador. Rápido, totalmente gratuito e privado.',
     heroSubtitle: 'Isole a faixa de áudio de vídeos, palestras e gravações em MP3 cristalino sem carregar o peso da imagem. Processamento local e seguro.',
     dropzoneTitle: 'Arraste seu arquivo de vídeo para extrair o áudio',
-    keywords: ['extrair audio de video', 'extrair áudio de vídeo', 'como extrair audio de video', 'extrair áudio de vídeo grátis', 'extrair audio de vídeo'],
+    keywords: ['extrair audio de video', 'extrair áudio de vídeo', 'como extrair audio de video', 'extrair audio de video online', 'extrair audio de video do youtube', 'extrair audio de video youtube', 'extrair áudio de vídeo youtube', 'extrair áudio de vídeo online grátis', 'extrair áudio de vídeo link', 'extrair áudio de vídeo grátis', 'extrair áudio de vídeo online', 'extrair audio de vídeo', 'extrair áudio de vídeo do youtube', 'extrair audio de video do instagram', 'extrair áudio de vídeo instagram', 'extrair audio de video gratis'],
     explainerTitle: 'Como isolar e extrair o som de qualquer arquivo de vídeo?',
     explainerParagraphs: [
       'Ao gravar uma apresentação, aula ou evento, a câmera registra imagens e sons em um mesmo contêiner multimídia. Quando você precisa apenas do áudio para criar um episódio de podcast, estudar ou ouvir música, carregar o vídeo completo é ineficiente.',
-      'A extração de áudio isola a trilha sonora original e a converte para o formato MP3 estéreo de 192 kbps. Essa operação elimina megabytes desnecessários e gera um arquivo leve e pronto para reprodução em qualquer fone ou reprodutor de áudio.'
+      'A extração de áudio isola a trilha sonora original e a converte para o formato MP3 estéreo de 192 kbps. Essa operação elimina megabytes desnecessários e gera um arquivo leve e pronto para reprodução em qualquer fone ou reprodutor de áudio.',
+      'Além de vídeos armazenados no celular, você pode extrair áudio de vídeos salvos do YouTube, Instagram ou qualquer rede social. Basta que o arquivo de vídeo esteja no seu dispositivo (MP4, WebM, MOV, MKV) e o conversor processará localmente sem enviar nada pela internet.'
     ],
     sourceDetailsTitle: 'Vídeo Original com Faixa Visual',
     sourceDetails: [
@@ -1453,56 +1149,14 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
       {
         question: 'A ferramenta funciona no celular Android e iPhone?',
         answer: 'Sim, basta abrir a página no navegador do seu smartphone (Chrome ou Safari) e escolher o vídeo da sua galeria.'
-      }
-    ]
-  },
-
-  'extrair-audio-de-video-online': {
-    slug: 'extrair-audio-de-video-online',
-    targetFormat: 'mp3',
-    initialPreset: 'audio_mp3',
-    badge: '🌐 Direto no Navegador • Sem Instalação',
-    h1Prefix: 'Extrair Áudio de Vídeo',
-    h1Highlight: 'Online no Navegador',
-    h1Suffix: 'Grátis',
-    metaTitle: 'Extrair Áudio de Vídeo Online no Navegador — Sem Instalar Programas',
-    metaDescription: 'Extraia áudio de vídeos online sem baixar softwares pesados. Funciona direto no Chrome, Safari e Edge com processamento local seguro via WebAssembly.',
-    heroSubtitle: 'Esqueça instaladores e programas pesados: extraia o áudio dos seus vídeos diretamente na janela do seu navegador com velocidade instantânea.',
-    dropzoneTitle: 'Arraste o vídeo para extrair o áudio online no navegador',
-    keywords: ['extrair audio de video online', 'extrair áudio de vídeo online', 'extrair áudio de vídeo online grátis', 'extrair audio de video web'],
-    explainerTitle: 'Por que extrair áudio online no navegador é mais prático e seguro?',
-    explainerParagraphs: [
-      'Tradicionalmente, extrair áudio de vídeos exigia instalar softwares pesados de edição ou arriscar o envio de arquivos pessoais para serviços desconhecidos na nuvem.',
-      'Com a tecnologia WebAssembly do ConversordeVideo.com, toda a computação é feita na hora pelo seu próprio navegador. Você economiza tempo, não ocupa espaço no disco com programas extras e mantém seus arquivos 100% confidenciais.'
-    ],
-    sourceDetailsTitle: 'Softwares Tradicionais Instalados',
-    sourceDetails: [
-      'Instalação pesada consumindo espaço no disco',
-      'Risco de malwares e atualizações invasivas',
-      'Configurações complexas e interfaces confusas'
-    ],
-    targetDetailsTitle: 'Extração Online no Navegador',
-    targetDetails: [
-      'Acesso instantâneo sem instalação ou extensões',
-      'Processamento 100% privado na sua máquina',
-      'Interface limpa, rápida e responsiva'
-    ],
-    faqs: [
-      {
-        question: 'Preciso instalar alguma extensão ou plugin no navegador?',
-        answer: 'Não. Nossa ferramenta funciona nativamente em qualquer navegador moderno (Chrome, Safari, Edge, Firefox, Opera) sem plugins.'
       },
       {
-        question: 'A extração consome meus dados de internet móvel?',
-        answer: 'Apenas para carregar o código da página uma única vez. Como o vídeo não é enviado para a nuvem, seu plano de dados não é consumido no envio.'
+        question: 'Posso extrair áudio de vídeos salvos do Instagram?',
+        answer: 'Sim! Se o vídeo do Instagram ou Reels já estiver salvo no armazenamento do seu celular, basta arrastá-lo para o conversor. A trilha de áudio será extraída localmente em MP3.'
       },
       {
-        question: 'Funciona mesmo com conexão lenta ou instável?',
-        answer: 'Sim. Uma vez carregada a página, a extração de áudio é realizada pelo processador do seu aparelho e não depende de internet rápida.'
-      },
-      {
-        question: 'Quanto tempo leva para extrair o áudio de um vídeo?',
-        answer: 'Geralmente poucos segundos, dependendo apenas da duração do vídeo e da velocidade do processador do seu dispositivo.'
+        question: 'Como extrair áudio de vídeo a partir de um link?',
+        answer: 'Nossa ferramenta processa arquivos de vídeo presentes no seu dispositivo, não URLs diretamente. Para vídeos da web, salve primeiro o arquivo no seu celular ou computador e depois arraste-o para o conversor.'
       }
     ]
   },
@@ -1516,7 +1170,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Highlight: 'YouTube Online',
     h1Suffix: 'em MP3',
     metaTitle: 'Extrair Áudio de Vídeo do YouTube Online — Salvar Som em MP3',
-    metaDescription: 'Extraia o áudio de vídeos e transmissões baixadas do YouTube em formato MP3 de 192 kbps. 100% privado no navegador e sem upload de arquivos.',
+    metaDescription: 'Extraia o áudio de vídeos e transmissões baixadas do YouTube em formato MP3 de 192 kbps. totalmente privado no navegador e sem upload de arquivos.',
     heroSubtitle: 'Converta gravações e clipes do YouTube salvos no seu aparelho em arquivos de som MP3 leves para escutar no celular ou no carro.',
     dropzoneTitle: 'Arraste o vídeo salvo do YouTube para extrair o áudio MP3',
     keywords: ['extrair audio de video do youtube', 'extrair audio de video youtube', 'extrair áudio de vídeo youtube', 'extrair áudio de vídeo do youtube', 'como extrair audio de video do youtube'],
@@ -1558,106 +1212,6 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
   },
 
   // Video Compacting Cluster (High Search Volume Keywords)
-  'compactar-video': {
-    slug: 'compactar-video',
-    targetFormat: 'mp4',
-    initialPreset: 'compress_balanced',
-    badge: '📦 Compactação Inteligente de Vídeo',
-    h1Prefix: 'Compactar Vídeo',
-    h1Highlight: 'Online Grátis',
-    h1Suffix: 'sem Perder Qualidade',
-    metaTitle: 'Compactar Vídeo Online Grátis — Reduzir Tamanho sem Perda de Qualidade',
-    metaDescription: 'Compacte vídeos MP4, MOV e outros formatos online diretamente no navegador. Reduza até 80% do tamanho com máxima nitidez visual, sem upload e sem cadastro.',
-    heroSubtitle: 'Diminua o peso dos seus vídeos em segundos mantendo excelente resolução em 1080p e 720p. Processamento 100% privado no seu próprio navegador.',
-    dropzoneTitle: 'Arraste seu arquivo de vídeo aqui para compactar',
-    keywords: ['compactar video', 'compactar vídeo', 'compactar video online', 'compactar video gratis', 'compactar video sem perder qualidade', 'compactar vídeo online'],
-    explainerTitle: 'Como compactar vídeos de alta resolução sem perder a nitidez visual?',
-    explainerParagraphs: [
-      'Vídeos gravados em smartphones e câmeras frequentemente contêm bitrates excessivos, gerando arquivos pesados de centenas de megabytes que dificultam o envio por mensageiros ou o armazenamento.',
-      'Nosso compactador aplica codificação inteligente CRF (Constant Rate Factor) via WebAssembly diretamente na memória do seu aparelho. O algoritmo reescreve os dados descartando redundâncias visuais imperceptíveis, reduzindo drasticamente o tamanho do arquivo sem criar artefatos ou desfoque.'
-    ],
-    sourceDetailsTitle: 'Vídeo Pesado Não Otimizado',
-    sourceDetails: [
-      'Bitrate excessivo ocupando gigabytes no aparelho',
-      'Erros de limite de anexo em e-mails e mensageiros',
-      'Lentidão para carregar e transferir em redes móveis'
-    ],
-    targetDetailsTitle: 'Vídeo Compactado & Otimizado',
-    targetDetails: [
-      'Redução média de 50% a 80% do tamanho em disco',
-      'Resolução e nitidez preservadas em 1080p ou 720p HD',
-      'Compatibilidade universal e carregamento instantâneo'
-    ],
-    faqs: [
-      {
-        question: 'Como compactar vídeo online sem perder qualidade?',
-        answer: 'Arraste seu arquivo de vídeo para a ferramenta e selecione a predefinição de compressão desejada. Nosso algoritmo perceptual reduz os dados redundantes preservando rostos, textos e detalhes visuais nítidos.'
-      },
-      {
-        question: 'Qual a diferença entre compactar e comprimir vídeo?',
-        answer: 'Os termos são sinônimos práticos. Ambas as abordagens aplicam reencodificação eficiente (H.264/AAC) para gerar arquivos menores com máxima fidelidade.'
-      },
-      {
-        question: 'Meus vídeos são enviados para algum servidor remoto?',
-        answer: 'Não. Todo o cálculo de compactação acontece na memória RAM do seu próprio aparelho via WebAssembly. Seus arquivos nunca saem do seu computador ou celular.'
-      },
-      {
-        question: 'Posso compactar vídeos do celular iPhone ou Android?',
-        answer: 'Sim! A ferramenta é totalmente compatível com navegadores móveis (Safari no iPhone e Chrome no Android).'
-      }
-    ]
-  },
-
-  'compactar-video-mp4': {
-    slug: 'compactar-video-mp4',
-    targetFormat: 'mp4',
-    initialPreset: 'compress_balanced',
-    badge: '🎬 Otimização de Arquivos MP4',
-    h1Prefix: 'Compactar Vídeo',
-    h1Highlight: 'MP4 Online',
-    h1Suffix: 'Grátis',
-    metaTitle: 'Compactar Vídeo MP4 Online Grátis — Diminuir Tamanho de Arquivo MP4',
-    metaDescription: 'Compacte arquivos MP4 online sem perder resolução. Reduza megabytes mantendo vídeo H.264 rápido para web e áudio AAC cristalino.',
-    heroSubtitle: 'Diminua o tamanho de qualquer vídeo MP4 sem comprometer a qualidade visual. Rápido, 100% privado e sem marcas d’água.',
-    dropzoneTitle: 'Arraste o arquivo MP4 para compactar',
-    keywords: ['compactar video mp4', 'compactar vídeo mp4', 'como compactar video mp4', 'compactar mp4 online', 'compactar video mp4 gratis'],
-    explainerTitle: 'Por que compactar vídeos MP4 com cabeçalho Faststart?',
-    explainerParagraphs: [
-      'O contêiner MP4 é o padrão mais usado no mundo, mas exportações brutas costumam conter taxas de dados muito superiores ao necessário para visualização online e em celulares.',
-      'Nossa ferramenta reescreve a faixa de vídeo com perfil H.264 otimizado e adiciona a flag faststart no início do arquivo, permitindo reprodução instantânea na web antes mesmo do download terminar.'
-    ],
-    sourceDetailsTitle: 'MP4 Pesado Original',
-    sourceDetails: [
-      'Taxa de dados pesada para upload e download',
-      'Risco de travamento em conexões móveis',
-      'Espaço em disco consumido rapidamente'
-    ],
-    targetDetailsTitle: 'MP4 Compactado',
-    targetDetails: [
-      'Cabeçalho faststart para streaming sem espera',
-      'Tamanho otimizado para e-mail e mensageiros',
-      'Áudio AAC estéreo de alta fidelidade preservado'
-    ],
-    faqs: [
-      {
-        question: 'Como compactar um arquivo MP4 sem perder resolução?',
-        answer: 'Basta arrastar o MP4 para o conversor e selecionar a opção de compressão. A ferramenta ajusta o bitrate de forma equilibrada, retendo os detalhes com metade do tamanho.'
-      },
-      {
-        question: 'O arquivo MP4 compactado funciona em Smart TVs e celulares?',
-        answer: 'Sim! O arquivo resultante é um MP4 padrão universal H.264 compatível com 100% dos dispositivos e reprodutores de mídia.'
-      },
-      {
-        question: 'Existe limite de tamanho para compactar arquivos MP4?',
-        answer: 'Como o processamento é local no navegador, você pode compactar arquivos de 300MB a 500MB com facilidade na maioria dos dispositivos modernos.'
-      },
-      {
-        question: 'A ferramenta adiciona marcas d’água nos vídeos compactados?',
-        answer: 'Nunca. Seus vídeos são exportados completamente limpos, sem marcas d’água e sem propagandas.'
-      }
-    ]
-  },
-
   'compactar-video-para-whatsapp': {
     slug: 'compactar-video-para-whatsapp',
     targetFormat: 'mp4',
@@ -1667,7 +1221,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Highlight: 'WhatsApp Online',
     h1Suffix: 'sem Travar',
     metaTitle: 'Compactar Vídeo para WhatsApp Online — Enviar sem Limite de 16MB',
-    metaDescription: 'Compacte vídeos pesados para menos de 16MB e envie no WhatsApp sem erros de limite e sem perda de nitidez. 100% gratuito e privado no navegador.',
+    metaDescription: 'Compacte vídeos pesados para menos de 16MB e envie no WhatsApp sem erros de limite e sem perda de nitidez. totalmente gratuito e privado no navegador.',
     heroSubtitle: 'Ajuste vídeos grandes para o limite oficial de 16 MB do WhatsApp mantendo resolução 720p HD e áudio nítido.',
     dropzoneTitle: 'Arraste o vídeo para compactar para o WhatsApp',
     keywords: ['compactar video para whatsapp', 'compactar vídeo para whatsapp', 'compactar video whatsapp', 'como compactar video para mandar no whatsapp'],
@@ -1708,56 +1262,6 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     ]
   },
 
-  'reduzir-tamanho-do-video': {
-    slug: 'reduzir-tamanho-do-video',
-    targetFormat: 'mp4',
-    initialPreset: 'compress_balanced',
-    badge: '📉 Redução Inteligente de Megabytes',
-    h1Prefix: 'Reduzir Tamanho do',
-    h1Highlight: 'Vídeo Online',
-    h1Suffix: 'Grátis',
-    metaTitle: 'Reduzir Tamanho do Vídeo Online Grátis — Diminuir Espaço em Disco',
-    metaDescription: 'Reduza o tamanho de vídeos pesados online sem perder nitidez visual. Economize espaço no seu celular ou computador sem upload de arquivos.',
-    heroSubtitle: 'Diminua os megabytes de qualquer vídeo com facilidade para liberar espaço no disco e agilizar compartilhamentos.',
-    dropzoneTitle: 'Arraste o vídeo aqui para reduzir o tamanho',
-    keywords: ['reduzir tamanho do video', 'reduzir tamanho do vídeo', 'reduzir tamanho do video online', 'reduzir tamanho de video', 'reduzir tamanho mp4'],
-    explainerTitle: 'Como reduzir o tamanho de vídeos em disco preservando a definição?',
-    explainerParagraphs: [
-      'Gravações em alta definição acumulam dezenas de gigabytes na memória do celular e no disco rígido do computador. Reduzir o tamanho dos arquivos é essencial para liberar espaço sem precisar apagar memórias importantes.',
-      'Com nosso algoritmo de compressão no navegador, você reduz o peso dos vídeos em até 70% mantendo a resolução em Full HD ou HD, pronto para arquivamento ou envio rápido.'
-    ],
-    sourceDetailsTitle: 'Vídeo com Espaço Excessivo',
-    sourceDetails: [
-      'Memória do smartphone lotada',
-      'Impossível de anexar em e-mails convencionais',
-      'Backup lento e custoso na nuvem'
-    ],
-    targetDetailsTitle: 'Vídeo Reduzido & Compacto',
-    targetDetails: [
-      'Até 70% menos espaço ocupado em disco',
-      'Facilidade total para compartilhar e anexar',
-      'Preservação da nitidez de imagem em telas grandes'
-    ],
-    faqs: [
-      {
-        question: 'Como reduzir o tamanho de um vídeo sem deixá-lo borrado?',
-        answer: 'Nossa ferramenta usa codificação perceptual inteligente CRF, que remove dados invisíveis ao olho humano mantendo bordas e cores nítidas.'
-      },
-      {
-        question: 'Quanto de espaço posso economizar reduzindo meus vídeos?',
-        answer: 'Na maioria dos casos, a redução varia entre 50% e 80% do tamanho original do arquivo.'
-      },
-      {
-        question: 'Posso reduzir o tamanho de múltiplos vídeos seguidos?',
-        answer: 'Sim! Não há limites diários de uso e você pode processar quantos vídeos desejar.'
-      },
-      {
-        question: 'É necessário fazer cadastro ou pagar alguma taxa?',
-        answer: 'Não. O ConversordeVideo.com é 100% gratuito e aberto a todos os usuários.'
-      }
-    ]
-  },
-
   // Video Resizer Cluster (High Volume Brazil Keywords)
   'redimensionar-video': {
     slug: 'redimensionar-video',
@@ -1769,13 +1273,14 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Suffix: 'em Alta Resolução',
     metaTitle: 'Redimensionar Vídeo Online Grátis — Mudar Resolução e Proporção',
     metaDescription: 'Redimensione vídeos MP4 e MOV online sem perder qualidade. Ajuste para Full HD 1080p, 720p ou proporções 16:9 e 9:16 diretamente no seu navegador.',
-    heroSubtitle: 'Altere a resolução e as dimensões dos seus vídeos de forma rápida e segura. Processamento 100% no seu navegador via WebAssembly.',
+    heroSubtitle: 'Altere a resolução e as dimensões dos seus vídeos de forma rápida e segura. Processamento totalmente no seu navegador via WebAssembly.',
     dropzoneTitle: 'Arraste seu arquivo de vídeo aqui para redimensionar',
-    keywords: ['redimensionar video', 'redimensionar vídeo', 'como redimensionar vídeo', 'redimensionar vídeo grátis', 'redimensionar video online'],
+    keywords: ['redimensionar video', 'redimensionar vídeo', 'como redimensionar vídeo', 'redimensionar vídeo grátis', 'redimensionar video online', 'redimensionar vídeo online grátis', 'redimensionar vídeo online', 'redimensionar vídeo para tiktok', 'redimensionar video para instagram'],
     explainerTitle: 'Como redimensionar a resolução de um vídeo sem distorcer a imagem?',
     explainerParagraphs: [
       'Plataformas digitais, redes sociais e reprodutores de vídeo frequentemente exigem resoluções ou proporções específicas para evitar barras pretas laterais ou cortes abruptos.',
-      'Nossa ferramenta aplica filtros bicúbicos de reescalonamento em tempo real via WebAssembly, ajustando a matriz de pixels do vídeo com máxima precisão geométrica. O resultado é um arquivo reescalado em Full HD 1080p ou 720p com proporções perfeitas e sem envio para servidores.'
+      'Nossa ferramenta aplica filtros bicúbicos de reescalonamento em tempo real via WebAssembly, ajustando a matriz de pixels do vídeo com máxima precisão geométrica. O resultado é um arquivo reescalado em Full HD 1080p ou 720p com proporções perfeitas e sem envio para servidores.',
+      'Para plataformas como TikTok, Instagram Reels e YouTube Shorts, você pode redimensionar vídeos horizontais para o formato vertical 9:16 (1080×1920 pixels). Para feeds do Instagram e Facebook, o formato quadrado 1:1 também é suportado. O redimensionamento online e gratuito preserva a proporção de aspecto para evitar distorções.'
     ],
     sourceDetailsTitle: 'Vídeo com Dimensões Inadequadas',
     sourceDetails: [
@@ -1804,57 +1309,11 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
       },
       {
         question: 'Meus vídeos são enviados para a internet durante o processo?',
-        answer: 'Não. Todo o redimensionamento é processado localmente no navegador via WebAssembly com 100% de privacidade.'
-      }
-    ]
-  },
-
-  'redimensionar-video-online': {
-    slug: 'redimensionar-video-online',
-    targetFormat: 'mp4',
-    initialPreset: 'resize_1080p',
-    badge: '🌐 No Navegador • Sem Instalação',
-    h1Prefix: 'Redimensionar Vídeo',
-    h1Highlight: 'Online no Navegador',
-    h1Suffix: 'Grátis',
-    metaTitle: 'Redimensionar Vídeo Online no Navegador — Sem Instalar Programas',
-    metaDescription: 'Redimensione vídeos online de graça sem baixar softwares de edição pesados. Funciona direto no Chrome, Safari e Edge com privacidade total.',
-    heroSubtitle: 'Ajuste dimensões e resolução de vídeos instantaneamente na janela do seu navegador sem instalar plugins ou programas.',
-    dropzoneTitle: 'Arraste o vídeo para redimensionar online',
-    keywords: ['redimensionar video online', 'redimensionar vídeo online', 'redimensionar vídeo online grátis', 'redimensionar video online gratis'],
-    explainerTitle: 'Por que redimensionar vídeos online no navegador é mais eficiente?',
-    explainerParagraphs: [
-      'Softwares de edição de vídeo convencionais exigem downloads demorados, ocupam gigabytes de espaço em disco e demandam configurações complexas de renderização.',
-      'Com o ConversordeVideo.com, você reescala seus clipes em segundos através da interface web. Aceleração local via WebAssembly garante renderização veloz sem filas de espera e sem custos.'
-    ],
-    sourceDetailsTitle: 'Editores de Vídeo Instalados',
-    sourceDetails: [
-      'Gasto de espaço no disco com programas pesados',
-      'Configurações de exportação confusas',
-      'Curva de aprendizado demorada'
-    ],
-    targetDetailsTitle: 'Redimensionamento Web Instantâneo',
-    targetDetails: [
-      'Acesso direto em qualquer navegador sem instalação',
-      'Predefinições automáticas para 1080p e proporções ideais',
-      'Processamento 100% confidencial na sua máquina'
-    ],
-    faqs: [
-      {
-        question: 'Preciso instalar algum software no meu computador?',
-        answer: 'Não. A ferramenta funciona diretamente no navegador web sem necessidade de plugins ou downloads.'
+        answer: 'Não. Todo o redimensionamento é processado localmente no navegador via WebAssembly com totalmente de privacidade.'
       },
       {
-        question: 'Quais formatos de arquivo são suportados para redimensionar?',
-        answer: 'Suportamos MP4, MOV, MKV, AVI, WebM, WMV, FLV, 3GP e a grande maioria dos formatos de vídeo populares.'
-      },
-      {
-        question: 'A ferramenta é realmente gratuita?',
-        answer: 'Sim, o redimensionador é 100% gratuito, sem limite de uso e sem marcas d’água.'
-      },
-      {
-        question: 'Quanto tempo leva para redimensionar um vídeo online?',
-        answer: 'Geralmente entre 5 e 20 segundos para vídeos comuns de celular, dependendo do poder de processamento do seu dispositivo.'
+        question: 'É possível redimensionar vídeos online grátis sem marca d’água?',
+        answer: 'Sim! Nosso redimensionador é totalmente gratuito e todos os vídeos exportados são completamente limpos, sem marcas d’água, assinaturas ou logos sobrepostos.'
       }
     ]
   },
@@ -1868,7 +1327,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Highlight: 'TikTok Online',
     h1Suffix: '9:16',
     metaTitle: 'Redimensionar Vídeo para TikTok Online — Formato Vertical 9:16',
-    metaDescription: 'Redimensione vídeos horizontais ou gravados em câmera para o formato vertical 9:16 do TikTok. 100% gratuito e privado no navegador.',
+    metaDescription: 'Redimensione vídeos horizontais ou gravados em câmera para o formato vertical 9:16 do TikTok. totalmente gratuito e privado no navegador.',
     heroSubtitle: 'Formate clipes e vídeos no padrão vertical exigido pelo TikTok com alta definição e sem cortes estranhos.',
     dropzoneTitle: 'Arraste o vídeo para formatar para o TikTok',
     keywords: ['redimensionar vídeo para tiktok', 'redimensionar video para tiktok', 'formatar video tiktok', 'video para tiktok 9 16'],
@@ -1918,7 +1377,7 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
     h1Highlight: 'Instagram Online',
     h1Suffix: 'Grátis',
     metaTitle: 'Redimensionar Vídeo para Instagram Online — Reels e Stories 9:16',
-    metaDescription: 'Redimensione qualquer vídeo para Reels, Stories e Feed do Instagram em 9:16. Sem marcas d’água, sem perda de qualidade e 100% no navegador.',
+    metaDescription: 'Redimensione qualquer vídeo para Reels, Stories e Feed do Instagram em 9:16. Sem marcas d’água, sem perda de qualidade e totalmente no navegador.',
     heroSubtitle: 'Adapte seus vídeos para o formato vertical oficial do Instagram com enquadramento perfeito e alta nitidez.',
     dropzoneTitle: 'Arraste o vídeo para redimensionar para o Instagram',
     keywords: ['redimensionar video para instagram', 'redimensionar vídeo para instagram', 'redimensionar vídeo para instagram online grátis', 'ajustar video instagram reels'],
@@ -1954,109 +1413,10 @@ export const FORMAT_PAGES: Record<string, FormatPageData> = {
       },
       {
         question: 'A ferramenta coloca marca d’água no vídeo?',
-        answer: 'Não. Todos os vídeos exportados são 100% limpos e livres de marcas d’água.'
+        answer: 'Não. Todos os vídeos exportados são totalmente limpos e livres de marcas d’água.'
       }
     ]
   },
 
   // GIF Expansion Cluster
-  'converter-video-para-gif': {
-    slug: 'converter-video-para-gif',
-    targetFormat: 'gif',
-    initialPreset: 'gif_standard',
-    badge: '🎞️ Criação Rápida de GIFs',
-    h1Prefix: 'Converter Vídeo para',
-    h1Highlight: 'GIF Online',
-    h1Suffix: 'Grátis',
-    metaTitle: 'Converter Vídeo para GIF Online Grátis — Criar GIF Animado',
-    metaDescription: 'Converta trechos de vídeo em GIFs animados com paleta de cores otimizada e loop suave. 100% gratuito, sem marcas d’água e no navegador.',
-    heroSubtitle: 'Transforme vídeos MP4 e MOV em GIFs animados leves para compartilhar no WhatsApp, Telegram, Discord e redes sociais.',
-    dropzoneTitle: 'Arraste o vídeo para converter para GIF',
-    keywords: ['converter video para gif', 'converter vídeo para gif', 'converter video para gif online', 'converter vídeo em gif'],
-    explainerTitle: 'Como transformar clipes de vídeo em animações GIF contínuas?',
-    explainerParagraphs: [
-      'GIFs animados são ideais para expressar reações, criar demonstrações rápidas de tutoriais e produzir figurinhas para chats. Converter um vídeo para GIF de forma convencional muitas vezes gera arquivos pesados com ruído na imagem.',
-      'Nossa ferramenta aplica o algoritmo Bayer Dithering com taxa de 12 quadros por segundo, garantindo gradientes suaves de cor com um arquivo extremamente compacto.'
-    ],
-    sourceDetailsTitle: 'Vídeo Pesado com Áudio',
-    sourceDetails: [
-      'Exige tocador de vídeo dedicado',
-      'Não repete em loop contínuo automaticamente',
-      'Arquivo pesado para figurinhas e stickers'
-    ],
-    targetDetailsTitle: 'GIF Animado em Loop Fluido',
-    targetDetails: [
-      'Loop contínuo e automático em qualquer chat',
-      'Arquivo leve otimizado para WhatsApp e Discord',
-      '100% livre de marcas d’água'
-    ],
-    faqs: [
-      {
-        question: 'Como converter um vídeo em GIF animado gratuitamente?',
-        answer: 'Arraste seu arquivo de vídeo para a ferramenta e clique em converter. O GIF em loop é gerado instantaneamente no seu navegador.'
-      },
-      {
-        question: 'Qual é o tamanho máximo de duração recomendado para o GIF?',
-        answer: 'Recomendamos clipes de até 15 segundos para manter o tamanho de arquivo leve e o carregamento instantâneo em mensagens.'
-      },
-      {
-        question: 'O GIF gerado tem áudio?',
-        answer: 'O formato GIF é puramente visual e não suporta áudio, tornando-o ideal para reações e stickers silenciosos.'
-      },
-      {
-        question: 'Posso criar figurinhas do WhatsApp a partir do GIF?',
-        answer: 'Sim! Os GIFs gerados são compatíveis com o WhatsApp, Telegram, Slack e Discord.'
-      }
-    ]
-  },
-
-  'conversor-de-video-para-gif': {
-    slug: 'conversor-de-video-para-gif',
-    targetFormat: 'gif',
-    initialPreset: 'gif_standard',
-    badge: '✨ Gerador de GIFs em Loop Sem Marca d’Água',
-    h1Prefix: 'Conversor de Vídeo para',
-    h1Highlight: 'GIF Animado',
-    h1Suffix: 'Online',
-    metaTitle: 'Conversor de Vídeo para GIF Animado Online — Sem Marca d’Água',
-    metaDescription: 'O melhor conversor de vídeo para GIF online: crie figurinhas e memes fluidos a 12 fps com Bayer Dithering sem marcas d’água e sem cadastro.',
-    heroSubtitle: 'Crie animações em loop perfeitas a partir dos seus vídeos com controle avançado de paleta e tamanho reduzido.',
-    dropzoneTitle: 'Arraste seu arquivo de vídeo para gerar GIF animado',
-    keywords: ['conversor de video para gif', 'conversor de vídeo para gif', 'conversor video para gif', 'converte video para gif'],
-    explainerTitle: 'O que torna nosso conversor de vídeo para GIF superior?',
-    explainerParagraphs: [
-      'Muitos serviços online impõem marcas d’água gigantes nos GIFs gerados ou cobram assinaturas para liberar arquivos sem limites.',
-      'O ConversordeVideo.com é 100% aberto e gratuito: processamos sua mídia diretamente no navegador com otimização profissional de paleta de 128 cores, gerando GIFs nítidos, leves e totalmente limpos.'
-    ],
-    sourceDetailsTitle: 'Conversores de GIF Comuns',
-    sourceDetails: [
-      'Marcas d’água forçadas sobre a imagem',
-      'Cores distorcidas e ruído granulado',
-      'Limites rígidos e cobrança de planos'
-    ],
-    targetDetailsTitle: 'ConversordeVideo.com',
-    targetDetails: [
-      '100% Gratuito e sem marca d’água',
-      'Paleta otimizada com Bayer Dithering',
-      'Processamento veloz e privado na sua máquina'
-    ],
-    faqs: [
-      {
-        question: 'O conversor de vídeo para GIF adiciona marca d’água?',
-        answer: 'Nunca. Seus GIFs são exportados totalmente limpos para uso pessoal ou profissional.'
-      },
-      {
-        question: 'Quais formatos de vídeo posso transformar em GIF?',
-        answer: 'Aceitamos MP4, MOV, WebM, AVI, MKV, FLV e praticamente qualquer formato de vídeo moderno.'
-      },
-      {
-        question: 'Como salvar o GIF gerado no meu aparelho?',
-        answer: 'Assim que a conversão terminar, clique no botão "Baixar GIF" para salvar o arquivo diretamente na pasta de downloads.'
-      },
-      {
-        question: 'Funciona no smartphone sem aplicativo?',
-        answer: 'Sim, o conversor roda perfeitamente no Safari do iPhone e no Chrome do Android.'
-      }
-    ]
-  }
 };

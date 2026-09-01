@@ -1,0 +1,224 @@
+---
+import { COLOR_PALETTES } from '../../lib/theme/palettes';
+
+export interface Props {
+  isMobileCompact?: boolean;
+}
+
+const { isMobileCompact = false } = Astro.props;
+---
+
+{isMobileCompact ? (
+  <div class="w-full space-y-2" id="mobile-palette-container">
+    <div class="text-[11px] font-semibold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 px-1 flex items-center justify-between">
+      <span>Paleta de Cores</span>
+      <span class="text-emerald-600 dark:text-emerald-400 font-bold" id="mobile-active-palette-name">
+        Emerald Mint
+      </span>
+    </div>
+    <div class="grid grid-cols-3 gap-2">
+      {COLOR_PALETTES.map((p) => (
+        <button
+          type="button"
+          data-palette-id={p.id}
+          class="palette-btn-mobile flex flex-col items-center justify-center p-2 rounded-xl border border-zinc-200/80 dark:border-zinc-700/80 bg-zinc-50 dark:bg-zinc-800/40 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-all cursor-pointer"
+          title={p.name}
+        >
+          <div class="relative flex items-center shrink-0 w-6 h-6 mb-1">
+            <div
+              class="w-4.5 h-4.5 rounded-full shadow-2xs border border-white dark:border-zinc-900 absolute left-0 z-10"
+              style={`background-color: ${p.primary};`}
+            />
+            <div
+              class="w-4 h-4 rounded-full shadow-2xs border border-white dark:border-zinc-900 absolute right-0 opacity-90"
+              style={`background-color: ${p.secondary};`}
+            />
+          </div>
+          <span class="text-[10px] font-semibold text-zinc-800 dark:text-zinc-200 truncate max-w-full">
+            {p.emoji} {p.name.split(' ')[0]}
+          </span>
+        </button>
+      ))}
+    </div>
+  </div>
+) : (
+  <div class="relative group/palette inline-block text-left shrink-0" id="palette-switcher">
+    <!-- Header Trigger Button -->
+    <button
+      type="button"
+      id="palette-dropdown-btn"
+      aria-label="Selecionar Paleta de Cores"
+      aria-haspopup="true"
+      aria-expanded="false"
+      class="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-full border border-zinc-200/80 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/50 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-white transition-all text-xs font-medium cursor-pointer shadow-2xs whitespace-nowrap"
+    >
+      <!-- Dual Circle Swatch -->
+      <div class="relative flex items-center shrink-0 w-4.5 h-4.5">
+        <div
+          id="header-palette-dot-1"
+          class="w-3.5 h-3.5 rounded-full shadow-2xs border border-white dark:border-zinc-900 absolute left-0 z-10 transition-colors"
+          style="background-color: #10b981;"
+        />
+        <div
+          id="header-palette-dot-2"
+          class="w-3 h-3 rounded-full shadow-2xs border border-white dark:border-zinc-900 absolute right-0 opacity-90 transition-colors"
+          style="background-color: #14b8a6;"
+        />
+      </div>
+
+      <span class="font-medium text-xs hidden xl:inline" id="header-palette-label">
+        Tema
+      </span>
+
+      <svg class="w-3 h-3 text-zinc-400 group-hover/palette:text-zinc-600 dark:group-hover/palette:text-zinc-200 transition-transform group-hover/palette:rotate-180 duration-200 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </button>
+
+    <!-- Dropdown Menu -->
+    <div class="absolute right-0 mt-2 w-64 rounded-2xl bg-white/95 dark:bg-zinc-900/95 backdrop-blur-xl border border-zinc-200/90 dark:border-zinc-800 shadow-2xl shadow-zinc-950/20 opacity-0 invisible group-hover/palette:opacity-100 group-hover/palette:visible group-focus-within/palette:opacity-100 group-focus-within/palette:visible transition-all duration-150 z-50 p-1 divide-y divide-zinc-100 dark:divide-zinc-800">
+      <div class="px-3.5 py-2 flex items-center justify-between">
+        <span class="text-[10px] font-semibold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">
+          Paletas de Cores
+        </span>
+        <span class="text-[10px] font-bold px-1.5 py-0.5 rounded-md bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">
+          {COLOR_PALETTES.length} Temas
+        </span>
+      </div>
+
+      <div class="py-1 max-h-[340px] overflow-y-auto scrollbar-thin space-y-0.5">
+        {COLOR_PALETTES.map((p) => (
+          <button
+            type="button"
+            data-palette-id={p.id}
+            data-palette-primary={p.primary}
+            data-palette-secondary={p.secondary}
+            data-palette-name={p.name}
+            data-palette-emoji={p.emoji}
+            class="palette-btn-item w-full flex items-center justify-between px-3 py-2 text-xs transition-colors rounded-xl mx-1 max-w-[calc(100%-8px)] text-left cursor-pointer hover:bg-zinc-50 dark:hover:bg-zinc-800/60 font-medium text-zinc-700 dark:text-zinc-300"
+          >
+            <div class="flex items-center gap-2.5">
+              <div class="relative flex items-center shrink-0 w-5 h-5">
+                <div
+                  class="w-3.5 h-3.5 rounded-full shadow-2xs border border-white dark:border-zinc-900 absolute left-0 z-10"
+                  style={`background-color: ${p.primary};`}
+                />
+                <div
+                  class="w-3 h-3 rounded-full shadow-2xs border border-white dark:border-zinc-900 absolute right-0 opacity-90"
+                  style={`background-color: ${p.secondary};`}
+                />
+              </div>
+
+              <div class="flex flex-col">
+                <span class="text-xs font-semibold leading-tight">
+                  {p.emoji} {p.name}
+                </span>
+                <span class="text-[10px] text-zinc-400 dark:text-zinc-500 leading-tight truncate max-w-[150px]">
+                  {p.tagline}
+                </span>
+              </div>
+            </div>
+
+            <span class="palette-check-icon hidden text-emerald-600 dark:text-emerald-400 font-bold text-xs">
+              ✓
+            </span>
+          </button>
+        ))}
+      </div>
+    </div>
+  </div>
+)}
+
+<script is:inline>
+  (function() {
+    const PALETTES_DATA = {
+      emerald: { primary: '#10b981', secondary: '#14b8a6', name: 'Emerald Mint', emoji: '🌿' },
+      caramel: { primary: '#8c5a3c', secondary: '#c08552', name: 'Warm Caramel', emoji: '🍯' },
+      espresso: { primary: '#664343', secondary: '#795757', name: 'Roasted Espresso', emoji: '🪵' },
+      meadow: { primary: '#2a7c13', secondary: '#76c457', name: 'Botanical Meadow', emoji: '🌱' },
+      oxford: { primary: '#0a2947', secondary: '#8b5e3c', name: 'Oxford Navy', emoji: '⚓' },
+      gelato: { primary: '#f9b2d7', secondary: '#daf9de', name: 'Pastel Gelato', emoji: '🍧' },
+      candy: { primary: '#aa96da', secondary: '#fcbad3', name: 'Cotton Candy', emoji: '🍬' },
+      slate: { primary: '#00adb5', secondary: '#393e46', name: 'Slate & Teal', emoji: '🌊' },
+      pastel: { primary: '#946d6d', secondary: '#a290b7', name: 'Pastel Dream', emoji: '🌸' },
+      beige: { primary: '#8d5b36', secondary: '#c4a47c', name: 'Beige & Chocolate', emoji: '☕' },
+      indigo: { primary: '#6366f1', secondary: '#8b5cf6', name: 'Electric Indigo', emoji: '⚡' },
+      cyan: { primary: '#06b6d4', secondary: '#0ea5e9', name: 'Cyber Cyan', emoji: '🌌' },
+      purple: { primary: '#a855f7', secondary: '#d946ef', name: 'Neon Purple', emoji: '🔮' },
+      amber: { primary: '#f59e0b', secondary: '#f97316', name: 'Sunset Amber', emoji: '🌅' },
+      blue: { primary: '#3b82f6', secondary: '#0ea5e9', name: 'Cobalt Sapphire', emoji: '💎' },
+      rose: { primary: '#f43f5e', secondary: '#ec4899', name: 'Crimson Rose', emoji: '🌹' },
+      mono: { primary: '#71717a', secondary: '#a1a1aa', name: 'Titanium Mono', emoji: '🖤' }
+    };
+
+    function updatePaletteUI(paletteId) {
+      const p = PALETTES_DATA[paletteId] || PALETTES_DATA.emerald;
+
+      // Update header dots
+      const dot1 = document.getElementById('header-palette-dot-1');
+      const dot2 = document.getElementById('header-palette-dot-2');
+      const label = document.getElementById('header-palette-label');
+      const emoji = document.getElementById('header-palette-emoji');
+      const mobileName = document.getElementById('mobile-active-palette-name');
+
+      if (dot1) dot1.style.backgroundColor = p.primary;
+      if (dot2) dot2.style.backgroundColor = p.secondary;
+      if (label) label.textContent = p.name.split(' ')[0];
+      if (emoji) emoji.textContent = p.emoji;
+      if (mobileName) mobileName.textContent = p.name;
+
+      // Update active checkmarks in desktop dropdown
+      document.querySelectorAll('.palette-btn-item').forEach((btn) => {
+        const id = btn.getAttribute('data-palette-id');
+        const check = btn.querySelector('.palette-check-icon');
+        if (id === paletteId) {
+          btn.classList.add('bg-zinc-100/90', 'dark:bg-zinc-800', 'text-zinc-950', 'dark:text-white', 'font-bold');
+          if (check) check.classList.remove('hidden');
+        } else {
+          btn.classList.remove('bg-zinc-100/90', 'dark:bg-zinc-800', 'text-zinc-950', 'dark:text-white', 'font-bold');
+          if (check) check.classList.add('hidden');
+        }
+      });
+
+      // Update active state in mobile grid
+      document.querySelectorAll('.palette-btn-mobile').forEach((btn) => {
+        const id = btn.getAttribute('data-palette-id');
+        if (id === paletteId) {
+          btn.classList.add('border-emerald-500', 'bg-emerald-50/80', 'dark:bg-emerald-950/60', 'ring-2', 'ring-emerald-500/20');
+        } else {
+          btn.classList.remove('border-emerald-500', 'bg-emerald-50/80', 'dark:bg-emerald-950/60', 'ring-2', 'ring-emerald-500/20');
+        }
+      });
+    }
+
+    function setPalette(paletteId) {
+      document.documentElement.setAttribute('data-palette', paletteId);
+      localStorage.setItem('color-palette', paletteId);
+      updatePaletteUI(paletteId);
+      window.dispatchEvent(new CustomEvent('palette-changed', { detail: { palette: paletteId } }));
+    }
+
+    function initPaletteListeners() {
+      const current = localStorage.getItem('color-palette') || 'gelato';
+      updatePaletteUI(current);
+
+      document.querySelectorAll('[data-palette-id]').forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const id = btn.getAttribute('data-palette-id');
+          if (id) setPalette(id);
+        });
+      });
+
+      window.addEventListener('palette-changed', (e) => {
+        if (e.detail?.palette) updatePaletteUI(e.detail.palette);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPaletteListeners);
+    } else {
+      initPaletteListeners();
+    }
+  })();
+</script>

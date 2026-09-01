@@ -104,6 +104,13 @@ export const ALL_DIRECTORY_TOOLS: DirectoryToolItem[] = [
     icon: 'M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3'
   },
   {
+    slug: 'converter-rmvb-para-mp4',
+    category: 'video',
+    sourceFormats: ['RMVB', 'RM'],
+    targetFormat: 'MP4',
+    icon: 'M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z'
+  },
+  {
     slug: 'converter-divx-para-mp4',
     category: 'video',
     sourceFormats: ['DivX'],
@@ -132,22 +139,13 @@ export const ALL_DIRECTORY_TOOLS: DirectoryToolItem[] = [
     icon: 'M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z'
   },
 
-  // 2. Compressors & Size Reducers (8 tools)
+  // 2. Compressors & Size Reducers (3 tools)
   {
     slug: 'compressor-de-video',
     category: 'compress',
     sourceFormats: ['MP4', 'MOV', 'MKV', 'AVI'],
     targetFormat: 'MP4',
     icon: 'M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10',
-    isPopular: true
-  },
-  {
-    slug: 'compactar-video',
-    category: 'compress',
-    sourceFormats: ['MP4', 'MOV', 'MKV', 'AVI', 'WebM'],
-    targetFormat: 'MP4',
-    icon: 'M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10',
-    isNew: true,
     isPopular: true
   },
   {
@@ -158,29 +156,6 @@ export const ALL_DIRECTORY_TOOLS: DirectoryToolItem[] = [
     icon: 'M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10'
   },
   {
-    slug: 'compactar-video-mp4',
-    category: 'compress',
-    sourceFormats: ['MP4'],
-    targetFormat: 'MP4',
-    icon: 'M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10',
-    isNew: true
-  },
-  {
-    slug: 'compressor-de-video-gratuito',
-    category: 'compress',
-    sourceFormats: ['MP4', 'MOV', 'MKV', 'AVI'],
-    targetFormat: 'MP4',
-    icon: 'M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7'
-  },
-  {
-    slug: 'comprimir-video',
-    category: 'compress',
-    sourceFormats: ['MP4', 'MOV', 'MKV'],
-    targetFormat: 'MP4',
-    icon: 'M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z',
-    isPopular: true
-  },
-  {
     slug: 'compactar-video-para-whatsapp',
     category: 'compress',
     sourceFormats: ['MP4', 'MOV', 'AVI', 'MKV'],
@@ -189,16 +164,7 @@ export const ALL_DIRECTORY_TOOLS: DirectoryToolItem[] = [
     isNew: true,
     isPopular: true
   },
-  {
-    slug: 'reduzir-tamanho-do-video',
-    category: 'compress',
-    sourceFormats: ['MP4', 'MOV', 'MKV', 'AVI'],
-    targetFormat: 'MP4',
-    icon: 'M13 17h8m0 0V9m0 8l-8-8-4 4-6-6',
-    isNew: true
-  },
-
-  // 3. Audio & MP3 Tools (12 tools)
+  // 3. Audio & MP3 Tools (5 tools)
   {
     slug: 'conversor-de-audio',
     category: 'audio',
@@ -217,14 +183,6 @@ export const ALL_DIRECTORY_TOOLS: DirectoryToolItem[] = [
     isPopular: true
   },
   {
-    slug: 'converter-video-em-audio-gratis',
-    category: 'audio',
-    sourceFormats: ['MP4', 'MOV', 'MKV', 'WebM'],
-    targetFormat: 'MP3',
-    icon: 'M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3',
-    isNew: true
-  },
-  {
     slug: 'extrair-audio-de-video',
     category: 'audio',
     sourceFormats: ['MP4', 'MOV', 'MKV', 'AVI'],
@@ -232,14 +190,6 @@ export const ALL_DIRECTORY_TOOLS: DirectoryToolItem[] = [
     icon: 'M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z',
     isNew: true,
     isPopular: true
-  },
-  {
-    slug: 'extrair-audio-de-video-online',
-    category: 'audio',
-    sourceFormats: ['MP4', 'MOV', 'MKV', 'WebM'],
-    targetFormat: 'MP3',
-    icon: 'M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z',
-    isNew: true
   },
   {
     slug: 'extrair-audio-de-video-do-youtube',
@@ -258,42 +208,13 @@ export const ALL_DIRECTORY_TOOLS: DirectoryToolItem[] = [
     isPopular: true
   },
   {
-    slug: 'conversor-de-audio-mp3',
-    category: 'audio',
-    sourceFormats: ['WAV', 'AAC', 'M4A', 'FLAC', 'OGG'],
-    targetFormat: 'MP3',
-    icon: 'M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3'
-  },
-  {
     slug: 'conversor-de-audio-para-mp3',
     category: 'audio',
     sourceFormats: ['WAV', 'AAC', 'M4A', 'FLAC', 'OGG', 'WMA'],
     targetFormat: 'MP3',
     icon: 'M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3'
   },
-  {
-    slug: 'conversor-de-audio-online',
-    category: 'audio',
-    sourceFormats: ['WAV', 'AAC', 'M4A', 'FLAC', 'OGG'],
-    targetFormat: 'MP3',
-    icon: 'M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9'
-  },
-  {
-    slug: 'conversor-de-audio-do-youtube',
-    category: 'audio',
-    sourceFormats: ['MP4', 'WebM'],
-    targetFormat: 'MP3',
-    icon: 'M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
-  },
-  {
-    slug: 'baixar-conversor-de-audio-mp3-gratuito',
-    category: 'audio',
-    sourceFormats: ['MP4', 'WAV', 'M4A', 'AAC', 'FLAC'],
-    targetFormat: 'MP3',
-    icon: 'M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4'
-  },
-
-  // 4. Video Resizers & Scaling (4 tools)
+  // 4. Video Resizers & Scaling (3 tools)
   {
     slug: 'redimensionar-video',
     category: 'resize',
@@ -302,14 +223,6 @@ export const ALL_DIRECTORY_TOOLS: DirectoryToolItem[] = [
     icon: 'M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4',
     isNew: true,
     isPopular: true
-  },
-  {
-    slug: 'redimensionar-video-online',
-    category: 'resize',
-    sourceFormats: ['MP4', 'MOV', 'WebM'],
-    targetFormat: 'MP4',
-    icon: 'M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4',
-    isNew: true
   },
   {
     slug: 'redimensionar-video-para-tiktok',
@@ -338,23 +251,6 @@ export const ALL_DIRECTORY_TOOLS: DirectoryToolItem[] = [
     icon: 'M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z',
     isPopular: true
   },
-  {
-    slug: 'converter-video-para-gif',
-    category: 'gif',
-    sourceFormats: ['MP4', 'MOV', 'MKV'],
-    targetFormat: 'GIF',
-    icon: 'M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z',
-    isNew: true
-  },
-  {
-    slug: 'conversor-de-video-para-gif',
-    category: 'gif',
-    sourceFormats: ['MP4', 'MOV', 'WebM'],
-    targetFormat: 'GIF',
-    icon: 'M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z',
-    isNew: true
-  },
-
   // 6. Camcorders, Devices & Social Platforms (10 tools)
   {
     slug: 'converter-video-iphone',
