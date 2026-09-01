@@ -9,11 +9,11 @@ html[data-palette="gelato"],
   --palette-primary: #f9b2d7;
   --palette-secondary: #daf9de;
 
-  --aurora-primary: rgba(244, 114, 182, 0.38);
-  --aurora-secondary: rgba(56, 189, 248, 0.30);
-  --orb-1: rgba(244, 114, 182, 0.44);
-  --orb-2: rgba(52, 211, 153, 0.38);
-  --orb-3: rgba(56, 189, 248, 0.32);
+  --aurora-primary: rgba(249, 178, 215, 0.18);
+  --aurora-secondary: rgba(186, 230, 253, 0.15);
+  --orb-1: rgba(249, 178, 215, 0.20);
+  --orb-2: rgba(218, 249, 222, 0.18);
+  --orb-3: rgba(186, 230, 253, 0.15);
 
   --color-emerald-50: #f6ffdc;
   --color-emerald-100: #fde2f0;
@@ -46,11 +46,11 @@ html[data-palette="gelato"].dark,
   --color-accent-hover: #f085be;
   --color-accent-soft: #440d28;
 
-  --aurora-primary: rgba(244, 114, 182, 0.52);
-  --aurora-secondary: rgba(56, 189, 248, 0.44);
-  --orb-1: rgba(244, 114, 182, 0.60);
-  --orb-2: rgba(52, 211, 153, 0.52);
-  --orb-3: rgba(56, 189, 248, 0.45);
+  --aurora-primary: rgba(249, 168, 212, 0.20);
+  --aurora-secondary: rgba(125, 211, 252, 0.16);
+  --orb-1: rgba(249, 168, 212, 0.22);
+  --orb-2: rgba(110, 231, 183, 0.18);
+  --orb-3: rgba(125, 211, 252, 0.16);
 
   --color-emerald-50: #f6ffdc;
   --color-emerald-100: #fde2f0;
